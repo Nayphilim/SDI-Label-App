@@ -2,6 +2,10 @@
 
  orbs:
   win: circleci/windows@2.2.0
+  
+  machine:
+  environment:
+    QMAKE: /opt/qt54/bin/qmake
 
  jobs:
    build:
