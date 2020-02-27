@@ -153,13 +153,17 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1456</width>
-         <height>981</height>
+         <width>1477</width>
+         <height>1000</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QOpenGLWidget" name="openGLWidget"/>
+         <widget class="QLabel" name="imageView">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
