@@ -943,6 +943,9 @@ mainwindow.o: ../SDILabelApp/mainwindow.cpp ../SDILabelApp/mainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstatusbar.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QVBoxLayout \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QWidget \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTimer \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtimer.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qbasictimer.h \
 		D:/opencv/build/include/opencv2/core/core.hpp \
 		D:/opencv/build/include/opencv2/core.hpp \
 		D:/opencv/build/include/opencv2/core/cvdef.h \
@@ -977,7 +980,9 @@ mainwindow.o: ../SDILabelApp/mainwindow.cpp ../SDILabelApp/mainwindow.h \
 		D:/opencv/build/include/opencv2/highgui/highgui.hpp \
 		D:/opencv/build/include/opencv2/highgui.hpp \
 		D:/opencv/build/include/opencv2/imgcodecs.hpp \
-		D:/opencv/build/include/opencv2/videoio.hpp
+		D:/opencv/build/include/opencv2/videoio.hpp \
+		D:/opencv/build/include/opencv2/imgproc/imgproc.hpp \
+		D:/opencv/build/include/opencv2/imgproc.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ..\SDILabelApp\mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
