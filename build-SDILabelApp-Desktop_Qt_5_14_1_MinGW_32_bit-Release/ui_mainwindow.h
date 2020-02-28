@@ -16,7 +16,6 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -52,22 +51,22 @@ public:
     QLabel *imageView;
     QGroupBox *rightMenuGroupBox;
     QGridLayout *gridLayout_5;
-    QGroupBox *classesGroupBox;
-    QGridLayout *gridLayout_4;
-    QPushButton *classesFileExplorerButton;
-    QLineEdit *classesFilePathBox;
-    QListWidget *classesFileList;
-    QGroupBox *imagesGroupBox;
-    QGridLayout *gridLayout_3;
-    QPushButton *ImagesFileExplorerButton;
-    QListView *ImagesFileList;
-    QLineEdit *ImagesFilePathBox;
     QGroupBox *annotationsGroupBox;
     QGridLayout *gridLayout_7;
     QLabel *annotationFileNameheader;
     QLineEdit *annotationFilePathBox;
     QPushButton *annotationFileExplorerButton;
     QPushButton *annotationSaveButton;
+    QGroupBox *classesGroupBox;
+    QGridLayout *gridLayout_4;
+    QPushButton *classesFileExplorerButton;
+    QListWidget *classesFileList;
+    QLineEdit *classesFilePathBox;
+    QGroupBox *imagesGroupBox;
+    QGridLayout *gridLayout_3;
+    QLineEdit *ImagesFilePathBox;
+    QPushButton *ImagesFileExplorerButton;
+    QListWidget *ImagesFileList;
     QGroupBox *bottomMenuGroupBox;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
@@ -177,51 +176,6 @@ public:
         rightMenuGroupBox->setAutoFillBackground(true);
         gridLayout_5 = new QGridLayout(rightMenuGroupBox);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        classesGroupBox = new QGroupBox(rightMenuGroupBox);
-        classesGroupBox->setObjectName(QString::fromUtf8("classesGroupBox"));
-        gridLayout_4 = new QGridLayout(classesGroupBox);
-        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        classesFileExplorerButton = new QPushButton(classesGroupBox);
-        classesFileExplorerButton->setObjectName(QString::fromUtf8("classesFileExplorerButton"));
-
-        gridLayout_4->addWidget(classesFileExplorerButton, 0, 1, 1, 1);
-
-        classesFilePathBox = new QLineEdit(classesGroupBox);
-        classesFilePathBox->setObjectName(QString::fromUtf8("classesFilePathBox"));
-
-        gridLayout_4->addWidget(classesFilePathBox, 0, 0, 1, 1);
-
-        classesFileList = new QListWidget(classesGroupBox);
-        classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
-
-        gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
-
-
-        gridLayout_5->addWidget(classesGroupBox, 1, 0, 1, 1);
-
-        imagesGroupBox = new QGroupBox(rightMenuGroupBox);
-        imagesGroupBox->setObjectName(QString::fromUtf8("imagesGroupBox"));
-        imagesGroupBox->setAutoFillBackground(true);
-        gridLayout_3 = new QGridLayout(imagesGroupBox);
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        ImagesFileExplorerButton = new QPushButton(imagesGroupBox);
-        ImagesFileExplorerButton->setObjectName(QString::fromUtf8("ImagesFileExplorerButton"));
-
-        gridLayout_3->addWidget(ImagesFileExplorerButton, 0, 2, 1, 1);
-
-        ImagesFileList = new QListView(imagesGroupBox);
-        ImagesFileList->setObjectName(QString::fromUtf8("ImagesFileList"));
-
-        gridLayout_3->addWidget(ImagesFileList, 2, 0, 1, 3);
-
-        ImagesFilePathBox = new QLineEdit(imagesGroupBox);
-        ImagesFilePathBox->setObjectName(QString::fromUtf8("ImagesFilePathBox"));
-
-        gridLayout_3->addWidget(ImagesFilePathBox, 0, 0, 1, 2);
-
-
-        gridLayout_5->addWidget(imagesGroupBox, 0, 0, 1, 1);
-
         annotationsGroupBox = new QGroupBox(rightMenuGroupBox);
         annotationsGroupBox->setObjectName(QString::fromUtf8("annotationsGroupBox"));
         gridLayout_7 = new QGridLayout(annotationsGroupBox);
@@ -261,6 +215,52 @@ public:
 
         gridLayout_5->addWidget(annotationsGroupBox, 2, 0, 1, 1);
 
+        classesGroupBox = new QGroupBox(rightMenuGroupBox);
+        classesGroupBox->setObjectName(QString::fromUtf8("classesGroupBox"));
+        gridLayout_4 = new QGridLayout(classesGroupBox);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        classesFileExplorerButton = new QPushButton(classesGroupBox);
+        classesFileExplorerButton->setObjectName(QString::fromUtf8("classesFileExplorerButton"));
+
+        gridLayout_4->addWidget(classesFileExplorerButton, 0, 1, 1, 1);
+
+        classesFileList = new QListWidget(classesGroupBox);
+        classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
+
+        gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
+
+        classesFilePathBox = new QLineEdit(classesGroupBox);
+        classesFilePathBox->setObjectName(QString::fromUtf8("classesFilePathBox"));
+
+        gridLayout_4->addWidget(classesFilePathBox, 0, 0, 1, 1);
+
+
+        gridLayout_5->addWidget(classesGroupBox, 1, 0, 1, 1);
+
+        imagesGroupBox = new QGroupBox(rightMenuGroupBox);
+        imagesGroupBox->setObjectName(QString::fromUtf8("imagesGroupBox"));
+        imagesGroupBox->setAutoFillBackground(true);
+        gridLayout_3 = new QGridLayout(imagesGroupBox);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        ImagesFilePathBox = new QLineEdit(imagesGroupBox);
+        ImagesFilePathBox->setObjectName(QString::fromUtf8("ImagesFilePathBox"));
+
+        gridLayout_3->addWidget(ImagesFilePathBox, 0, 0, 1, 1);
+
+        ImagesFileExplorerButton = new QPushButton(imagesGroupBox);
+        ImagesFileExplorerButton->setObjectName(QString::fromUtf8("ImagesFileExplorerButton"));
+
+        gridLayout_3->addWidget(ImagesFileExplorerButton, 0, 2, 1, 1);
+
+        ImagesFileList = new QListWidget(imagesGroupBox);
+        ImagesFileList->setObjectName(QString::fromUtf8("ImagesFileList"));
+        ImagesFileList->setSortingEnabled(true);
+
+        gridLayout_3->addWidget(ImagesFileList, 2, 0, 1, 3);
+
+
+        gridLayout_5->addWidget(imagesGroupBox, 0, 0, 1, 1);
+
 
         gridLayout_8->addWidget(rightMenuGroupBox, 0, 2, 2, 1);
 
@@ -287,6 +287,8 @@ public:
         menubar->addAction(menuLoad->menuAction());
 
         retranslateUi(MainWindow);
+        QObject::connect(ImagesFileExplorerButton, SIGNAL(clicked()), ImagesFilePathBox, SLOT(copy()));
+        QObject::connect(ImagesFilePathBox, SIGNAL(textChanged(QString)), ImagesFileList, SLOT(update()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -303,16 +305,16 @@ public:
         zoomGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Zoom", nullptr));
         imageView->setText(QString());
         rightMenuGroupBox->setTitle(QString());
-        classesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Classes", nullptr));
-        classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        classesFilePathBox->setText(QString());
-        imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
-        ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        ImagesFilePathBox->setText(QString());
         annotationsGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Annotations", nullptr));
         annotationFileNameheader->setText(QCoreApplication::translate("MainWindow", "Annotation File Name", nullptr));
         annotationFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         annotationSaveButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        classesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Classes", nullptr));
+        classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        classesFilePathBox->setText(QString());
+        imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
+        ImagesFilePathBox->setText(QString());
+        ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         bottomMenuGroupBox->setTitle(QString());
         menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Save", nullptr));
         menuLoad->setTitle(QCoreApplication::translate("MainWindow", "Load", nullptr));

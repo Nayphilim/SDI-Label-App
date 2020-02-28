@@ -1,9 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include<QTimer>
-#include<opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
 
 using namespace cv;
 
@@ -11,10 +6,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
-    Timer = new QTimer(this);
-    connect(Timer, SIGNAL(timeout()), this, SLOT(DisplayImage()));
-    Timer->start();
+    DisplayImage();
+
 
 }
 
@@ -30,3 +25,20 @@ void MainWindow::DisplayImage(){
     ui->imageView->setPixmap(QPixmap::fromImage(imageDisplay));
 }
 
+
+void MainWindow::on_ImagesFileExplorerButton_clicked()
+{
+    QString filePath = QFileDialog::getExistingDirectory(0, ("Select Output Folder"), QDir::currentPath());
+    //QMessageBox::information(this, "", filePath);
+    ui->ImagesFilePathBox->setText(filePath);
+    updateImageFileList(filePath);
+
+
+
+}
+
+void MainWindow::updateImageFileList(QString filePath){
+    QDir directory(filePath);
+    QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files);
+    ui->ImagesFileList->addItems(images);
+}
