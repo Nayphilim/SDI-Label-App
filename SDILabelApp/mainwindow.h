@@ -24,12 +24,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 public slots:
-    void DisplayImage();
+
 
 private slots:
     void on_ImagesFileExplorerButton_clicked();
 
     void updateImageFileList(QString);
+
+    void on_ImagesFileList_itemDoubleClicked(QListWidgetItem *item);
+
+    void DisplayImage(std::string);
+
+    std::string getImageFilePath();
 
 private:
     Ui::MainWindow *ui;

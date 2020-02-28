@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[5];
-    char stringdata0[81];
+    QByteArrayData data[10];
+    char stringdata0[168];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,15 +33,22 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 12), // "DisplayImage"
-QT_MOC_LITERAL(2, 24, 0), // ""
-QT_MOC_LITERAL(3, 25, 35), // "on_ImagesFileExplorerButton_c..."
-QT_MOC_LITERAL(4, 61, 19) // "updateImageFileList"
+QT_MOC_LITERAL(1, 11, 35), // "on_ImagesFileExplorerButton_c..."
+QT_MOC_LITERAL(2, 47, 0), // ""
+QT_MOC_LITERAL(3, 48, 19), // "updateImageFileList"
+QT_MOC_LITERAL(4, 68, 35), // "on_ImagesFileList_itemDoubleC..."
+QT_MOC_LITERAL(5, 104, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(6, 121, 4), // "item"
+QT_MOC_LITERAL(7, 126, 12), // "DisplayImage"
+QT_MOC_LITERAL(8, 139, 11), // "std::string"
+QT_MOC_LITERAL(9, 151, 16) // "getImageFilePath"
 
     },
-    "MainWindow\0DisplayImage\0\0"
-    "on_ImagesFileExplorerButton_clicked\0"
-    "updateImageFileList"
+    "MainWindow\0on_ImagesFileExplorerButton_clicked\0"
+    "\0updateImageFileList\0"
+    "on_ImagesFileList_itemDoubleClicked\0"
+    "QListWidgetItem*\0item\0DisplayImage\0"
+    "std::string\0getImageFilePath"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,7 +58,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,14 +66,18 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x0a /* Public */,
-       3,    0,   30,    2, 0x08 /* Private */,
-       4,    1,   31,    2, 0x08 /* Private */,
+       1,    0,   39,    2, 0x08 /* Private */,
+       3,    1,   40,    2, 0x08 /* Private */,
+       4,    1,   43,    2, 0x08 /* Private */,
+       7,    1,   46,    2, 0x08 /* Private */,
+       9,    0,   49,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void, 0x80000000 | 8,    2,
+    0x80000000 | 8,
 
        0        // eod
 };
@@ -77,9 +88,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->DisplayImage(); break;
-        case 1: _t->on_ImagesFileExplorerButton_clicked(); break;
-        case 2: _t->updateImageFileList((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 0: _t->on_ImagesFileExplorerButton_clicked(); break;
+        case 1: _t->updateImageFileList((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: _t->on_ImagesFileList_itemDoubleClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
+        case 3: _t->DisplayImage((*reinterpret_cast< std::string(*)>(_a[1]))); break;
+        case 4: { std::string _r = _t->getImageFilePath();
+            if (_a[0]) *reinterpret_cast< std::string*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -114,13 +128,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 5;
     }
     return _id;
 }
