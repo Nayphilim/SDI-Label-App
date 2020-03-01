@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[10];
-    char stringdata0[168];
+    QByteArrayData data[12];
+    char stringdata0[186];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,19 +36,21 @@ QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 35), // "on_ImagesFileExplorerButton_c..."
 QT_MOC_LITERAL(2, 47, 0), // ""
 QT_MOC_LITERAL(3, 48, 19), // "updateImageFileList"
-QT_MOC_LITERAL(4, 68, 35), // "on_ImagesFileList_itemDoubleC..."
-QT_MOC_LITERAL(5, 104, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(6, 121, 4), // "item"
-QT_MOC_LITERAL(7, 126, 12), // "DisplayImage"
-QT_MOC_LITERAL(8, 139, 11), // "std::string"
-QT_MOC_LITERAL(9, 151, 16) // "getImageFilePath"
+QT_MOC_LITERAL(4, 68, 8), // "filePath"
+QT_MOC_LITERAL(5, 77, 35), // "on_ImagesFileList_itemDoubleC..."
+QT_MOC_LITERAL(6, 113, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(7, 130, 4), // "item"
+QT_MOC_LITERAL(8, 135, 12), // "DisplayImage"
+QT_MOC_LITERAL(9, 148, 11), // "std::string"
+QT_MOC_LITERAL(10, 160, 8), // "fileName"
+QT_MOC_LITERAL(11, 169, 16) // "getImageFilePath"
 
     },
     "MainWindow\0on_ImagesFileExplorerButton_clicked\0"
-    "\0updateImageFileList\0"
+    "\0updateImageFileList\0filePath\0"
     "on_ImagesFileList_itemDoubleClicked\0"
     "QListWidgetItem*\0item\0DisplayImage\0"
-    "std::string\0getImageFilePath"
+    "std::string\0fileName\0getImageFilePath"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,16 +70,16 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags
        1,    0,   39,    2, 0x08 /* Private */,
        3,    1,   40,    2, 0x08 /* Private */,
-       4,    1,   43,    2, 0x08 /* Private */,
-       7,    1,   46,    2, 0x08 /* Private */,
-       9,    0,   49,    2, 0x08 /* Private */,
+       5,    1,   43,    2, 0x08 /* Private */,
+       8,    1,   46,    2, 0x08 /* Private */,
+      11,    0,   49,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    2,
-    QMetaType::Void, 0x80000000 | 5,    6,
-    QMetaType::Void, 0x80000000 | 8,    2,
-    0x80000000 | 8,
+    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, 0x80000000 | 6,    7,
+    QMetaType::Void, 0x80000000 | 9,   10,
+    0x80000000 | 9,
 
        0        // eod
 };
