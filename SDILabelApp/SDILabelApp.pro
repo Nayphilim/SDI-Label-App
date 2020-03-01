@@ -103,3 +103,10 @@ else:unix: LIBS += -L$$PWD/thirdparty/Qt5/lib/ -lQt5Widgets
 
 INCLUDEPATH += $$PWD/thirdparty/Qt5/include
 DEPENDPATH += $$PWD/thirdparty/Qt5/include
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/thirdparty/opencv/lib/ -llibopencv_features2d420.dll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/thirdparty/opencv/lib/ -llibopencv_features2d420.dlld
+else:unix: LIBS += -L$$PWD/thirdparty/opencv/lib/ -llibopencv_features2d420.dll
+
+INCLUDEPATH += $$PWD/thirdparty/opencv/include
+DEPENDPATH += $$PWD/thirdparty/opencv/include
