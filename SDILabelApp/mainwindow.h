@@ -2,12 +2,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
 #include "ui_mainwindow.h"
+
 #include<QTimer>
 #include<QFileDialog>
 #include<QString>
 #include<QMessageBox>
 #include<QDir>
+
 #include<opencv2/core/core.hpp>
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
