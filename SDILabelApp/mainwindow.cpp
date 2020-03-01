@@ -44,6 +44,7 @@ void MainWindow::on_ImagesFileExplorerButton_clicked()
 void MainWindow::updateImageFileList(QString filePath){
     QDir directory(filePath);
     QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files);
+    ui->ImagesFileList->clear();
     ui->ImagesFileList->addItems(images);
 }
 
