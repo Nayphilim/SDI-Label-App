@@ -60,8 +60,9 @@ public:
     QGroupBox *classesGroupBox;
     QGridLayout *gridLayout_4;
     QPushButton *classesFileExplorerButton;
-    QListWidget *classesFileList;
     QLineEdit *classesFilePathBox;
+    QListWidget *classesFileList;
+    QPushButton *manageClassesButton;
     QGroupBox *imagesGroupBox;
     QGridLayout *gridLayout_3;
     QLineEdit *ImagesFilePathBox;
@@ -224,16 +225,21 @@ public:
 
         gridLayout_4->addWidget(classesFileExplorerButton, 0, 1, 1, 1);
 
+        classesFilePathBox = new QLineEdit(classesGroupBox);
+        classesFilePathBox->setObjectName(QString::fromUtf8("classesFilePathBox"));
+
+        gridLayout_4->addWidget(classesFilePathBox, 0, 0, 1, 1);
+
         classesFileList = new QListWidget(classesGroupBox);
         classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
         classesFileList->setSortingEnabled(true);
 
         gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
 
-        classesFilePathBox = new QLineEdit(classesGroupBox);
-        classesFilePathBox->setObjectName(QString::fromUtf8("classesFilePathBox"));
+        manageClassesButton = new QPushButton(classesGroupBox);
+        manageClassesButton->setObjectName(QString::fromUtf8("manageClassesButton"));
 
-        gridLayout_4->addWidget(classesFilePathBox, 0, 0, 1, 1);
+        gridLayout_4->addWidget(manageClassesButton, 2, 1, 1, 1);
 
 
         gridLayout_5->addWidget(classesGroupBox, 1, 0, 1, 1);
@@ -315,6 +321,7 @@ public:
         classesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Classes", nullptr));
         classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         classesFilePathBox->setText(QString());
+        manageClassesButton->setText(QCoreApplication::translate("MainWindow", "Manage Classes", nullptr));
         imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
         ImagesFilePathBox->setText(QString());
         ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));

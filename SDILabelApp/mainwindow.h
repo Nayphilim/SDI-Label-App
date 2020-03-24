@@ -5,6 +5,7 @@
 
 #include "ui_mainwindow.h"
 #include "classfile.h"
+#include "classmanagement.h"
 
 #include<QTimer>
 #include<QFileDialog>
@@ -29,10 +30,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private:
 public slots:
 
 
 private slots:
+
+
     /// signals sent from the image file explorer button being clicked
     ///
     ///Opens the file explorer for the user to select a folder containing images
@@ -64,6 +69,8 @@ private slots:
     void on_classesFileExplorerButton_clicked();
 
     void updateClassFileList(QUrl classFile);
+
+    void on_manageClassesButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = opencvtest
+TARGET = SDILabelApp
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -19,14 +19,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     classfile.cpp \
+    classmanagement.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     classfile.h \
+    classmanagement.h \
     mainwindow.h
 
 FORMS += \
+    classmanagement.ui \
     mainwindow.ui
 
 INCLUDEPATH += $$PWD/thirdparty/opencv/include

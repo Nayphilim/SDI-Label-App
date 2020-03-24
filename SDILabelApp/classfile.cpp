@@ -1,6 +1,9 @@
 #include "classfile.h"
 
 #include <iostream>
+
+QStringList Classes;
+
 classFile::classFile()
 {
 
@@ -17,6 +20,15 @@ classFile::classFile()
         }
         file.close();
     }
+    Classes = classes;
     return classes;
 
 }
+
+ QStringList classFile::getClasses(){
+     return Classes;
+ }
+
+ void classFile::setClasses(QStringList classes){
+     Classes = classes;
+ }

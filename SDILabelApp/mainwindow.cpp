@@ -71,3 +71,11 @@ void MainWindow::updateClassFileList(QUrl classFilePath){
     QStringList classes = classFile::readClassFile(classFilePath);
     ui->classesFileList->addItems(classes);
 }
+
+void MainWindow::on_manageClassesButton_clicked()
+{
+    classManagement classManagement(this);
+    classManagement.setModal(true);
+    classManagement.exec();
+}
+

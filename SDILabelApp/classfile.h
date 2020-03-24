@@ -10,9 +10,14 @@ class classFile
 {
 public:
     classFile();
+    static QStringList getClasses();
     static QStringList readClassFile(QUrl filePath);
+    void setClasses(QStringList classes);
+
 
 private:
+
+
 
 };
 
