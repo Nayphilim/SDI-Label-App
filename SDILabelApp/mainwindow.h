@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "ui_mainwindow.h"
+#include "classfile.h"
 
 #include<QTimer>
 #include<QFileDialog>
@@ -59,6 +60,10 @@ private slots:
     ///
     ///Gets the path based on what is entered into the image file box either by being manually typed by the user or automatically filled when selecting a folder through the file explorer
     std::string getImageFilePath();
+
+    void on_classesFileExplorerButton_clicked();
+
+    void updateClassFileList(QUrl classFile);
 
 private:
     Ui::MainWindow *ui;

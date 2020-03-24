@@ -22,7 +22,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::DisplayImage(std::string imageFileName){
     Mat img;
-    //img = imread("D:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/res/test.png");
     std::string imageFilePath = getImageFilePath();
     img = imread(imageFilePath + "/" + imageFileName);
     QImage imageDisplay((uchar*)img.data, img.cols, img.rows, img.step, QImage::Format_BGR888);
@@ -33,7 +32,6 @@ void MainWindow::DisplayImage(std::string imageFileName){
 void MainWindow::on_ImagesFileExplorerButton_clicked()
 {
     QString filePath = QFileDialog::getExistingDirectory(0, ("Select Output Folder"), QDir::currentPath());
-    //QMessageBox::information(this, "", filePath);
     ui->ImagesFilePathBox->setText(filePath);
     updateImageFileList(filePath);
 
@@ -60,4 +58,16 @@ std::string MainWindow::getImageFilePath(){
     QString qImageFilePath = ui->ImagesFilePathBox->text();
     std::string imageFilePath = qImageFilePath.toStdString();
     return imageFilePath;
+}
+
+void MainWindow::on_classesFileExplorerButton_clicked()
+{
+QString classFilePath = QFileDialog::getOpenFileName(this, "open a file", QDir::currentPath(), "*.txt");
+ ui->classesFilePathBox->setText(classFilePath);
+ updateClassFileList(classFilePath);
+}
+
+void MainWindow::updateClassFileList(QUrl classFilePath){
+    QStringList classes = classFile::readClassFile(classFilePath);
+    ui->classesFileList->addItems(classes);
 }

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[12];
-    char stringdata0[186];
+    QByteArrayData data[15];
+    char stringdata0[253];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,14 +43,19 @@ QT_MOC_LITERAL(7, 130, 4), // "item"
 QT_MOC_LITERAL(8, 135, 12), // "DisplayImage"
 QT_MOC_LITERAL(9, 148, 11), // "std::string"
 QT_MOC_LITERAL(10, 160, 8), // "fileName"
-QT_MOC_LITERAL(11, 169, 16) // "getImageFilePath"
+QT_MOC_LITERAL(11, 169, 16), // "getImageFilePath"
+QT_MOC_LITERAL(12, 186, 36), // "on_classesFileExplorerButton_..."
+QT_MOC_LITERAL(13, 223, 19), // "updateClassFileList"
+QT_MOC_LITERAL(14, 243, 9) // "classFile"
 
     },
     "MainWindow\0on_ImagesFileExplorerButton_clicked\0"
     "\0updateImageFileList\0filePath\0"
     "on_ImagesFileList_itemDoubleClicked\0"
     "QListWidgetItem*\0item\0DisplayImage\0"
-    "std::string\0fileName\0getImageFilePath"
+    "std::string\0fileName\0getImageFilePath\0"
+    "on_classesFileExplorerButton_clicked\0"
+    "updateClassFileList\0classFile"
 };
 #undef QT_MOC_LITERAL
 
@@ -60,7 +65,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -68,11 +73,13 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x08 /* Private */,
-       3,    1,   40,    2, 0x08 /* Private */,
-       5,    1,   43,    2, 0x08 /* Private */,
-       8,    1,   46,    2, 0x08 /* Private */,
-      11,    0,   49,    2, 0x08 /* Private */,
+       1,    0,   49,    2, 0x08 /* Private */,
+       3,    1,   50,    2, 0x08 /* Private */,
+       5,    1,   53,    2, 0x08 /* Private */,
+       8,    1,   56,    2, 0x08 /* Private */,
+      11,    0,   59,    2, 0x08 /* Private */,
+      12,    0,   60,    2, 0x08 /* Private */,
+      13,    1,   61,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -80,6 +87,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void, 0x80000000 | 9,   10,
     0x80000000 | 9,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QUrl,   14,
 
        0        // eod
 };
@@ -96,6 +105,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->DisplayImage((*reinterpret_cast< std::string(*)>(_a[1]))); break;
         case 4: { std::string _r = _t->getImageFilePath();
             if (_a[0]) *reinterpret_cast< std::string*>(_a[0]) = std::move(_r); }  break;
+        case 5: _t->on_classesFileExplorerButton_clicked(); break;
+        case 6: _t->updateClassFileList((*reinterpret_cast< QUrl(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -130,13 +141,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

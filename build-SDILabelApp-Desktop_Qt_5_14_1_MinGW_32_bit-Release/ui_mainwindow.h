@@ -226,6 +226,7 @@ public:
 
         classesFileList = new QListWidget(classesGroupBox);
         classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
+        classesFileList->setSortingEnabled(true);
 
         gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
 
@@ -289,6 +290,8 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(ImagesFileExplorerButton, SIGNAL(clicked()), ImagesFilePathBox, SLOT(copy()));
         QObject::connect(ImagesFilePathBox, SIGNAL(textChanged(QString)), ImagesFileList, SLOT(update()));
+        QObject::connect(classesFileExplorerButton, SIGNAL(clicked()), classesFilePathBox, SLOT(copy()));
+        QObject::connect(classesFileExplorerButton, SIGNAL(clicked()), classesFileList, SLOT(update()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

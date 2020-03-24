@@ -250,7 +250,11 @@
            </widget>
           </item>
           <item row="1" column="0" colspan="2">
-           <widget class="QListWidget" name="classesFileList"/>
+           <widget class="QListWidget" name="classesFileList">
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item row="0" column="0">
            <widget class="QLineEdit" name="classesFilePathBox">
@@ -347,8 +351,8 @@
      <y>78</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1750</x>
-     <y>106</y>
+     <x>1803</x>
+     <y>83</y>
     </hint>
    </hints>
   </connection>
@@ -359,12 +363,44 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1822</x>
-     <y>104</y>
+     <x>1803</x>
+     <y>83</y>
     </hint>
     <hint type="destinationlabel">
      <x>1797</x>
      <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>classesFileExplorerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>classesFilePathBox</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1860</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1776</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>classesFileExplorerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>classesFileList</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1875</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1869</x>
+     <y>564</y>
     </hint>
    </hints>
   </connection>

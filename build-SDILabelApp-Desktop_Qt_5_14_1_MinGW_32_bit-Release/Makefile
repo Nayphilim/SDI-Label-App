@@ -51,13 +51,19 @@ OBJECTS_DIR   = .
 
 ####### Files
 
-SOURCES       = ..\SDILabelApp\main.cpp \
-		..\SDILabelApp\mainwindow.cpp moc_mainwindow.cpp
-OBJECTS       = main.o \
+SOURCES       = ..\SDILabelApp\classfile.cpp \
+		..\SDILabelApp\main.cpp \
+		..\SDILabelApp\mainwindow.cpp moc_classfile.cpp \
+		moc_mainwindow.cpp
+OBJECTS       = classfile.o \
+		main.o \
 		mainwindow.o \
+		moc_classfile.o \
 		moc_mainwindow.o
 
-DIST          =  ..\SDILabelApp\mainwindow.h ..\SDILabelApp\main.cpp \
+DIST          =  ..\SDILabelApp\classfile.h \
+		..\SDILabelApp\mainwindow.h ..\SDILabelApp\classfile.cpp \
+		..\SDILabelApp\main.cpp \
 		..\SDILabelApp\mainwindow.cpp
 QMAKE_TARGET  = opencvtest
 DESTDIR        =  #avoid trailing-slash linebreak
@@ -441,10 +447,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) opencvtest.zip $(SOURCES) $(DIST) ..\SDILabelApp\SDILabelApp.pro D:\Qt\5.14.1\mingw73_32\mkspecs\features\spec_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\qdevice.pri D:\Qt\5.14.1\mingw73_32\mkspecs\features\device_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\common\sanitize.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\gcc-base.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\g++-base.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\angle.conf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\5.14.1\mingw73_32\mkspecs\common\windows-vulkan.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\g++-win32.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\windows-desktop.conf D:\Qt\5.14.1\mingw73_32\mkspecs\qconfig.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3drender.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axbase.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axserver.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_core.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_core_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_dbus.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designer.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_edid_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_egl_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gamepad.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gamepad_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gui.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_help.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_help_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_location.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_location_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_network.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_network_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_nfc.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_opengl.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_openglextensions.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioning.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlmodels.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_repparser.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_scxml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sensors.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialport.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sql.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_svg.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_testlib.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_theme_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uitools.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_websockets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_widgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_winextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_winextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt_functions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\win32-g++\qmake.conf D:\Qt\5.14.1\mingw73_32\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\5.14.1\mingw73_32\mkspecs\features\exclusive_builds.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\toolchain.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\default_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\default_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resolve_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\default_post.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resources_functions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qtquickcompiler.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\precompile_header.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\warn_on.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resources.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\moc.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\opengl.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\uic.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qmake_use.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\file_copies.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\windows.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\testcase_targets.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\exceptions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\yacc.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\lex.prf ..\SDILabelApp\SDILabelApp.pro ..\SDILabelApp\thirdparty\Qt5\lib\Qt5Gui.prl ..\SDILabelApp\thirdparty\Qt5\lib\Qt5Widgets.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Widgets.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Gui.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Core.prl D:\Qt\5.14.1\mingw73_32\lib\qtmain.prl      D:\Qt\5.14.1\mingw73_32\mkspecs\features\data\dummy.cpp ..\SDILabelApp\mainwindow.h  ..\SDILabelApp\main.cpp ..\SDILabelApp\mainwindow.cpp ..\SDILabelApp\mainwindow.ui    
+	$(ZIP) opencvtest.zip $(SOURCES) $(DIST) ..\SDILabelApp\SDILabelApp.pro D:\Qt\5.14.1\mingw73_32\mkspecs\features\spec_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\qdevice.pri D:\Qt\5.14.1\mingw73_32\mkspecs\features\device_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\common\sanitize.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\gcc-base.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\g++-base.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\angle.conf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\5.14.1\mingw73_32\mkspecs\common\windows-vulkan.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\g++-win32.conf D:\Qt\5.14.1\mingw73_32\mkspecs\common\windows-desktop.conf D:\Qt\5.14.1\mingw73_32\mkspecs\qconfig.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3drender.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axbase.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axserver.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_core.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_core_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_dbus.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designer.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_edid_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_egl_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gamepad.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gamepad_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gui.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_help.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_help_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_location.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_location_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_network.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_network_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_nfc.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_opengl.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_openglextensions.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioning.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlmodels.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quick.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_repparser.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_scxml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sensors.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialport.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sql.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_svg.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_testlib.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_theme_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uitools.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_websockets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_widgets.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_winextras.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_winextras_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xml.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Qt\5.14.1\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt_functions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\win32-g++\qmake.conf D:\Qt\5.14.1\mingw73_32\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\5.14.1\mingw73_32\mkspecs\features\exclusive_builds.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\toolchain.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\default_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\default_pre.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resolve_config.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\default_post.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resources_functions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qtquickcompiler.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\precompile_header.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\warn_on.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qt.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\resources.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\moc.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\opengl.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\uic.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\qmake_use.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\file_copies.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\win32\windows.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\testcase_targets.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\exceptions.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\yacc.prf D:\Qt\5.14.1\mingw73_32\mkspecs\features\lex.prf ..\SDILabelApp\SDILabelApp.pro ..\SDILabelApp\thirdparty\Qt5\lib\Qt5Gui.prl ..\SDILabelApp\thirdparty\Qt5\lib\Qt5Widgets.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Widgets.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Gui.prl D:\Qt\5.14.1\mingw73_32\lib\Qt5Core.prl D:\Qt\5.14.1\mingw73_32\lib\qtmain.prl      D:\Qt\5.14.1\mingw73_32\mkspecs\features\data\dummy.cpp ..\SDILabelApp\classfile.h ..\SDILabelApp\mainwindow.h  ..\SDILabelApp\classfile.cpp ..\SDILabelApp\main.cpp ..\SDILabelApp\mainwindow.cpp ..\SDILabelApp\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) main.o mainwindow.o moc_mainwindow.o
+	-$(DEL_FILE) classfile.o main.o mainwindow.o moc_classfile.o moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -474,10 +480,486 @@ compiler_moc_predefs_clean:
 moc_predefs.h: D:/Qt/5.14.1/mingw73_32/mkspecs/features/data/dummy.cpp
 	g++ -fno-keep-inline-dllexport -O2 -Wall -Wextra -Wextra -dM -E -o moc_predefs.h D:\Qt\5.14.1\mingw73_32\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_classfile.cpp moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_classfile.cpp moc_mainwindow.cpp
+moc_classfile.cpp: ../SDILabelApp/classfile.h \
+		../SDILabelApp/mainwindow.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMainWindow \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmainwindow.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtguiglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qconfig-bootstrapped.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qconfig.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtcore-config.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsystemdetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qprocessordetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcompilerdetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtypeinfo.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsysinfo.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlogging.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qflags.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasicatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_bootstrap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qgenericatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_cxx11.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_msvc.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qglobalstatic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmutex.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qnumeric.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qversiontagging.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtgui-config.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qwindowdefs.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobjectdefs.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qnamespace.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobjectdefs_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qwindowdefs_win.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobject.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstring.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qchar.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbytearray.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qrefcount.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qarraydata.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringliteral.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringalgorithms.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringview.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringbuilder.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qalgorithms.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qiterator.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qhashfunctions.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qpair.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvector.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontainertools_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qpoint.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbytearraylist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringlist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qregexp.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringmatcher.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcoreevent.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qscopedpointer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmetatype.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvarlengtharray.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontainerfwd.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobject_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmargins.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpaintdevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qrect.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsize.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpalette.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qcolor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qrgb.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qrgba64.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qbrush.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qmatrix.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpolygon.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qregion.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdatastream.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qiodevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qline.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtransform.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpainterpath.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qimage.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpixelformat.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpixmap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsharedpointer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qshareddata.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qhash.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsharedpointer_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfont.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfontmetrics.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfontinfo.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qsizepolicy.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qcursor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qkeysequence.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qevent.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvariant.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdebug.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtextstream.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlocale.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qset.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontiguouscache.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qurl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qurlquery.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfile.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfiledevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qvector2d.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtouchdevice.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtabwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qicon.h \
+		ui_mainwindow.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/QVariant \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QAction \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qaction.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qactiongroup.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QApplication \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcoreapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qeventloop.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qguiapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qinputmethod.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QGridLayout \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QGroupBox \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qgroupbox.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qframe.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QLabel \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlabel.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QLineEdit \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlineedit.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextcursor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextformat.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpen.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextoption.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QListWidget \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlistwidget.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlistview.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractitemview.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qabstractitemmodel.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qitemselectionmodel.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstyleoption.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractspinbox.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qvalidator.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qregularexpression.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qslider.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractslider.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstyle.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtabbar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qrubberband.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMenu \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmenu.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMenuBar \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmenubar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QPushButton \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qpushbutton.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QScrollArea \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qscrollarea.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QSlider \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QStatusBar \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstatusbar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QWidget \
+		../SDILabelApp/classfile.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTextStream \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtextstream.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTimer \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtimer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasictimer.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QFileDialog \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qfiledialog.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdir.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfileinfo.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QString \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qstring.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmessagebox.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QDir \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qdir.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/core.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvdef.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/hal/interface.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cv_cpu_dispatch.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cv_cpu_helper.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/hal/msa_macros.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/fast_math.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/version.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/base.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/opencv_modules.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd_wrapper.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/neon_utils.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/vsx_utils.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/check.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/traits.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/matx.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/saturate.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/types.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/mat.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/bufferpool.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/mat.inl.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/persistence.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/operations.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd.inl.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utility.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utils/instrumentation.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utils/tls.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/optim.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/ovx.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/highgui/highgui.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/highgui.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgcodecs.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/videoio.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc/imgproc.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc.hpp \
+		moc_predefs.h \
+		D:/Qt/5.14.1/mingw73_32/bin/moc.exe
+	D:\Qt\5.14.1\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Nayphilim/Documents/GitHub/SDI-Label-App/build-SDILabelApp-Desktop_Qt_5_14_1_MinGW_32_bit-Release/moc_predefs.h -ID:/Qt/5.14.1/mingw73_32/mkspecs/win32-g++ -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Qt/5.14.1/mingw73_32/include -ID:/Qt/5.14.1/mingw73_32/include/QtWidgets -ID:/Qt/5.14.1/mingw73_32/include/QtGui -ID:/Qt/5.14.1/mingw73_32/include/QtANGLE -ID:/Qt/5.14.1/mingw73_32/include/QtCore -I. -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\SDILabelApp\classfile.h -o moc_classfile.cpp
+
 moc_mainwindow.cpp: ../SDILabelApp/mainwindow.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMainWindow \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmainwindow.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtguiglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qglobal.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qconfig-bootstrapped.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qconfig.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtcore-config.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsystemdetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qprocessordetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcompilerdetection.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtypeinfo.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsysinfo.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlogging.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qflags.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasicatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_bootstrap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qgenericatomic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_cxx11.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qatomic_msvc.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qglobalstatic.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmutex.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qnumeric.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qversiontagging.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtgui-config.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qwindowdefs.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobjectdefs.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qnamespace.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobjectdefs_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qwindowdefs_win.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobject.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstring.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qchar.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbytearray.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qrefcount.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qarraydata.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringliteral.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringalgorithms.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringview.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringbuilder.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qalgorithms.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qiterator.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qhashfunctions.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qpair.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvector.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontainertools_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qpoint.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbytearraylist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringlist.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qregexp.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qstringmatcher.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcoreevent.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qscopedpointer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmetatype.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvarlengtharray.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontainerfwd.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qobject_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmargins.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpaintdevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qrect.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsize.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpalette.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qcolor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qrgb.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qrgba64.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qbrush.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qmatrix.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpolygon.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qregion.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdatastream.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qiodevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qline.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtransform.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpainterpath.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qimage.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpixelformat.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpixmap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsharedpointer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qshareddata.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qhash.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qsharedpointer_impl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfont.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfontmetrics.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qfontinfo.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qsizepolicy.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qcursor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qkeysequence.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qevent.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qvariant.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qmap.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdebug.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qtextstream.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qlocale.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qset.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcontiguouscache.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qurl.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qurlquery.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfile.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfiledevice.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qvector2d.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtouchdevice.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtabwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qicon.h \
+		ui_mainwindow.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/QVariant \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QAction \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qaction.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qactiongroup.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QApplication \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qcoreapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qeventloop.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qguiapplication.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qinputmethod.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QGridLayout \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QGroupBox \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qgroupbox.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qframe.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QLabel \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlabel.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QLineEdit \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlineedit.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextcursor.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextformat.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qpen.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qtextoption.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QListWidget \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlistwidget.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qlistview.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractitemview.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qabstractitemmodel.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qitemselectionmodel.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstyleoption.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractspinbox.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtGui/qvalidator.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qregularexpression.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qslider.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractslider.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstyle.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtabbar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qrubberband.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMenu \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmenu.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMenuBar \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmenubar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QPushButton \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qpushbutton.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QScrollArea \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qscrollarea.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QSlider \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QStatusBar \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstatusbar.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QWidget \
+		../SDILabelApp/classfile.h \
+		../SDILabelApp/mainwindow.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTimer \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtimer.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasictimer.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QFileDialog \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qfiledialog.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qdir.h \
+		../SDILabelApp/thirdparty/Qt5/include/QtCore/qfileinfo.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QString \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qstring.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmessagebox.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QDir \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qdir.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/core.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvdef.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/hal/interface.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cv_cpu_dispatch.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cv_cpu_helper.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/hal/msa_macros.h \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/fast_math.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/version.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/base.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/opencv_modules.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd_wrapper.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/neon_utils.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/vsx_utils.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/check.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/traits.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/matx.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/saturate.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/types.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/mat.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/bufferpool.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/mat.inl.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/persistence.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/operations.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/cvstd.inl.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utility.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utils/instrumentation.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/utils/tls.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/optim.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/core/ovx.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/highgui/highgui.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/highgui.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgcodecs.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/videoio.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc/imgproc.hpp \
+		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc.hpp \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTextStream \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtextstream.h \
+		moc_predefs.h \
+		D:/Qt/5.14.1/mingw73_32/bin/moc.exe
+	D:\Qt\5.14.1\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Nayphilim/Documents/GitHub/SDI-Label-App/build-SDILabelApp-Desktop_Qt_5_14_1_MinGW_32_bit-Release/moc_predefs.h -ID:/Qt/5.14.1/mingw73_32/mkspecs/win32-g++ -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Qt/5.14.1/mingw73_32/include -ID:/Qt/5.14.1/mingw73_32/include/QtWidgets -ID:/Qt/5.14.1/mingw73_32/include/QtGui -ID:/Qt/5.14.1/mingw73_32/include/QtANGLE -ID:/Qt/5.14.1/mingw73_32/include/QtCore -I. -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\SDILabelApp\mainwindow.h -o moc_mainwindow.cpp
+
+compiler_moc_objc_header_make_all:
+compiler_moc_objc_header_clean:
+compiler_moc_source_make_all:
+compiler_moc_source_clean:
+compiler_uic_make_all: ui_mainwindow.h
+compiler_uic_clean:
+	-$(DEL_FILE) ui_mainwindow.h
+ui_mainwindow.h: ../SDILabelApp/mainwindow.ui \
+		D:/Qt/5.14.1/mingw73_32/bin/uic.exe
+	D:\Qt\5.14.1\mingw73_32\bin\uic.exe ..\SDILabelApp\mainwindow.ui -o ui_mainwindow.h
+
+compiler_yacc_decl_make_all:
+compiler_yacc_decl_clean:
+compiler_yacc_impl_make_all:
+compiler_yacc_impl_clean:
+compiler_lex_make_all:
+compiler_lex_clean:
+compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+
+
+
+####### Compile
+
+classfile.o: ../SDILabelApp/classfile.cpp ../SDILabelApp/classfile.h \
+		../SDILabelApp/mainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMainWindow \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qmainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
@@ -695,32 +1177,9 @@ moc_mainwindow.cpp: ../SDILabelApp/mainwindow.h \
 		../SDILabelApp/thirdparty/opencv/include/opencv2/videoio.hpp \
 		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc/imgproc.hpp \
 		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc.hpp \
-		moc_predefs.h \
-		D:/Qt/5.14.1/mingw73_32/bin/moc.exe
-	D:\Qt\5.14.1\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Nayphilim/Documents/GitHub/SDI-Label-App/build-SDILabelApp-Desktop_Qt_5_14_1_MinGW_32_bit-Release/moc_predefs.h -ID:/Qt/5.14.1/mingw73_32/mkspecs/win32-g++ -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/Qt5/include -ID:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/thirdparty/opencv/include -ID:/Qt/5.14.1/mingw73_32/include -ID:/Qt/5.14.1/mingw73_32/include/QtWidgets -ID:/Qt/5.14.1/mingw73_32/include/QtGui -ID:/Qt/5.14.1/mingw73_32/include/QtANGLE -ID:/Qt/5.14.1/mingw73_32/include/QtCore -I. -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\SDILabelApp\mainwindow.h -o moc_mainwindow.cpp
-
-compiler_moc_objc_header_make_all:
-compiler_moc_objc_header_clean:
-compiler_moc_source_make_all:
-compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h
-compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h
-ui_mainwindow.h: ../SDILabelApp/mainwindow.ui \
-		D:/Qt/5.14.1/mingw73_32/bin/uic.exe
-	D:\Qt\5.14.1\mingw73_32\bin\uic.exe ..\SDILabelApp\mainwindow.ui -o ui_mainwindow.h
-
-compiler_yacc_decl_make_all:
-compiler_yacc_decl_clean:
-compiler_yacc_impl_make_all:
-compiler_yacc_impl_clean:
-compiler_lex_make_all:
-compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
-
-
-
-####### Compile
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTextStream \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtextstream.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o classfile.o ..\SDILabelApp\classfile.cpp
 
 main.o: ../SDILabelApp/main.cpp ../SDILabelApp/mainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QMainWindow \
@@ -889,6 +1348,9 @@ main.o: ../SDILabelApp/main.cpp ../SDILabelApp/mainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstatusbar.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QVBoxLayout \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QWidget \
+		../SDILabelApp/classfile.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTextStream \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtextstream.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTimer \
 		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtimer.h \
 		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasictimer.h \
@@ -1109,6 +1571,9 @@ mainwindow.o: ../SDILabelApp/mainwindow.cpp ../SDILabelApp/mainwindow.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/qstatusbar.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QVBoxLayout \
 		D:/Qt/5.14.1/mingw73_32/include/QtWidgets/QWidget \
+		../SDILabelApp/classfile.h \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTextStream \
+		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtextstream.h \
 		D:/Qt/5.14.1/mingw73_32/include/QtCore/QTimer \
 		D:/Qt/5.14.1/mingw73_32/include/QtCore/qtimer.h \
 		../SDILabelApp/thirdparty/Qt5/include/QtCore/qbasictimer.h \
@@ -1161,6 +1626,9 @@ mainwindow.o: ../SDILabelApp/mainwindow.cpp ../SDILabelApp/mainwindow.h \
 		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc/imgproc.hpp \
 		../SDILabelApp/thirdparty/opencv/include/opencv2/imgproc.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ..\SDILabelApp\mainwindow.cpp
+
+moc_classfile.o: moc_classfile.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_classfile.o moc_classfile.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
