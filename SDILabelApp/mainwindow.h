@@ -68,7 +68,7 @@ private slots:
 
     void on_classesFileExplorerButton_clicked();
 
-    void updateClassFileList(QUrl classFile);
+    void updateClassFileList();
 
     void on_manageClassesButton_clicked();
 

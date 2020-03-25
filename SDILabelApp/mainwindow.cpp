@@ -64,18 +64,24 @@ void MainWindow::on_classesFileExplorerButton_clicked()
 {
 QString classFilePath = QFileDialog::getOpenFileName(this, "open a file", QDir::currentPath(), "*.txt");
  ui->classesFilePathBox->setText(classFilePath);
- updateClassFileList(classFilePath);
+ classFile::clearClassList();
+classFile::readClassFile(classFilePath);
+ updateClassFileList();
 }
 
-void MainWindow::updateClassFileList(QUrl classFilePath){
-    QStringList classes = classFile::readClassFile(classFilePath);
-    ui->classesFileList->addItems(classes);
+void MainWindow::updateClassFileList(){
+    ui->classesFileList->clear();
+    ui->classesFileList->addItems(classFile::getClasses());
 }
 
 void MainWindow::on_manageClassesButton_clicked()
 {
     classManagement classManagement(this);
     classManagement.setModal(true);
-    classManagement.exec();
+    int result = classManagement.exec();
+    if(result==QDialog::Rejected){
+        updateClassFileList();
+    }
 }
+
 

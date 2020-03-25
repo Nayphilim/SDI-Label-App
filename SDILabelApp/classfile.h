@@ -12,7 +12,12 @@ public:
     classFile();
     static QStringList getClasses();
     static QStringList readClassFile(QUrl filePath);
-    void setClasses(QStringList classes);
+    static void setClasses(QStringList classes);
+    static void clearClassList();
+    static bool checkExisting(QString selectedClass);
+    static void addClass(QString selectedClass);
+    static QUrl getCurrentClassFilePath();
+    static void removeClass(QString selectedClass);
 
 
 private:

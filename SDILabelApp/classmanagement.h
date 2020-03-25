@@ -16,13 +16,22 @@ class classManagement : public QDialog
 public:
     explicit classManagement(QWidget *parent = nullptr);
     ~classManagement();
+     void loadClassList();
 
 private slots:
+
+    void on_classList_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_addButton_clicked();
+
+    void on_removeButton_clicked();
+
+    void on_okButton_clicked();
 
 private:
     Ui::classManagement *ui;
 
-    void loadClassList();
+
 
 };
 
