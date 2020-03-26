@@ -70,6 +70,7 @@ classFile::readClassFile(classFilePath);
 }
 
 void MainWindow::updateClassFileList(){
+    classFile::readClassFile(classFile::getCurrentClassFilePath());
     ui->classesFilePathBox->clear();
     ui->classesFileList->clear();
     ui->classesFilePathBox->setText(classFile::getCurrentClassFilePath().toEncoded());
