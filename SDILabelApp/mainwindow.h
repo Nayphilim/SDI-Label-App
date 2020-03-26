@@ -6,6 +6,7 @@
 #include "ui_mainwindow.h"
 #include "classfile.h"
 #include "classmanagement.h"
+#include "classlistcreator.h"
 
 #include<QTimer>
 #include<QFileDialog>
@@ -71,6 +72,8 @@ private slots:
     void updateClassFileList();
 
     void on_manageClassesButton_clicked();
+
+    void on_newClassListButton_clicked();
 
 private:
     Ui::MainWindow *ui;

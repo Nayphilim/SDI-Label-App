@@ -63,6 +63,7 @@ public:
     QLineEdit *classesFilePathBox;
     QListWidget *classesFileList;
     QPushButton *manageClassesButton;
+    QPushButton *newClassListButton;
     QGroupBox *imagesGroupBox;
     QGridLayout *gridLayout_3;
     QLineEdit *ImagesFilePathBox;
@@ -241,6 +242,11 @@ public:
 
         gridLayout_4->addWidget(manageClassesButton, 2, 1, 1, 1);
 
+        newClassListButton = new QPushButton(classesGroupBox);
+        newClassListButton->setObjectName(QString::fromUtf8("newClassListButton"));
+
+        gridLayout_4->addWidget(newClassListButton, 2, 0, 1, 1);
+
 
         gridLayout_5->addWidget(classesGroupBox, 1, 0, 1, 1);
 
@@ -322,6 +328,7 @@ public:
         classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         classesFilePathBox->setText(QString());
         manageClassesButton->setText(QCoreApplication::translate("MainWindow", "Manage Classes", nullptr));
+        newClassListButton->setText(QCoreApplication::translate("MainWindow", "Create New Class List", nullptr));
         imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
         ImagesFilePathBox->setText(QString());
         ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));

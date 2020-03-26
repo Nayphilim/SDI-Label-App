@@ -19,16 +19,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     classfile.cpp \
+    classlistcreator.cpp \
     classmanagement.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     classfile.h \
+    classlistcreator.h \
     classmanagement.h \
     mainwindow.h
 
 FORMS += \
+    classlistcreator.ui \
     classmanagement.ui \
     mainwindow.ui
 

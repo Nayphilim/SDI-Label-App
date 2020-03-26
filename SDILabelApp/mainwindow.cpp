@@ -85,3 +85,13 @@ void MainWindow::on_manageClassesButton_clicked()
 }
 
 
+
+void MainWindow::on_newClassListButton_clicked()
+{
+    classListCreator classListCreator(this);
+    classListCreator.setModal(true);
+    int result = classListCreator.exec();
+
+
+
+}
