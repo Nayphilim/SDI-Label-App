@@ -28,6 +28,9 @@ void classListCreator::on_okButton_clicked()
         QFile classFile(classFilePath);
         classFile.open(QIODevice::WriteOnly);
         classFile::setCurrentClassFilePath(classFilePath);
+        QMessageBox fileCreatedAlert;
+        fileCreatedAlert.setText("File succesfully created");
+        fileCreatedAlert.exec();
         this->close();
 
     }
