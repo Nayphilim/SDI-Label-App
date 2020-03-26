@@ -18,7 +18,7 @@ classFile::classFile()
         while(!stream.atEnd()){
           QString text = stream.readLine();
           //if class already exists in class list do not append
-          if(classes.indexOf(QRegularExpression(text)) == -1){
+          if(classes.indexOf(QRegularExpression(text)) == -1 & text !=""){
               classes.append(text);
           }
 
@@ -98,4 +98,8 @@ classFile::classFile()
          file.close();
      }
 
+ }
+
+ void classFile::setCurrentClassFilePath(QUrl classFilePath){
+     CurrentClassFilePath = classFilePath;
  }

@@ -25,11 +25,10 @@ void classListCreator::on_okButton_clicked()
     if(!(ui->classFileNameBox->text().isEmpty()) & !(ui->classFileLocationBox->text().isEmpty())){
         QString classFileName = ui->classFileNameBox->text() + ".txt";
         QString classFilePath = ui->classFileLocationBox->text() + "/" + classFileName;
-        QMessageBox box;
-        box.setText(classFilePath);
-        box.exec();
         QFile classFile(classFilePath);
         classFile.open(QIODevice::WriteOnly);
+        classFile::setCurrentClassFilePath(classFilePath);
+        this->close();
 
     }
     else if(ui->classFileNameBox->text().isEmpty()){

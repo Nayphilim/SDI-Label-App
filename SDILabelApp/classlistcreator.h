@@ -2,6 +2,7 @@
 #define CLASSLISTCREATOR_H
 
 #include "mainwindow.h"
+#include "classfile.h"
 
 #include <QDialog>
 

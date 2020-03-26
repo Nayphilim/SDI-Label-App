@@ -91,7 +91,8 @@ void MainWindow::on_newClassListButton_clicked()
     classListCreator classListCreator(this);
     classListCreator.setModal(true);
     int result = classListCreator.exec();
-
-
+    if(result==QDialog::Rejected){
+        updateClassFileList();
+    }
 
 }

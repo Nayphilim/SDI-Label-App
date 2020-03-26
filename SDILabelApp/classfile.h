@@ -18,6 +18,7 @@ public:
     static void addClass(QString selectedClass);
     static QUrl getCurrentClassFilePath();
     static void removeClass(QString selectedClass);
+    static void setCurrentClassFilePath(QUrl classFilePath);
 
 
 private:
