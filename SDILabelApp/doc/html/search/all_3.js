@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['on_5fimagesfileexplorerbutton_5fclicked_7',['on_ImagesFileExplorerButton_clicked',['../class_main_window.html#a3a25784791c0b0d1855ba9906298e2ad',1,'MainWindow']]],
-  ['on_5fimagesfilelist_5fitemdoubleclicked_8',['on_ImagesFileList_itemDoubleClicked',['../class_main_window.html#a2fee526a00523cc9ff28da3685148874',1,'MainWindow']]]
+  ['getclasses_15',['getClasses',['../classclass_file.html#a8a01daae03eba240985d737465a516b3',1,'classFile']]],
+  ['getcurrentclassfilepath_16',['getCurrentClassFilePath',['../classclass_file.html#a608fca7344bf95ac899d4dd1a2476ddf',1,'classFile']]],
+  ['getimagefilepath_17',['getImageFilePath',['../class_main_window.html#af5dc7dac41604a78af3059650c5baeee',1,'MainWindow']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Label App: mainwindow.h Source File</title>
+<title>SDI Label App: D:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/mainwindow.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,8 +30,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Label App
-   &#160;<span id="projectnumber">Beta 0.1</span>
+   <div id="projectname">SDI Label App
+   &#160;<span id="projectnumber">Beta 0.2</span>
    </div>
    <div id="projectbrief">Reference manual for sytem software design and implementation coursework 2020</div>
   </td>
@@ -94,62 +94,90 @@ $(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initRe
 
 <div class="header">
   <div class="headertitle">
-<div class="title">mainwindow.h</div>  </div>
+<div class="title">D:/Nayphilim/Documents/GitHub/SDI-Label-App/SDILabelApp/mainwindow.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="mainwindow_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAINWINDOW_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;QTimer&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include&lt;QFileDialog&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include&lt;QString&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include&lt;QMessageBox&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include&lt;QDir&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include&lt;opencv2/core/core.hpp&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include&lt;opencv2/highgui/highgui.hpp&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include&lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;QT_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespace_ui.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> { <span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;QT_END_NAMESPACE</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_main_window.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="classfile_8h.html">classfile.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="classmanagement_8h.html">classmanagement.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="classlistcreator_8h.html">classlistcreator.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include&lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include&lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include&lt;QString&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include&lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include&lt;QDir&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include&lt;opencv2/core/core.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include&lt;opencv2/highgui/highgui.hpp&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include&lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;QT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> { <span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;QT_END_NAMESPACE</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_main_window.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a3a25784791c0b0d1855ba9906298e2ad">on_ImagesFileExplorerButton_clicked</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#af86beb5a792ccd3148ec45cebf0c04f4">updateImageFileList</a>(QString filePath);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a2fee526a00523cc9ff28da3685148874">on_ImagesFileList_itemDoubleClicked</a>(QListWidgetItem *item);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a29482b591941977dfa55c23923da6519">DisplayImage</a>(std::string fileName);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string <a class="code" href="class_main_window.html#af5dc7dac41604a78af3059650c5baeee">getImageFilePath</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a3a25784791c0b0d1855ba9906298e2ad">on_ImagesFileExplorerButton_clicked</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#af86beb5a792ccd3148ec45cebf0c04f4">updateImageFileList</a>(QString filePath);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a2fee526a00523cc9ff28da3685148874">on_ImagesFileList_itemDoubleClicked</a>(QListWidgetItem *item);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">   61</a></span>&#160;    Ui::MainWindow *<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a29482b591941977dfa55c23923da6519">DisplayImage</a>(std::string fileName);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::string <a class="code" href="class_main_window.html#af5dc7dac41604a78af3059650c5baeee">getImageFilePath</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a751904e6d2c6fdea46f70a89cc833809">on_classesFileExplorerButton_clicked</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a4b40abe2f047252b374bd3d8745e9fdf">updateClassFileList</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a32f8acd83ce67a48d0e10c32f57ca7ef">on_manageClassesButton_clicked</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae92a2cb4f45d8dbc66350dde9f65d3bb">on_newClassListButton_clicked</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a056f58a64d709e528724e5721071aa5f">on_imageFileListSortBox_currentIndexChanged</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">   95</a></span>&#160;    Ui::MainWindow *<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassfile_8h_html"><div class="ttname"><a href="classfile_8h.html">classfile.h</a></div></div>
 <div class="ttc" id="aclass_main_window_html_a29482b591941977dfa55c23923da6519"><div class="ttname"><a href="class_main_window.html#a29482b591941977dfa55c23923da6519">MainWindow::DisplayImage</a></div><div class="ttdeci">void DisplayImage(std::string fileName)</div><div class="ttdoc">Displays the requested image from the image file list to the UI.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00022">mainwindow.cpp:22</a></div></div>
-<div class="ttc" id="aclass_main_window_html_a3a25784791c0b0d1855ba9906298e2ad"><div class="ttname"><a href="class_main_window.html#a3a25784791c0b0d1855ba9906298e2ad">MainWindow::on_ImagesFileExplorerButton_clicked</a></div><div class="ttdeci">void on_ImagesFileExplorerButton_clicked()</div><div class="ttdoc">signals sent from the image file explorer button being clicked</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00032">mainwindow.cpp:32</a></div></div>
-<div class="ttc" id="aclass_main_window_html_af5dc7dac41604a78af3059650c5baeee"><div class="ttname"><a href="class_main_window.html#af5dc7dac41604a78af3059650c5baeee">MainWindow::getImageFilePath</a></div><div class="ttdeci">std::string getImageFilePath()</div><div class="ttdoc">Gets the file path of the image folder the user selected.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00057">mainwindow.cpp:57</a></div></div>
-<div class="ttc" id="aclass_main_window_html_af86beb5a792ccd3148ec45cebf0c04f4"><div class="ttname"><a href="class_main_window.html#af86beb5a792ccd3148ec45cebf0c04f4">MainWindow::updateImageFileList</a></div><div class="ttdeci">void updateImageFileList(QString filePath)</div><div class="ttdoc">Updates the list of image files in the UI with all image files contained in the folder the user has s...</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00043">mainwindow.cpp:43</a></div></div>
-<div class="ttc" id="aclass_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00061">mainwindow.h:61</a></div></div>
-<div class="ttc" id="aclass_main_window_html_a2fee526a00523cc9ff28da3685148874"><div class="ttname"><a href="class_main_window.html#a2fee526a00523cc9ff28da3685148874">MainWindow::on_ImagesFileList_itemDoubleClicked</a></div><div class="ttdeci">void on_ImagesFileList_itemDoubleClicked(QListWidgetItem *item)</div><div class="ttdoc">Handles signals sent from the image file list items being double clicked.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00049">mainwindow.cpp:49</a></div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00016">mainwindow.h:16</a></div></div>
-<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">This class handles all GUI components.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00021">mainwindow.h:21</a></div></div>
-<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00006">mainwindow.cpp:6</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a3a25784791c0b0d1855ba9906298e2ad"><div class="ttname"><a href="class_main_window.html#a3a25784791c0b0d1855ba9906298e2ad">MainWindow::on_ImagesFileExplorerButton_clicked</a></div><div class="ttdeci">void on_ImagesFileExplorerButton_clicked()</div><div class="ttdoc">signals sent from the image file explorer button being clicked</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00031">mainwindow.cpp:31</a></div></div>
+<div class="ttc" id="aclass_main_window_html_af5dc7dac41604a78af3059650c5baeee"><div class="ttname"><a href="class_main_window.html#af5dc7dac41604a78af3059650c5baeee">MainWindow::getImageFilePath</a></div><div class="ttdeci">std::string getImageFilePath()</div><div class="ttdoc">Gets the file path of the image folder the user selected.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00056">mainwindow.cpp:56</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a751904e6d2c6fdea46f70a89cc833809"><div class="ttname"><a href="class_main_window.html#a751904e6d2c6fdea46f70a89cc833809">MainWindow::on_classesFileExplorerButton_clicked</a></div><div class="ttdeci">void on_classesFileExplorerButton_clicked()</div><div class="ttdoc">Loads the class file selected by the user.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00062">mainwindow.cpp:62</a></div></div>
+<div class="ttc" id="aclasslistcreator_8h_html"><div class="ttname"><a href="classlistcreator_8h.html">classlistcreator.h</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a056f58a64d709e528724e5721071aa5f"><div class="ttname"><a href="class_main_window.html#a056f58a64d709e528724e5721071aa5f">MainWindow::on_imageFileListSortBox_currentIndexChanged</a></div><div class="ttdeci">void on_imageFileListSortBox_currentIndexChanged(int index)</div><div class="ttdoc">Detects when the user selects a new sort mode and applies that sort (not finished)</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00102">mainwindow.cpp:102</a></div></div>
+<div class="ttc" id="aclass_main_window_html_af86beb5a792ccd3148ec45cebf0c04f4"><div class="ttname"><a href="class_main_window.html#af86beb5a792ccd3148ec45cebf0c04f4">MainWindow::updateImageFileList</a></div><div class="ttdeci">void updateImageFileList(QString filePath)</div><div class="ttdoc">Updates the list of image files in the UI with all image files contained in the folder the user has s...</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00041">mainwindow.cpp:41</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae92a2cb4f45d8dbc66350dde9f65d3bb"><div class="ttname"><a href="class_main_window.html#ae92a2cb4f45d8dbc66350dde9f65d3bb">MainWindow::on_newClassListButton_clicked</a></div><div class="ttdeci">void on_newClassListButton_clicked()</div><div class="ttdoc">opens the class list creator dialog</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00091">mainwindow.cpp:91</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a32f8acd83ce67a48d0e10c32f57ca7ef"><div class="ttname"><a href="class_main_window.html#a32f8acd83ce67a48d0e10c32f57ca7ef">MainWindow::on_manageClassesButton_clicked</a></div><div class="ttdeci">void on_manageClassesButton_clicked()</div><div class="ttdoc">opens the class manager dialog</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00079">mainwindow.cpp:79</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a4b40abe2f047252b374bd3d8745e9fdf"><div class="ttname"><a href="class_main_window.html#a4b40abe2f047252b374bd3d8745e9fdf">MainWindow::updateClassFileList</a></div><div class="ttdeci">void updateClassFileList()</div><div class="ttdoc">Updates thes class file list.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00071">mainwindow.cpp:71</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00095">mainwindow.h:95</a></div></div>
+<div class="ttc" id="aclassmanagement_8h_html"><div class="ttname"><a href="classmanagement_8h.html">classmanagement.h</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a2fee526a00523cc9ff28da3685148874"><div class="ttname"><a href="class_main_window.html#a2fee526a00523cc9ff28da3685148874">MainWindow::on_ImagesFileList_itemDoubleClicked</a></div><div class="ttdeci">void on_ImagesFileList_itemDoubleClicked(QListWidgetItem *item)</div><div class="ttdoc">Handles signals sent from the image file list items being double clicked.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00048">mainwindow.cpp:48</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="classlistcreator_8h_source.html#l00009">classlistcreator.h:9</a></div></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">This class handles all GUI components.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00027">mainwindow.h:27</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Initialises the main windows GUI by building the UI elements.</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00006">mainwindow.cpp:6</a></div></div>
 <div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00017">mainwindow.cpp:17</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

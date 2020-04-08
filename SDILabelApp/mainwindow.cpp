@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     showMaximized();
-    //DisplayImage();
 
 
 }
@@ -62,7 +61,7 @@ std::string MainWindow::getImageFilePath(){
 
 void MainWindow::on_classesFileExplorerButton_clicked()
 {
-QString classFilePath = QFileDialog::getOpenFileName(this, "open a file", QDir::currentPath(), "*.txt");
+QString classFilePath = QFileDialog::getOpenFileName(this, "open a file", QDir::currentPath(), "*.names");
  ui->classesFilePathBox->setText(classFilePath);
  classFile::clearClassList();
 classFile::readClassFile(classFilePath);
@@ -98,4 +97,10 @@ void MainWindow::on_newClassListButton_clicked()
         updateClassFileList();
     }
 
+}
+
+void MainWindow::on_imageFileListSortBox_currentIndexChanged(int index)
+{
+    //activate sort algorithm that is chosen
+    //change order of list by changing the index of each item.
 }

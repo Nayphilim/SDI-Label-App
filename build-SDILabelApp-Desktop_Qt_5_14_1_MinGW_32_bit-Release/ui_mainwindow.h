@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -69,6 +70,7 @@ public:
     QLineEdit *ImagesFilePathBox;
     QPushButton *ImagesFileExplorerButton;
     QListWidget *ImagesFileList;
+    QComboBox *imageFileListSortBox;
     QGroupBox *bottomMenuGroupBox;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
@@ -159,7 +161,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1477, 1000));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1438, 1000));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         imageView = new QLabel(scrollAreaWidgetContents_2);
@@ -233,7 +235,7 @@ public:
 
         classesFileList = new QListWidget(classesGroupBox);
         classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
-        classesFileList->setSortingEnabled(true);
+        classesFileList->setSortingEnabled(false);
 
         gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
 
@@ -267,9 +269,19 @@ public:
 
         ImagesFileList = new QListWidget(imagesGroupBox);
         ImagesFileList->setObjectName(QString::fromUtf8("ImagesFileList"));
-        ImagesFileList->setSortingEnabled(true);
+        ImagesFileList->setSortingEnabled(false);
 
-        gridLayout_3->addWidget(ImagesFileList, 2, 0, 1, 3);
+        gridLayout_3->addWidget(ImagesFileList, 2, 0, 1, 4);
+
+        imageFileListSortBox = new QComboBox(imagesGroupBox);
+        imageFileListSortBox->addItem(QString());
+        imageFileListSortBox->addItem(QString());
+        imageFileListSortBox->addItem(QString());
+        imageFileListSortBox->addItem(QString());
+        imageFileListSortBox->setObjectName(QString::fromUtf8("imageFileListSortBox"));
+        imageFileListSortBox->setEnabled(true);
+
+        gridLayout_3->addWidget(imageFileListSortBox, 0, 3, 1, 1);
 
 
         gridLayout_5->addWidget(imagesGroupBox, 0, 0, 1, 1);
@@ -332,6 +344,11 @@ public:
         imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
         ImagesFilePathBox->setText(QString());
         ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        imageFileListSortBox->setItemText(0, QCoreApplication::translate("MainWindow", "A-Z", nullptr));
+        imageFileListSortBox->setItemText(1, QCoreApplication::translate("MainWindow", "Z-A", nullptr));
+        imageFileListSortBox->setItemText(2, QCoreApplication::translate("MainWindow", "Newest", nullptr));
+        imageFileListSortBox->setItemText(3, QCoreApplication::translate("MainWindow", "Oldest", nullptr));
+
         bottomMenuGroupBox->setTitle(QString());
         menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Save", nullptr));
         menuLoad->setTitle(QCoreApplication::translate("MainWindow", "Load", nullptr));

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['displayimage_17',['DisplayImage',['../class_main_window.html#a29482b591941977dfa55c23923da6519',1,'MainWindow']]]
+  ['addclass_61',['addClass',['../classclass_file.html#aac42ce46019fb341d569738735fb803e',1,'classFile']]]
 ];

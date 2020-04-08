@@ -1,0 +1,165 @@
+\hypertarget{classclass_management}{}\doxysection{class\+Management Class Reference}
+\label{classclass_management}\index{classManagement@{classManagement}}
+
+
+This class handles the dialog for managing classes.  
+
+
+
+
+{\ttfamily \#include $<$classmanagement.\+h$>$}
+
+Inheritance diagram for class\+Management\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classclass_management}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclass_management_af14c1ee978056dcac2921379a820944a}{class\+Management}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Initialises the \mbox{\hyperlink{classclass_management}{class\+Management}} G\+UI but buidling the UI elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclass_management_adeddbee0b425d1979519ffbdbf127cdc}{$\sim$class\+Management}} ()
+\item 
+void \mbox{\hyperlink{classclass_management_aeceb97cd4c2a7a97c6c5a707cd773a10}{load\+Class\+List}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classclass_management_a89544d21322a694eb6834854e498aab8}{on\+\_\+class\+List\+\_\+item\+Double\+Clicked}} (Q\+List\+Widget\+Item $\ast$item)
+\begin{DoxyCompactList}\small\item\em Gets the name of the item in the class list selected and sets it as the text of the selected class box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclass_management_addf268c6b9d264cd0668df5c92d3ba9a}{on\+\_\+add\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em adds the chosen class name to the class file loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclass_management_a9d0b21453f2dc0ca18bd5cc7daf5721f}{on\+\_\+remove\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em removes the chosen class name from the class fiel loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclass_management_a832ba9e152cfc5ba4336c64861463512}{on\+\_\+ok\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em closes the class management dialog \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::class\+Management $\ast$ \mbox{\hyperlink{classclass_management_a9ef91ac9253ac4d033ba05b2f30213ea}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles the dialog for managing classes. 
+
+handles the dialog created when you select the manage classes button on the home screen. Allows for the adding and removing of class names to the class file loaded 
+
+Definition at line 14 of file classmanagement.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclass_management_af14c1ee978056dcac2921379a820944a}\label{classclass_management_af14c1ee978056dcac2921379a820944a}} 
+\index{classManagement@{classManagement}!classManagement@{classManagement}}
+\index{classManagement@{classManagement}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{classManagement()}{classManagement()}}
+{\footnotesize\ttfamily class\+Management\+::class\+Management (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Initialises the \mbox{\hyperlink{classclass_management}{class\+Management}} G\+UI but buidling the UI elements. 
+
+
+
+Definition at line 5 of file classmanagement.\+cpp.
+
+\mbox{\Hypertarget{classclass_management_adeddbee0b425d1979519ffbdbf127cdc}\label{classclass_management_adeddbee0b425d1979519ffbdbf127cdc}} 
+\index{classManagement@{classManagement}!````~classManagement@{$\sim$classManagement}}
+\index{````~classManagement@{$\sim$classManagement}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{$\sim$classManagement()}{~classManagement()}}
+{\footnotesize\ttfamily class\+Management\+::$\sim$class\+Management (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file classmanagement.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclass_management_aeceb97cd4c2a7a97c6c5a707cd773a10}\label{classclass_management_aeceb97cd4c2a7a97c6c5a707cd773a10}} 
+\index{classManagement@{classManagement}!loadClassList@{loadClassList}}
+\index{loadClassList@{loadClassList}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{loadClassList()}{loadClassList()}}
+{\footnotesize\ttfamily void class\+Management\+::load\+Class\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file classmanagement.\+cpp.
+
+\mbox{\Hypertarget{classclass_management_addf268c6b9d264cd0668df5c92d3ba9a}\label{classclass_management_addf268c6b9d264cd0668df5c92d3ba9a}} 
+\index{classManagement@{classManagement}!on\_addButton\_clicked@{on\_addButton\_clicked}}
+\index{on\_addButton\_clicked@{on\_addButton\_clicked}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{on\_addButton\_clicked}{on\_addButton\_clicked}}
+{\footnotesize\ttfamily void class\+Management\+::on\+\_\+add\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+adds the chosen class name to the class file loaded 
+
+adds the chosen class name to the class file by calling the add\+Class() function in \mbox{\hyperlink{classclass_file}{class\+File}} 
+
+Definition at line 31 of file classmanagement.\+cpp.
+
+\mbox{\Hypertarget{classclass_management_a89544d21322a694eb6834854e498aab8}\label{classclass_management_a89544d21322a694eb6834854e498aab8}} 
+\index{classManagement@{classManagement}!on\_classList\_itemDoubleClicked@{on\_classList\_itemDoubleClicked}}
+\index{on\_classList\_itemDoubleClicked@{on\_classList\_itemDoubleClicked}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{on\_classList\_itemDoubleClicked}{on\_classList\_itemDoubleClicked}}
+{\footnotesize\ttfamily void class\+Management\+::on\+\_\+class\+List\+\_\+item\+Double\+Clicked (\begin{DoxyParamCaption}\item[{Q\+List\+Widget\+Item $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Gets the name of the item in the class list selected and sets it as the text of the selected class box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$item} & is a reference to the Q\+List\+Widget\+Item that was double clicked \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file classmanagement.\+cpp.
+
+\mbox{\Hypertarget{classclass_management_a832ba9e152cfc5ba4336c64861463512}\label{classclass_management_a832ba9e152cfc5ba4336c64861463512}} 
+\index{classManagement@{classManagement}!on\_okButton\_clicked@{on\_okButton\_clicked}}
+\index{on\_okButton\_clicked@{on\_okButton\_clicked}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{on\_okButton\_clicked}{on\_okButton\_clicked}}
+{\footnotesize\ttfamily void class\+Management\+::on\+\_\+ok\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+closes the class management dialog 
+
+when closes the program updates the class list and file path box 
+
+Definition at line 63 of file classmanagement.\+cpp.
+
+\mbox{\Hypertarget{classclass_management_a9d0b21453f2dc0ca18bd5cc7daf5721f}\label{classclass_management_a9d0b21453f2dc0ca18bd5cc7daf5721f}} 
+\index{classManagement@{classManagement}!on\_removeButton\_clicked@{on\_removeButton\_clicked}}
+\index{on\_removeButton\_clicked@{on\_removeButton\_clicked}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{on\_removeButton\_clicked}{on\_removeButton\_clicked}}
+{\footnotesize\ttfamily void class\+Management\+::on\+\_\+remove\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+removes the chosen class name from the class fiel loaded 
+
+removes the chosen class name from the class file by calling the remove\+Class() function in \mbox{\hyperlink{classclass_file}{class\+File}} 
+
+Definition at line 47 of file classmanagement.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classclass_management_a9ef91ac9253ac4d033ba05b2f30213ea}\label{classclass_management_a9ef91ac9253ac4d033ba05b2f30213ea}} 
+\index{classManagement@{classManagement}!ui@{ui}}
+\index{ui@{ui}!classManagement@{classManagement}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::class\+Management$\ast$ class\+Management\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file classmanagement.\+h.
+

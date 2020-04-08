@@ -19,7 +19,7 @@ Inheritance diagram for Main\+Window\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialises the main windows G\+UI by building the UI elements. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
@@ -34,7 +34,17 @@ void \mbox{\hyperlink{class_main_window_a2fee526a00523cc9ff28da3685148874}{on\+\
 void \mbox{\hyperlink{class_main_window_a29482b591941977dfa55c23923da6519}{Display\+Image}} (std\+::string file\+Name)
 \begin{DoxyCompactList}\small\item\em Displays the requested image from the image file list to the UI. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_main_window_af5dc7dac41604a78af3059650c5baeee}{get\+Image\+File\+Path}} ()
-\begin{DoxyCompactList}\small\item\em Gets the file path of the image folder the user selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the file path of the image folder the user selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a751904e6d2c6fdea46f70a89cc833809}{on\+\_\+classes\+File\+Explorer\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Loads the class file selected by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4b40abe2f047252b374bd3d8745e9fdf}{update\+Class\+File\+List}} ()
+\begin{DoxyCompactList}\small\item\em Updates thes class file list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}{on\+\_\+manage\+Classes\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em opens the class manager dialog \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}{on\+\_\+new\+Class\+List\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em opens the class list creator dialog \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a056f58a64d709e528724e5721071aa5f}{on\+\_\+image\+File\+List\+Sort\+Box\+\_\+current\+Index\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Detects when the user selects a new sort mode and applies that sort (not finished) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,7 +57,7 @@ This class handles all G\+UI components.
 
 This class initialises the main window and handles all signals sent from the G\+UI. It also handles loading the image file through open\+CV. 
 
-Definition at line 21 of file mainwindow.\+h.
+Definition at line 27 of file mainwindow.\+h.
 
 
 
@@ -57,6 +67,10 @@ Definition at line 21 of file mainwindow.\+h.
 \index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
 {\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Initialises the main windows G\+UI by building the UI elements. 
 
 
 
@@ -106,7 +120,35 @@ Gets the file path of the image folder the user selected.
 
 Gets the path based on what is entered into the image file box either by being manually typed by the user or automatically filled when selecting a folder through the file explorer 
 
-Definition at line 57 of file mainwindow.\+cpp.
+Definition at line 56 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a751904e6d2c6fdea46f70a89cc833809}\label{class_main_window_a751904e6d2c6fdea46f70a89cc833809}} 
+\index{MainWindow@{MainWindow}!on\_classesFileExplorerButton\_clicked@{on\_classesFileExplorerButton\_clicked}}
+\index{on\_classesFileExplorerButton\_clicked@{on\_classesFileExplorerButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_classesFileExplorerButton\_clicked}{on\_classesFileExplorerButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+classes\+File\+Explorer\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Loads the class file selected by the user. 
+
+Opens a file dialog for the user to select a $\ast$.names file on their pc and then clears the class list and loads the new one. It also sets the class list file path box to the full file path of the file loaded 
+
+Definition at line 62 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a056f58a64d709e528724e5721071aa5f}\label{class_main_window_a056f58a64d709e528724e5721071aa5f}} 
+\index{MainWindow@{MainWindow}!on\_imageFileListSortBox\_currentIndexChanged@{on\_imageFileListSortBox\_currentIndexChanged}}
+\index{on\_imageFileListSortBox\_currentIndexChanged@{on\_imageFileListSortBox\_currentIndexChanged}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_imageFileListSortBox\_currentIndexChanged}{on\_imageFileListSortBox\_currentIndexChanged}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+image\+File\+List\+Sort\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Detects when the user selects a new sort mode and applies that sort (not finished) 
+
+
+
+Definition at line 102 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a3a25784791c0b0d1855ba9906298e2ad}\label{class_main_window_a3a25784791c0b0d1855ba9906298e2ad}} 
 \index{MainWindow@{MainWindow}!on\_ImagesFileExplorerButton\_clicked@{on\_ImagesFileExplorerButton\_clicked}}
@@ -120,7 +162,7 @@ signals sent from the image file explorer button being clicked
 
 Opens the file explorer for the user to select a folder containing images 
 
-Definition at line 32 of file mainwindow.\+cpp.
+Definition at line 31 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a2fee526a00523cc9ff28da3685148874}\label{class_main_window_a2fee526a00523cc9ff28da3685148874}} 
 \index{MainWindow@{MainWindow}!on\_ImagesFileList\_itemDoubleClicked@{on\_ImagesFileList\_itemDoubleClicked}}
@@ -139,7 +181,49 @@ Converts the name of the item from the image file list to a basic string and req
 \end{DoxyParams}
 
 
-Definition at line 49 of file mainwindow.\+cpp.
+Definition at line 48 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}\label{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}} 
+\index{MainWindow@{MainWindow}!on\_manageClassesButton\_clicked@{on\_manageClassesButton\_clicked}}
+\index{on\_manageClassesButton\_clicked@{on\_manageClassesButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_manageClassesButton\_clicked}{on\_manageClassesButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+manage\+Classes\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+opens the class manager dialog 
+
+Updates the class list and file path box when the dialog is closed 
+
+Definition at line 79 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}\label{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}} 
+\index{MainWindow@{MainWindow}!on\_newClassListButton\_clicked@{on\_newClassListButton\_clicked}}
+\index{on\_newClassListButton\_clicked@{on\_newClassListButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_newClassListButton\_clicked}{on\_newClassListButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+new\+Class\+List\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+opens the class list creator dialog 
+
+loads the new class file when closed 
+
+Definition at line 91 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a4b40abe2f047252b374bd3d8745e9fdf}\label{class_main_window_a4b40abe2f047252b374bd3d8745e9fdf}} 
+\index{MainWindow@{MainWindow}!updateClassFileList@{updateClassFileList}}
+\index{updateClassFileList@{updateClassFileList}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateClassFileList}{updateClassFileList}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Class\+File\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates thes class file list. 
+
+Updates the class list to show new/removed class names or to show an entirely new list of classes from a newly loaded file 
+
+Definition at line 71 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_af86beb5a792ccd3148ec45cebf0c04f4}\label{class_main_window_af86beb5a792ccd3148ec45cebf0c04f4}} 
 \index{MainWindow@{MainWindow}!updateImageFileList@{updateImageFileList}}
@@ -158,7 +242,7 @@ Uses the filepath provided by the users selection of folder and gets all png and
 \end{DoxyParams}
 
 
-Definition at line 43 of file mainwindow.\+cpp.
+Definition at line 41 of file mainwindow.\+cpp.
 
 
 
@@ -171,5 +255,5 @@ Definition at line 43 of file mainwindow.\+cpp.
 
 
 
-Definition at line 61 of file mainwindow.\+h.
+Definition at line 95 of file mainwindow.\+h.
 

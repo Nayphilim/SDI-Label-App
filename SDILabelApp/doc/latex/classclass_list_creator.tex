@@ -1,0 +1,109 @@
+\hypertarget{classclass_list_creator}{}\doxysection{class\+List\+Creator Class Reference}
+\label{classclass_list_creator}\index{classListCreator@{classListCreator}}
+
+
+{\ttfamily \#include $<$classlistcreator.\+h$>$}
+
+Inheritance diagram for class\+List\+Creator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classclass_list_creator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclass_list_creator_a8e3e1cb9a79c4f2d14a9ed52358a0f19}{class\+List\+Creator}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em initialises the \mbox{\hyperlink{classclass_list_creator}{class\+List\+Creator}} G\+UI by building the UI elements \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclass_list_creator_aa32502401915bea097bf7e6be2c4d98e}{$\sim$class\+List\+Creator}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classclass_list_creator_ade238d33e14e5e60a676f0cf504b1b4f}{on\+\_\+class\+File\+Browse\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Opens a file dialog to select a folder directory for the class file to be created. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclass_list_creator_ab37f014e914c27a2412d99aefaa47535}{on\+\_\+ok\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Creates the class file with the name and location chosen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::class\+List\+Creator $\ast$ \mbox{\hyperlink{classclass_list_creator_a02915eb0c62740065db625924a26f0a8}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file classlistcreator.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclass_list_creator_a8e3e1cb9a79c4f2d14a9ed52358a0f19}\label{classclass_list_creator_a8e3e1cb9a79c4f2d14a9ed52358a0f19}} 
+\index{classListCreator@{classListCreator}!classListCreator@{classListCreator}}
+\index{classListCreator@{classListCreator}!classListCreator@{classListCreator}}
+\doxysubsubsection{\texorpdfstring{classListCreator()}{classListCreator()}}
+{\footnotesize\ttfamily class\+List\+Creator\+::class\+List\+Creator (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+initialises the \mbox{\hyperlink{classclass_list_creator}{class\+List\+Creator}} G\+UI by building the UI elements 
+
+
+
+Definition at line 4 of file classlistcreator.\+cpp.
+
+\mbox{\Hypertarget{classclass_list_creator_aa32502401915bea097bf7e6be2c4d98e}\label{classclass_list_creator_aa32502401915bea097bf7e6be2c4d98e}} 
+\index{classListCreator@{classListCreator}!````~classListCreator@{$\sim$classListCreator}}
+\index{````~classListCreator@{$\sim$classListCreator}!classListCreator@{classListCreator}}
+\doxysubsubsection{\texorpdfstring{$\sim$classListCreator()}{~classListCreator()}}
+{\footnotesize\ttfamily class\+List\+Creator\+::$\sim$class\+List\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file classlistcreator.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclass_list_creator_ade238d33e14e5e60a676f0cf504b1b4f}\label{classclass_list_creator_ade238d33e14e5e60a676f0cf504b1b4f}} 
+\index{classListCreator@{classListCreator}!on\_classFileBrowseButton\_clicked@{on\_classFileBrowseButton\_clicked}}
+\index{on\_classFileBrowseButton\_clicked@{on\_classFileBrowseButton\_clicked}!classListCreator@{classListCreator}}
+\doxysubsubsection{\texorpdfstring{on\_classFileBrowseButton\_clicked}{on\_classFileBrowseButton\_clicked}}
+{\footnotesize\ttfamily void class\+List\+Creator\+::on\+\_\+class\+File\+Browse\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Opens a file dialog to select a folder directory for the class file to be created. 
+
+Opens the file dialog for the user to select a directory which is then set as the text for the file path box. Function is called when the file browse button is clicked 
+
+Definition at line 16 of file classlistcreator.\+cpp.
+
+\mbox{\Hypertarget{classclass_list_creator_ab37f014e914c27a2412d99aefaa47535}\label{classclass_list_creator_ab37f014e914c27a2412d99aefaa47535}} 
+\index{classListCreator@{classListCreator}!on\_okButton\_clicked@{on\_okButton\_clicked}}
+\index{on\_okButton\_clicked@{on\_okButton\_clicked}!classListCreator@{classListCreator}}
+\doxysubsubsection{\texorpdfstring{on\_okButton\_clicked}{on\_okButton\_clicked}}
+{\footnotesize\ttfamily void class\+List\+Creator\+::on\+\_\+ok\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Creates the class file with the name and location chosen. 
+
+Creates the class file using the name from the name box and location from the file path box as parameters. 
+
+Definition at line 22 of file classlistcreator.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classclass_list_creator_a02915eb0c62740065db625924a26f0a8}\label{classclass_list_creator_a02915eb0c62740065db625924a26f0a8}} 
+\index{classListCreator@{classListCreator}!ui@{ui}}
+\index{ui@{ui}!classListCreator@{classListCreator}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::class\+List\+Creator$\ast$ class\+List\+Creator\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file classlistcreator.\+h.
+

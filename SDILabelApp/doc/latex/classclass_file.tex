@@ -1,0 +1,218 @@
+\hypertarget{classclass_file}{}\doxysection{class\+File Class Reference}
+\label{classclass_file}\index{classFile@{classFile}}
+
+
+This class manages all class file functionaility.  
+
+
+
+
+{\ttfamily \#include $<$classfile.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclass_file_a5433f3373caf5cc760317dc358269a60}{class\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+String\+List \mbox{\hyperlink{classclass_file_a8a01daae03eba240985d737465a516b3}{get\+Classes}} ()
+\begin{DoxyCompactList}\small\item\em returns the list of classes in loaded class file \end{DoxyCompactList}\item 
+static Q\+String\+List \mbox{\hyperlink{classclass_file_a066742982c131f52560afacd0cfcd3e3}{read\+Class\+File}} (Q\+Url file\+Path)
+\begin{DoxyCompactList}\small\item\em reads the class file selected \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}{set\+Classes}} (Q\+String\+List classes)
+\begin{DoxyCompactList}\small\item\em sets the list of classes \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclass_file_a17153b9673a207c2cd4867764d7d016e}{clear\+Class\+List}} ()
+\begin{DoxyCompactList}\small\item\em clears the list of classes \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classclass_file_a14bddfc9866ab3385e883574efb7bccf}{check\+Existing}} (Q\+String selected\+Class)
+\begin{DoxyCompactList}\small\item\em checks if a class already exists inside a class file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclass_file_aac42ce46019fb341d569738735fb803e}{add\+Class}} (Q\+String selected\+Class)
+\begin{DoxyCompactList}\small\item\em adds a new class to the class file in use \end{DoxyCompactList}\item 
+static Q\+Url \mbox{\hyperlink{classclass_file_a608fca7344bf95ac899d4dd1a2476ddf}{get\+Current\+Class\+File\+Path}} ()
+\begin{DoxyCompactList}\small\item\em returns the full file path of the class file \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}{remove\+Class}} (Q\+String selected\+Class)
+\begin{DoxyCompactList}\small\item\em removes a class from the class file in use \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclass_file_acaa61fac9a1e77cab6f0d1484496196c}{set\+Current\+Class\+File\+Path}} (Q\+Url class\+File\+Path)
+\begin{DoxyCompactList}\small\item\em sets the full file path of the class file to be loaded \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class manages all class file functionaility. 
+
+This class contains all functions attributing to the creation, loading and managing of class files. It also holds the current loaded class list and the full file path of the class file in use 
+
+Definition at line 11 of file classfile.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclass_file_a5433f3373caf5cc760317dc358269a60}\label{classclass_file_a5433f3373caf5cc760317dc358269a60}} 
+\index{classFile@{classFile}!classFile@{classFile}}
+\index{classFile@{classFile}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{classFile()}{classFile()}}
+{\footnotesize\ttfamily class\+File\+::class\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file classfile.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclass_file_aac42ce46019fb341d569738735fb803e}\label{classclass_file_aac42ce46019fb341d569738735fb803e}} 
+\index{classFile@{classFile}!addClass@{addClass}}
+\index{addClass@{addClass}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{addClass()}{addClass()}}
+{\footnotesize\ttfamily void class\+File\+::add\+Class (\begin{DoxyParamCaption}\item[{Q\+String}]{selected\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+adds a new class to the class file in use 
+
+adds a new class to the class file loaded as well as appending it to the class list 
+\begin{DoxyParams}{Parameters}
+{\em selected\+Class} & is the class name to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a14bddfc9866ab3385e883574efb7bccf}\label{classclass_file_a14bddfc9866ab3385e883574efb7bccf}} 
+\index{classFile@{classFile}!checkExisting@{checkExisting}}
+\index{checkExisting@{checkExisting}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{checkExisting()}{checkExisting()}}
+{\footnotesize\ttfamily bool class\+File\+::check\+Existing (\begin{DoxyParamCaption}\item[{Q\+String}]{selected\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+checks if a class already exists inside a class file 
+
+checks for duplicate class names that are in the loaded class file. Using a combination of Q\+Regular\+Expression and the Q\+String\+List function index\+Of will return -\/1 if it does not contain the string given as a parameter 
+\begin{DoxyParams}{Parameters}
+{\em selected\+Class} & is the class name that is being compared for duplicates \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a17153b9673a207c2cd4867764d7d016e}\label{classclass_file_a17153b9673a207c2cd4867764d7d016e}} 
+\index{classFile@{classFile}!clearClassList@{clearClassList}}
+\index{clearClassList@{clearClassList}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{clearClassList()}{clearClassList()}}
+{\footnotesize\ttfamily void class\+File\+::clear\+Class\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+clears the list of classes 
+
+clears the current Q\+String\+List of classes to be rewritten 
+
+Definition at line 42 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a8a01daae03eba240985d737465a516b3}\label{classclass_file_a8a01daae03eba240985d737465a516b3}} 
+\index{classFile@{classFile}!getClasses@{getClasses}}
+\index{getClasses@{getClasses}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{getClasses()}{getClasses()}}
+{\footnotesize\ttfamily Q\+String\+List class\+File\+::get\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+returns the list of classes in loaded class file 
+
+
+
+Definition at line 34 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a608fca7344bf95ac899d4dd1a2476ddf}\label{classclass_file_a608fca7344bf95ac899d4dd1a2476ddf}} 
+\index{classFile@{classFile}!getCurrentClassFilePath@{getCurrentClassFilePath}}
+\index{getCurrentClassFilePath@{getCurrentClassFilePath}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{getCurrentClassFilePath()}{getCurrentClassFilePath()}}
+{\footnotesize\ttfamily Q\+Url class\+File\+::get\+Current\+Class\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+returns the full file path of the class file 
+
+returns the full file path of the class file that is currently in use 
+
+Definition at line 77 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a066742982c131f52560afacd0cfcd3e3}\label{classclass_file_a066742982c131f52560afacd0cfcd3e3}} 
+\index{classFile@{classFile}!readClassFile@{readClassFile}}
+\index{readClassFile@{readClassFile}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{readClassFile()}{readClassFile()}}
+{\footnotesize\ttfamily Q\+String\+List class\+File\+::read\+Class\+File (\begin{DoxyParamCaption}\item[{Q\+Url}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+reads the class file selected 
+
+reads the class file selected by the user by reading each line individually and appending it to a Q\+String\+List 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & is the full path to the selected class file that is being read \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}\label{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}} 
+\index{classFile@{classFile}!removeClass@{removeClass}}
+\index{removeClass@{removeClass}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{removeClass()}{removeClass()}}
+{\footnotesize\ttfamily void class\+File\+::remove\+Class (\begin{DoxyParamCaption}\item[{Q\+String}]{selected\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+removes a class from the class file in use 
+
+removes all instances of a class name entered from the class Q\+String\+List and then rewrites the the file with the new Q\+String\+List 
+\begin{DoxyParams}{Parameters}
+{\em selected\+Class} & is the class name selected to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}\label{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}} 
+\index{classFile@{classFile}!setClasses@{setClasses}}
+\index{setClasses@{setClasses}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{setClasses()}{setClasses()}}
+{\footnotesize\ttfamily void class\+File\+::set\+Classes (\begin{DoxyParamCaption}\item[{Q\+String\+List}]{classes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+sets the list of classes 
+
+sets the Q\+String\+List of classes that will be displayed in the class list widget and will be saved to the file 
+\begin{DoxyParams}{Parameters}
+{\em classes} & is the new list of classes to be set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file classfile.\+cpp.
+
+\mbox{\Hypertarget{classclass_file_acaa61fac9a1e77cab6f0d1484496196c}\label{classclass_file_acaa61fac9a1e77cab6f0d1484496196c}} 
+\index{classFile@{classFile}!setCurrentClassFilePath@{setCurrentClassFilePath}}
+\index{setCurrentClassFilePath@{setCurrentClassFilePath}!classFile@{classFile}}
+\doxysubsubsection{\texorpdfstring{setCurrentClassFilePath()}{setCurrentClassFilePath()}}
+{\footnotesize\ttfamily void class\+File\+::set\+Current\+Class\+File\+Path (\begin{DoxyParamCaption}\item[{Q\+Url}]{class\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+sets the full file path of the class file to be loaded 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+File\+Path} & is the full file path of the class file to be loaded \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file classfile.\+cpp.
+

@@ -21,7 +21,7 @@
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-///This class handles all GUI components
+///This class handles all GUI components for the main window
 ///
 ///This class initialises the main window and handles all signals sent from the GUI. It also handles loading the image file through openCV.
 class MainWindow : public QMainWindow
@@ -29,6 +29,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    ///Initialises the main windows GUI by building the UI elements
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -67,13 +68,28 @@ private slots:
     ///Gets the path based on what is entered into the image file box either by being manually typed by the user or automatically filled when selecting a folder through the file explorer
     std::string getImageFilePath();
 
+    ///Loads the class file selected by the user
+    ///
+    ///Opens a file dialog for the user to select a *.names file on their pc and then clears the class list and loads the new one. It also sets the class list file path box to the full file path of the file loaded
     void on_classesFileExplorerButton_clicked();
 
+    ///Updates thes class file list
+    ///
+    ///Updates the class list to show new/removed class names or to show an entirely new list of classes from a newly loaded file
     void updateClassFileList();
 
+    ///opens the class manager dialog
+    ///
+    ///Updates the class list and file path box when the dialog is closed
     void on_manageClassesButton_clicked();
 
+    ///opens the class list creator dialog
+    ///
+    ///loads the new class file when closed
     void on_newClassListButton_clicked();
+
+    ///Detects when the user selects a new sort mode and applies that sort (not finished)
+    void on_imageFileListSortBox_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;
