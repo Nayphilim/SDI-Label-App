@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 
-using namespace cv;
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -20,11 +19,10 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::DisplayImage(std::string imageFileName){
-    Mat img;
     std::string imageFilePath = getImageFilePath();
-    img = imread(imageFilePath + "/" + imageFileName);
-    QImage imageDisplay((uchar*)img.data, img.cols, img.rows, img.step, QImage::Format_BGR888);
-    ui->imageView->setPixmap(QPixmap::fromImage(imageDisplay));
+    QString imagePath = QString::fromStdString(imageFilePath + "/" + imageFileName);
+    QPixmap image(imagePath);
+    ui->imageView->setPixmap(image);
 }
 
 

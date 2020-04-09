@@ -13,10 +13,8 @@
 #include<QString>
 #include<QMessageBox>
 #include<QDir>
+#include<QPixmap>
 
-#include<opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
