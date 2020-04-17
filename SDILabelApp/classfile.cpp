@@ -103,3 +103,23 @@ classFile::classFile()
  void classFile::setCurrentClassFilePath(QUrl classFilePath){
      CurrentClassFilePath = classFilePath;
  }
+
+ void classFile::sortAlphabetically(){
+    QStringList classes = Classes;
+    std::sort(classes.begin(), classes.end(), AlphabeticComparison);
+    Classes = classes;
+ }
+
+ void classFile::sortReversedAlphabetically(){
+    QStringList classes = Classes;
+    std::sort(classes.begin(), classes.end(), ReversedAlphabeticComparison);
+    Classes = classes;
+ }
+
+ bool classFile::AlphabeticComparison(QString a, QString b){
+     return a<b;
+ }
+
+ bool classFile::ReversedAlphabeticComparison(QString a, QString b){
+     return b<a;
+ }

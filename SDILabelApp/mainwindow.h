@@ -89,6 +89,19 @@ private slots:
     ///Detects when the user selects a new sort mode and applies that sort (not finished)
     void on_imageFileListSortBox_currentIndexChanged(int index);
 
+    void sortAlphabetically(QDir directory);
+
+    void sortReversedAlphabetically(QDir directory);
+
+    void sortNewest(QDir directory);
+
+    void sortOldest(QDir directory);
+
+    QDir getImageFileDirectory();
+
+
+    void on_classFileSortBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
 };

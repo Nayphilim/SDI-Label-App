@@ -100,5 +100,66 @@ void MainWindow::on_newClassListButton_clicked()
 void MainWindow::on_imageFileListSortBox_currentIndexChanged(int index)
 {
     //activate sort algorithm that is chosen
-    //change order of list by changing the index of each item.
+    QDir directory = getImageFileDirectory();
+    switch(index){
+    case 0:
+        sortAlphabetically(directory);
+        break;
+    case 1:
+        sortReversedAlphabetically(directory);
+        break;
+    case 2:
+        sortNewest(directory);
+        break;
+    case 3:
+        sortOldest(directory);
+        break;
+
+}
+}
+
+QDir MainWindow::getImageFileDirectory(){
+    QDir directory(ui->ImagesFilePathBox->text());
+    return directory;
+}
+
+void MainWindow::sortAlphabetically(QDir directory){
+    QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files, QDir::Name);
+    ui->ImagesFileList->clear();
+    ui->ImagesFileList->addItems(images);
+}
+
+void MainWindow::sortReversedAlphabetically(QDir directory){
+    QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files, QDir::Name | QDir::Reversed);
+    ui->ImagesFileList->clear();
+    ui->ImagesFileList->addItems(images);
+}
+
+void MainWindow::sortNewest(QDir directory){
+    QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files, QDir::Time);
+    ui->ImagesFileList->clear();
+    ui->ImagesFileList->addItems(images);
+}
+
+void MainWindow::sortOldest(QDir directory){
+    QStringList images = directory.entryList(QStringList() << "*.jpg" << "*.png" << "*.JPG" << "*.PNG", QDir::Files, QDir::Time | QDir::Reversed);
+    ui->ImagesFileList->clear();
+    ui->ImagesFileList->addItems(images);
+}
+
+void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
+{
+    switch(index){
+    case 0:
+        classFile::sortAlphabetically();
+        ui->classesFileList->clear();
+        ui->classesFileList->addItems(classFile::getClasses());
+        break;
+
+    case 1:
+        classFile::sortReversedAlphabetically();
+        ui->classesFileList->clear();
+        ui->classesFileList->addItems(classFile::getClasses());
+        break;
+}
 }

@@ -60,11 +60,12 @@ public:
     QPushButton *annotationSaveButton;
     QGroupBox *classesGroupBox;
     QGridLayout *gridLayout_4;
-    QPushButton *classesFileExplorerButton;
     QLineEdit *classesFilePathBox;
-    QListWidget *classesFileList;
-    QPushButton *manageClassesButton;
     QPushButton *newClassListButton;
+    QPushButton *classesFileExplorerButton;
+    QPushButton *manageClassesButton;
+    QComboBox *classFileSortBox;
+    QListWidget *classesFileList;
     QGroupBox *imagesGroupBox;
     QGridLayout *gridLayout_3;
     QLineEdit *ImagesFilePathBox;
@@ -161,7 +162,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1438, 1000));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1434, 1000));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         imageView = new QLabel(scrollAreaWidgetContents_2);
@@ -223,31 +224,38 @@ public:
         classesGroupBox->setObjectName(QString::fromUtf8("classesGroupBox"));
         gridLayout_4 = new QGridLayout(classesGroupBox);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        classesFileExplorerButton = new QPushButton(classesGroupBox);
-        classesFileExplorerButton->setObjectName(QString::fromUtf8("classesFileExplorerButton"));
-
-        gridLayout_4->addWidget(classesFileExplorerButton, 0, 1, 1, 1);
-
         classesFilePathBox = new QLineEdit(classesGroupBox);
         classesFilePathBox->setObjectName(QString::fromUtf8("classesFilePathBox"));
 
         gridLayout_4->addWidget(classesFilePathBox, 0, 0, 1, 1);
 
-        classesFileList = new QListWidget(classesGroupBox);
-        classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
-        classesFileList->setSortingEnabled(false);
+        newClassListButton = new QPushButton(classesGroupBox);
+        newClassListButton->setObjectName(QString::fromUtf8("newClassListButton"));
 
-        gridLayout_4->addWidget(classesFileList, 1, 0, 1, 2);
+        gridLayout_4->addWidget(newClassListButton, 2, 0, 1, 1);
+
+        classesFileExplorerButton = new QPushButton(classesGroupBox);
+        classesFileExplorerButton->setObjectName(QString::fromUtf8("classesFileExplorerButton"));
+
+        gridLayout_4->addWidget(classesFileExplorerButton, 0, 1, 1, 1);
 
         manageClassesButton = new QPushButton(classesGroupBox);
         manageClassesButton->setObjectName(QString::fromUtf8("manageClassesButton"));
 
         gridLayout_4->addWidget(manageClassesButton, 2, 1, 1, 1);
 
-        newClassListButton = new QPushButton(classesGroupBox);
-        newClassListButton->setObjectName(QString::fromUtf8("newClassListButton"));
+        classFileSortBox = new QComboBox(classesGroupBox);
+        classFileSortBox->addItem(QString());
+        classFileSortBox->addItem(QString());
+        classFileSortBox->setObjectName(QString::fromUtf8("classFileSortBox"));
 
-        gridLayout_4->addWidget(newClassListButton, 2, 0, 1, 1);
+        gridLayout_4->addWidget(classFileSortBox, 0, 2, 1, 1);
+
+        classesFileList = new QListWidget(classesGroupBox);
+        classesFileList->setObjectName(QString::fromUtf8("classesFileList"));
+        classesFileList->setSortingEnabled(false);
+
+        gridLayout_4->addWidget(classesFileList, 1, 0, 1, 3);
 
 
         gridLayout_5->addWidget(classesGroupBox, 1, 0, 1, 1);
@@ -337,10 +345,13 @@ public:
         annotationFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         annotationSaveButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
         classesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Classes", nullptr));
-        classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         classesFilePathBox->setText(QString());
-        manageClassesButton->setText(QCoreApplication::translate("MainWindow", "Manage Classes", nullptr));
         newClassListButton->setText(QCoreApplication::translate("MainWindow", "Create New Class List", nullptr));
+        classesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        manageClassesButton->setText(QCoreApplication::translate("MainWindow", "Manage Classes", nullptr));
+        classFileSortBox->setItemText(0, QCoreApplication::translate("MainWindow", "A-Z", nullptr));
+        classFileSortBox->setItemText(1, QCoreApplication::translate("MainWindow", "Z-A", nullptr));
+
         imagesGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Images", nullptr));
         ImagesFilePathBox->setText(QString());
         ImagesFileExplorerButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
