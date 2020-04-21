@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -37,19 +38,21 @@ public:
     QGridLayout *gridLayout_8;
     QGroupBox *leftMenuGroupBox;
     QGridLayout *gridLayout_6;
-    QGroupBox *toolGroupBox;
-    QVBoxLayout *verticalLayout_2;
-    QPushButton *triangleToolButton;
-    QPushButton *squareToolButton;
-    QPushButton *trapeziumToolButton;
-    QPushButton *polygonToolButton;
     QGroupBox *zoomGroupBox;
     QGridLayout *gridLayout;
     QSlider *zoomSlider;
+    QGroupBox *toolGroupBox;
+    QVBoxLayout *verticalLayout_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_5;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents_2;
     QGridLayout *gridLayout_2;
     QLabel *imageView;
+    QGraphicsView *graphicsView;
     QGroupBox *rightMenuGroupBox;
     QGridLayout *gridLayout_5;
     QGroupBox *annotationsGroupBox;
@@ -92,55 +95,13 @@ public:
         leftMenuGroupBox->setAutoFillBackground(true);
         gridLayout_6 = new QGridLayout(leftMenuGroupBox);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
-        toolGroupBox = new QGroupBox(leftMenuGroupBox);
-        toolGroupBox->setObjectName(QString::fromUtf8("toolGroupBox"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(toolGroupBox->sizePolicy().hasHeightForWidth());
-        toolGroupBox->setSizePolicy(sizePolicy);
-        toolGroupBox->setAutoFillBackground(true);
-        toolGroupBox->setCheckable(false);
-        verticalLayout_2 = new QVBoxLayout(toolGroupBox);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        triangleToolButton = new QPushButton(toolGroupBox);
-        triangleToolButton->setObjectName(QString::fromUtf8("triangleToolButton"));
-        triangleToolButton->setMinimumSize(QSize(75, 75));
-        triangleToolButton->setCheckable(true);
-
-        verticalLayout_2->addWidget(triangleToolButton);
-
-        squareToolButton = new QPushButton(toolGroupBox);
-        squareToolButton->setObjectName(QString::fromUtf8("squareToolButton"));
-        squareToolButton->setMinimumSize(QSize(75, 75));
-        squareToolButton->setCheckable(true);
-
-        verticalLayout_2->addWidget(squareToolButton);
-
-        trapeziumToolButton = new QPushButton(toolGroupBox);
-        trapeziumToolButton->setObjectName(QString::fromUtf8("trapeziumToolButton"));
-        trapeziumToolButton->setMinimumSize(QSize(75, 75));
-        trapeziumToolButton->setCheckable(true);
-
-        verticalLayout_2->addWidget(trapeziumToolButton);
-
-        polygonToolButton = new QPushButton(toolGroupBox);
-        polygonToolButton->setObjectName(QString::fromUtf8("polygonToolButton"));
-        polygonToolButton->setMinimumSize(QSize(75, 75));
-        polygonToolButton->setCheckable(true);
-
-        verticalLayout_2->addWidget(polygonToolButton);
-
-
-        gridLayout_6->addWidget(toolGroupBox, 0, 0, 1, 1);
-
         zoomGroupBox = new QGroupBox(leftMenuGroupBox);
         zoomGroupBox->setObjectName(QString::fromUtf8("zoomGroupBox"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(zoomGroupBox->sizePolicy().hasHeightForWidth());
-        zoomGroupBox->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(zoomGroupBox->sizePolicy().hasHeightForWidth());
+        zoomGroupBox->setSizePolicy(sizePolicy);
         zoomGroupBox->setMinimumSize(QSize(0, 300));
         gridLayout = new QGridLayout(zoomGroupBox);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -153,6 +114,45 @@ public:
 
         gridLayout_6->addWidget(zoomGroupBox, 1, 0, 1, 1);
 
+        toolGroupBox = new QGroupBox(leftMenuGroupBox);
+        toolGroupBox->setObjectName(QString::fromUtf8("toolGroupBox"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(toolGroupBox->sizePolicy().hasHeightForWidth());
+        toolGroupBox->setSizePolicy(sizePolicy1);
+        toolGroupBox->setAutoFillBackground(true);
+        toolGroupBox->setCheckable(false);
+        verticalLayout_2 = new QVBoxLayout(toolGroupBox);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        pushButton_3 = new QPushButton(toolGroupBox);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        verticalLayout_2->addWidget(pushButton_3);
+
+        pushButton = new QPushButton(toolGroupBox);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        verticalLayout_2->addWidget(pushButton);
+
+        pushButton_4 = new QPushButton(toolGroupBox);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        verticalLayout_2->addWidget(pushButton_4);
+
+        pushButton_6 = new QPushButton(toolGroupBox);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        verticalLayout_2->addWidget(pushButton_6);
+
+        pushButton_5 = new QPushButton(toolGroupBox);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+
+        verticalLayout_2->addWidget(pushButton_5);
+
+
+        gridLayout_6->addWidget(toolGroupBox, 0, 0, 1, 1);
+
 
         gridLayout_8->addWidget(leftMenuGroupBox, 0, 0, 2, 1);
 
@@ -162,13 +162,18 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1434, 1000));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1442, 1000));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         imageView = new QLabel(scrollAreaWidgetContents_2);
         imageView->setObjectName(QString::fromUtf8("imageView"));
 
-        gridLayout_2->addWidget(imageView, 0, 0, 1, 1);
+        gridLayout_2->addWidget(imageView, 1, 0, 1, 1);
+
+        graphicsView = new QGraphicsView(scrollAreaWidgetContents_2);
+        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
+
+        gridLayout_2->addWidget(graphicsView, 0, 0, 1, 1);
 
         scrollArea->setWidget(scrollAreaWidgetContents_2);
 
@@ -176,8 +181,8 @@ public:
 
         rightMenuGroupBox = new QGroupBox(centralwidget);
         rightMenuGroupBox->setObjectName(QString::fromUtf8("rightMenuGroupBox"));
-        sizePolicy.setHeightForWidth(rightMenuGroupBox->sizePolicy().hasHeightForWidth());
-        rightMenuGroupBox->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(rightMenuGroupBox->sizePolicy().hasHeightForWidth());
+        rightMenuGroupBox->setSizePolicy(sizePolicy1);
         rightMenuGroupBox->setAutoFillBackground(true);
         gridLayout_5 = new QGridLayout(rightMenuGroupBox);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
@@ -202,8 +207,8 @@ public:
 
         annotationFileExplorerButton = new QPushButton(annotationsGroupBox);
         annotationFileExplorerButton->setObjectName(QString::fromUtf8("annotationFileExplorerButton"));
-        sizePolicy1.setHeightForWidth(annotationFileExplorerButton->sizePolicy().hasHeightForWidth());
-        annotationFileExplorerButton->setSizePolicy(sizePolicy1);
+        sizePolicy.setHeightForWidth(annotationFileExplorerButton->sizePolicy().hasHeightForWidth());
+        annotationFileExplorerButton->setSizePolicy(sizePolicy);
 
         gridLayout_7->addWidget(annotationFileExplorerButton, 1, 1, 1, 1);
 
@@ -332,12 +337,13 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         leftMenuGroupBox->setTitle(QString());
-        toolGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Tools", nullptr));
-        triangleToolButton->setText(QCoreApplication::translate("MainWindow", "Triangle", nullptr));
-        squareToolButton->setText(QCoreApplication::translate("MainWindow", "Square", nullptr));
-        trapeziumToolButton->setText(QCoreApplication::translate("MainWindow", "Trapezium", nullptr));
-        polygonToolButton->setText(QCoreApplication::translate("MainWindow", "Polygon", nullptr));
         zoomGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Zoom", nullptr));
+        toolGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Tools", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Triangle", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Square", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Trapezium", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Increase Scale", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "Polygon", nullptr));
         imageView->setText(QString());
         rightMenuGroupBox->setTitle(QString());
         annotationsGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Annotations", nullptr));

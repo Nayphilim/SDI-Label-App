@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../SDILabelApp/mainwindow.h"
+#include "../../../Year 2 SDI/SDI-Label-App-master/SDILabelApp/mainwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[26];
-    char stringdata0[499];
+    QByteArrayData data[30];
+    char stringdata0[593];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -57,7 +57,11 @@ QT_MOC_LITERAL(21, 388, 26), // "sortReversedAlphabetically"
 QT_MOC_LITERAL(22, 415, 10), // "sortNewest"
 QT_MOC_LITERAL(23, 426, 10), // "sortOldest"
 QT_MOC_LITERAL(24, 437, 21), // "getImageFileDirectory"
-QT_MOC_LITERAL(25, 459, 39) // "on_classFileSortBox_currentIn..."
+QT_MOC_LITERAL(25, 459, 39), // "on_classFileSortBox_currentIn..."
+QT_MOC_LITERAL(26, 499, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(27, 521, 23), // "on_pushButton_3_clicked"
+QT_MOC_LITERAL(28, 545, 23), // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(29, 569, 23) // "on_pushButton_6_clicked"
 
     },
     "MainWindow\0on_ImagesFileExplorerButton_clicked\0"
@@ -72,7 +76,9 @@ QT_MOC_LITERAL(25, 459, 39) // "on_classFileSortBox_currentIn..."
     "index\0sortAlphabetically\0QDir\0directory\0"
     "sortReversedAlphabetically\0sortNewest\0"
     "sortOldest\0getImageFileDirectory\0"
-    "on_classFileSortBox_currentIndexChanged"
+    "on_classFileSortBox_currentIndexChanged\0"
+    "on_pushButton_clicked\0on_pushButton_3_clicked\0"
+    "on_pushButton_4_clicked\0on_pushButton_6_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,7 +88,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      20,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -90,22 +96,26 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   94,    2, 0x08 /* Private */,
-       3,    1,   95,    2, 0x08 /* Private */,
-       5,    1,   98,    2, 0x08 /* Private */,
-       8,    1,  101,    2, 0x08 /* Private */,
-      11,    0,  104,    2, 0x08 /* Private */,
-      12,    0,  105,    2, 0x08 /* Private */,
-      13,    0,  106,    2, 0x08 /* Private */,
-      14,    0,  107,    2, 0x08 /* Private */,
-      15,    0,  108,    2, 0x08 /* Private */,
-      16,    1,  109,    2, 0x08 /* Private */,
-      18,    1,  112,    2, 0x08 /* Private */,
-      21,    1,  115,    2, 0x08 /* Private */,
-      22,    1,  118,    2, 0x08 /* Private */,
-      23,    1,  121,    2, 0x08 /* Private */,
-      24,    0,  124,    2, 0x08 /* Private */,
-      25,    1,  125,    2, 0x08 /* Private */,
+       1,    0,  114,    2, 0x08 /* Private */,
+       3,    1,  115,    2, 0x08 /* Private */,
+       5,    1,  118,    2, 0x08 /* Private */,
+       8,    1,  121,    2, 0x08 /* Private */,
+      11,    0,  124,    2, 0x08 /* Private */,
+      12,    0,  125,    2, 0x08 /* Private */,
+      13,    0,  126,    2, 0x08 /* Private */,
+      14,    0,  127,    2, 0x08 /* Private */,
+      15,    0,  128,    2, 0x08 /* Private */,
+      16,    1,  129,    2, 0x08 /* Private */,
+      18,    1,  132,    2, 0x08 /* Private */,
+      21,    1,  135,    2, 0x08 /* Private */,
+      22,    1,  138,    2, 0x08 /* Private */,
+      23,    1,  141,    2, 0x08 /* Private */,
+      24,    0,  144,    2, 0x08 /* Private */,
+      25,    1,  145,    2, 0x08 /* Private */,
+      26,    0,  148,    2, 0x08 /* Private */,
+      27,    0,  149,    2, 0x08 /* Private */,
+      28,    0,  150,    2, 0x08 /* Private */,
+      29,    0,  151,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -124,6 +134,10 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 19,   20,
     0x80000000 | 19,
     QMetaType::Void, QMetaType::Int,   17,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -152,6 +166,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 14: { QDir _r = _t->getImageFileDirectory();
             if (_a[0]) *reinterpret_cast< QDir*>(_a[0]) = std::move(_r); }  break;
         case 15: _t->on_classFileSortBox_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->on_pushButton_clicked(); break;
+        case 17: _t->on_pushButton_3_clicked(); break;
+        case 18: _t->on_pushButton_4_clicked(); break;
+        case 19: _t->on_pushButton_6_clicked(); break;
         default: ;
         }
     }
@@ -186,13 +204,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 20)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 16;
+        _id -= 20;
     }
     return _id;
 }

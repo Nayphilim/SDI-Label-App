@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../SDILabelApp/classlistcreator.h"
+#include "../../../Year 2 SDI/SDI-Label-App-master/SDILabelApp/classlistcreator.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

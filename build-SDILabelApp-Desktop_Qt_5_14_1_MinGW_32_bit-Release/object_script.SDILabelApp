@@ -1,0 +1,10 @@
+classfile.o
+classlistcreator.o
+classmanagement.o
+main.o
+mainwindow.o
+trapezium.o
+triangle.o
+moc_classlistcreator.o
+moc_classmanagement.o
+moc_mainwindow.o

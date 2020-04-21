@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../SDILabelApp/classmanagement.h"
+#include "../../../Year 2 SDI/SDI-Label-App-master/SDILabelApp/classmanagement.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
