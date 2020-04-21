@@ -16,6 +16,16 @@
 #include<QPixmap>
 
 
+#include <QtCore>
+#include <QtGui>
+#include <QGraphicsItem>
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include<QKeyEvent>
+#include "triangle.h"
+#include "trapezium.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -30,6 +40,12 @@ public:
     ///Initialises the main windows GUI by building the UI elements
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    bool Re;
+    bool Tr;
+    bool Tra;
+    int i = 2;
+
+
 
 private:
 public slots:
@@ -99,10 +115,27 @@ private slots:
 
     QDir getImageFileDirectory();
 
-
     void on_classFileSortBox_currentIndexChanged(int index);
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_6_clicked();
+
 
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *scene;
+    QGraphicsRectItem *rectangle;
+    Triangle *triangle;
+    Trapezium *trapezium;
+
+protected:
+    void keyPressEvent(QKeyEvent*);
 };
+
+
 #endif // MAINWINDOW_H

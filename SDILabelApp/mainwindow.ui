@@ -24,91 +24,6 @@
        <string/>
       </property>
       <layout class="QGridLayout" name="gridLayout_6">
-       <item row="0" column="0">
-        <widget class="QGroupBox" name="toolGroupBox">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="autoFillBackground">
-          <bool>true</bool>
-         </property>
-         <property name="title">
-          <string>Tools</string>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QPushButton" name="triangleToolButton">
-            <property name="minimumSize">
-             <size>
-              <width>75</width>
-              <height>75</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Triangle</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="squareToolButton">
-            <property name="minimumSize">
-             <size>
-              <width>75</width>
-              <height>75</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Square</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="trapeziumToolButton">
-            <property name="minimumSize">
-             <size>
-              <width>75</width>
-              <height>75</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Trapezium</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="polygonToolButton">
-            <property name="minimumSize">
-             <size>
-              <width>75</width>
-              <height>75</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Polygon</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QGroupBox" name="zoomGroupBox">
          <property name="sizePolicy">
@@ -137,6 +52,62 @@
          </layout>
         </widget>
        </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="toolGroupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="title">
+          <string>Tools</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>Triangle</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Square</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string>Trapezium</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="text">
+             <string>Increase Scale</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="text">
+             <string>Polygon</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -153,17 +124,20 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1434</width>
+         <width>1442</width>
          <height>1000</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
+        <item row="1" column="0">
          <widget class="QLabel" name="imageView">
           <property name="text">
            <string/>
           </property>
          </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="graphicsView"/>
         </item>
        </layout>
       </widget>
@@ -402,11 +376,11 @@
    <slot>copy()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1854</x>
-     <y>78</y>
+     <x>1822</x>
+     <y>85</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1803</x>
+     <x>1735</x>
      <y>83</y>
     </hint>
    </hints>
@@ -418,7 +392,7 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1803</x>
+     <x>1735</x>
      <y>83</y>
     </hint>
     <hint type="destinationlabel">
@@ -434,12 +408,12 @@
    <slot>copy()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1860</x>
-     <y>525</y>
+     <x>1841</x>
+     <y>534</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1776</x>
-     <y>527</y>
+     <x>1750</x>
+     <y>532</y>
     </hint>
    </hints>
   </connection>
@@ -450,8 +424,8 @@
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1875</x>
-     <y>527</y>
+     <x>1841</x>
+     <y>534</y>
     </hint>
     <hint type="destinationlabel">
      <x>1869</x>

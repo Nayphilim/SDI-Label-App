@@ -22,13 +22,17 @@ SOURCES += \
     classlistcreator.cpp \
     classmanagement.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    trapezium.cpp \
+    triangle.cpp
 
 HEADERS += \
     classfile.h \
     classlistcreator.h \
     classmanagement.h \
-    mainwindow.h
+    mainwindow.h \
+    trapezium.h \
+    triangle.h
 
 FORMS += \
     classlistcreator.ui \
