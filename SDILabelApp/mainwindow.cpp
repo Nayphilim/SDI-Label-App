@@ -17,17 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
 
-
-
-
-//void MainWindow::DisplayImage(std::string imageFileName){
-//    std::string imageFilePath = getImageFilePath();
-//    QString imagePath = QString::fromStdString(imageFilePath + "/" + imageFileName);
-//    QPixmap image(imagePath);
-//    ui->imageView->setPixmap(image);
-//}
 
 void MainWindow::DisplayImage(std::string imageFileName){
     scene = new QGraphicsScene(this);
@@ -85,6 +77,7 @@ void MainWindow::updateClassFileList(){
     ui->classesFileList->clear();
     ui->classesFilePathBox->setText(classFile::getCurrentClassFilePath().toEncoded());
     ui->classesFileList->addItems(classFile::getClasses());
+    ui->classesFileList->setDragEnabled(true);
 }
 
 void MainWindow::on_manageClassesButton_clicked()
@@ -179,25 +172,15 @@ void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
 
 void MainWindow::on_pushButton_clicked()
 {
-    QPen blackpen(Qt::red);
-    blackpen.setWidth(4);
-
-    rectangle = scene->addRect(0,0,100,100,blackpen);
-    rectangle->setFlag(QGraphicsItem::ItemIsMovable);
-    rectangle->setFlag(QGraphicsItem::ItemSendsGeometryChanges);
-    Re = true;
-    Tr = false;
-    Tra = false;
+    square = new Square;
+    scene->addItem(square);
     i = 1;
-
+    
 }
 void MainWindow::on_pushButton_3_clicked()
 {
     triangle = new Triangle;
     scene->addItem(triangle);
-    Re = false;
-    Tr = true;
-    Tra = false;
     i = 1;
 }
 
@@ -205,53 +188,41 @@ void MainWindow::on_pushButton_4_clicked()
 {
     trapezium = new Trapezium;
     scene->addItem(trapezium);
-    Re = false;
-    Tr = false;
-    Tra = true;
     i = 1;
 }
 
+
+
 void MainWindow::on_pushButton_6_clicked()
 {
-    if(i < 6)
+    foreach(QGraphicsItem * item, scene->selectedItems())
     {
-        i++;
-    }
-    else
-    {
-        i = 1;
-    }
-
-    if(Re)
-    {
-    rectangle->setScale(i);
-    }
-    if(Tr)
-    {
-    triangle->setScale(i);
-    }
-    if(Tra)
-    {
-    trapezium->setScale(i);
+        if(i < 6)
+        {
+            i++;
+        }
+        else
+        {
+            i = 1;
+        }
+        item->setScale(i);
     }
 }
+
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Delete){
-        if(Re)
+        foreach(QGraphicsItem * item, scene->selectedItems())
         {
-        scene->removeItem(rectangle);
-        }
-        if(Tr)
-        {
-        scene->removeItem(triangle);
-        }
-        if(Tra)
-        {
-        scene->removeItem(trapezium);
+            scene->removeItem(item);
+            delete item;
         }
     }
+
     QMainWindow::keyPressEvent(event);
 }
+
+
+
 

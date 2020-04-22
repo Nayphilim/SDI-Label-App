@@ -19,12 +19,15 @@
 #include <QtCore>
 #include <QtGui>
 #include <QGraphicsItem>
+#include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
-#include<QKeyEvent>
+#include <QKeyEvent>
 #include "triangle.h"
 #include "trapezium.h"
-
+#include "square.h"
+#include <QGraphicsView>
+#include <QListWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,9 +43,7 @@ public:
     ///Initialises the main windows GUI by building the UI elements
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    bool Re;
-    bool Tr;
-    bool Tra;
+
     int i = 2;
 
 
@@ -126,12 +127,14 @@ private slots:
     void on_pushButton_6_clicked();
 
 
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
-    QGraphicsRectItem *rectangle;
     Triangle *triangle;
     Trapezium *trapezium;
+    Square *square;
+
 
 protected:
     void keyPressEvent(QKeyEvent*);
