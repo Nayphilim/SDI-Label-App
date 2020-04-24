@@ -24,9 +24,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
 #include <QKeyEvent>
-#include "triangle.h"
-#include "trapezium.h"
-#include "square.h"
+#include "shape.h"
 #include <QGraphicsView>
 #include <QListWidget>
 
@@ -132,9 +130,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
-    Triangle *triangle;
-    Trapezium *trapezium;
-    Square *square;
+    Shape *shape;
 
 
 protected:

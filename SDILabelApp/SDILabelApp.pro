@@ -23,9 +23,7 @@ SOURCES += \
     classmanagement.cpp \
     main.cpp \
     mainwindow.cpp \
-    square.cpp \
-    trapezium.cpp \
-    triangle.cpp \
+    shape.cpp \
     linkedList.cpp
 
 HEADERS += \
@@ -33,9 +31,7 @@ HEADERS += \
     classlistcreator.h \
     classmanagement.h \
     mainwindow.h \
-    square.h \
-    trapezium.h \
-    triangle.h \
+    shape.h \
     linkedList.h
 
 FORMS += \
