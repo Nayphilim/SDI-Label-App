@@ -7,11 +7,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
+
     ui->setupUi(this);
     showMaximized();
     scene = new QGraphicsScene(this);
     ui->graphicsView->setScene(scene);
-
 }
 
 MainWindow::~MainWindow()
@@ -76,7 +76,11 @@ void MainWindow::updateClassFileList(){
     ui->classesFilePathBox->clear();
     ui->classesFileList->clear();
     ui->classesFilePathBox->setText(classFile::getCurrentClassFilePath().toEncoded());
-    ui->classesFileList->addItems(classFile::getClasses());
+    linkedList classes = classFile::getClasses();
+    for(int i=0; i<classes.size();i++){
+    ui->classesFileList->addItem(classes.getDataAtPos(i));
+    }
+
     ui->classesFileList->setDragEnabled(true);
 }
 
@@ -155,17 +159,34 @@ void MainWindow::sortOldest(QDir directory){
 
 void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
 {
+    linkedList classes = classFile::getClasses();
     switch(index){
     case 0:
-        classFile::sortAlphabetically();
         ui->classesFileList->clear();
-        ui->classesFileList->addItems(classFile::getClasses());
+        for(int i=0;i<classes.size()-1;i++){
+            for(int j=0;j<classes.size()-i-1;j++){
+                if(classes.getDataAtPos(j) > classes.getDataAtPos(j+1)){
+                    classes.swap(j,j+1);
+                }
+        }
+        }
+        for(int i=0; i<classes.size();i++){
+        ui->classesFileList->addItem(classes.getDataAtPos(i));
+        }
         break;
 
     case 1:
-        classFile::sortReversedAlphabetically();
         ui->classesFileList->clear();
-        ui->classesFileList->addItems(classFile::getClasses());
+        for(int i=0;i<classes.size()-1;i++){
+            for(int j=0;j<classes.size()-i-1;j++){
+                if(classes.getDataAtPos(j) < classes.getDataAtPos(j+1)){
+                    classes.swap(j,j+1);
+                }
+        }
+        }
+        for(int i=0; i<classes.size();i++){
+        ui->classesFileList->addItem(classes.getDataAtPos(i));
+        }
         break;
 }
 }

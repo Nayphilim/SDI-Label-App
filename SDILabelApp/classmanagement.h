@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "mainwindow.h"
 #include "classfile.h"
+#include "linkedList.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class classManagement; }

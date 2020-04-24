@@ -73,28 +73,68 @@
           <item>
            <widget class="QPushButton" name="pushButton_3">
             <property name="text">
-             <string>Triangle</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="res.qrc">
+              <normaloff>:/res/images/triangleTool.png</normaloff>:/res/images/triangleTool.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton">
             <property name="text">
-             <string>Square</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="res.qrc">
+              <normaloff>:/res/images/rectangleTool.png</normaloff>:/res/images/rectangleTool.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_4">
             <property name="text">
-             <string>Trapezium</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="res.qrc">
+              <normaloff>:/res/images/trapeziumTool.png</normaloff>:/res/images/trapeziumTool.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_6">
             <property name="text">
-             <string>Increase Scale</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="res.qrc">
+              <normaloff>:/res/images/scaleTool.png</normaloff>:/res/images/scaleTool.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -117,7 +157,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1442</width>
+         <width>1408</width>
          <height>1000</height>
         </rect>
        </property>
@@ -360,7 +400,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>ImagesFileExplorerButton</sender>

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>images/triangleTool.png</file>
+        <file>images/scaleTool.png</file>
+        <file>images/trapeziumTool.png</file>
+        <file>images/rectangleTool.png</file>
+    </qresource>
+</RCC>

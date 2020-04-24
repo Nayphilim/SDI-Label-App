@@ -25,7 +25,8 @@ SOURCES += \
     mainwindow.cpp \
     square.cpp \
     trapezium.cpp \
-    triangle.cpp
+    triangle.cpp \
+    linkedList.cpp
 
 HEADERS += \
     classfile.h \
@@ -34,7 +35,8 @@ HEADERS += \
     mainwindow.h \
     square.h \
     trapezium.h \
-    triangle.h
+    triangle.h \
+    linkedList.h
 
 FORMS += \
     classlistcreator.ui \
@@ -45,3 +47,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc

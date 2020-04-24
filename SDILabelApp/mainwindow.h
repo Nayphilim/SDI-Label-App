@@ -7,6 +7,7 @@
 #include "classfile.h"
 #include "classmanagement.h"
 #include "classlistcreator.h"
+#include "linkedList.h"
 
 #include<QTimer>
 #include<QFileDialog>

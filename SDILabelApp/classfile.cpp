@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-QStringList Classes;
+linkedList Classes;
 QUrl CurrentClassFilePath;
 
 classFile::classFile()
@@ -10,16 +10,16 @@ classFile::classFile()
 
 }
 
- QStringList classFile::readClassFile(QUrl filePath){
-    QStringList classes;
+ linkedList classFile::readClassFile(QUrl filePath){
+    linkedList classes;
     QFile file(filePath.toEncoded());
     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
         QTextStream stream(&file);
         while(!stream.atEnd()){
           QString text = stream.readLine();
           //if class already exists in class list do not append
-          if((classes.indexOf(QRegularExpression(text)) == -1) & text !=""){
-              classes.append(text);
+          if(!classes.contains(text) & !text.isEmpty()){
+              classes.createNode(text);
           }
 
         }
@@ -31,23 +31,23 @@ classFile::classFile()
 
 }
 
- QStringList classFile::getClasses(){
+ linkedList classFile::getClasses(){
      return Classes;
  }
 
- void classFile::setClasses(QStringList classes){
+ void classFile::setClasses(linkedList classes){
      Classes = classes;
  }
 
  void classFile::clearClassList(){
-     Classes.clear();
+     Classes.deleteList();
  }
 
  bool classFile::checkExisting(QString selectedClass){
-     if(Classes.indexOf(QRegularExpression(selectedClass)) == -1){
-         return false;
+     if(Classes.contains(selectedClass)){
+         return true;
      }
-     return true;
+     return false;
 
  }
 
@@ -63,7 +63,7 @@ classFile::classFile()
 
              }
              file.close();
-             Classes.append(selectedClass);
+             Classes.createNode(selectedClass);
          }
      }
      else{
@@ -83,15 +83,16 @@ classFile::classFile()
      return CurrentClassFilePath;
  }
 
- void classFile::removeClass(QString selectedClass){
+ void classFile::removeClass(int index){
      QUrl currentClassFilePath = getCurrentClassFilePath();
      if(currentClassFilePath.isValid()){
-         Classes.removeAll(selectedClass);
+         Classes.deletePosition(index);
          QFile file(currentClassFilePath.toEncoded());
          if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
              QTextStream stream(&file);
-             for(const auto& i : Classes){
-                 stream << i << endl;
+             for(int i = 0;i<Classes.size();i++){
+
+                 stream << Classes.getDataAtPos(i) << endl;
              }
 
          }
@@ -104,22 +105,4 @@ classFile::classFile()
      CurrentClassFilePath = classFilePath;
  }
 
- void classFile::sortAlphabetically(){
-    QStringList classes = Classes;
-    std::sort(classes.begin(), classes.end(), AlphabeticComparison);
-    Classes = classes;
- }
 
- void classFile::sortReversedAlphabetically(){
-    QStringList classes = Classes;
-    std::sort(classes.begin(), classes.end(), ReversedAlphabeticComparison);
-    Classes = classes;
- }
-
- bool classFile::AlphabeticComparison(QString a, QString b){
-     return a<b;
- }
-
- bool classFile::ReversedAlphabeticComparison(QString a, QString b){
-     return b<a;
- }
