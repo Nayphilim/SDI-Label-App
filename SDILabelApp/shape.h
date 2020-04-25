@@ -1,8 +1,9 @@
-#ifndef TRAPEZIUM_H
-#define TRAPEZIUM_H
+#ifndef SHAPE_H
+#define SHAPE_H
 
 #include <QPainter>
 #include <QGraphicsItem>
+#include <QGraphicsRectItem>
 #include <QGraphicsScene>
 #include <QtCore>
 #include <QPaintEvent>
@@ -12,10 +13,11 @@
 #include <QTextOption>
 
 
-class Trapezium : public QGraphicsItem
+
+class Shape : public QGraphicsItem
 {
 public:
-    Trapezium();
+    Shape(int shapeNum);
 
     QRectF boundingRect() const override;
     void dropEvent(QGraphicsSceneDragDropEvent *event) override;
@@ -25,6 +27,7 @@ public:
 
 private:
     QString m_text;
-
+    int shapeNum;
 };
-#endif // TRAPEZIUM_H
+
+#endif // SQUARE_H

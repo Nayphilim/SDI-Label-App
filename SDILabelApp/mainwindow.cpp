@@ -193,22 +193,22 @@ void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
 
 void MainWindow::on_pushButton_clicked()
 {
-    square = new Square;
-    scene->addItem(square);
+    shape = new Shape(1);
+    scene->addItem(shape);
     i = 1;
     
 }
 void MainWindow::on_pushButton_3_clicked()
 {
-    triangle = new Triangle;
-    scene->addItem(triangle);
+    shape = new Shape(3);
+    scene->addItem(shape);
     i = 1;
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    trapezium = new Trapezium;
-    scene->addItem(trapezium);
+    shape = new Shape(2);
+    scene->addItem(shape);
     i = 1;
 }
 
