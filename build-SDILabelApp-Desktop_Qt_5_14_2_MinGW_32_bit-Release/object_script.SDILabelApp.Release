@@ -3,9 +3,7 @@ release/classlistcreator.o
 release/classmanagement.o
 release/main.o
 release/mainwindow.o
-release/square.o
-release/trapezium.o
-release/triangle.o
+release/shape.o
 release/linkedList.o
 release/qrc_res.o
 release/moc_classlistcreator.o
