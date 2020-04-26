@@ -1,4 +1,3 @@
-release/autosavetimer.o
 release/classfile.o
 release/classlistcreator.o
 release/classmanagement.o
