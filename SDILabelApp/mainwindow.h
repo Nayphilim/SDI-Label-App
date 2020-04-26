@@ -145,7 +145,7 @@ private slots:
     ///detects when push button to create a square is pressed
     void on_pushButton_clicked();
 
-    ///detects when push button to create a triangle is pressed
+
 //    void writeJson();
 
     void readJson();
@@ -154,6 +154,7 @@ private slots:
 
     void on_annotationSaveButton_clicked();
 
+    ///detects when push button to create a triangle is pressed
     void on_pushButton_3_clicked();
 
     ///detects when push button to create a trapezium is pressed
