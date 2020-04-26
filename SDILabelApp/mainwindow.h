@@ -25,9 +25,11 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QKeyEvent>
 #include "shape.h"
+#include <json.hpp>
 #include <QGraphicsView>
 #include <QListWidget>
 
+using json = nlohmann::json;
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -42,8 +44,8 @@ public:
     ///Initialises the main windows GUI by building the UI elements
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-    int i = 2;
+    std::string imageFileName;
+    json annotation;
 
 
 
@@ -119,11 +121,21 @@ private slots:
 
     void on_pushButton_clicked();
 
+//    void writeJson();
+
+    void readJson();
+
+    void on_annotationFileExplorerButton_clicked();
+
+    void on_annotationSaveButton_clicked();
+
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
 
     void on_pushButton_6_clicked();
+
+    void saveJson();
 
 
 
