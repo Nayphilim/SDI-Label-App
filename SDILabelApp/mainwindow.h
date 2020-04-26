@@ -51,7 +51,9 @@ public:
 
 private:
 public slots:
+     void saveJson();
 
+     void showAutoSave();
 
 private slots:
 
@@ -162,7 +164,9 @@ private slots:
     ///detects when push button to scale a shape is pressed
     void on_pushButton_6_clicked();
 
-    void saveJson();
+
+
+
 
 
 

@@ -249,9 +249,10 @@ void MainWindow::saveJson()
     } catch (...) {
 
     }
+QString qAnnotationFilePath = ui->annotationFilePathBox->text();
 
-    QString qAnnotationFilePath = ui->annotationFilePathBox->text();
-
+if(!qAnnotationFilePath.isEmpty()){
+    qAnnotationFilePath = qAnnotationFilePath + "annotations";
     j["images"][imageFileName]["numOfshapes"] = scene->items().count();
     std::vector<json> shapes;
     json shape;
@@ -294,6 +295,7 @@ void MainWindow::saveJson()
     out.open (qAnnotationFilePath.toStdString());
     out << j;
     out.close();
+}
 }
 
 void MainWindow::readJson()
@@ -347,6 +349,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     }
 
     QMainWindow::keyPressEvent(event);
+}
+
+void MainWindow::showAutoSave(){
+ui->autoSaveLabel->setText("Annotation file has been saved");
 }
 
 

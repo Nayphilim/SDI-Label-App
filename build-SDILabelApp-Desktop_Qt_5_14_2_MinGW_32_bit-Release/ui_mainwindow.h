@@ -76,6 +76,7 @@ public:
     QListWidget *ImagesFileList;
     QComboBox *imageFileListSortBox;
     QGroupBox *bottomMenuGroupBox;
+    QLabel *autoSaveLabel;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
     QMenu *menuLoad;
@@ -316,6 +317,9 @@ public:
         bottomMenuGroupBox = new QGroupBox(centralwidget);
         bottomMenuGroupBox->setObjectName(QString::fromUtf8("bottomMenuGroupBox"));
         bottomMenuGroupBox->setAutoFillBackground(true);
+        autoSaveLabel = new QLabel(bottomMenuGroupBox);
+        autoSaveLabel->setObjectName(QString::fromUtf8("autoSaveLabel"));
+        autoSaveLabel->setGeometry(QRect(720, 0, 47, 13));
 
         gridLayout_8->addWidget(bottomMenuGroupBox, 1, 1, 1, 1);
 
@@ -377,6 +381,7 @@ public:
         imageFileListSortBox->setItemText(3, QCoreApplication::translate("MainWindow", "Oldest", nullptr));
 
         bottomMenuGroupBox->setTitle(QString());
+        autoSaveLabel->setText(QString());
         menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Save", nullptr));
         menuLoad->setTitle(QCoreApplication::translate("MainWindow", "Load", nullptr));
     } // retranslateUi

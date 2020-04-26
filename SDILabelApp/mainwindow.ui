@@ -372,6 +372,19 @@
       <property name="title">
        <string/>
       </property>
+      <widget class="QLabel" name="autoSaveLabel">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>0</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
