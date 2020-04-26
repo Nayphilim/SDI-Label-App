@@ -295,6 +295,7 @@ if(!qAnnotationFilePath.isEmpty()){
     out.open (qAnnotationFilePath.toStdString());
     out << j;
     out.close();
+    ui->autoSaveLabel->setText("Annotation file has been saved");
 }
 }
 
@@ -351,9 +352,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     QMainWindow::keyPressEvent(event);
 }
 
-void MainWindow::showAutoSave(){
-ui->autoSaveLabel->setText("Annotation file has been saved");
-}
 
 
 

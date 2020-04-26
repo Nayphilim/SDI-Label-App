@@ -15,5 +15,4 @@ autoSaveTimer::autoSaveTimer()
 void autoSaveTimer::MyTimerSlot(){
     MainWindow window;
     window.saveJson();
-    window.showAutoSave();
 }

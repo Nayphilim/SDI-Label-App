@@ -52,9 +52,6 @@ public:
 private:
 public slots:
      void saveJson();
-
-     void showAutoSave();
-
 private slots:
 
 
