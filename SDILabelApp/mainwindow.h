@@ -102,27 +102,54 @@ private slots:
     ///loads the new class file when closed
     void on_newClassListButton_clicked();
 
-    ///Detects when the user selects a new sort mode and applies that sort (not finished)
+    ///Detects when the user selects a new sort mode and applies that sort
     void on_imageFileListSortBox_currentIndexChanged(int index);
 
+    ///sorts list of image files loaded alphabetically
+    ///
+    ///sorts the image files directly as they are being read in from the directory
+    ///@param directory is the full directory of the image files being loaded
     void sortAlphabetically(QDir directory);
 
+    ///sorts list of image files loaded reversed alphabetically
+    ///
+    ///sorts the image files directly as they are being read in from the directory
+    ///@param directory is the full directory of the image files being loaded
     void sortReversedAlphabetically(QDir directory);
 
+    ///sorts list of image files loaded by the newest file
+    ///
+    ///sorts the image files directly as they are being read in from the directory
+    ///@param directory is the full directory of the image files being loaded
     void sortNewest(QDir directory);
 
+    ///sorts list of image files loaded by the oldest file
+    ///
+    ///sorts the image files directly as they are being read in from the directory
+    ///@param directory is the full directory of the image files being loaded
     void sortOldest(QDir directory);
 
+    ///returns the full directory of the image files to be loaded
+    ///
+    ///returns the diretory displayed in the imageFileDirectory text box
     QDir getImageFileDirectory();
 
+    ///Detects when the user selects a new sort mode and applies that sort
+    ///
+    ///Uses bubble sort to sort the class file linked list into order
+    ///@param index the index of the option pressed by the user in the drop down menu
     void on_classFileSortBox_currentIndexChanged(int index);
 
+    ///detects when push button to create a square is pressed
     void on_pushButton_clicked();
 
+    ///detects when push button to create a triangle is pressed
     void on_pushButton_3_clicked();
 
+    ///detects when push button to create a trapezium is pressed
     void on_pushButton_4_clicked();
 
+    ///detects when push button to scale a shape is pressed
     void on_pushButton_6_clicked();
 
 
@@ -134,6 +161,9 @@ private:
 
 
 protected:
+    ///detects what key was pressed and performs an action based on it
+    ///
+    ///currently handles a delete key press which deletes the last selected shape
     void keyPressEvent(QKeyEvent*);
 };
 

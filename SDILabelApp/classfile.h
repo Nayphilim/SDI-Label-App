@@ -55,14 +55,6 @@ public:
     ///@param classFilePath is the full file path of the class file to be loaded
     static void setCurrentClassFilePath(QUrl classFilePath);
 
-    static void sortAlphabetically();
-
-    static bool AlphabeticComparison(QString a, QString b);
-
-    static void sortReversedAlphabetically();
-
-    static bool ReversedAlphabeticComparison(QString a, QString b);
-
 
 private:
 

@@ -191,6 +191,7 @@ void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
 }
 }
 
+//square button
 void MainWindow::on_pushButton_clicked()
 {
     shape = new Shape(1);
@@ -198,13 +199,14 @@ void MainWindow::on_pushButton_clicked()
     i = 1;
     
 }
+//triangle button
 void MainWindow::on_pushButton_3_clicked()
 {
     shape = new Shape(3);
     scene->addItem(shape);
     i = 1;
 }
-
+//trapezium button
 void MainWindow::on_pushButton_4_clicked()
 {
     shape = new Shape(2);
@@ -213,7 +215,7 @@ void MainWindow::on_pushButton_4_clicked()
 }
 
 
-
+//scale button
 void MainWindow::on_pushButton_6_clicked()
 {
     foreach(QGraphicsItem * item, scene->selectedItems())
