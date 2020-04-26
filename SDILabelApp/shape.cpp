@@ -27,7 +27,7 @@ Shape::Shape(std::string type)
 QRectF Shape::boundingRect() const
 {
     if (type == "square"){
-        return QRectF(0,0,120,120);
+        return QRectF(-5,-10,120,120);
     }
     else if (type == "trapezium"){
         return QRectF(50,-5,150,70);
@@ -50,7 +50,7 @@ void Shape::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 
     painter->setPen(linepen);
     painter->drawPolygon(poly);
-    painter->drawText(boundingRect(),m_text,QTextOption(Qt::AlignTop));
+    painter->drawText(boundingRect(),m_text,QTextOption(Qt::AlignHCenter));
 
     setFlag(ItemIsMovable);
     setFlag(ItemSendsGeometryChanges);
