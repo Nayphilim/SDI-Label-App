@@ -30,6 +30,7 @@ HEADERS += \
     classfile.h \
     classlistcreator.h \
     classmanagement.h \
+    json.hpp \
     mainwindow.h \
     shape.h \
     linkedList.h

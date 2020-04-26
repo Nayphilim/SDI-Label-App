@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-
+#include <fstream>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -52,8 +52,13 @@ void MainWindow::on_ImagesFileList_itemDoubleClicked(QListWidgetItem *item)
 {
     QListWidgetItem qImageFileItem = *item;
     QString QImageFileName = qImageFileItem.text();
-    std::string imageFileName = QImageFileName.toStdString();
+    imageFileName = QImageFileName.toStdString();
     DisplayImage(imageFileName);
+    try {
+        readJson();
+    } catch (...) {
+    }
+
 }
 
 std::string MainWindow::getImageFilePath(){
@@ -194,24 +199,23 @@ void MainWindow::on_classFileSortBox_currentIndexChanged(int index)
 //square button
 void MainWindow::on_pushButton_clicked()
 {
-    shape = new Shape(1);
+    shape = new Shape("square");
+    shape->setData(0,"square");
     scene->addItem(shape);
-    i = 1;
-    
 }
 //triangle button
 void MainWindow::on_pushButton_3_clicked()
 {
-    shape = new Shape(3);
+    shape = new Shape("triangle");
+    shape->setData(0,"triangle");
     scene->addItem(shape);
-    i = 1;
 }
 //trapezium button
 void MainWindow::on_pushButton_4_clicked()
 {
-    shape = new Shape(2);
+    shape = new Shape("trapezium");
+    shape->setData(0,"trapezium");
     scene->addItem(shape);
-    i = 1;
 }
 
 
@@ -220,6 +224,7 @@ void MainWindow::on_pushButton_6_clicked()
 {
     foreach(QGraphicsItem * item, scene->selectedItems())
     {
+        int i = item->scale();
         if(i < 6)
         {
             i++;
@@ -232,6 +237,104 @@ void MainWindow::on_pushButton_6_clicked()
     }
 }
 
+void MainWindow::on_annotationSaveButton_clicked(){
+    saveJson();
+}
+
+void MainWindow::saveJson()
+{
+    json j;
+    try {
+        j = annotation;
+    } catch (...) {
+
+    }
+
+    QString qAnnotationFilePath = ui->annotationFilePathBox->text();
+
+    j["images"][imageFileName]["numOfshapes"] = scene->items().count();
+    std::vector<json> shapes;
+    json shape;
+    foreach(QGraphicsItem * item, scene->items())
+    {
+        shape["type"] = "";
+        if (item->data(0).toString().toStdString() != ""){
+            shape["type"] = item->data(0).toString().toStdString();
+        }
+
+        int xOffset = item->pos().x();
+        int yOffset = item->pos().y();
+
+        shape["scale"] = item->scale();
+        if (shape["type"] == "square"){
+            shape["point_1"] = {10+xOffset,10+yOffset};
+            shape["point_2"] = {100+xOffset,10+yOffset};
+            shape["point_3"] = {100+xOffset,100+yOffset};
+            shape["point_4"] = {10+xOffset,100+yOffset};
+            shapes.push_back(shape);
+        }
+        else if (shape["type"] == "trapezium"){
+            shape["point_1"] = {10+xOffset,60+yOffset};
+            shape["point_2"] = {80+xOffset,10+yOffset};
+            shape["point_3"] = {170+xOffset,10+yOffset};
+            shape["point_4"] = {190+xOffset,60+yOffset};
+            shapes.push_back(shape);
+        }
+        else if (shape["type"] == "triangle"){
+            shape["point_1"] = {75+xOffset,25+yOffset};
+            shape["point_2"] = {25+xOffset,125+yOffset};
+            shape["point_3"] = {125+xOffset,125+yOffset};
+            shapes.push_back(shape);
+        }
+
+    }
+    j["images"][imageFileName]["shapes"] = shapes;
+    j["numOfImages"] = j["images"].size();
+    std::ofstream out;
+    out.open (qAnnotationFilePath.toStdString());
+    out << j;
+    out.close();
+}
+
+void MainWindow::readJson()
+{
+    std::ifstream myfile;
+    QString qAnnotationFilePath = ui->annotationFilePathBox->text();
+    myfile.open (qAnnotationFilePath.toStdString());
+    myfile >> annotation;
+    myfile.close();
+    QVariant type;
+    int len = annotation["images"][imageFileName]["numOfshapes"];
+    for (int index = 0; index < len; index++) {
+        type = QString::fromStdString(annotation["images"][imageFileName]["shapes"].at(index)["type"]);
+        std::vector<std::vector<int>> points;
+        int xOffset = annotation["images"][imageFileName]["shapes"].at(index)["point_1"].at(0);
+        int yOffset = annotation["images"][imageFileName]["shapes"].at(index)["point_1"].at(1);
+        if (annotation["images"][imageFileName]["shapes"].at(index)["type"] == "square"){
+            xOffset -= 10;
+            yOffset -= 10;
+        }
+        else if (annotation["images"][imageFileName]["shapes"].at(index)["type"] == "trapezium"){
+            xOffset -= 10;
+            yOffset -= 60;
+        }
+        else if (annotation["images"][imageFileName]["shapes"].at(index)["type"] == "triangle"){
+            xOffset -= 75;
+            yOffset -= 25;
+        }
+        shape = new Shape(annotation["images"][imageFileName]["shapes"].at(index)["type"]);
+        shape->setData(0,type);
+        shape->setPos(xOffset,yOffset);
+        shape->setScale(annotation["images"][imageFileName]["shapes"].at(index)["scale"]);
+        scene->addItem(shape);
+    }
+}
+
+void MainWindow::on_annotationFileExplorerButton_clicked()
+{
+    QString filePath = QFileDialog::getOpenFileName(0, ("Select Annotation File"), QDir::currentPath());
+    ui->annotationFilePathBox->setText(filePath);
+}
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {

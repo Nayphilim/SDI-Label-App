@@ -17,17 +17,17 @@
 class Shape : public QGraphicsItem
 {
 public:
-    Shape(int shapeNum);
-
+    Shape(std::string);
     QRectF boundingRect() const override;
     void dropEvent(QGraphicsSceneDragDropEvent *event) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
     void setText(const QString& text);
     QString text() const {return m_text;}
-
+    std::string type;
+    std::vector<std::vector<int>> points;
 private:
     QString m_text;
-    int shapeNum;
+
 };
 
 #endif // SQUARE_H
