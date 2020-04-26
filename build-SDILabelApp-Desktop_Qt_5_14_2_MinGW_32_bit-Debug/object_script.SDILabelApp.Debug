@@ -1,11 +1,12 @@
+debug/autosavetimer.o
 debug/classfile.o
 debug/classlistcreator.o
 debug/classmanagement.o
 debug/main.o
 debug/mainwindow.o
-debug/square.o
-debug/trapezium.o
-debug/triangle.o
+debug/shape.o
+debug/linkedList.o
+debug/qrc_res.o
 debug/moc_classlistcreator.o
 debug/moc_classmanagement.o
 debug/moc_mainwindow.o

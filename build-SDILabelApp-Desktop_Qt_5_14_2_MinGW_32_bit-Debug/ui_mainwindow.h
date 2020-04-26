@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
@@ -75,6 +76,7 @@ public:
     QListWidget *ImagesFileList;
     QComboBox *imageFileListSortBox;
     QGroupBox *bottomMenuGroupBox;
+    QLabel *autoSaveLabel;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
     QMenu *menuLoad;
@@ -126,21 +128,37 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         pushButton_3 = new QPushButton(toolGroupBox);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/res/images/triangleTool.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_3->setIcon(icon);
+        pushButton_3->setIconSize(QSize(100, 100));
 
         verticalLayout_2->addWidget(pushButton_3);
 
         pushButton = new QPushButton(toolGroupBox);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/res/images/rectangleTool.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon1);
+        pushButton->setIconSize(QSize(100, 100));
 
         verticalLayout_2->addWidget(pushButton);
 
         pushButton_4 = new QPushButton(toolGroupBox);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/res/images/trapeziumTool.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_4->setIcon(icon2);
+        pushButton_4->setIconSize(QSize(100, 100));
 
         verticalLayout_2->addWidget(pushButton_4);
 
         pushButton_6 = new QPushButton(toolGroupBox);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/res/images/scaleTool.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_6->setIcon(icon3);
+        pushButton_6->setIconSize(QSize(100, 100));
 
         verticalLayout_2->addWidget(pushButton_6);
 
@@ -156,7 +174,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1442, 1000));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1408, 1000));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         imageView = new QLabel(scrollAreaWidgetContents_2);
@@ -299,6 +317,9 @@ public:
         bottomMenuGroupBox = new QGroupBox(centralwidget);
         bottomMenuGroupBox->setObjectName(QString::fromUtf8("bottomMenuGroupBox"));
         bottomMenuGroupBox->setAutoFillBackground(true);
+        autoSaveLabel = new QLabel(bottomMenuGroupBox);
+        autoSaveLabel->setObjectName(QString::fromUtf8("autoSaveLabel"));
+        autoSaveLabel->setGeometry(QRect(720, 0, 47, 13));
 
         gridLayout_8->addWidget(bottomMenuGroupBox, 1, 1, 1, 1);
 
@@ -333,10 +354,10 @@ public:
         leftMenuGroupBox->setTitle(QString());
         zoomGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Zoom", nullptr));
         toolGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Tools", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Triangle", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Square", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Trapezium", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Increase Scale", nullptr));
+        pushButton_3->setText(QString());
+        pushButton->setText(QString());
+        pushButton_4->setText(QString());
+        pushButton_6->setText(QString());
         imageView->setText(QString());
         rightMenuGroupBox->setTitle(QString());
         annotationsGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Annotations", nullptr));
@@ -360,6 +381,7 @@ public:
         imageFileListSortBox->setItemText(3, QCoreApplication::translate("MainWindow", "Oldest", nullptr));
 
         bottomMenuGroupBox->setTitle(QString());
+        autoSaveLabel->setText(QString());
         menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Save", nullptr));
         menuLoad->setTitle(QCoreApplication::translate("MainWindow", "Load", nullptr));
     } // retranslateUi

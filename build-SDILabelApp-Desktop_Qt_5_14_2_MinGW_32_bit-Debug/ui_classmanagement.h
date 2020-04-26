@@ -65,7 +65,7 @@ public:
         classList = new QListWidget(classManagement);
         classList->setObjectName(QString::fromUtf8("classList"));
         classList->setMouseTracking(true);
-        classList->setSortingEnabled(true);
+        classList->setSortingEnabled(false);
 
         gridLayout_5->addWidget(classList, 0, 0, 1, 2);
 
@@ -77,6 +77,9 @@ public:
 
         retranslateUi(classManagement);
         QObject::connect(classList, SIGNAL(itemDoubleClicked(QListWidgetItem*)), selectedClass, SLOT(update()));
+
+        classList->setCurrentRow(-1);
+
 
         QMetaObject::connectSlotsByName(classManagement);
     } // setupUi

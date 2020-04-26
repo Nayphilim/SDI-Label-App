@@ -252,7 +252,7 @@ void MainWindow::saveJson()
 QString qAnnotationFilePath = ui->annotationFilePathBox->text();
 
 if(!qAnnotationFilePath.isEmpty()){
-    qAnnotationFilePath = qAnnotationFilePath + "annotations";
+    qAnnotationFilePath = qAnnotationFilePath + ".annotations";
     j["images"][imageFileName]["numOfshapes"] = scene->items().count();
     std::vector<json> shapes;
     json shape;
