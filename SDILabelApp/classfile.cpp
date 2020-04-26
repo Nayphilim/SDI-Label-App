@@ -12,7 +12,7 @@ classFile::classFile()
 
  linkedList classFile::readClassFile(QUrl filePath){
     linkedList classes;
-    QFile file(filePath.toEncoded());
+    QFile file(filePath.toString());
     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
         QTextStream stream(&file);
         while(!stream.atEnd()){
@@ -56,7 +56,7 @@ classFile::classFile()
      if(!(classFile::checkExisting(selectedClass))){
          QUrl currentClassFilePath = getCurrentClassFilePath();
          if(currentClassFilePath.isValid()){
-             QFile file(currentClassFilePath.toEncoded());
+             QFile file(currentClassFilePath.toString());
              if(file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)){
                  QTextStream stream(&file);
                  stream << "\n" << selectedClass;
@@ -87,7 +87,7 @@ classFile::classFile()
      QUrl currentClassFilePath = getCurrentClassFilePath();
      if(currentClassFilePath.isValid()){
          Classes.deletePosition(index);
-         QFile file(currentClassFilePath.toEncoded());
+         QFile file(currentClassFilePath.toString());
          if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
              QTextStream stream(&file);
              for(int i = 0;i<Classes.size();i++){

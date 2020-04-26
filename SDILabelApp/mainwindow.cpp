@@ -80,7 +80,7 @@ void MainWindow::updateClassFileList(){
     classFile::readClassFile(classFile::getCurrentClassFilePath());
     ui->classesFilePathBox->clear();
     ui->classesFileList->clear();
-    ui->classesFilePathBox->setText(classFile::getCurrentClassFilePath().toEncoded());
+    ui->classesFilePathBox->setText(classFile::getCurrentClassFilePath().toString());
     linkedList classes = classFile::getClasses();
     for(int i=0; i<classes.size();i++){
     ui->classesFileList->addItem(classes.getDataAtPos(i));
