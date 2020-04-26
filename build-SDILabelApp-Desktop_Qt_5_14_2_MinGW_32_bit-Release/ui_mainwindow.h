@@ -35,6 +35,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionhelp;
     QWidget *centralwidget;
     QGridLayout *gridLayout_8;
     QGroupBox *leftMenuGroupBox;
@@ -80,7 +81,6 @@ public:
     QLabel *autoSaveLabel;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
-    QMenu *menuLoad;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -88,6 +88,8 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(1920, 1080);
+        actionhelp = new QAction(MainWindow);
+        actionhelp->setObjectName(QString::fromUtf8("actionhelp"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout_8 = new QGridLayout(centralwidget);
@@ -334,15 +336,13 @@ public:
         menubar->setGeometry(QRect(0, 0, 1920, 21));
         menuSDI_Label_App = new QMenu(menubar);
         menuSDI_Label_App->setObjectName(QString::fromUtf8("menuSDI_Label_App"));
-        menuLoad = new QMenu(menubar);
-        menuLoad->setObjectName(QString::fromUtf8("menuLoad"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuSDI_Label_App->menuAction());
-        menubar->addAction(menuLoad->menuAction());
+        menuSDI_Label_App->addAction(actionhelp);
 
         retranslateUi(MainWindow);
         QObject::connect(ImagesFileExplorerButton, SIGNAL(clicked()), ImagesFilePathBox, SLOT(copy()));
@@ -356,6 +356,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionhelp->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
         leftMenuGroupBox->setTitle(QString());
         zoomGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Zoom", nullptr));
         toolGroupBox->setTitle(QCoreApplication::translate("MainWindow", "Tools", nullptr));
@@ -387,8 +388,7 @@ public:
 
         bottomMenuGroupBox->setTitle(QString());
         autoSaveLabel->setText(QString());
-        menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Save", nullptr));
-        menuLoad->setTitle(QCoreApplication::translate("MainWindow", "Load", nullptr));
+        menuSDI_Label_App->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 
 };

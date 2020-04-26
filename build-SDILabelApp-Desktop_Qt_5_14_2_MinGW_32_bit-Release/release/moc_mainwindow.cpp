@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[34];
-    char stringdata0[683];
+    QByteArrayData data[35];
+    char stringdata0[707];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -65,7 +65,8 @@ QT_MOC_LITERAL(29, 570, 31), // "on_annotationSaveButton_clicked"
 QT_MOC_LITERAL(30, 602, 23), // "on_pushButton_3_clicked"
 QT_MOC_LITERAL(31, 626, 23), // "on_pushButton_4_clicked"
 QT_MOC_LITERAL(32, 650, 23), // "on_pushButton_6_clicked"
-QT_MOC_LITERAL(33, 674, 8) // "saveJson"
+QT_MOC_LITERAL(33, 674, 8), // "saveJson"
+QT_MOC_LITERAL(34, 683, 23) // "on_actionhelp_triggered"
 
     },
     "MainWindow\0on_ImagesFileExplorerButton_clicked\0"
@@ -85,7 +86,8 @@ QT_MOC_LITERAL(33, 674, 8) // "saveJson"
     "on_annotationFileExplorerButton_clicked\0"
     "on_annotationSaveButton_clicked\0"
     "on_pushButton_3_clicked\0on_pushButton_4_clicked\0"
-    "on_pushButton_6_clicked\0saveJson"
+    "on_pushButton_6_clicked\0saveJson\0"
+    "on_actionhelp_triggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -95,7 +97,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      25,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -103,30 +105,31 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  134,    2, 0x08 /* Private */,
-       3,    1,  135,    2, 0x08 /* Private */,
-       5,    1,  138,    2, 0x08 /* Private */,
-       8,    1,  141,    2, 0x08 /* Private */,
-      11,    0,  144,    2, 0x08 /* Private */,
-      12,    0,  145,    2, 0x08 /* Private */,
-      13,    0,  146,    2, 0x08 /* Private */,
-      14,    0,  147,    2, 0x08 /* Private */,
-      15,    0,  148,    2, 0x08 /* Private */,
-      16,    1,  149,    2, 0x08 /* Private */,
-      18,    1,  152,    2, 0x08 /* Private */,
-      21,    1,  155,    2, 0x08 /* Private */,
-      22,    1,  158,    2, 0x08 /* Private */,
-      23,    1,  161,    2, 0x08 /* Private */,
-      24,    0,  164,    2, 0x08 /* Private */,
-      25,    1,  165,    2, 0x08 /* Private */,
-      26,    0,  168,    2, 0x08 /* Private */,
-      27,    0,  169,    2, 0x08 /* Private */,
-      28,    0,  170,    2, 0x08 /* Private */,
-      29,    0,  171,    2, 0x08 /* Private */,
-      30,    0,  172,    2, 0x08 /* Private */,
-      31,    0,  173,    2, 0x08 /* Private */,
-      32,    0,  174,    2, 0x08 /* Private */,
-      33,    0,  175,    2, 0x08 /* Private */,
+       1,    0,  139,    2, 0x08 /* Private */,
+       3,    1,  140,    2, 0x08 /* Private */,
+       5,    1,  143,    2, 0x08 /* Private */,
+       8,    1,  146,    2, 0x08 /* Private */,
+      11,    0,  149,    2, 0x08 /* Private */,
+      12,    0,  150,    2, 0x08 /* Private */,
+      13,    0,  151,    2, 0x08 /* Private */,
+      14,    0,  152,    2, 0x08 /* Private */,
+      15,    0,  153,    2, 0x08 /* Private */,
+      16,    1,  154,    2, 0x08 /* Private */,
+      18,    1,  157,    2, 0x08 /* Private */,
+      21,    1,  160,    2, 0x08 /* Private */,
+      22,    1,  163,    2, 0x08 /* Private */,
+      23,    1,  166,    2, 0x08 /* Private */,
+      24,    0,  169,    2, 0x08 /* Private */,
+      25,    1,  170,    2, 0x08 /* Private */,
+      26,    0,  173,    2, 0x08 /* Private */,
+      27,    0,  174,    2, 0x08 /* Private */,
+      28,    0,  175,    2, 0x08 /* Private */,
+      29,    0,  176,    2, 0x08 /* Private */,
+      30,    0,  177,    2, 0x08 /* Private */,
+      31,    0,  178,    2, 0x08 /* Private */,
+      32,    0,  179,    2, 0x08 /* Private */,
+      33,    0,  180,    2, 0x08 /* Private */,
+      34,    0,  181,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -145,6 +148,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 19,   20,
     0x80000000 | 19,
     QMetaType::Void, QMetaType::Int,   17,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -189,6 +193,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 21: _t->on_pushButton_4_clicked(); break;
         case 22: _t->on_pushButton_6_clicked(); break;
         case 23: _t->saveJson(); break;
+        case 24: _t->on_actionhelp_triggered(); break;
         default: ;
         }
     }
@@ -223,13 +228,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 25)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 25;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 25)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 24;
+        _id -= 25;
     }
     return _id;
 }

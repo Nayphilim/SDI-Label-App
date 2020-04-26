@@ -170,6 +170,8 @@ private slots:
 
 
 
+    void on_actionhelp_triggered();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

@@ -396,18 +396,18 @@
    </property>
    <widget class="QMenu" name="menuSDI_Label_App">
     <property name="title">
-     <string>Save</string>
+     <string>Help</string>
     </property>
-   </widget>
-   <widget class="QMenu" name="menuLoad">
-    <property name="title">
-     <string>Load</string>
-    </property>
+    <addaction name="actionhelp"/>
    </widget>
    <addaction name="menuSDI_Label_App"/>
-   <addaction name="menuLoad"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionhelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="res.qrc"/>

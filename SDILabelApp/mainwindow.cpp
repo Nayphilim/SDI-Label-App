@@ -360,3 +360,16 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 
 
+
+void MainWindow::on_actionhelp_triggered()
+{
+    QMessageBox helpBox;
+    helpBox.setText("Welcome to the image labelling application \
+                    \n\nThis program is designed to allow you to label your images using shapes and identify them with unique class tags. \
+                    \n\nTo get started you should select a directory to load some images you would like to label. This can be done by pressing the button wi \th 3 dots in the top right corner of the screen in the images section. Once that’s done you will be able to double click your images in the image list to load them. \
+                    \n\nYou can create new labels by placing shapes on them. To place a new shape on the image press one of the shape buttons on the left of the application. If you would like to add identifiable classes to your label you can use a class in the classes section by dragging the desired class onto the shape.\
+                    \n\nTo start using classes you will need to load or create a new class file. To create your first-class file, select “create new class list” and give it a name and specify a location to save the file to. After the file is created you can select the “class manager” option to add and remove classes.\
+                    \n\nTo save your annotations you can give the annotation file a name in the bottom right corner and it will auto save every minute. Otherwise you can also select “save” to save manually. When you want to load an annotation file you can select it from your pc using the button labelled “…” in the annotation section. After the file has been loaded you can select the image you annotated, and it will load the previously saved annotations \
+");
+    helpBox.exec();
+}

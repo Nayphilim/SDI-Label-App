@@ -32,7 +32,7 @@ private slots:
     ///adds the chosen class name to the class file by calling the addClass() function in classFile
     void on_addButton_clicked();
 
-    ///removes the chosen class name from the class fiel loaded
+    ///removes the chosen class name from the class field loaded
     ///
     ///removes the chosen class name from the class file by calling the removeClass() function in classFile
     void on_removeButton_clicked();
