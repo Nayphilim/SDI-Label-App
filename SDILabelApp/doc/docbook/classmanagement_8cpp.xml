@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmanagement_8cpp">
+<title>classmanagement.cpp File Reference</title>
+<indexterm><primary>classmanagement.cpp</primary></indexterm>
+<programlisting>#include &quot;classmanagement.h&quot;
+#include &quot;ui_classmanagement.h&quot;
+</programlisting><simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classmanagement_8cpp_1a0b5e61fba21ba3e21d2fad72a4a445b5">selectedItemIndex</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_classmanagement_8cpp_1a0b5e61fba21ba3e21d2fad72a4a445b5"/>    <section>
+    <title>selectedItemIndex</title>
+<indexterm><primary>selectedItemIndex</primary><secondary>classmanagement.cpp</secondary></indexterm>
+<indexterm><primary>classmanagement.cpp</primary><secondary>selectedItemIndex</secondary></indexterm>
+<para><computeroutput>int selectedItemIndex</computeroutput></para><para>
+Definition at line 4 of file classmanagement.cpp.</para>
+</section>
+</section>
+</section>

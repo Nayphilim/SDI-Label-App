@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classlinked_list">
+<title>linkedList Class Reference</title>
+<indexterm><primary>linkedList</primary></indexterm>
+<para>
+
+<para>This class handles the linked list data structure. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;linkedList.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classlinked_list_1a9c60821596e60f06c51e72c15f919709">linkedList</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a4ec828f689e7a68d2a12d34bbd82431a">createNode</link> (QString value)</para>
+
+<para>creates a new node at the end of the list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a61ef20668de2a5d640fef96021cca41b">insertStart</link> (QString value)</para>
+
+<para>inserts a new node at the start of the linked list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a2f20beca703b80dcebc5117c66dd4b0c">insertPosition</link> (int pos, QString value)</para>
+
+<para>inserts a new node at the given position in the linked list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a4aa7d151f5de99341407a46160bf3d1a">deleteFirst</link> ()</para>
+
+<para>deletes the first node in the linked list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a8945e30dba885ff8c99074ce2a658404">deleteLast</link> ()</para>
+
+<para>deletes last node in the linked list </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a29fce399760c75b81988ac7a0f2fd8f6">deletePosition</link> (int pos)</para>
+
+<para>deletes a node at a given position </para>
+</listitem>
+            <listitem><para>int <link linkend="_classlinked_list_1a6e3062bc159e356bf8c9728b8f2e8bcf">size</link> ()</para>
+
+<para>returns the number of nodes in the linked list </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classlinked_list_1a3cd83ba0e5cde130e463e49e261f7c22">contains</link> (QString value)</para>
+
+<para>tests if a given value is present in a linked list and returns true if it is </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1ab01d7b2db94e35c1c70e459235190311">deleteList</link> ()</para>
+
+<para>deletes the linked list entirely and frees the memory </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1aa8c64de096751f98a71eede2e660682b">swap</link> (int posA, int posB)</para>
+
+<para>swap two nodes positions in the linked list </para>
+</listitem>
+            <listitem><para>QString <link linkend="_classlinked_list_1afccfea0c3ea2c5ab90e6c892eed287a2">getDataAtPos</link> (int i)</para>
+
+<para>returns the data in a node at a given position </para>
+</listitem>
+            <listitem><para>void <link linkend="_classlinked_list_1a25e5abd299c58387f1660bf49c660454">deleteData</link> (QString data)</para>
+
+<para>delete the node that has the given data in </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structnode">node</link> * <link linkend="_classlinked_list_1ad4a1059170d4c4428581707ab1c1af1e">nodeAtPos</link> (int pos)</para>
+
+<para>returns a pointer to the node at the position given </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structnode">node</link> * <link linkend="_classlinked_list_1acef1e648b177e866f2962f4bfa6fda95">head</link></para>
+
+<para>pointers to the head and tail of the linked list </para>
+</listitem>
+            <listitem><para><link linkend="_structnode">node</link> * <link linkend="_classlinked_list_1a1827bc84093365c8045d9cacc92bdafe">tail</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class handles the linked list data structure. </para>
+
+
+
+<para>This class contains all the functions needed to utilise a linked list for the storage of QStrings and allows for sorting </para>
+<para>
+Definition at line 15 of file linkedList.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classlinked_list_1a9c60821596e60f06c51e72c15f919709"/>    <section>
+    <title>linkedList()</title>
+<indexterm><primary>linkedList</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>linkedList</secondary></indexterm>
+<para><computeroutput>linkedList::linkedList ( )</computeroutput></para><para>
+Definition at line 4 of file linkedList.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classlinked_list_1a3cd83ba0e5cde130e463e49e261f7c22"/>    <section>
+    <title>contains()</title>
+<indexterm><primary>contains</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>contains</secondary></indexterm>
+<para><computeroutput>bool linkedList::contains (QString value)</computeroutput></para><para>
+
+<para>tests if a given value is present in a linked list and returns true if it is </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>This is the data being tested if it already exists in the linked list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 98 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a4ec828f689e7a68d2a12d34bbd82431a"/>    <section>
+    <title>createNode()</title>
+<indexterm><primary>createNode</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>createNode</secondary></indexterm>
+<para><computeroutput>void linkedList::createNode (QString value)</computeroutput></para><para>
+
+<para>creates a new node at the end of the list </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>This is the data that is being put into the linked list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 10 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a25e5abd299c58387f1660bf49c660454"/>    <section>
+    <title>deleteData()</title>
+<indexterm><primary>deleteData</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>deleteData</secondary></indexterm>
+<para><computeroutput>void linkedList::deleteData (QString data)</computeroutput></para><para>
+
+<para>delete the node that has the given data in </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>is the data given to find the node that contains it </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 158 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a4aa7d151f5de99341407a46160bf3d1a"/>    <section>
+    <title>deleteFirst()</title>
+<indexterm><primary>deleteFirst</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>deleteFirst</secondary></indexterm>
+<para><computeroutput>void linkedList::deleteFirst ( )</computeroutput></para><para>
+
+<para>deletes the first node in the linked list </para>
+</para>
+
+<para>Necessary as handling a deletion of a head or the first node is different to other nodes </para>
+<para>
+Definition at line 50 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a8945e30dba885ff8c99074ce2a658404"/>    <section>
+    <title>deleteLast()</title>
+<indexterm><primary>deleteLast</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>deleteLast</secondary></indexterm>
+<para><computeroutput>void linkedList::deleteLast ( )</computeroutput></para><para>
+
+<para>deletes last node in the linked list </para>
+</para>
+
+<para>created in case of situations that we do not know the size of the linked list but want to delete the last node </para>
+<para>
+Definition at line 57 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1ab01d7b2db94e35c1c70e459235190311"/>    <section>
+    <title>deleteList()</title>
+<indexterm><primary>deleteList</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>deleteList</secondary></indexterm>
+<para><computeroutput>void linkedList::deleteList ( )</computeroutput></para><para>
+
+<para>deletes the linked list entirely and frees the memory </para>
+</para>
+<para>
+Definition at line 111 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a29fce399760c75b81988ac7a0f2fd8f6"/>    <section>
+    <title>deletePosition()</title>
+<indexterm><primary>deletePosition</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>deletePosition</secondary></indexterm>
+<para><computeroutput>void linkedList::deletePosition (int pos)</computeroutput></para><para>
+
+<para>deletes a node at a given position </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pos</entry>
+                                <entry>
+<para>This is the index in the linked list selected to be deleted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 71 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1afccfea0c3ea2c5ab90e6c892eed287a2"/>    <section>
+    <title>getDataAtPos()</title>
+<indexterm><primary>getDataAtPos</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>getDataAtPos</secondary></indexterm>
+<para><computeroutput>QString linkedList::getDataAtPos (int i)</computeroutput></para><para>
+
+<para>returns the data in a node at a given position </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>i</entry>
+                                <entry>
+<para>is the index of the node in the linked list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 147 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a2f20beca703b80dcebc5117c66dd4b0c"/>    <section>
+    <title>insertPosition()</title>
+<indexterm><primary>insertPosition</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>insertPosition</secondary></indexterm>
+<para><computeroutput>void linkedList::insertPosition (int pos, QString value)</computeroutput></para><para>
+
+<para>inserts a new node at the given position in the linked list </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pos</entry>
+                                <entry>
+<para>This is the position in the linked list for the node to be created </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>This is the data to be inserted into the node </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 35 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a61ef20668de2a5d640fef96021cca41b"/>    <section>
+    <title>insertStart()</title>
+<indexterm><primary>insertStart</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>insertStart</secondary></indexterm>
+<para><computeroutput>void linkedList::insertStart (QString value)</computeroutput></para><para>
+
+<para>inserts a new node at the start of the linked list </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>This is the data that is being put into the linked list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 28 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1ad4a1059170d4c4428581707ab1c1af1e"/>    <section>
+    <title>nodeAtPos()</title>
+<indexterm><primary>nodeAtPos</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>nodeAtPos</secondary></indexterm>
+<para><computeroutput><link linkend="_structnode">node</link> * linkedList::nodeAtPos (int pos)<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>returns a pointer to the node at the position given </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pos</entry>
+                                <entry>
+<para>This is the index of the node to be returned </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 138 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1a6e3062bc159e356bf8c9728b8f2e8bcf"/>    <section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>int linkedList::size ( )</computeroutput></para><para>
+
+<para>returns the number of nodes in the linked list </para>
+</para>
+<para>
+Definition at line 87 of file linkedList.cpp.</para>
+    </section><anchor xml:id="_classlinked_list_1aa8c64de096751f98a71eede2e660682b"/>    <section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void linkedList::swap (int posA, int posB)</computeroutput></para><para>
+
+<para>swap two nodes positions in the linked list </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>posA</entry>
+                                <entry>
+<para>and</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>posB</entry>
+                                <entry>
+<para>are the postions of the nodes in the linked list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 129 of file linkedList.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classlinked_list_1acef1e648b177e866f2962f4bfa6fda95"/>    <section>
+    <title>head</title>
+<indexterm><primary>head</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>head</secondary></indexterm>
+<para><computeroutput><link linkend="_structnode">node</link>* linkedList::head<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>pointers to the head and tail of the linked list </para>
+</para>
+<para>
+Definition at line 59 of file linkedList.h.</para>
+    </section><anchor xml:id="_classlinked_list_1a1827bc84093365c8045d9cacc92bdafe"/>    <section>
+    <title>tail</title>
+<indexterm><primary>tail</primary><secondary>linkedList</secondary></indexterm>
+<indexterm><primary>linkedList</primary><secondary>tail</secondary></indexterm>
+<para><computeroutput><link linkend="_structnode">node</link> * linkedList::tail<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 59 of file linkedList.h.</para>
+</section>
+</section>
+</section>

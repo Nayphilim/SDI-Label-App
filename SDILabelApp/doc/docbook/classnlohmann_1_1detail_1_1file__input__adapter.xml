@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1file__input__adapter">
+<title>nlohmann::detail::file_input_adapter Class Reference</title>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::file_input_adapter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1file__input__adapter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1aeade050f2793280503be93feff2ece5b">file_input_adapter</link> (std::FILE *f) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a308099b496a0cba2123a06fe99a95d02">file_input_adapter</link> (const <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a10b4dec4e8751a4f8a110fa917f0d5a8">file_input_adapter</link> (<link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;&amp;)=default</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1ad59bbc7e3f23dd74475c5cb818784e42">operator=</link> (const <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a95adaec9a8c583a46083c4c493981e77">operator=</link> (<link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;&amp;)=default</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1af96552e4560be08b201e62a36e6b6189">~file_input_adapter</link> () override=default</para>
+</listitem>
+            <listitem><para>std::char_traits&lt; char &gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a0d4ff48617c8f63c30babdfd09482329">get_character</link> () noexcept override</para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::FILE * <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a164fbe2739ac97e517e22bc1fff1c174">m_file</link></para>
+
+<para>the file pointer to read from </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Input adapter for stdio file access. This adapter read only 1 byte and do not use any buffer. This adapter is a very low level adapter. </para>
+<para>
+Definition at line 4276 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1aeade050f2793280503be93feff2ece5b"/>    <section>
+    <title>file_input_adapter()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>file_input_adapter</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>file_input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::file_input_adapter::file_input_adapter (std::FILE * f)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4280 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1a308099b496a0cba2123a06fe99a95d02"/>    <section>
+    <title>file_input_adapter()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>file_input_adapter</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>file_input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::file_input_adapter::file_input_adapter (const <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1a10b4dec4e8751a4f8a110fa917f0d5a8"/>    <section>
+    <title>file_input_adapter()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>file_input_adapter</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>file_input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::file_input_adapter::file_input_adapter (<link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;&amp; )<computeroutput>[default]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1af96552e4560be08b201e62a36e6b6189"/>    <section>
+    <title>~file_input_adapter()</title>
+<indexterm><primary>~file_input_adapter</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>~file_input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::file_input_adapter::~file_input_adapter ( )<computeroutput>[override]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1a0d4ff48617c8f63c30babdfd09482329"/>    <section>
+    <title>get_character()</title>
+<indexterm><primary>get_character</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>get_character</secondary></indexterm>
+<para><computeroutput>std::char_traits&lt;char&gt;::int_type nlohmann::detail::file_input_adapter::get_character ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</para>
+<para>
+Implements <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol_1aac10a6a4048a8ce8e2ed50277692a3ca">nlohmann::detail::input_adapter_protocol</link>.</para>
+<para>
+Definition at line 4291 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1ad59bbc7e3f23dd74475c5cb818784e42"/>    <section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link>&amp; nlohmann::detail::file_input_adapter::operator= (const <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1a95adaec9a8c583a46083c4c493981e77"/>    <section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link>&amp; nlohmann::detail::file_input_adapter::operator= (<link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link> &amp;&amp; )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1file__input__adapter_1a164fbe2739ac97e517e22bc1fff1c174"/>    <section>
+    <title>m_file</title>
+<indexterm><primary>m_file</primary><secondary>nlohmann::detail::file_input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::file_input_adapter</primary><secondary>m_file</secondary></indexterm>
+<para><computeroutput>std::FILE* nlohmann::detail::file_input_adapter::m_file<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the file pointer to read from </para>
+</para>
+<para>
+Definition at line 4298 of file json.hpp.</para>
+</section>
+</section>
+</section>

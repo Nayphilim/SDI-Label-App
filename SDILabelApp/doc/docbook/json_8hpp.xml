@@ -1,0 +1,1886 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_json_8hpp">
+<title>json.hpp File Reference</title>
+<indexterm><primary>json.hpp</primary></indexterm>
+<programlisting>#include &lt;algorithm&gt;
+#include &lt;cassert&gt;
+#include &lt;ciso646&gt;
+#include &lt;cstddef&gt;
+#include &lt;functional&gt;
+#include &lt;initializer_list&gt;
+#include &lt;iosfwd&gt;
+#include &lt;iterator&gt;
+#include &lt;memory&gt;
+#include &lt;numeric&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+#include &lt;array&gt;
+#include &lt;forward_list&gt;
+#include &lt;map&gt;
+#include &lt;tuple&gt;
+#include &lt;type_traits&gt;
+#include &lt;unordered_map&gt;
+#include &lt;valarray&gt;
+#include &lt;exception&gt;
+#include &lt;stdexcept&gt;
+#include &lt;cstdlib&gt;
+#include &lt;limits&gt;
+#include &lt;cstdint&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;istream&gt;
+#include &lt;clocale&gt;
+#include &lt;cctype&gt;
+#include &lt;ios&gt;
+#include &lt;ostream&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1position__t">nlohmann::detail::position_t</link></para>
+
+<para>struct to capture the start position of the current token </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1exception">nlohmann::detail::exception</link></para>
+
+<para>general exception of the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1parse__error">nlohmann::detail::parse_error</link></para>
+
+<para>exception indicating a parse error </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">nlohmann::detail::invalid_iterator</link></para>
+
+<para>exception indicating errors with iterators </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1type__error">nlohmann::detail::type_error</link></para>
+
+<para>exception indicating executing a member function with a wrong type </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1out__of__range">nlohmann::detail::out_of_range</link></para>
+
+<para>exception indicating access out of the defined range </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1other__error">nlohmann::detail::other_error</link></para>
+
+<para>exception indicating other library errors </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1index__sequence">nlohmann::detail::index_sequence&lt; Ints &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1merge__and__renumber">nlohmann::detail::merge_and_renumber&lt; Sequence1, Sequence2 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1merge__and__renumber_3_01index__sequence_3_01_i1_8_8_8_01_4_00_01indf5ec8c9c7b5107e4b381e3ca4c1be2ca">nlohmann::detail::merge_and_renumber&lt; index_sequence&lt; I1... &gt;, index_sequence&lt; I2... &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence">nlohmann::detail::make_index_sequence&lt; N &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence_3_010_01_4">nlohmann::detail::make_index_sequence&lt; 0 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence_3_011_01_4">nlohmann::detail::make_index_sequence&lt; 1 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1priority__tag">nlohmann::detail::priority_tag&lt; N &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1priority__tag_3_010_01_4">nlohmann::detail::priority_tag&lt; 0 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1static__const">nlohmann::detail::static_const&lt; T &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__void">nlohmann::detail::make_void&lt; Ts &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__types">nlohmann::detail::iterator_types&lt; It, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__types_3_01_it_00_01void__t_3_01typename_01_it_1_1differenc4a413e9bd546446175f10f15c5631361">nlohmann::detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits">nlohmann::detail::iterator_traits&lt; T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits_3_01_t_00_01enable__if__t_3_01_9std_1_1is__pointer_3_01_t_01_4_1_1value_01_4_01_4">nlohmann::detail::iterator_traits&lt; T, enable_if_t&lt; !std::is_pointer&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__objec8d960665487688165530972cda4f1bea">nlohmann::detail::iterator_traits&lt; T *, enable_if_t&lt; std::is_object&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1nonesuch">nlohmann::detail::nonesuch</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1detector">nlohmann::detail::detector&lt; Default, AlwaysVoid, Op, Args &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4">nlohmann::detail::detector&lt; Default, void_t&lt; Op&lt; Args... &gt; &gt;, Op, Args... &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1adl__serializer">nlohmann::adl_serializer&lt; typename, typename &gt;</link></para>
+
+<para>default JSONSerializer template argument </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1basic__json">nlohmann::basic_json</link></para>
+
+<para>a class to store JSON values </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer&lt; BasicJsonType &gt;</link></para>
+
+<para>JSON Pointer. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__basic__json">nlohmann::detail::is_basic_json&lt; typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__basic__json_3_01_n_l_o_h_m_a_n_n___b_a_s_i_c___j_s_o_n___t_p_l_01_4">nlohmann::detail::is_basic_json&lt; NLOHMANN_BASIC_JSON_TPL &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref&lt; BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__json__ref">nlohmann::detail::is_json_ref&lt; typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__json__ref_3_01json__ref_3_01_t_01_4_01_4">nlohmann::detail::is_json_ref&lt; json_ref&lt; T &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__from__json">nlohmann::detail::has_from_json&lt; BasicJsonType, T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__from__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01e29213c543deddccc314d19cbaf9f3b4">nlohmann::detail::has_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json">nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207">nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__to__json">nlohmann::detail::has_to_json&lt; BasicJsonType, T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__to__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01nob111e71d40e2273c290d1ce5c6a3b84f">nlohmann::detail::has_to_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__iterator__traits">nlohmann::detail::is_iterator_traits&lt; T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__iterator__traits_3_01iterator__traits_3_01_t_01_4_01_4">nlohmann::detail::is_iterator_traits&lt; iterator_traits&lt; T &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__complete__type">nlohmann::detail::is_complete_type&lt; T, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__complete__type_3_01_t_00_01decltype_07void_07sizeof_07_t_08_08_08_4">nlohmann::detail::is_complete_type&lt; T, decltype(void(sizeof(T)))&gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type__impl">nlohmann::detail::is_compatible_object_type_impl&lt; BasicJsonType, CompatibleObjectType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type__impl_3_01_basic_json_type_00_01_compatfbe9a153c4ecce445c98bbdd2d65f605">nlohmann::detail::is_compatible_object_type_impl&lt; BasicJsonType, CompatibleObjectType, enable_if_t&lt; is_detected&lt; mapped_type_t, CompatibleObjectType &gt;::value and is_detected&lt; key_type_t, CompatibleObjectType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type">nlohmann::detail::is_compatible_object_type&lt; BasicJsonType, CompatibleObjectType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type__impl">nlohmann::detail::is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type__impl_3_01_basic_json_type_00_01_con6e3270de8050717120afcafe87648413">nlohmann::detail::is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType, enable_if_t&lt; is_detected&lt; mapped_type_t, ConstructibleObjectType &gt;::value and is_detected&lt; key_type_t, ConstructibleObjectType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type">nlohmann::detail::is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type__impl">nlohmann::detail::is_compatible_string_type_impl&lt; BasicJsonType, CompatibleStringType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type__impl_3_01_basic_json_type_00_01_compat6590904cab40fc73f430e4c7518179a2">nlohmann::detail::is_compatible_string_type_impl&lt; BasicJsonType, CompatibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, CompatibleStringType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type">nlohmann::detail::is_compatible_string_type&lt; BasicJsonType, ConstructibleStringType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl">nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512">nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type">nlohmann::detail::is_constructible_string_type&lt; BasicJsonType, ConstructibleStringType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type__impl">nlohmann::detail::is_compatible_array_type_impl&lt; BasicJsonType, CompatibleArrayType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type__impl_3_01_basic_json_type_00_01_compati04c4671a9fa75002365be1949a74f972">nlohmann::detail::is_compatible_array_type_impl&lt; BasicJsonType, CompatibleArrayType, enable_if_t&lt; is_detected&lt; value_type_t, CompatibleArrayType &gt;::value and is_detected&lt; iterator_t, CompatibleArrayType &gt;::value and not is_iterator_traits&lt; iterator_traits&lt; CompatibleArrayType &gt; &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type">nlohmann::detail::is_compatible_array_type&lt; BasicJsonType, CompatibleArrayType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl">nlohmann::detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_cons8cf88e17d5eaa68665a8fb4b97604b0e">nlohmann::detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_cons437c79c936c626a4ffcf289ee9218c26">nlohmann::detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; not std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value and std::is_default_constructible&lt; ConstructibleArrayType &gt;::value and(std::is_move_assignable&lt; ConstructibleArrayType &gt;::value or std::is_copy_assignable&lt; ConstructibleArrayType &gt;::value) andis_detected&lt; value_type_t, ConstructibleArrayType &gt;::value andis_detected&lt; iterator_t, ConstructibleArrayType &gt;::value andis_complete_type&lt; detected_t&lt; value_type_t, ConstructibleArrayType &gt; &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type">nlohmann::detail::is_constructible_array_type&lt; BasicJsonType, ConstructibleArrayType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type__impl">nlohmann::detail::is_compatible_integer_type_impl&lt; RealIntegerType, CompatibleNumberIntegerType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type__impl_3_01_real_integer_type_00_01_com5aa74bcf254245a639da00509f4d2655">nlohmann::detail::is_compatible_integer_type_impl&lt; RealIntegerType, CompatibleNumberIntegerType, enable_if_t&lt; std::is_integral&lt; RealIntegerType &gt;::value and std::is_integral&lt; CompatibleNumberIntegerType &gt;::value and not std::is_same&lt; bool, CompatibleNumberIntegerType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type">nlohmann::detail::is_compatible_integer_type&lt; RealIntegerType, CompatibleNumberIntegerType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type__impl">nlohmann::detail::is_compatible_type_impl&lt; BasicJsonType, CompatibleType, typename &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type__impl_3_01_basic_json_type_00_01_compatible_typ632bee7ec037fc0233f1bbe9dd7d8874">nlohmann::detail::is_compatible_type_impl&lt; BasicJsonType, CompatibleType, enable_if_t&lt; is_complete_type&lt; CompatibleType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type">nlohmann::detail::is_compatible_type&lt; BasicJsonType, CompatibleType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction">nlohmann::detail::conjunction&lt;... &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction_3_01_b1_01_4">nlohmann::detail::conjunction&lt; B1 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction_3_01_b1_00_01_bn_8_8_8_01_4">nlohmann::detail::conjunction&lt; B1, Bn... &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__tuple">nlohmann::detail::is_constructible_tuple&lt; T1, T2 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__tuple_3_01_t1_00_01std_1_1tuple_3_01_args_8_8_8_01_4_01_4">nlohmann::detail::is_constructible_tuple&lt; T1, std::tuple&lt; Args... &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1from__json__fn">nlohmann::detail::from_json_fn</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy">nlohmann::detail::iteration_proxy&lt; IteratorType &gt;</link></para>
+
+<para>proxy class for the items() function </para>
+</listitem>
+            <listitem><para>class <link linkend="_classstd_1_1tuple__size_3_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4">std::tuple_size&lt;::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4">std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor">nlohmann::detail::external_constructor&lt; value_t &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1boolean_01_4">nlohmann::detail::external_constructor&lt; value_t::boolean &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1string_01_4">nlohmann::detail::external_constructor&lt; value_t::string &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1binary_01_4">nlohmann::detail::external_constructor&lt; value_t::binary &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__float_01_4">nlohmann::detail::external_constructor&lt; value_t::number_float &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__unsigned_01_4">nlohmann::detail::external_constructor&lt; value_t::number_unsigned &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__integer_01_4">nlohmann::detail::external_constructor&lt; value_t::number_integer &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1array_01_4">nlohmann::detail::external_constructor&lt; value_t::array &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4">nlohmann::detail::external_constructor&lt; value_t::object &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1to__json__fn">nlohmann::detail::to_json_fn</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1adl__serializer">nlohmann::adl_serializer&lt; typename, typename &gt;</link></para>
+
+<para>default JSONSerializer template argument </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol">nlohmann::detail::input_adapter_protocol</link></para>
+
+<para>abstract input adapter interface </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">nlohmann::detail::file_input_adapter</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__stream__adapter">nlohmann::detail::input_stream_adapter</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__buffer__adapter">nlohmann::detail::input_buffer_adapter</link></para>
+
+<para>input adapter for buffer input </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1wide__string__input__helper">nlohmann::detail::wide_string_input_helper&lt; WideStringType, T &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1wide__string__input__helper_3_01_wide_string_type_00_012_01_4">nlohmann::detail::wide_string_input_helper&lt; WideStringType, 2 &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__adapter">nlohmann::detail::input_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax&lt; BasicJsonType &gt;</link></para>
+
+<para>SAX interface. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__dom__parser">nlohmann::detail::json_sax_dom_parser&lt; BasicJsonType &gt;</link></para>
+
+<para>SAX implementation to create a JSON value from SAX events. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__dom__callback__parser">nlohmann::detail::json_sax_dom_callback_parser&lt; BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__acceptor">nlohmann::detail::json_sax_acceptor&lt; BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__sax">nlohmann::detail::is_sax&lt; SAX, BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__sax__static__asserts">nlohmann::detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1binary__reader">nlohmann::detail::binary_reader&lt; BasicJsonType, SAX &gt;</link></para>
+
+<para>deserialization of CBOR, MessagePack, and UBJSON values </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer&lt; BasicJsonType &gt;</link></para>
+
+<para>lexical analysis </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser&lt; BasicJsonType &gt;</link></para>
+
+<para>syntax analysis </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">nlohmann::detail::primitive_iterator_t</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1internal__iterator">nlohmann::detail::internal_iterator&lt; BasicJsonType &gt;</link></para>
+
+<para>an iterator value </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy">nlohmann::detail::iteration_proxy&lt; IteratorType &gt;</link></para>
+
+<para>proxy class for the items() function </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iter__impl">nlohmann::detail::iter_impl&lt; BasicJsonType &gt;</link></para>
+
+<para>a template for a bidirectional iterator for the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class This class implements a both iterators (iterator and const_iterator) for the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator&lt; Base &gt;</link></para>
+
+<para>a template for a reverse iterator class </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer&lt; BasicJsonType &gt;</link></para>
+
+<para>JSON Pointer. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref&lt; BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1output__adapter__protocol">nlohmann::detail::output_adapter_protocol&lt; CharType &gt;</link></para>
+
+<para>abstract output adapter interface </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__vector__adapter">nlohmann::detail::output_vector_adapter&lt; CharType &gt;</link></para>
+
+<para>output adapter for byte vectors </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__stream__adapter">nlohmann::detail::output_stream_adapter&lt; CharType &gt;</link></para>
+
+<para>output adapter for output streams </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__string__adapter">nlohmann::detail::output_string_adapter&lt; CharType, StringType &gt;</link></para>
+
+<para>output adapter for basic_string </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__adapter">nlohmann::detail::output_adapter&lt; CharType, StringType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</link></para>
+
+<para>serialization to CBOR and MessagePack values </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">nlohmann::detail::dtoa_impl::diyfp</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries">nlohmann::detail::dtoa_impl::boundaries</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1cached__power">nlohmann::detail::dtoa_impl::cached_power</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1serializer">nlohmann::detail::serializer&lt; BasicJsonType &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1basic__json">nlohmann::basic_json</link></para>
+
+<para>a class to store JSON values </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1basic__json_1_1internal__binary__t">nlohmann::basic_json::internal_binary_t</link></para>
+
+<para>an internal type for a backed binary type </para>
+</listitem>
+            <listitem><para>union <link linkend="_unionnlohmann_1_1basic__json_1_1json__value">nlohmann::basic_json::json_value</link></para>
+
+<para>a JSON value </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structstd_1_1hash_3_01nlohmann_1_1json_01_4">std::hash&lt; nlohmann::json &gt;</link></para>
+
+<para>hash value for JSON objects </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structstd_1_1less_3_1_1nlohmann_1_1detail_1_1value__t_01_4">std::less&lt;::nlohmann::detail::value_t &gt;</link></para>
+
+<para>specialization for std::less&lt;value_t&gt; </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para> <link linkend="_namespacenlohmann">nlohmann</link></para>
+
+<para>namespace for Niels Lohmann </para>
+</listitem>
+            <listitem><para> <link linkend="_namespacenlohmann_1_1detail">nlohmann::detail</link></para>
+
+<para>detail namespace with internal helper functions </para>
+</listitem>
+            <listitem><para> <link linkend="_namespacestd">std</link></para>
+</listitem>
+            <listitem><para> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl">nlohmann::detail::dtoa_impl</link></para>
+
+<para>implements the Grisu2 algorithm for binary to decimal floating-point conversion. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_json_8hpp_1a7c94253db90041af11dd946a49f0f8a4">NLOHMANN_JSON_VERSION_MAJOR</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ab5ca1e164894d78d3276d2e5fe58c5e3">NLOHMANN_JSON_VERSION_MINOR</link>   7</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a307e0238ebc35e99ea45c68823eb83eb">NLOHMANN_JSON_VERSION_PATCH</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae4654024695783bdf7cbd900f0e0634a">JSON_HEDLEY_VERSION</link>   13</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8b50e69690eed3a7e11797b1122b4302">JSON_HEDLEY_STRINGIFY_EX</link>(x)   #x</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a9b2aefadecfe77306599a08b0d8147ca">JSON_HEDLEY_STRINGIFY</link>(x)   <link linkend="_json_8hpp_1a8b50e69690eed3a7e11797b1122b4302">JSON_HEDLEY_STRINGIFY_EX</link>(x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aee52531ff30270c04958309efa66a5da">JSON_HEDLEY_CONCAT_EX</link>(a,  b)   a##b</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a4ec16c2642fdc5876d8dbeab3445b313">JSON_HEDLEY_CONCAT</link>(a,  b)   <link linkend="_json_8hpp_1aee52531ff30270c04958309efa66a5da">JSON_HEDLEY_CONCAT_EX</link>(a,b)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a29b325cc7fac302f2488259237d30953">JSON_HEDLEY_CONCAT3_EX</link>(a,  b,  c)   a##b##c</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad10e2ad45ace3771e4d2a3807d33f64f">JSON_HEDLEY_CONCAT3</link>(a,  b,  c)   <link linkend="_json_8hpp_1a29b325cc7fac302f2488259237d30953">JSON_HEDLEY_CONCAT3_EX</link>(a,b,c)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aa1da535c59b21f70e5967b66473543f0">JSON_HEDLEY_VERSION_ENCODE</link>(major,  minor,  revision)   (((major) * 1000000) + ((minor) * 1000) + (revision))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a50f81c80525d6fbce743d5d28b53ff73">JSON_HEDLEY_VERSION_DECODE_MAJOR</link>(version)   ((version) / 1000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae55f01749c4cc564b20b0f2650f10519">JSON_HEDLEY_VERSION_DECODE_MINOR</link>(version)   (((version) % 1000000) / 1000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2d04cc47c899e9addd019e0e7d1ebdbb">JSON_HEDLEY_VERSION_DECODE_REVISION</link>(version)   ((version) % 1000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ac3dc0b5b04f307fc875f9470c0cc841f">JSON_HEDLEY_MSVC_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae51b1abb6876168df25d3f36fa335c94">JSON_HEDLEY_INTEL_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a009a77cb8a9fd33aafff173bb945128d">JSON_HEDLEY_PGI_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a4b6d318de76d6d23850ec1a588bdeffa">JSON_HEDLEY_SUNPRO_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a472a0656b154bb30cf6e8fb8a31b9209">JSON_HEDLEY_EMSCRIPTEN_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aec1d1b1e286d1610ff11dbb29bf3e8cf">JSON_HEDLEY_ARM_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a66ec7d7c320280d6e75cb3634048cd49">JSON_HEDLEY_IBM_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a3d620ef5f95be933b3d8e24d4fc5b6d5">JSON_HEDLEY_TI_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a1ff3757a45a2cb0c54f78722fd7dc47c">JSON_HEDLEY_TI_CL2000_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a0c4b607b1dda665174dcd4c6cfe6ce95">JSON_HEDLEY_TI_CL430_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1abbff24b90b5e9f8b586ee0b334baa636">JSON_HEDLEY_TI_ARMCL_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a138095ac760d2964c84f562b23332101">JSON_HEDLEY_TI_CL6X_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a6198db3ff6fc72b1fa798229fd025229">JSON_HEDLEY_TI_CL7X_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aab50c0bc1673dde3c1cf4e3b131e97ad">JSON_HEDLEY_TI_CLPRU_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a5d9ed879aa65e4db12a81ee95529c3e4">JSON_HEDLEY_CRAY_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8788394855e9b5a1cc32327db5a613cb">JSON_HEDLEY_IAR_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a38192f48e8c6ee0018a988d54e97cacf">JSON_HEDLEY_TINYC_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af21c5dbd9df3b2e245ae547e2d940adc">JSON_HEDLEY_DMC_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad8f9aee7d709155d6745cb3f77c6ff0c">JSON_HEDLEY_COMPCERT_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a21937c8e7c79a1bef6695691c733e29f">JSON_HEDLEY_PELLES_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,  minor,  patch)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af41dc3300eaa6e5e6a976730d160a268">JSON_HEDLEY_HAS_ATTRIBUTE</link>(attribute)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1afdf01f41465021815bb6fc4d8c1839fd">JSON_HEDLEY_GNUC_HAS_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af33c67f65300eb91494f25bf583f5bd7">JSON_HEDLEY_GCC_HAS_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2c4e6a04293aaf333a31698dea661b3b">JSON_HEDLEY_HAS_CPP_ATTRIBUTE</link>(attribute)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad5b94be3095ea0549561c1bc951c5998">JSON_HEDLEY_HAS_CPP_ATTRIBUTE_NS</link>(ns,  attribute)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a938dadb6cadaaaccf72990d09be5dc0a">JSON_HEDLEY_GNUC_HAS_CPP_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aaa3c748298e83bf6a67b583b83233c11">JSON_HEDLEY_GCC_HAS_CPP_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1acf8ab10ce06ffe6f54840b555b15121c">JSON_HEDLEY_HAS_BUILTIN</link>(builtin)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a92764b738f44272e1b18c3ef1403c894">JSON_HEDLEY_GNUC_HAS_BUILTIN</link>(builtin,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aa210655ec7cc8387bef8ade74c3af647">JSON_HEDLEY_GCC_HAS_BUILTIN</link>(builtin,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a752eb648bbfc7bcd8a4624c43f520412">JSON_HEDLEY_HAS_FEATURE</link>(feature)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad5dab327c783036962c7d921a4144676">JSON_HEDLEY_GNUC_HAS_FEATURE</link>(feature,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae9f353e2ea047111e419855144b06ab7">JSON_HEDLEY_GCC_HAS_FEATURE</link>(feature,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a320bfe79028a67cd5873f917bc5418dd">JSON_HEDLEY_HAS_EXTENSION</link>(extension)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2417cc05952936574c0a6ed96d73d8e2">JSON_HEDLEY_GNUC_HAS_EXTENSION</link>(extension,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af488159969a8b7154820cffe04bb4917">JSON_HEDLEY_GCC_HAS_EXTENSION</link>(extension,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ac256365345e803d24cbd9651d3cb0274">JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</link>(attribute)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a005d6f0dbab6f7152e43fb85fc4f4990">JSON_HEDLEY_GNUC_HAS_DECLSPEC_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a164e098f308804c3bada63613ad75dab">JSON_HEDLEY_GCC_HAS_DECLSPEC_ATTRIBUTE</link>(attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a472922971d1cd7308a4402042bdafe34">JSON_HEDLEY_HAS_WARNING</link>(warning)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8afa30449fac8b5069e62f26421d4148">JSON_HEDLEY_GNUC_HAS_WARNING</link>(warning,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ab45544391bc41507efde58d48331dfc2">JSON_HEDLEY_GCC_HAS_WARNING</link>(warning,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a543a78d9931a92663e3b3fc552a390a4">JSON_HEDLEY_DIAGNOSTIC_DISABLE_CPP98_COMPAT_WRAP_</link>(x)   x</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ab849ba88a6f410da5a46a86f8565b381">JSON_HEDLEY_CONST_CAST</link>(T,  expr)   ((T) (expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a86dd11af75e3f25f5be26cf3c779ba79">JSON_HEDLEY_REINTERPRET_CAST</link>(T,  expr)   ((T) (expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(T,  expr)   ((T) (expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8c790866b16f58cbe0b3286a7a6238c3">JSON_HEDLEY_CPP_CAST</link>(T,  expr)   (expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aeb6e382f24fc5453621ae258b72e8775">JSON_HEDLEY_PRAGMA</link>(value)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a1850f57fcda72becebc7033a2e10e77b">JSON_HEDLEY_DIAGNOSTIC_PUSH</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aeedd50a52e1ea565ceab84bb596ec07f">JSON_HEDLEY_DIAGNOSTIC_POP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1afe5855242129fa5d1adf55227669a337">JSON_HEDLEY_DIAGNOSTIC_DISABLE_DEPRECATED</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ab67745ae0065d536d8e67969db68d564">JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_PRAGMAS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ab6e5abd7e400c9a725278206ece33e16">JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_CPP_ATTRIBUTES</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8d412aa5d441b533afa439a89aa4a754">JSON_HEDLEY_DIAGNOSTIC_DISABLE_CAST_QUAL</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a0f2cbf281fa983a844b9279c697b7a0c">JSON_HEDLEY_DEPRECATED</link>(since)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af0469b867b0ec3a1c4b229ce9d087620">JSON_HEDLEY_DEPRECATED_FOR</link>(since,  replacement)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a681fd0533fbc24394f3322b6f4a60c4f">JSON_HEDLEY_UNAVAILABLE</link>(available_since)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a28d7e3b2d26bd5b8a3806da3db7dea03">JSON_HEDLEY_WARN_UNUSED_RESULT</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1adfb98ffe9adf238a5ba1670738c0f387">JSON_HEDLEY_WARN_UNUSED_RESULT_MSG</link>(msg)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1afe58497d56cda5e4cbf2d33be1bdd91e">JSON_HEDLEY_SENTINEL</link>(position)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a82747e7a15c5cecf1223dbc4eb7a1c6b">JSON_HEDLEY_NO_RETURN</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a9a8fe3009f53d14ac4b48600a2606fc1">JSON_HEDLEY_NO_ESCAPE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a70d7244eea52c8bb5716545e54050bb5">JSON_HEDLEY_ASSUME</link>(expr)   <link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(void, expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a06401b258ef03263f2aec48029dc8b03">JSON_HEDLEY_UNREACHABLE_RETURN</link>(value)   return (value)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2d5705bd7bd14855c3ef5b98305c5fb4">JSON_HEDLEY_UNREACHABLE</link>()   <link linkend="_json_8hpp_1a70d7244eea52c8bb5716545e54050bb5">JSON_HEDLEY_ASSUME</link>(0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a5338981b5ad9027c9e54b1c5597f4344">JSON_HEDLEY_NON_NULL</link>(...)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a2e17831d69746d3ee8ad4796e96975a2">JSON_HEDLEY_PRINTF_FORMAT</link>(string_idx,  first_to_check)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ac317a48664e4099c22d33d8132bef97e">JSON_HEDLEY_CONSTEXPR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a34846d0797b38c1971baee08736dae69">JSON_HEDLEY_PREDICT</link>(expr,  expected,  probability)   (<link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(void, expected), (expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1adb569cea2c5a17c33734f27e8fef2473">JSON_HEDLEY_PREDICT_TRUE</link>(expr,  probability)   (!!(expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aec5597506417346f8f1c4d1f08c7719f">JSON_HEDLEY_PREDICT_FALSE</link>(expr,  probability)   (!!(expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a355f2770653ff7bdd5c74b204b5a3ad0">JSON_HEDLEY_LIKELY</link>(expr)   (!!(expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8df7de76ab3c9445f46f6994ec205bcd">JSON_HEDLEY_UNLIKELY</link>(expr)   (!!(expr))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a26967eb7395562701e450cec045dda15">JSON_HEDLEY_UNPREDICTABLE</link>(expr)   <link linkend="_json_8hpp_1a34846d0797b38c1971baee08736dae69">JSON_HEDLEY_PREDICT</link>(expr, 1, 0.5)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a521367b4e81907450a7ea0bf28028b01">JSON_HEDLEY_MALLOC</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000">JSON_HEDLEY_PURE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a0d17bf1a54fc45a04ced6d3aa86a96e3">JSON_HEDLEY_CONST</link>   <link linkend="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000">JSON_HEDLEY_PURE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad4979e5bc2f252ff6e367fc254ab4e85">JSON_HEDLEY_RESTRICT</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af943d68414c7fe0fdfab7e772fa628a8">JSON_HEDLEY_INLINE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aa8811aa2a21030baad33c103cb04d322">JSON_HEDLEY_ALWAYS_INLINE</link>   <link linkend="_json_8hpp_1af943d68414c7fe0fdfab7e772fa628a8">JSON_HEDLEY_INLINE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aa400dd54d50fd20d7e931e2f08ee6374">JSON_HEDLEY_NEVER_INLINE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a034c879888858092ec101e8d02be67c2">JSON_HEDLEY_PRIVATE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aa1588f4ea4e7819b5b6e66f07865737f">JSON_HEDLEY_PUBLIC</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a29c62e19dfa10fb48bf3aa877c4af21c">JSON_HEDLEY_IMPORT</link>   extern</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a99bb53bea18285e3d2ae4385c6c75434">JSON_HEDLEY_NO_THROW</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a7056c44a5787e78720407fc97aefbd0f">JSON_HEDLEY_FALL_THROUGH</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a81c7e3b5b6811abfd89146ad33a93d8f">JSON_HEDLEY_ARRAY_PARAM</link>(name)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a37617841d58aa4d88d0efee4db57ee18">JSON_HEDLEY_IS_CONSTANT</link>(expr)   (0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a1136ab0d872379bb18d0839893bede67">JSON_HEDLEY_REQUIRE_CONSTEXPR</link>(expr)   (expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ad43f9ae10083194afdfe88516ad876e7">JSON_HEDLEY_BEGIN_C_DECLS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1aca2fc4b765ac5739d680153895b673fb">JSON_HEDLEY_END_C_DECLS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a378be9b66feb11153979c282c669b12e">JSON_HEDLEY_C_DECL</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a04269935c66fe5a9b6c33fa36037d215">JSON_HEDLEY_STATIC_ASSERT</link>(expr,  message)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a06449cfb74f25f075a8ea334542f1c65">JSON_HEDLEY_NULL</link>   ((void*) 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8419c2b65d28686932087c587eb19157">JSON_HEDLEY_MESSAGE</link>(msg)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a5563e5b0fbc2a9b525830081404d9208">JSON_HEDLEY_WARNING</link>(msg)   <link linkend="_json_8hpp_1a8419c2b65d28686932087c587eb19157">JSON_HEDLEY_MESSAGE</link>(msg)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1acbc72fa9390d5e8b7592a81384dfabf3">JSON_HEDLEY_REQUIRE</link>(expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a7106fb230747163b5b16121eb6a42b23">JSON_HEDLEY_REQUIRE_MSG</link>(expr,  msg)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a701eddd8e14dbe617a9ca81b095e88fb">JSON_HEDLEY_FLAGS_CAST</link>(T,  expr)   <link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(T, expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae7a983344e78f37697c2688f1885f9e1">JSON_HEDLEY_EMPTY_BASES</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1af3737b675cbb70bcdfdaca78c2bc7d4a">JSON_HEDLEY_GCC_NOT_CLANG_VERSION_CHECK</link>(major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a940783ca9410ed9dbe4f7abf44a29394">JSON_HEDLEY_CLANG_HAS_ATTRIBUTE</link>(attribute)   <link linkend="_json_8hpp_1af41dc3300eaa6e5e6a976730d160a268">JSON_HEDLEY_HAS_ATTRIBUTE</link>(attribute)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a3ce7b30717e453922113c4f62e645e13">JSON_HEDLEY_CLANG_HAS_CPP_ATTRIBUTE</link>(attribute)   <link linkend="_json_8hpp_1a2c4e6a04293aaf333a31698dea661b3b">JSON_HEDLEY_HAS_CPP_ATTRIBUTE</link>(attribute)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a4500e349152e53a3a6f0ab95c6a4a840">JSON_HEDLEY_CLANG_HAS_BUILTIN</link>(builtin)   <link linkend="_json_8hpp_1acf8ab10ce06ffe6f54840b555b15121c">JSON_HEDLEY_HAS_BUILTIN</link>(builtin)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a096be2083232d3a3ea9f3aeb25885f60">JSON_HEDLEY_CLANG_HAS_FEATURE</link>(feature)   <link linkend="_json_8hpp_1a752eb648bbfc7bcd8a4624c43f520412">JSON_HEDLEY_HAS_FEATURE</link>(feature)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a8fcc2d27e828fbd8d5ef88ba341e56c0">JSON_HEDLEY_CLANG_HAS_EXTENSION</link>(extension)   <link linkend="_json_8hpp_1a320bfe79028a67cd5873f917bc5418dd">JSON_HEDLEY_HAS_EXTENSION</link>(extension)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1afb4bf1280cd8738877e1f0f681a5d96d">JSON_HEDLEY_CLANG_HAS_DECLSPEC_ATTRIBUTE</link>(attribute)   <link linkend="_json_8hpp_1ac256365345e803d24cbd9651d3cb0274">JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</link>(attribute)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a6125ffd318b2d6698faad4175a6e7c56">JSON_HEDLEY_CLANG_HAS_WARNING</link>(warning)   <link linkend="_json_8hpp_1a472922971d1cd7308a4402042bdafe34">JSON_HEDLEY_HAS_WARNING</link>(warning)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a6c274f6db2e65c1b66c7d41b06ad690f">JSON_THROW</link>(exception)   std::abort()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a985d3b82445302c57257f6432f261fe9">JSON_TRY</link>   if(true)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a6954bec49ed2a2dfb938c1131c82740a">JSON_CATCH</link>(exception)   if(false)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a5478b7564e65634cc69432ed3cb6490e">JSON_INTERNAL_CATCH</link>(exception)   if(false)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a4c5d399dfa9252e70f876756f3f49084">NLOHMANN_JSON_SERIALIZE_ENUM</link>(ENUM_TYPE, ...)</para>
+
+<para>macro to briefly define a mapping between an enum and JSON </para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a0643bd74c2dc6f0e4e420b8190ea8f0f">NLOHMANN_BASIC_JSON_TPL_DECLARATION</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1a80b7254e63f199a1f656f07ae551f632">NLOHMANN_BASIC_JSON_TPL</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_json_8hpp_1ae7fdc438c6d6cb1f17c4373bce5a802d">INCLUDE_NLOHMANN_JSON_FWD_HPP_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;bool B, typename T  = void&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">nlohmann::detail::enable_if_t</link> = typename std::enable_if&lt; B, T &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a53a082eedad9f4729fcd8fed552a21f7">nlohmann::detail::uncvref_t</link> = typename std::remove_cv&lt; typename std::remove_reference&lt; T &gt;::type &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;typename... Ts&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a24800493c6ec02ce033dcbb47b7fd28e">nlohmann::detail::index_sequence_for</link> = make_index_sequence&lt; sizeof...(Ts)&gt;</para>
+</listitem>
+            <listitem><para>template&lt;typename ... Ts&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a92a167c49c6697b6ffe4f79492c705e5">nlohmann::detail::void_t</link> = typename make_void&lt; Ts... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9135fcf616d6ac6e231a86e0a055ac44">nlohmann::detail::is_detected</link> = typename detector&lt; nonesuch, void, Op, Args... &gt;::value_t</para>
+</listitem>
+            <listitem><para>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">nlohmann::detail::detected_t</link> = typename detector&lt; nonesuch, void, Op, Args... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce">nlohmann::detail::detected_or</link> = detector&lt; Default, void, Op, Args... &gt;</para>
+</listitem>
+            <listitem><para>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a7ac5b8ef0363101275a2827b3b117dcf">nlohmann::detail::detected_or_t</link> = typename detected_or&lt; Default, Op, Args... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;class Expected , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def">nlohmann::detail::is_detected_exact</link> = std::is_same&lt; Expected, detected_t&lt; Op, Args... &gt; &gt;</para>
+</listitem>
+            <listitem><para>template&lt;class To , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a5262e531c46e357b33007060f294673b">nlohmann::detail::is_detected_convertible</link> = std::is_convertible&lt; detected_t&lt; Op, Args... &gt;, To &gt;</para>
+</listitem>
+            <listitem><para>using <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> = basic_json&lt;&gt;</para>
+
+<para>default JSON class </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9c1795c148875722f8482d39e0eb9364">nlohmann::detail::mapped_type_t</link> = typename T::mapped_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a66dfe39f03b05d6b7265a0ff748d64ef">nlohmann::detail::key_type_t</link> = typename T::key_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af91beae90c2fb0f931079b3d50a343bc">nlohmann::detail::value_type_t</link> = typename T::value_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a3603b59a17d1c5e15050743b847992f2">nlohmann::detail::difference_type_t</link> = typename T::difference_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a26dc71e2dd9336587e56062178f9abce">nlohmann::detail::pointer_t</link> = typename T::pointer</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a082bdafd3b4c61d9d1e92b35b8f75ee3">nlohmann::detail::reference_t</link> = typename T::reference</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ad22d2aa3aab018050ae519f6754366e1">nlohmann::detail::iterator_category_t</link> = typename T::iterator_category</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9ff93db146174305bce1bc4c54703e11">nlohmann::detail::iterator_t</link> = typename T::iterator</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af846b6cf2f926009ff3a7a61495ca383">nlohmann::detail::to_json_function</link> = decltype(T::to_json(std::declval&lt; Args &gt;()...))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a1711ee5cef66a0523055c8d9f024f322">nlohmann::detail::from_json_function</link> = decltype(T::from_json(std::declval&lt; Args &gt;()...))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename U &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ab4d22cdb6521ee3508db496dea66711e">nlohmann::detail::get_template_function</link> = decltype(std::declval&lt; T &gt;().template get&lt; U &gt;())</para>
+</listitem>
+            <listitem><para>using <link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">nlohmann::detail::input_adapter_t</link> = std::shared_ptr&lt; input_adapter_protocol &gt;</para>
+
+<para>a type to simplify interfaces </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ac1b4e524746bf8b790b2b776048b93c4">nlohmann::detail::null_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().null())</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a45ec87326503b8884b664a9ef23a6c99">nlohmann::detail::boolean_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().boolean(std::declval&lt; bool &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Integer &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a4a3e14a011b9ea1ff849fc6d2411e6a0">nlohmann::detail::number_integer_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_integer(std::declval&lt; Integer &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Unsigned &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a74da7b17bda76f65d276feb18209c913">nlohmann::detail::number_unsigned_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_unsigned(std::declval&lt; Unsigned &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Float , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ad42df56e913abe26ed556e0e92f386f4">nlohmann::detail::number_float_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_float(std::declval&lt; Float &gt;(), std::declval&lt; const String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a27c3fc3bd42ac406f763184aa8ae4cb0">nlohmann::detail::string_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().string(std::declval&lt; String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a5fff1e6dcaabd367d9b1109a5682f9d4">nlohmann::detail::start_object_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().start_object(std::declval&lt; std::size_t &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a44869ca9f422b260625d78e4e8121559">nlohmann::detail::key_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().key(std::declval&lt; String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af52d6d2521c386998ae940d118182ebc">nlohmann::detail::end_object_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().end_object())</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a80273cecc45765d7b2826ec931fbffdd">nlohmann::detail::start_array_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().start_array(std::declval&lt; std::size_t &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1aec53c029383b34a72182210e58fadb79">nlohmann::detail::end_array_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().end_array())</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Exception &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a264d4d58bc1fd82bcc7bf6bf73d6acad">nlohmann::detail::parse_error_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().parse_error(std::declval&lt; std::size_t &gt;(), std::declval&lt; const std::string &amp; &gt;(), std::declval&lt; const Exception &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename CharType &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">nlohmann::detail::output_adapter_t</link> = std::shared_ptr&lt; output_adapter_protocol&lt; CharType &gt; &gt;</para>
+
+<para>a type to simplify interfaces </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">nlohmann::detail::value_t</link> : std::uint8_t { 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a37a6259cc0c1dae299a7866489dff0bd">nlohmann::detail::value_t::null</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">nlohmann::detail::value_t::object</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985af1f713c9e000f5d3f280adbd124df4f5">nlohmann::detail::value_t::array</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ab45cffe084dd3d20d928bee85e7b0f21">nlohmann::detail::value_t::string</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a84e2c64f38f78ba3ea5c905ab5a2da27">nlohmann::detail::value_t::boolean</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a5763da164f8659d94a56e29df64b4bcc">nlohmann::detail::value_t::number_integer</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985adce7cc8ec29055c4158828921f2f265e">nlohmann::detail::value_t::number_unsigned</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ad9966ecb59667235a57b4b999a649eef">nlohmann::detail::value_t::number_float</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a9d7183f16acce70658f686ae7f1a4d20">nlohmann::detail::value_t::binary</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a94708897ec9db8647dfe695714c98e46">nlohmann::detail::value_t::discarded</link>
+ }</para>
+
+<para>the JSON type enumeration </para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40">nlohmann::detail::input_format_t</link> { 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a466deec76ecdf5fca6d38571f6324d54">nlohmann::detail::input_format_t::json</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40aaf9de350d652f0c9055ddab514bd23ea">nlohmann::detail::input_format_t::cbor</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40ac40d516627022a54003ac2b74a82688a">nlohmann::detail::input_format_t::msgpack</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a4537f20910e85437f6d07701864084e8">nlohmann::detail::input_format_t::ubjson</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a0b6879b186bfb2b1ec65d2460e4eccd4">nlohmann::detail::input_format_t::bson</link>
+ }</para>
+
+<para>the supported input formats </para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967df">nlohmann::detail::error_handler_t</link> { <link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa2133fd717402a7966ee88d06f9e0b792">nlohmann::detail::error_handler_t::strict</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa9dde360102c103867bd2f45872f1129c">nlohmann::detail::error_handler_t::replace</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa567bc1d268f135496de3d5b946b691f3">nlohmann::detail::error_handler_t::ignore</link>
+ }</para>
+
+<para>how to treat decoding errors </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_namespacenlohmann_1_1detail_1a09169efff3bd1771fff29bd92cea19e0">nlohmann::detail::operator&lt;</link> (const value_t lhs, const value_t rhs) noexcept</para>
+
+<para>comparison operator for JSON types </para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a1f0395aad0fe853a4539288749d3a603">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename std::nullptr_t &amp;n)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a85955b9c6dd31846e4b8e891f78614b6">nlohmann::detail::get_arithmetic_value</link> (const BasicJsonType &amp;j, ArithmeticType &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a58117f225f43d03e3a0a4a6f3d77c9d9">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::boolean_t &amp;b)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ad74d89f77ada7a57eff38b43d4bf2335">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::string_t &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleStringType , enable_if_t&lt; is_constructible_string_type&lt; BasicJsonType, ConstructibleStringType &gt;::value and not std::is_same&lt; typename BasicJsonType::string_t, ConstructibleStringType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a2932f2bc2943dac6d51669312f4fc0f5">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, ConstructibleStringType &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a7cb5dd7d46a60e65f9a8e0873b3f7dd8">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_float_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ace4d5680ba413d9fd897ccb5d9c61a1c">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_unsigned_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a047d881e611fcac709dc318f730a1732">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_integer_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a5440d650150d01e8015133521351b459">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, EnumType &amp;e)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , typename Allocator , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a5cfb765aad92795abd7fda29d017272a">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::forward_list&lt; T, Allocator &gt; &amp;l)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a3df497b1d3977f071b488ecac1401517">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::valarray&lt; T &gt; &amp;l)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a7deb2db8eed6f1762373dde7a6595760">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, T(&amp;arr)[N]) -&gt; decltype(j.template get&lt; T &gt;(), void())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a40f7bb070a60e8ba14fffb9c117fcbd8">nlohmann::detail::from_json_array_impl</link> (const BasicJsonType &amp;j, typename BasicJsonType::array_t &amp;arr, priority_tag&lt; 3 &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1aba0ce45ebb69fd2c7132a00f9a56b503">nlohmann::detail::from_json_array_impl</link> (const BasicJsonType &amp;j, std::array&lt; T, N &gt; &amp;arr, priority_tag&lt; 2 &gt;) -&gt; decltype(j.template get&lt; T &gt;(), void())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a464e1246f3df7edea79c3f81ab701edd">nlohmann::detail::from_json_array_impl</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr, priority_tag&lt; 1 &gt;) -&gt; decltype(arr.reserve(std::declval&lt; typename ConstructibleArrayType::size_type &gt;()), j.template get&lt; typename ConstructibleArrayType::value_type &gt;(), void())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a20cf21255e75cff1ffb0869c2c545e63">nlohmann::detail::from_json_array_impl</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr, priority_tag&lt; 0 &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType , enable_if_t&lt; is_constructible_array_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_object_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_string_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_basic_json&lt; ConstructibleArrayType &gt;::value, int &gt;  = 0&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a14d8cdf544585f1c38eab6a0820e55f7">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr) -&gt; decltype(from_json_array_impl(j, arr, priority_tag&lt; 3 &gt;</para>
+</listitem>
+            <listitem><para>j template <link linkend="_namespacenlohmann_1_1detail_1ad9e016d7b6a3cd2847027950aa0aac3b">nlohmann::detail::get&lt; typename ConstructibleArrayType::value_type &gt;</link> ()</para>
+</listitem>
+            <listitem><para>j template <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">nlohmann::detail::void</link> ())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleObjectType , enable_if_t&lt; is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a5b24896e5f5db6af06d939dde4b63fe1">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, ConstructibleObjectType &amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_unsigned_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_integer_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_float_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a839b0ab50d2c9bce669068f56bc41202">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, ArithmeticType &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename A1 , typename A2 &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1aae9f9c2601074e323d49428132cc293d">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::pair&lt; A1, A2 &gt; &amp;p)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a28253915d9db4a0112d60eaee0422949">nlohmann::detail::from_json_tuple_impl</link> (const BasicJsonType &amp;j, Tuple &amp;t, index_sequence&lt; Idx... &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename... Args&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a8b99ec9b29f3f20a18fc4281fb784e49">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::tuple&lt; Args... &gt; &amp;t)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Key , typename Value , typename Compare , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ae93147a54d2740228ef16a5e6210ca3e">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::map&lt; Key, Value, Compare, Allocator &gt; &amp;m)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Key , typename Value , typename Hash , typename KeyEqual , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1aef5c8ea108f4d2b03fb4a635617510de">nlohmann::detail::from_json</link> (const BasicJsonType &amp;j, std::unordered_map&lt; Key, Value, Hash, KeyEqual, Allocator &gt; &amp;m)</para>
+</listitem>
+            <listitem><para>template&lt;typename string_type &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a3c45286b0a2f15ea0a756cb87a76cf9b">nlohmann::detail::int_to_string</link> (string_type &amp;target, std::size_t value)</para>
+</listitem>
+            <listitem><para>template&lt;std::size_t N, typename IteratorType , enable_if_t&lt; N==0, int &gt;  = 0&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">nlohmann::detail::get</link> (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt; &amp;i) -&gt; decltype(i.key())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, T b) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleString , enable_if_t&lt; std::is_constructible&lt; typename BasicJsonType::string_t, CompatibleString &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a7356ed05cdbbb080cee80e1211e1c6c9">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const CompatibleString &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a4aa1ca6b7c61bf19d1f30ea5b669f68e">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::string_t &amp;&amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename FloatType , enable_if_t&lt; std::is_floating_point&lt; FloatType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a22bffdc8bc7e43af380ba2050696b230">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, FloatType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleNumberUnsignedType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_unsigned_t, CompatibleNumberUnsignedType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ae5fd66b5517b3b5a6c6b9fd9f29ba8dc">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, CompatibleNumberUnsignedType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleNumberIntegerType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_integer_t, CompatibleNumberIntegerType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a91fe576be579c8c2fdd14610605c6dd2">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, CompatibleNumberIntegerType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a0c8b159dba71981d6c555d284cf6e2bf">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, EnumType e) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1aeca6fb5fede5ed1e12a4420d98a5692b">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const std::vector&lt; bool &gt; &amp;e)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleArrayType , enable_if_t&lt; is_compatible_array_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_object_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_string_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_basic_json&lt; CompatibleArrayType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a3afebc132c5ff83f9cd160e52030fdfd">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const CompatibleArrayType &amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; T, BasicJsonType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a7f7c7b9760161b774cdc0b4b838fae64">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const std::valarray&lt; T &gt; &amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1aa0fd1b5788e9ba37e31da43dda738cb5">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::array_t &amp;&amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleObjectType , enable_if_t&lt; is_compatible_object_type&lt; BasicJsonType, CompatibleObjectType &gt;::value and not is_basic_json&lt; CompatibleObjectType &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a24c9c12f3839c94e09532f08de85e949">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const CompatibleObjectType &amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ac9f7a5542851c61d93740148eaec509f">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::object_t &amp;&amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N, enable_if_t&lt; not std::is_constructible&lt; typename BasicJsonType::string_t, const T(&amp;)[N]&gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a20ea5175c8999fc8b673e46b892f71f6">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const T(&amp;arr)[N])</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T1 , typename T2 , enable_if_t&lt; std::is_constructible&lt; BasicJsonType, T1 &gt;::value &amp;&amp;std::is_constructible&lt; BasicJsonType, T2 &gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1ab64eeb55b44db44eb8e9070229eb97df">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const std::pair&lt; T1, T2 &gt; &amp;p)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, iteration_proxy_value&lt; typename BasicJsonType::iterator &gt;&gt;::value, int &gt;  = 0&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1aaa77b0c9745130b77733a92a1a2e82ec">nlohmann::detail::to_json</link> (BasicJsonType &amp;j, const T &amp;b)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1a510dfa15b01e9a8afe31600a27b28199">nlohmann::detail::to_json_tuple_impl</link> (BasicJsonType &amp;j, const Tuple &amp;t, index_sequence&lt; Idx... &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename Target , typename Source &gt; </para><para>Target <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a1c5d30eb51e5e994a3f48bde104d2ce8">nlohmann::detail::dtoa_impl::reinterpret_bits</link> (const Source source)</para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para>boundaries <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a22b6e37654ac93c6d0d9c06ec1bf5ded">nlohmann::detail::dtoa_impl::compute_boundaries</link> (FloatType value)</para>
+</listitem>
+            <listitem><para>cached_power <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1adbf329a18c5cf854a3477327afd2200b">nlohmann::detail::dtoa_impl::get_cached_power_for_binary_exponent</link> (int e)</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a36ded358763b5dbcea9867660fbe4e28">nlohmann::detail::dtoa_impl::find_largest_pow10</link> (const std::uint32_t n, std::uint32_t &amp;pow10)</para>
+</listitem>
+            <listitem><para>void <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a5bc841e0bee12fd6489d49cf7bd07bb4">nlohmann::detail::dtoa_impl::grisu2_round</link> (char *buf, int len, std::uint64_t dist, std::uint64_t delta, std::uint64_t rest, std::uint64_t ten_k)</para>
+</listitem>
+            <listitem><para>void <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a9b899c72b0e1e3dd46d75c2b4e6bcdfb">nlohmann::detail::dtoa_impl::grisu2_digit_gen</link> (char *buffer, int &amp;length, int &amp;decimal_exponent, diyfp M_minus, diyfp w, diyfp M_plus)</para>
+</listitem>
+            <listitem><para>void <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a05b681dcb8569b9784c6dccfadb01633">nlohmann::detail::dtoa_impl::grisu2</link> (char *buf, int &amp;len, int &amp;decimal_exponent, diyfp m_minus, diyfp v, diyfp m_plus)</para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para>void <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1aab7a9670a4f4704a5d0347ad7588576b">nlohmann::detail::dtoa_impl::grisu2</link> (char *buf, int &amp;len, int &amp;decimal_exponent, FloatType value)</para>
+</listitem>
+            <listitem><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ad90f19ed10d8133b727df4b9bc5ddf5c">nlohmann::detail::dtoa_impl::append_exponent</link> (char *buf, int e)</para>
+
+<para>appends a decimal representation of e to buf </para>
+</listitem>
+            <listitem><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ab441f2761e33839ca48bc2225e14a2a9">nlohmann::detail::dtoa_impl::format_buffer</link> (char *buf, int len, int decimal_exponent, int min_exp, int max_exp)</para>
+
+<para>prettify v = buf * 10^decimal_exponent </para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1a6cca370ac6c99294dbe4fe24716a57dd">nlohmann::detail::to_chars</link> (char *first, const char *last, FloatType value)</para>
+
+<para>generates a decimal representation of the floating-point number value in [first, last). </para>
+</listitem>
+            <listitem><para><link linkend="_json_8hpp_1a0643bd74c2dc6f0e4e420b8190ea8f0f">NLOHMANN_BASIC_JSON_TPL_DECLARATION</link> std::string <link linkend="_namespacenlohmann_1a6ce645a0b8717757e096a5b5773b7a16">nlohmann::to_string</link> (const <link linkend="_json_8hpp_1a80b7254e63f199a1f656f07ae551f632">NLOHMANN_BASIC_JSON_TPL</link> &amp;j)</para>
+
+<para>user-defined to_string function for JSON values </para>
+</listitem>
+            <listitem><para>template&lt;&gt; </para><para>void <link linkend="_namespacestd_1ace192546038d61d9c28ddfe0c3d732de">std::swap&lt; nlohmann::json &gt;</link> (<link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp;j1, <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp;j2) noexcept(is_nothrow_move_constructible&lt; <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &gt;::value and is_nothrow_move_assignable&lt; <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &gt;::value)</para>
+
+<para>exchanges the values of two JSON objects </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> <link linkend="_json_8hpp_1ae90d59ab420a183cd5fb8588bdc95e06">operator&quot;&quot;_json</link> (const char *s, std::size_t n)</para>
+
+<para>user-defined string literal for JSON values </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a352187a5ebf3cde865be1b833c18f208">nlohmann::json::json_pointer</link> <link linkend="_json_8hpp_1a3e528a99a7882f8d0b97375bb6081d10">operator&quot;&quot;_json_pointer</link> (const char *s, std::size_t n)</para>
+
+<para>user-defined string literal for JSON pointer </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>constexpr int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ac1ea1316de0b4a219f707c76b1db1966">nlohmann::detail::dtoa_impl::kAlpha</link> = -60</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a4a750fcc38da1ce68b7e25ab3a230e20">nlohmann::detail::dtoa_impl::kGamma</link> = -32</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_json_8hpp_1ae7fdc438c6d6cb1f17c4373bce5a802d"/>    <section>
+    <title>INCLUDE_NLOHMANN_JSON_FWD_HPP_</title>
+<indexterm><primary>INCLUDE_NLOHMANN_JSON_FWD_HPP_</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>INCLUDE_NLOHMANN_JSON_FWD_HPP_</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_NLOHMANN_JSON_FWD_HPP_</computeroutput></para><para>
+Definition at line 2703 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a6954bec49ed2a2dfb938c1131c82740a"/>    <section>
+    <title>JSON_CATCH</title>
+<indexterm><primary>JSON_CATCH</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_CATCH</secondary></indexterm>
+<para><computeroutput>#define JSON_CATCH( exception)   if(false)</computeroutput></para><para>
+Definition at line 2072 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aa8811aa2a21030baad33c103cb04d322"/>    <section>
+    <title>JSON_HEDLEY_ALWAYS_INLINE</title>
+<indexterm><primary>JSON_HEDLEY_ALWAYS_INLINE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_ALWAYS_INLINE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_ALWAYS_INLINE   <link linkend="_json_8hpp_1af943d68414c7fe0fdfab7e772fa628a8">JSON_HEDLEY_INLINE</link></computeroutput></para><para>
+Definition at line 1594 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aec1d1b1e286d1610ff11dbb29bf3e8cf"/>    <section>
+    <title>JSON_HEDLEY_ARM_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_ARM_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_ARM_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_ARM_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 310 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a81c7e3b5b6811abfd89146ad33a93d8f"/>    <section>
+    <title>JSON_HEDLEY_ARRAY_PARAM</title>
+<indexterm><primary>JSON_HEDLEY_ARRAY_PARAM</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_ARRAY_PARAM</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_ARRAY_PARAM( name)</computeroutput></para><para>
+Definition at line 1729 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a70d7244eea52c8bb5716545e54050bb5"/>    <section>
+    <title>JSON_HEDLEY_ASSUME</title>
+<indexterm><primary>JSON_HEDLEY_ASSUME</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_ASSUME</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_ASSUME( expr)   <link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(void, expr)</computeroutput></para><para>
+Definition at line 1257 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad43f9ae10083194afdfe88516ad876e7"/>    <section>
+    <title>JSON_HEDLEY_BEGIN_C_DECLS</title>
+<indexterm><primary>JSON_HEDLEY_BEGIN_C_DECLS</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_BEGIN_C_DECLS</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_BEGIN_C_DECLS</computeroutput></para><para>
+Definition at line 1835 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a378be9b66feb11153979c282c669b12e"/>    <section>
+    <title>JSON_HEDLEY_C_DECL</title>
+<indexterm><primary>JSON_HEDLEY_C_DECL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_C_DECL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_C_DECL</computeroutput></para><para>
+Definition at line 1837 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a940783ca9410ed9dbe4f7abf44a29394"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_ATTRIBUTE( attribute)   <link linkend="_json_8hpp_1af41dc3300eaa6e5e6a976730d160a268">JSON_HEDLEY_HAS_ATTRIBUTE</link>(attribute)</computeroutput></para><para>
+Definition at line 1991 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a4500e349152e53a3a6f0ab95c6a4a840"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_BUILTIN</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_BUILTIN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_BUILTIN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_BUILTIN( builtin)   <link linkend="_json_8hpp_1acf8ab10ce06ffe6f54840b555b15121c">JSON_HEDLEY_HAS_BUILTIN</link>(builtin)</computeroutput></para><para>
+Definition at line 2001 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a3ce7b30717e453922113c4f62e645e13"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_CPP_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_CPP_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_CPP_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_CPP_ATTRIBUTE( attribute)   <link linkend="_json_8hpp_1a2c4e6a04293aaf333a31698dea661b3b">JSON_HEDLEY_HAS_CPP_ATTRIBUTE</link>(attribute)</computeroutput></para><para>
+Definition at line 1996 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1afb4bf1280cd8738877e1f0f681a5d96d"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_DECLSPEC_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_DECLSPEC_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_DECLSPEC_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_DECLSPEC_ATTRIBUTE( attribute)   <link linkend="_json_8hpp_1ac256365345e803d24cbd9651d3cb0274">JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</link>(attribute)</computeroutput></para><para>
+Definition at line 2016 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8fcc2d27e828fbd8d5ef88ba341e56c0"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_EXTENSION</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_EXTENSION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_EXTENSION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_EXTENSION( extension)   <link linkend="_json_8hpp_1a320bfe79028a67cd5873f917bc5418dd">JSON_HEDLEY_HAS_EXTENSION</link>(extension)</computeroutput></para><para>
+Definition at line 2011 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a096be2083232d3a3ea9f3aeb25885f60"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_FEATURE</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_FEATURE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_FEATURE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_FEATURE( feature)   <link linkend="_json_8hpp_1a752eb648bbfc7bcd8a4624c43f520412">JSON_HEDLEY_HAS_FEATURE</link>(feature)</computeroutput></para><para>
+Definition at line 2006 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a6125ffd318b2d6698faad4175a6e7c56"/>    <section>
+    <title>JSON_HEDLEY_CLANG_HAS_WARNING</title>
+<indexterm><primary>JSON_HEDLEY_CLANG_HAS_WARNING</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CLANG_HAS_WARNING</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CLANG_HAS_WARNING( warning)   <link linkend="_json_8hpp_1a472922971d1cd7308a4402042bdafe34">JSON_HEDLEY_HAS_WARNING</link>(warning)</computeroutput></para><para>
+Definition at line 2021 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad8f9aee7d709155d6745cb3f77c6ff0c"/>    <section>
+    <title>JSON_HEDLEY_COMPCERT_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_COMPCERT_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_COMPCERT_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_COMPCERT_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 538 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a4ec16c2642fdc5876d8dbeab3445b313"/>    <section>
+    <title>JSON_HEDLEY_CONCAT</title>
+<indexterm><primary>JSON_HEDLEY_CONCAT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONCAT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONCAT( a,  b)   <link linkend="_json_8hpp_1aee52531ff30270c04958309efa66a5da">JSON_HEDLEY_CONCAT_EX</link>(a,b)</computeroutput></para><para>
+Definition at line 149 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad10e2ad45ace3771e4d2a3807d33f64f"/>    <section>
+    <title>JSON_HEDLEY_CONCAT3</title>
+<indexterm><primary>JSON_HEDLEY_CONCAT3</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONCAT3</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONCAT3( a,  b,  c)   <link linkend="_json_8hpp_1a29b325cc7fac302f2488259237d30953">JSON_HEDLEY_CONCAT3_EX</link>(a,b,c)</computeroutput></para><para>
+Definition at line 159 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a29b325cc7fac302f2488259237d30953"/>    <section>
+    <title>JSON_HEDLEY_CONCAT3_EX</title>
+<indexterm><primary>JSON_HEDLEY_CONCAT3_EX</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONCAT3_EX</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONCAT3_EX( a,  b,  c)   a##b##c</computeroutput></para><para>
+Definition at line 154 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aee52531ff30270c04958309efa66a5da"/>    <section>
+    <title>JSON_HEDLEY_CONCAT_EX</title>
+<indexterm><primary>JSON_HEDLEY_CONCAT_EX</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONCAT_EX</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONCAT_EX( a,  b)   a##b</computeroutput></para><para>
+Definition at line 144 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a0d17bf1a54fc45a04ced6d3aa86a96e3"/>    <section>
+    <title>JSON_HEDLEY_CONST</title>
+<indexterm><primary>JSON_HEDLEY_CONST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONST   <link linkend="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000">JSON_HEDLEY_PURE</link></computeroutput></para><para>
+Definition at line 1503 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ab849ba88a6f410da5a46a86f8565b381"/>    <section>
+    <title>JSON_HEDLEY_CONST_CAST</title>
+<indexterm><primary>JSON_HEDLEY_CONST_CAST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONST_CAST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONST_CAST( T,  expr)   ((T) (expr))</computeroutput></para><para>
+Definition at line 836 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ac317a48664e4099c22d33d8132bef97e"/>    <section>
+    <title>JSON_HEDLEY_CONSTEXPR</title>
+<indexterm><primary>JSON_HEDLEY_CONSTEXPR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CONSTEXPR</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CONSTEXPR</computeroutput></para><para>
+Definition at line 1343 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8c790866b16f58cbe0b3286a7a6238c3"/>    <section>
+    <title>JSON_HEDLEY_CPP_CAST</title>
+<indexterm><primary>JSON_HEDLEY_CPP_CAST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CPP_CAST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CPP_CAST( T,  expr)   (expr)</computeroutput></para><para>
+Definition at line 876 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a5d9ed879aa65e4db12a81ee95529c3e4"/>    <section>
+    <title>JSON_HEDLEY_CRAY_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_CRAY_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_CRAY_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_CRAY_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 470 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a0f2cbf281fa983a844b9279c697b7a0c"/>    <section>
+    <title>JSON_HEDLEY_DEPRECATED</title>
+<indexterm><primary>JSON_HEDLEY_DEPRECATED</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DEPRECATED</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DEPRECATED( since)</computeroutput></para><para>
+Definition at line 1099 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af0469b867b0ec3a1c4b229ce9d087620"/>    <section>
+    <title>JSON_HEDLEY_DEPRECATED_FOR</title>
+<indexterm><primary>JSON_HEDLEY_DEPRECATED_FOR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DEPRECATED_FOR</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DEPRECATED_FOR( since,  replacement)</computeroutput></para><para>
+Definition at line 1100 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8d412aa5d441b533afa439a89aa4a754"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CAST_QUAL</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CAST_QUAL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CAST_QUAL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_DISABLE_CAST_QUAL</computeroutput></para><para>
+Definition at line 1044 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a543a78d9931a92663e3b3fc552a390a4"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CPP98_COMPAT_WRAP_</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CPP98_COMPAT_WRAP_</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_CPP98_COMPAT_WRAP_</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_DISABLE_CPP98_COMPAT_WRAP_( x)   x</computeroutput></para><para>
+Definition at line 817 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1afe5855242129fa5d1adf55227669a337"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_DISABLE_DEPRECATED</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_DEPRECATED</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_DEPRECATED</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_DISABLE_DEPRECATED</computeroutput></para><para>
+Definition at line 978 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ab6e5abd7e400c9a725278206ece33e16"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_CPP_ATTRIBUTES</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_CPP_ATTRIBUTES</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_CPP_ATTRIBUTES</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_CPP_ATTRIBUTES</computeroutput></para><para>
+Definition at line 1031 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ab67745ae0065d536d8e67969db68d564"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_PRAGMAS</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_PRAGMAS</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_PRAGMAS</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_DISABLE_UNKNOWN_PRAGMAS</computeroutput></para><para>
+Definition at line 1005 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aeedd50a52e1ea565ceab84bb596ec07f"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_POP</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_POP</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_POP</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_POP</computeroutput></para><para>
+Definition at line 940 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a1850f57fcda72becebc7033a2e10e77b"/>    <section>
+    <title>JSON_HEDLEY_DIAGNOSTIC_PUSH</title>
+<indexterm><primary>JSON_HEDLEY_DIAGNOSTIC_PUSH</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DIAGNOSTIC_PUSH</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DIAGNOSTIC_PUSH</computeroutput></para><para>
+Definition at line 939 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af21c5dbd9df3b2e245ae547e2d940adc"/>    <section>
+    <title>JSON_HEDLEY_DMC_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_DMC_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_DMC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_DMC_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 522 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ae7a983344e78f37697c2688f1885f9e1"/>    <section>
+    <title>JSON_HEDLEY_EMPTY_BASES</title>
+<indexterm><primary>JSON_HEDLEY_EMPTY_BASES</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_EMPTY_BASES</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_EMPTY_BASES</computeroutput></para><para>
+Definition at line 1974 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a472a0656b154bb30cf6e8fb8a31b9209"/>    <section>
+    <title>JSON_HEDLEY_EMSCRIPTEN_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_EMSCRIPTEN_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_EMSCRIPTEN_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_EMSCRIPTEN_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 292 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aca2fc4b765ac5739d680153895b673fb"/>    <section>
+    <title>JSON_HEDLEY_END_C_DECLS</title>
+<indexterm><primary>JSON_HEDLEY_END_C_DECLS</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_END_C_DECLS</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_END_C_DECLS</computeroutput></para><para>
+Definition at line 1836 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a7056c44a5787e78720407fc97aefbd0f"/>    <section>
+    <title>JSON_HEDLEY_FALL_THROUGH</title>
+<indexterm><primary>JSON_HEDLEY_FALL_THROUGH</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_FALL_THROUGH</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_FALL_THROUGH</computeroutput></para><para>
+Definition at line 1702 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a701eddd8e14dbe617a9ca81b095e88fb"/>    <section>
+    <title>JSON_HEDLEY_FLAGS_CAST</title>
+<indexterm><primary>JSON_HEDLEY_FLAGS_CAST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_FLAGS_CAST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_FLAGS_CAST( T,  expr)   <link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(T, expr)</computeroutput></para><para>
+Definition at line 1965 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af33c67f65300eb91494f25bf583f5bd7"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 610 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aa210655ec7cc8387bef8ade74c3af647"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_BUILTIN</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_BUILTIN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_BUILTIN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_BUILTIN( builtin,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 682 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aaa3c748298e83bf6a67b583b83233c11"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_CPP_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_CPP_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_CPP_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_CPP_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 655 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a164e098f308804c3bada63613ad75dab"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_DECLSPEC_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_DECLSPEC_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_DECLSPEC_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_DECLSPEC_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 763 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af488159969a8b7154820cffe04bb4917"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_EXTENSION</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_EXTENSION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_EXTENSION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_EXTENSION( extension,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 736 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ae9f353e2ea047111e419855144b06ab7"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_FEATURE</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_FEATURE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_FEATURE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_FEATURE( feature,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 709 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ab45544391bc41507efde58d48331dfc2"/>    <section>
+    <title>JSON_HEDLEY_GCC_HAS_WARNING</title>
+<indexterm><primary>JSON_HEDLEY_GCC_HAS_WARNING</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_HAS_WARNING</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_HAS_WARNING( warning,  major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 790 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af3737b675cbb70bcdfdaca78c2bc7d4a"/>    <section>
+    <title>JSON_HEDLEY_GCC_NOT_CLANG_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_GCC_NOT_CLANG_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_NOT_CLANG_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_NOT_CLANG_VERSION_CHECK( major,  minor,  patch)   <link linkend="_json_8hpp_1aaf82a065634719d57994ef5876e208ff">JSON_HEDLEY_GCC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 1985 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aaf82a065634719d57994ef5876e208ff"/>    <section>
+    <title>JSON_HEDLEY_GCC_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_GCC_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GCC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GCC_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 583 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1afdf01f41465021815bb6fc4d8c1839fd"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 601 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a92764b738f44272e1b18c3ef1403c894"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_BUILTIN</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_BUILTIN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_BUILTIN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_BUILTIN( builtin,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 673 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a938dadb6cadaaaccf72990d09be5dc0a"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_CPP_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_CPP_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_CPP_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_CPP_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 646 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a005d6f0dbab6f7152e43fb85fc4f4990"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_DECLSPEC_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_DECLSPEC_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_DECLSPEC_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_DECLSPEC_ATTRIBUTE( attribute,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 754 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2417cc05952936574c0a6ed96d73d8e2"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_EXTENSION</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_EXTENSION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_EXTENSION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_EXTENSION( extension,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 727 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad5dab327c783036962c7d921a4144676"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_FEATURE</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_FEATURE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_FEATURE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_FEATURE( feature,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 700 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8afa30449fac8b5069e62f26421d4148"/>    <section>
+    <title>JSON_HEDLEY_GNUC_HAS_WARNING</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_HAS_WARNING</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_HAS_WARNING</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_HAS_WARNING( warning,  major,  minor,  patch)   <link linkend="_json_8hpp_1a074e795380699252f28c9526ca83e586">JSON_HEDLEY_GNUC_VERSION_CHECK</link>(major,minor,patch)</computeroutput></para><para>
+Definition at line 781 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a074e795380699252f28c9526ca83e586"/>    <section>
+    <title>JSON_HEDLEY_GNUC_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_GNUC_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_GNUC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_GNUC_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 196 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af41dc3300eaa6e5e6a976730d160a268"/>    <section>
+    <title>JSON_HEDLEY_HAS_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_HAS_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_ATTRIBUTE( attribute)   (0)</computeroutput></para><para>
+Definition at line 592 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1acf8ab10ce06ffe6f54840b555b15121c"/>    <section>
+    <title>JSON_HEDLEY_HAS_BUILTIN</title>
+<indexterm><primary>JSON_HEDLEY_HAS_BUILTIN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_BUILTIN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_BUILTIN( builtin)   (0)</computeroutput></para><para>
+Definition at line 664 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2c4e6a04293aaf333a31698dea661b3b"/>    <section>
+    <title>JSON_HEDLEY_HAS_CPP_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_HAS_CPP_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_CPP_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_CPP_ATTRIBUTE( attribute)   (0)</computeroutput></para><para>
+Definition at line 622 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad5b94be3095ea0549561c1bc951c5998"/>    <section>
+    <title>JSON_HEDLEY_HAS_CPP_ATTRIBUTE_NS</title>
+<indexterm><primary>JSON_HEDLEY_HAS_CPP_ATTRIBUTE_NS</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_CPP_ATTRIBUTE_NS</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_CPP_ATTRIBUTE_NS( ns,  attribute)   (0)</computeroutput></para><para>
+Definition at line 629 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ac256365345e803d24cbd9651d3cb0274"/>    <section>
+    <title>JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</title>
+<indexterm><primary>JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_DECLSPEC_ATTRIBUTE( attribute)   (0)</computeroutput></para><para>
+Definition at line 745 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a320bfe79028a67cd5873f917bc5418dd"/>    <section>
+    <title>JSON_HEDLEY_HAS_EXTENSION</title>
+<indexterm><primary>JSON_HEDLEY_HAS_EXTENSION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_EXTENSION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_EXTENSION( extension)   (0)</computeroutput></para><para>
+Definition at line 718 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a752eb648bbfc7bcd8a4624c43f520412"/>    <section>
+    <title>JSON_HEDLEY_HAS_FEATURE</title>
+<indexterm><primary>JSON_HEDLEY_HAS_FEATURE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_FEATURE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_FEATURE( feature)   (0)</computeroutput></para><para>
+Definition at line 691 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a472922971d1cd7308a4402042bdafe34"/>    <section>
+    <title>JSON_HEDLEY_HAS_WARNING</title>
+<indexterm><primary>JSON_HEDLEY_HAS_WARNING</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_HAS_WARNING</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_HAS_WARNING( warning)   (0)</computeroutput></para><para>
+Definition at line 772 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8788394855e9b5a1cc32327db5a613cb"/>    <section>
+    <title>JSON_HEDLEY_IAR_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_IAR_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_IAR_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_IAR_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 490 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a66ec7d7c320280d6e75cb3634048cd49"/>    <section>
+    <title>JSON_HEDLEY_IBM_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_IBM_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_IBM_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_IBM_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 330 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a29c62e19dfa10fb48bf3aa877c4af21c"/>    <section>
+    <title>JSON_HEDLEY_IMPORT</title>
+<indexterm><primary>JSON_HEDLEY_IMPORT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_IMPORT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_IMPORT   extern</computeroutput></para><para>
+Definition at line 1669 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af943d68414c7fe0fdfab7e772fa628a8"/>    <section>
+    <title>JSON_HEDLEY_INLINE</title>
+<indexterm><primary>JSON_HEDLEY_INLINE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_INLINE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_INLINE</computeroutput></para><para>
+Definition at line 1554 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ae51b1abb6876168df25d3f36fa335c94"/>    <section>
+    <title>JSON_HEDLEY_INTEL_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_INTEL_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_INTEL_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_INTEL_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 238 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a37617841d58aa4d88d0efee4db57ee18"/>    <section>
+    <title>JSON_HEDLEY_IS_CONSTANT</title>
+<indexterm><primary>JSON_HEDLEY_IS_CONSTANT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_IS_CONSTANT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_IS_CONSTANT( expr)   (0)</computeroutput></para><para>
+Definition at line 1816 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a355f2770653ff7bdd5c74b204b5a3ad0"/>    <section>
+    <title>JSON_HEDLEY_LIKELY</title>
+<indexterm><primary>JSON_HEDLEY_LIKELY</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_LIKELY</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_LIKELY( expr)   (!!(expr))</computeroutput></para><para>
+Definition at line 1403 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a521367b4e81907450a7ea0bf28028b01"/>    <section>
+    <title>JSON_HEDLEY_MALLOC</title>
+<indexterm><primary>JSON_HEDLEY_MALLOC</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_MALLOC</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_MALLOC</computeroutput></para><para>
+Definition at line 1437 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8419c2b65d28686932087c587eb19157"/>    <section>
+    <title>JSON_HEDLEY_MESSAGE</title>
+<indexterm><primary>JSON_HEDLEY_MESSAGE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_MESSAGE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_MESSAGE( msg)</computeroutput></para><para>
+Definition at line 1897 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ac3dc0b5b04f307fc875f9470c0cc841f"/>    <section>
+    <title>JSON_HEDLEY_MSVC_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_MSVC_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_MSVC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_MSVC_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 214 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aa400dd54d50fd20d7e931e2f08ee6374"/>    <section>
+    <title>JSON_HEDLEY_NEVER_INLINE</title>
+<indexterm><primary>JSON_HEDLEY_NEVER_INLINE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NEVER_INLINE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NEVER_INLINE</computeroutput></para><para>
+Definition at line 1632 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a9a8fe3009f53d14ac4b48600a2606fc1"/>    <section>
+    <title>JSON_HEDLEY_NO_ESCAPE</title>
+<indexterm><primary>JSON_HEDLEY_NO_ESCAPE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NO_ESCAPE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NO_ESCAPE</computeroutput></para><para>
+Definition at line 1216 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a82747e7a15c5cecf1223dbc4eb7a1c6b"/>    <section>
+    <title>JSON_HEDLEY_NO_RETURN</title>
+<indexterm><primary>JSON_HEDLEY_NO_RETURN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NO_RETURN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NO_RETURN</computeroutput></para><para>
+Definition at line 1207 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a99bb53bea18285e3d2ae4385c6c75434"/>    <section>
+    <title>JSON_HEDLEY_NO_THROW</title>
+<indexterm><primary>JSON_HEDLEY_NO_THROW</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NO_THROW</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NO_THROW</computeroutput></para><para>
+Definition at line 1685 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a5338981b5ad9027c9e54b1c5597f4344"/>    <section>
+    <title>JSON_HEDLEY_NON_NULL</title>
+<indexterm><primary>JSON_HEDLEY_NON_NULL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NON_NULL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NON_NULL( ...)</computeroutput></para><para>
+Definition at line 1299 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a06449cfb74f25f075a8ea334542f1c65"/>    <section>
+    <title>JSON_HEDLEY_NULL</title>
+<indexterm><primary>JSON_HEDLEY_NULL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_NULL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_NULL   ((void*) 0)</computeroutput></para><para>
+Definition at line 1874 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a21937c8e7c79a1bef6695691c733e29f"/>    <section>
+    <title>JSON_HEDLEY_PELLES_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_PELLES_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PELLES_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PELLES_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 554 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a009a77cb8a9fd33aafff173bb945128d"/>    <section>
+    <title>JSON_HEDLEY_PGI_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_PGI_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PGI_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PGI_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 254 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aeb6e382f24fc5453621ae258b72e8775"/>    <section>
+    <title>JSON_HEDLEY_PRAGMA</title>
+<indexterm><primary>JSON_HEDLEY_PRAGMA</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PRAGMA</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PRAGMA( value)</computeroutput></para><para>
+Definition at line 902 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a34846d0797b38c1971baee08736dae69"/>    <section>
+    <title>JSON_HEDLEY_PREDICT</title>
+<indexterm><primary>JSON_HEDLEY_PREDICT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PREDICT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PREDICT( expr,  expected,  probability)   (<link linkend="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a">JSON_HEDLEY_STATIC_CAST</link>(void, expected), (expr))</computeroutput></para><para>
+Definition at line 1400 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aec5597506417346f8f1c4d1f08c7719f"/>    <section>
+    <title>JSON_HEDLEY_PREDICT_FALSE</title>
+<indexterm><primary>JSON_HEDLEY_PREDICT_FALSE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PREDICT_FALSE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PREDICT_FALSE( expr,  probability)   (!!(expr))</computeroutput></para><para>
+Definition at line 1402 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1adb569cea2c5a17c33734f27e8fef2473"/>    <section>
+    <title>JSON_HEDLEY_PREDICT_TRUE</title>
+<indexterm><primary>JSON_HEDLEY_PREDICT_TRUE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PREDICT_TRUE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PREDICT_TRUE( expr,  probability)   (!!(expr))</computeroutput></para><para>
+Definition at line 1401 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2e17831d69746d3ee8ad4796e96975a2"/>    <section>
+    <title>JSON_HEDLEY_PRINTF_FORMAT</title>
+<indexterm><primary>JSON_HEDLEY_PRINTF_FORMAT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PRINTF_FORMAT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PRINTF_FORMAT( string_idx,  first_to_check)</computeroutput></para><para>
+Definition at line 1331 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a034c879888858092ec101e8d02be67c2"/>    <section>
+    <title>JSON_HEDLEY_PRIVATE</title>
+<indexterm><primary>JSON_HEDLEY_PRIVATE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PRIVATE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PRIVATE</computeroutput></para><para>
+Definition at line 1666 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aa1588f4ea4e7819b5b6e66f07865737f"/>    <section>
+    <title>JSON_HEDLEY_PUBLIC</title>
+<indexterm><primary>JSON_HEDLEY_PUBLIC</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PUBLIC</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PUBLIC</computeroutput></para><para>
+Definition at line 1667 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000"/>    <section>
+    <title>JSON_HEDLEY_PURE</title>
+<indexterm><primary>JSON_HEDLEY_PURE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_PURE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_PURE</computeroutput></para><para>
+Definition at line 1473 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a86dd11af75e3f25f5be26cf3c779ba79"/>    <section>
+    <title>JSON_HEDLEY_REINTERPRET_CAST</title>
+<indexterm><primary>JSON_HEDLEY_REINTERPRET_CAST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_REINTERPRET_CAST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_REINTERPRET_CAST( T,  expr)   ((T) (expr))</computeroutput></para><para>
+Definition at line 845 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1acbc72fa9390d5e8b7592a81384dfabf3"/>    <section>
+    <title>JSON_HEDLEY_REQUIRE</title>
+<indexterm><primary>JSON_HEDLEY_REQUIRE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_REQUIRE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_REQUIRE( expr)</computeroutput></para><para>
+Definition at line 1943 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a1136ab0d872379bb18d0839893bede67"/>    <section>
+    <title>JSON_HEDLEY_REQUIRE_CONSTEXPR</title>
+<indexterm><primary>JSON_HEDLEY_REQUIRE_CONSTEXPR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_REQUIRE_CONSTEXPR</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_REQUIRE_CONSTEXPR( expr)   (expr)</computeroutput></para><para>
+Definition at line 1818 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a7106fb230747163b5b16121eb6a42b23"/>    <section>
+    <title>JSON_HEDLEY_REQUIRE_MSG</title>
+<indexterm><primary>JSON_HEDLEY_REQUIRE_MSG</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_REQUIRE_MSG</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_REQUIRE_MSG( expr,  msg)</computeroutput></para><para>
+Definition at line 1944 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ad4979e5bc2f252ff6e367fc254ab4e85"/>    <section>
+    <title>JSON_HEDLEY_RESTRICT</title>
+<indexterm><primary>JSON_HEDLEY_RESTRICT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_RESTRICT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_RESTRICT</computeroutput></para><para>
+Definition at line 1529 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1"/>    <section>
+    <title>JSON_HEDLEY_RETURNS_NON_NULL</title>
+<indexterm><primary>JSON_HEDLEY_RETURNS_NON_NULL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_RETURNS_NON_NULL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_RETURNS_NON_NULL</computeroutput></para><para>
+Definition at line 1715 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1afe58497d56cda5e4cbf2d33be1bdd91e"/>    <section>
+    <title>JSON_HEDLEY_SENTINEL</title>
+<indexterm><primary>JSON_HEDLEY_SENTINEL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_SENTINEL</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_SENTINEL( position)</computeroutput></para><para>
+Definition at line 1164 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a04269935c66fe5a9b6c33fa36037d215"/>    <section>
+    <title>JSON_HEDLEY_STATIC_ASSERT</title>
+<indexterm><primary>JSON_HEDLEY_STATIC_ASSERT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_STATIC_ASSERT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_STATIC_ASSERT( expr,  message)</computeroutput></para><para>
+Definition at line 1857 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2edb8d037ad5cbac818c86aca317226a"/>    <section>
+    <title>JSON_HEDLEY_STATIC_CAST</title>
+<indexterm><primary>JSON_HEDLEY_STATIC_CAST</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_STATIC_CAST</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_STATIC_CAST( T,  expr)   ((T) (expr))</computeroutput></para><para>
+Definition at line 854 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a9b2aefadecfe77306599a08b0d8147ca"/>    <section>
+    <title>JSON_HEDLEY_STRINGIFY</title>
+<indexterm><primary>JSON_HEDLEY_STRINGIFY</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_STRINGIFY( x)   <link linkend="_json_8hpp_1a8b50e69690eed3a7e11797b1122b4302">JSON_HEDLEY_STRINGIFY_EX</link>(x)</computeroutput></para><para>
+Definition at line 139 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8b50e69690eed3a7e11797b1122b4302"/>    <section>
+    <title>JSON_HEDLEY_STRINGIFY_EX</title>
+<indexterm><primary>JSON_HEDLEY_STRINGIFY_EX</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_STRINGIFY_EX</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_STRINGIFY_EX( x)   #x</computeroutput></para><para>
+Definition at line 134 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a4b6d318de76d6d23850ec1a588bdeffa"/>    <section>
+    <title>JSON_HEDLEY_SUNPRO_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_SUNPRO_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_SUNPRO_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_SUNPRO_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 276 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1abbff24b90b5e9f8b586ee0b334baa636"/>    <section>
+    <title>JSON_HEDLEY_TI_ARMCL_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_ARMCL_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_ARMCL_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_ARMCL_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 402 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a1ff3757a45a2cb0c54f78722fd7dc47c"/>    <section>
+    <title>JSON_HEDLEY_TI_CL2000_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_CL2000_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_CL2000_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_CL2000_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 370 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a0c4b607b1dda665174dcd4c6cfe6ce95"/>    <section>
+    <title>JSON_HEDLEY_TI_CL430_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_CL430_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_CL430_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_CL430_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 386 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a138095ac760d2964c84f562b23332101"/>    <section>
+    <title>JSON_HEDLEY_TI_CL6X_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_CL6X_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_CL6X_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_CL6X_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 418 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a6198db3ff6fc72b1fa798229fd025229"/>    <section>
+    <title>JSON_HEDLEY_TI_CL7X_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_CL7X_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_CL7X_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_CL7X_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 434 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aab50c0bc1673dde3c1cf4e3b131e97ad"/>    <section>
+    <title>JSON_HEDLEY_TI_CLPRU_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_CLPRU_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_CLPRU_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_CLPRU_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 450 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a3d620ef5f95be933b3d8e24d4fc5b6d5"/>    <section>
+    <title>JSON_HEDLEY_TI_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TI_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TI_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TI_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 354 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a38192f48e8c6ee0018a988d54e97cacf"/>    <section>
+    <title>JSON_HEDLEY_TINYC_VERSION_CHECK</title>
+<indexterm><primary>JSON_HEDLEY_TINYC_VERSION_CHECK</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_TINYC_VERSION_CHECK</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_TINYC_VERSION_CHECK( major,  minor,  patch)   (0)</computeroutput></para><para>
+Definition at line 506 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a681fd0533fbc24394f3322b6f4a60c4f"/>    <section>
+    <title>JSON_HEDLEY_UNAVAILABLE</title>
+<indexterm><primary>JSON_HEDLEY_UNAVAILABLE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_UNAVAILABLE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_UNAVAILABLE( available_since)</computeroutput></para><para>
+Definition at line 1112 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a8df7de76ab3c9445f46f6994ec205bcd"/>    <section>
+    <title>JSON_HEDLEY_UNLIKELY</title>
+<indexterm><primary>JSON_HEDLEY_UNLIKELY</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_UNLIKELY</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_UNLIKELY( expr)   (!!(expr))</computeroutput></para><para>
+Definition at line 1404 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a26967eb7395562701e450cec045dda15"/>    <section>
+    <title>JSON_HEDLEY_UNPREDICTABLE</title>
+<indexterm><primary>JSON_HEDLEY_UNPREDICTABLE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_UNPREDICTABLE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_UNPREDICTABLE( expr)   <link linkend="_json_8hpp_1a34846d0797b38c1971baee08736dae69">JSON_HEDLEY_PREDICT</link>(expr, 1, 0.5)</computeroutput></para><para>
+Definition at line 1407 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2d5705bd7bd14855c3ef5b98305c5fb4"/>    <section>
+    <title>JSON_HEDLEY_UNREACHABLE</title>
+<indexterm><primary>JSON_HEDLEY_UNREACHABLE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_UNREACHABLE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_UNREACHABLE( )   <link linkend="_json_8hpp_1a70d7244eea52c8bb5716545e54050bb5">JSON_HEDLEY_ASSUME</link>(0)</computeroutput></para><para>
+Definition at line 1272 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a06401b258ef03263f2aec48029dc8b03"/>    <section>
+    <title>JSON_HEDLEY_UNREACHABLE_RETURN</title>
+<indexterm><primary>JSON_HEDLEY_UNREACHABLE_RETURN</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_UNREACHABLE_RETURN</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_UNREACHABLE_RETURN( value)   return (value)</computeroutput></para><para>
+Definition at line 1269 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ae4654024695783bdf7cbd900f0e0634a"/>    <section>
+    <title>JSON_HEDLEY_VERSION</title>
+<indexterm><primary>JSON_HEDLEY_VERSION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_VERSION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_VERSION   13</computeroutput></para><para>
+Definition at line 129 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a50f81c80525d6fbce743d5d28b53ff73"/>    <section>
+    <title>JSON_HEDLEY_VERSION_DECODE_MAJOR</title>
+<indexterm><primary>JSON_HEDLEY_VERSION_DECODE_MAJOR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_VERSION_DECODE_MAJOR</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_VERSION_DECODE_MAJOR( version)   ((version) / 1000000)</computeroutput></para><para>
+Definition at line 169 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ae55f01749c4cc564b20b0f2650f10519"/>    <section>
+    <title>JSON_HEDLEY_VERSION_DECODE_MINOR</title>
+<indexterm><primary>JSON_HEDLEY_VERSION_DECODE_MINOR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_VERSION_DECODE_MINOR</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_VERSION_DECODE_MINOR( version)   (((version) % 1000000) / 1000)</computeroutput></para><para>
+Definition at line 174 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a2d04cc47c899e9addd019e0e7d1ebdbb"/>    <section>
+    <title>JSON_HEDLEY_VERSION_DECODE_REVISION</title>
+<indexterm><primary>JSON_HEDLEY_VERSION_DECODE_REVISION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_VERSION_DECODE_REVISION</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_VERSION_DECODE_REVISION( version)   ((version) % 1000)</computeroutput></para><para>
+Definition at line 179 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1aa1da535c59b21f70e5967b66473543f0"/>    <section>
+    <title>JSON_HEDLEY_VERSION_ENCODE</title>
+<indexterm><primary>JSON_HEDLEY_VERSION_ENCODE</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_VERSION_ENCODE</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_VERSION_ENCODE( major,  minor,  revision)   (((major) * 1000000) + ((minor) * 1000) + (revision))</computeroutput></para><para>
+Definition at line 164 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a28d7e3b2d26bd5b8a3806da3db7dea03"/>    <section>
+    <title>JSON_HEDLEY_WARN_UNUSED_RESULT</title>
+<indexterm><primary>JSON_HEDLEY_WARN_UNUSED_RESULT</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_WARN_UNUSED_RESULT</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_WARN_UNUSED_RESULT</computeroutput></para><para>
+Definition at line 1150 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1adfb98ffe9adf238a5ba1670738c0f387"/>    <section>
+    <title>JSON_HEDLEY_WARN_UNUSED_RESULT_MSG</title>
+<indexterm><primary>JSON_HEDLEY_WARN_UNUSED_RESULT_MSG</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_WARN_UNUSED_RESULT_MSG</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_WARN_UNUSED_RESULT_MSG( msg)</computeroutput></para><para>
+Definition at line 1151 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a5563e5b0fbc2a9b525830081404d9208"/>    <section>
+    <title>JSON_HEDLEY_WARNING</title>
+<indexterm><primary>JSON_HEDLEY_WARNING</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_HEDLEY_WARNING</secondary></indexterm>
+<para><computeroutput>#define JSON_HEDLEY_WARNING( msg)   <link linkend="_json_8hpp_1a8419c2b65d28686932087c587eb19157">JSON_HEDLEY_MESSAGE</link>(msg)</computeroutput></para><para>
+Definition at line 1917 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a5478b7564e65634cc69432ed3cb6490e"/>    <section>
+    <title>JSON_INTERNAL_CATCH</title>
+<indexterm><primary>JSON_INTERNAL_CATCH</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_INTERNAL_CATCH</secondary></indexterm>
+<para><computeroutput>#define JSON_INTERNAL_CATCH( exception)   if(false)</computeroutput></para><para>
+Definition at line 2073 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a6c274f6db2e65c1b66c7d41b06ad690f"/>    <section>
+    <title>JSON_THROW</title>
+<indexterm><primary>JSON_THROW</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_THROW</secondary></indexterm>
+<para><computeroutput>#define JSON_THROW( exception)   std::abort()</computeroutput></para><para>
+Definition at line 2070 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a985d3b82445302c57257f6432f261fe9"/>    <section>
+    <title>JSON_TRY</title>
+<indexterm><primary>JSON_TRY</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>JSON_TRY</secondary></indexterm>
+<para><computeroutput>#define JSON_TRY   if(true)</computeroutput></para><para>
+Definition at line 2071 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a80b7254e63f199a1f656f07ae551f632"/>    <section>
+    <title>NLOHMANN_BASIC_JSON_TPL</title>
+<indexterm><primary>NLOHMANN_BASIC_JSON_TPL</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_BASIC_JSON_TPL</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_BASIC_JSON_TPL</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;basic_json&lt;ObjectType,&#32;ArrayType,&#32;StringType,&#32;BooleanType,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;NumberIntegerType,&#32;NumberUnsignedType,&#32;NumberFloatType,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;AllocatorType,&#32;JSONSerializer,&#32;BinaryType&gt;
+</programlisting><para>
+Definition at line 2139 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a0643bd74c2dc6f0e4e420b8190ea8f0f"/>    <section>
+    <title>NLOHMANN_BASIC_JSON_TPL_DECLARATION</title>
+<indexterm><primary>NLOHMANN_BASIC_JSON_TPL_DECLARATION</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_BASIC_JSON_TPL_DECLARATION</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_BASIC_JSON_TPL_DECLARATION</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>,&#32;<emphasis role="keyword">typename</emphasis>,&#32;<emphasis role="keyword">typename</emphasis>...&gt;&#32;<emphasis role="keyword">class&#32;</emphasis>ObjectType,&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;template&lt;<emphasis role="keyword">typename</emphasis>,&#32;<emphasis role="keyword">typename</emphasis>...&gt;&#32;<emphasis role="keyword">class&#32;</emphasis>ArrayType,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;class&#32;StringType,&#32;<emphasis role="keyword">class&#32;</emphasis>BooleanType,&#32;<emphasis role="keyword">class&#32;</emphasis>NumberIntegerType,&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;class&#32;NumberUnsignedType,&#32;<emphasis role="keyword">class&#32;</emphasis>NumberFloatType,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;template&lt;typename&gt;&#32;<emphasis role="keyword">class&#32;</emphasis>AllocatorType,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;template&lt;typename,&#32;typename&#32;=&#32;void&gt;&#32;<emphasis role="keyword">class&#32;</emphasis>JSONSerializer,&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;class&#32;BinaryType&gt;
+</programlisting><para>
+Definition at line 2130 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a4c5d399dfa9252e70f876756f3f49084"/>    <section>
+    <title>NLOHMANN_JSON_SERIALIZE_ENUM</title>
+<indexterm><primary>NLOHMANN_JSON_SERIALIZE_ENUM</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_JSON_SERIALIZE_ENUM</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_JSON_SERIALIZE_ENUM( ENUM_TYPE,  ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;BasicJsonType&gt;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;inline&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespacenlohmann_1_1detail_1aaa77b0c9745130b77733a92a1a2e82ec">to_json</link>(BasicJsonType&amp;&#32;j,&#32;<emphasis role="keyword">const</emphasis>&#32;ENUM_TYPE&amp;&#32;e)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;static_assert(std::is_enum&lt;ENUM_TYPE&gt;::value,&#32;#ENUM_TYPE&#32;<emphasis role="stringliteral">&quot;&#32;must&#32;be&#32;an&#32;enum!&quot;</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;static&#32;<emphasis role="keyword">const</emphasis>&#32;std::pair&lt;ENUM_TYPE,&#32;BasicJsonType&gt;&#32;m[]&#32;=&#32;__VA_ARGS__;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;auto&#32;it&#32;=&#32;std::find_if(std::begin(m),&#32;std::end(m),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[e](<emphasis role="keyword">const</emphasis>&#32;std::pair&lt;ENUM_TYPE,&#32;BasicJsonType&gt;&amp;&#32;ej_pair)&#32;-&gt;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;ej_pair.first&#32;==&#32;e;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;j&#32;=&#32;((it&#32;!=&#32;std::end(m))&#32;?&#32;it&#32;:&#32;std::begin(m))-&gt;second;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;template&lt;typename&#32;BasicJsonType&gt;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;inline&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_namespacenlohmann_1_1detail_1aef5c8ea108f4d2b03fb4a635617510de">from_json</link>(<emphasis role="keyword">const</emphasis>&#32;BasicJsonType&amp;&#32;j,&#32;ENUM_TYPE&amp;&#32;e)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;static_assert(std::is_enum&lt;ENUM_TYPE&gt;::value,&#32;#ENUM_TYPE&#32;<emphasis role="stringliteral">&quot;&#32;must&#32;be&#32;an&#32;enum!&quot;</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;static&#32;<emphasis role="keyword">const</emphasis>&#32;std::pair&lt;ENUM_TYPE,&#32;BasicJsonType&gt;&#32;m[]&#32;=&#32;__VA_ARGS__;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;auto&#32;it&#32;=&#32;std::find_if(std::begin(m),&#32;std::end(m),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[&amp;j](<emphasis role="keyword">const</emphasis>&#32;std::pair&lt;ENUM_TYPE,&#32;BasicJsonType&gt;&amp;&#32;ej_pair)&#32;-&gt;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;ej_pair.second&#32;==&#32;j;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;e&#32;=&#32;((it&#32;!=&#32;std::end(m))&#32;?&#32;it&#32;:&#32;std::begin(m))-&gt;first;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}
+</programlisting><para>
+
+<para>macro to briefly define a mapping between an enum and JSON </para>
+</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.4.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2101 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a7c94253db90041af11dd946a49f0f8a4"/>    <section>
+    <title>NLOHMANN_JSON_VERSION_MAJOR</title>
+<indexterm><primary>NLOHMANN_JSON_VERSION_MAJOR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_JSON_VERSION_MAJOR</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_JSON_VERSION_MAJOR   3</computeroutput></para><para>
+Definition at line 33 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1ab5ca1e164894d78d3276d2e5fe58c5e3"/>    <section>
+    <title>NLOHMANN_JSON_VERSION_MINOR</title>
+<indexterm><primary>NLOHMANN_JSON_VERSION_MINOR</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_JSON_VERSION_MINOR</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_JSON_VERSION_MINOR   7</computeroutput></para><para>
+Definition at line 34 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a307e0238ebc35e99ea45c68823eb83eb"/>    <section>
+    <title>NLOHMANN_JSON_VERSION_PATCH</title>
+<indexterm><primary>NLOHMANN_JSON_VERSION_PATCH</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>NLOHMANN_JSON_VERSION_PATCH</secondary></indexterm>
+<para><computeroutput>#define NLOHMANN_JSON_VERSION_PATCH   3</computeroutput></para><para>
+Definition at line 35 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_json_8hpp_1ae90d59ab420a183cd5fb8588bdc95e06"/>    <section>
+    <title>operator&quot;&quot;_json()</title>
+<indexterm><primary>operator&quot;&quot;_json</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>operator&quot;&quot;_json</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> operator&quot;&quot;_json (const char * s, std::size_t n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>user-defined string literal for JSON values </para>
+</para>
+
+<para>This operator implements a user-defined string literal for JSON objects. It can be used by adding <computeroutput>&quot;_json&quot;</computeroutput> to a string literal and returns a JSON object if no parse error occurred.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>a string representation of a JSON object </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>n</entry>
+                                <entry>
+<para>the length of string <emphasis>s</emphasis> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>a JSON object</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 24069 of file json.hpp.</para>
+    </section><anchor xml:id="_json_8hpp_1a3e528a99a7882f8d0b97375bb6081d10"/>    <section>
+    <title>operator&quot;&quot;_json_pointer()</title>
+<indexterm><primary>operator&quot;&quot;_json_pointer</primary><secondary>json.hpp</secondary></indexterm>
+<indexterm><primary>json.hpp</primary><secondary>operator&quot;&quot;_json_pointer</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a352187a5ebf3cde865be1b833c18f208">nlohmann::json::json_pointer</link> operator&quot;&quot;_json_pointer (const char * s, std::size_t n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>user-defined string literal for JSON pointer </para>
+</para>
+
+<para>This operator implements a user-defined string literal for JSON Pointers. It can be used by adding <computeroutput>&quot;_json_pointer&quot;</computeroutput> to a string literal and returns a JSON pointer object if no parse error occurred.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>a string representation of a JSON Pointer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>n</entry>
+                                <entry>
+<para>the length of string <emphasis>s</emphasis> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>a JSON pointer object</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 24088 of file json.hpp.</para>
+</section>
+</section>
+</section>

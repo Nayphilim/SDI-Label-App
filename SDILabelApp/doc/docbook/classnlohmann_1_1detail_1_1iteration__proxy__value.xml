@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value">
+<title>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ada6b4e6d55d8ed7ac79e49a03e9d1fe2">difference_type</link> = std::ptrdiff_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> = <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link></para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a44c64feee85b8e7164a05310e6418a4b">pointer</link> = <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> *</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5bc7d3133daab5ec4797f3132e093af8">reference</link> = <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> &amp;</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1ab8c44e3772c03651b5ad07216043cf">iterator_category</link> = std::input_iterator_tag</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> = typename std::remove_cv&lt; typename std::remove_reference&lt; decltype(std::declval&lt; IteratorType &gt;().<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2949ac0d70212738030bfda29c5bcc2">key</link>()) &gt;::type &gt;::type</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a459dd8961b80b2089d8161c9aa466581">iteration_proxy_value</link> (IteratorType it) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a10accadf05a172fdc69a016bec201e81">operator*</link> ()</para>
+
+<para>dereference operator (needed for range-based for) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1adf4db2aef31822f3a179435158a4de11">operator++</link> ()</para>
+
+<para>increment operator (needed for range-based for) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2b78a8b9c9276b07c928b21bb1e2d54">operator==</link> (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link> &amp;o) const</para>
+
+<para>equality operator (needed for InputIterator) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a646dbb2b1842f44f42ee1e14245b8595">operator!=</link> (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link> &amp;o) const</para>
+
+<para>inequality operator (needed for range-based for) </para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2949ac0d70212738030bfda29c5bcc2">key</link> () const</para>
+
+<para>return key of the iterator </para>
+</listitem>
+            <listitem><para>IteratorType::reference <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ab8e33bd01c285a1a80b737a1905ceb97">value</link> () const</para>
+
+<para>return value of the iterator </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>IteratorType <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a073741b6536b7a5166467a5515bc59cb">anchor</link></para>
+
+<para>the iterator </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ad3d18c83aff5e9f4bdbf99385b29a39a">array_index</link> = 0</para>
+
+<para>an index for arrays (used to create key names) </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1aac6e7cc0c17242a0a42c14d1e714747c">array_index_last</link> = 0</para>
+
+<para>last stringified array index </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ab0b34133f45a3610070492d32978f2ea">array_index_str</link> = &quot;0&quot;</para>
+
+<para>a string representation of the array index </para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a298dae04e3c0a64719752c16754d1d71">empty_str</link> = &quot;&quot;</para>
+
+<para>an empty string (to return a reference for primitive values) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename IteratorType&gt;
+class nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</title></simplesect>
+
+<para>
+Definition at line 3633 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ada6b4e6d55d8ed7ac79e49a03e9d1fe2"/>    <section>
+    <title>difference_type</title>
+<indexterm><primary>difference_type</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>difference_type</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ada6b4e6d55d8ed7ac79e49a03e9d1fe2">difference_type</link> =  std::ptrdiff_t</computeroutput></para><para>
+Definition at line 3636 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1ab8c44e3772c03651b5ad07216043cf"/>    <section>
+    <title>iterator_category</title>
+<indexterm><primary>iterator_category</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>iterator_category</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1ab8c44e3772c03651b5ad07216043cf">iterator_category</link> =  std::input_iterator_tag</computeroutput></para><para>
+Definition at line 3640 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a44c64feee85b8e7164a05310e6418a4b"/>    <section>
+    <title>pointer</title>
+<indexterm><primary>pointer</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>pointer</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a44c64feee85b8e7164a05310e6418a4b">pointer</link> =  <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> *</computeroutput></para><para>
+Definition at line 3638 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5bc7d3133daab5ec4797f3132e093af8"/>    <section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>reference</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5bc7d3133daab5ec4797f3132e093af8">reference</link> =  <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> &amp;</computeroutput></para><para>
+Definition at line 3639 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6"/>    <section>
+    <title>string_type</title>
+<indexterm><primary>string_type</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>string_type</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> =  typename std::remove_cv&lt; typename std::remove_reference&lt;decltype( std::declval&lt;IteratorType&gt;().<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2949ac0d70212738030bfda29c5bcc2">key</link>() ) &gt;::type &gt;::type</computeroutput></para><para>
+Definition at line 3641 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e"/>    <section>
+    <title>value_type</title>
+<indexterm><primary>value_type</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>value_type</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a5e90a5810cc1bb6c1000eabbfdfe7b9e">value_type</link> =  <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link></computeroutput></para><para>
+Definition at line 3637 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a459dd8961b80b2089d8161c9aa466581"/>    <section>
+    <title>iteration_proxy_value()</title>
+<indexterm><primary>iteration_proxy_value</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>iteration_proxy_value</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link> (IteratorType it)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 3656 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2949ac0d70212738030bfda29c5bcc2"/>    <section>
+    <title>key()</title>
+<indexterm><primary>key</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>key</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::key ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return key of the iterator </para>
+</para>
+<para>
+Definition at line 3686 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a646dbb2b1842f44f42ee1e14245b8595"/>    <section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::operator!= (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link>&lt; IteratorType &gt; &amp; o) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>inequality operator (needed for range-based for) </para>
+</para>
+<para>
+Definition at line 3680 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a10accadf05a172fdc69a016bec201e81"/>    <section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::operator* ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>dereference operator (needed for range-based for) </para>
+</para>
+<para>
+Definition at line 3659 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1adf4db2aef31822f3a179435158a4de11"/>    <section>
+    <title>operator++()</title>
+<indexterm><primary>operator++</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>increment operator (needed for range-based for) </para>
+</para>
+<para>
+Definition at line 3665 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1af2b78a8b9c9276b07c928b21bb1e2d54"/>    <section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::operator== (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link>&lt; IteratorType &gt; &amp; o) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>equality operator (needed for InputIterator) </para>
+</para>
+<para>
+Definition at line 3674 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ab8e33bd01c285a1a80b737a1905ceb97"/>    <section>
+    <title>value()</title>
+<indexterm><primary>value</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>IteratorType::reference <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::value ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return value of the iterator </para>
+</para>
+<para>
+Definition at line 3714 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a073741b6536b7a5166467a5515bc59cb"/>    <section>
+    <title>anchor</title>
+<indexterm><primary>anchor</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>anchor</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>IteratorType <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::anchor<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the iterator </para>
+</para>
+<para>
+Definition at line 3645 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ad3d18c83aff5e9f4bdbf99385b29a39a"/>    <section>
+    <title>array_index</title>
+<indexterm><primary>array_index</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>array_index</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::array_index = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>an index for arrays (used to create key names) </para>
+</para>
+<para>
+Definition at line 3647 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1aac6e7cc0c17242a0a42c14d1e714747c"/>    <section>
+    <title>array_index_last</title>
+<indexterm><primary>array_index_last</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>array_index_last</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::array_index_last = 0<computeroutput>[mutable]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>last stringified array index </para>
+</para>
+<para>
+Definition at line 3649 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1ab0b34133f45a3610070492d32978f2ea"/>    <section>
+    <title>array_index_str</title>
+<indexterm><primary>array_index_str</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>array_index_str</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::array_index_str = &quot;0&quot;<computeroutput>[mutable]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>a string representation of the array index </para>
+</para>
+<para>
+Definition at line 3651 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a298dae04e3c0a64719752c16754d1d71"/>    <section>
+    <title>empty_str</title>
+<indexterm><primary>empty_str</primary><secondary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt;</primary><secondary>empty_str</secondary></indexterm>
+<computeroutput>template&lt;typename IteratorType &gt; </computeroutput><para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value_1a1fc63b88a585fa39942007aab69a74e6">string_type</link> <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt;::empty_str = &quot;&quot;<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>an empty string (to return a reference for primitive values) </para>
+</para>
+<para>
+Definition at line 3653 of file json.hpp.</para>
+</section>
+</section>
+</section>

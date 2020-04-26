@@ -17,11 +17,11 @@ This class manages all class file functionaility.
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static Q\+String\+List \mbox{\hyperlink{classclass_file_a8a01daae03eba240985d737465a516b3}{get\+Classes}} ()
+static \mbox{\hyperlink{classlinked_list}{linked\+List}} \mbox{\hyperlink{classclass_file_ad685e07e0ca637eecc4379a52964fd7f}{get\+Classes}} ()
 \begin{DoxyCompactList}\small\item\em returns the list of classes in loaded class file \end{DoxyCompactList}\item 
-static Q\+String\+List \mbox{\hyperlink{classclass_file_a066742982c131f52560afacd0cfcd3e3}{read\+Class\+File}} (Q\+Url file\+Path)
+static \mbox{\hyperlink{classlinked_list}{linked\+List}} \mbox{\hyperlink{classclass_file_ae015f5aafd0671ae79998eef093e3068}{read\+Class\+File}} (Q\+Url file\+Path)
 \begin{DoxyCompactList}\small\item\em reads the class file selected \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}{set\+Classes}} (Q\+String\+List classes)
+static void \mbox{\hyperlink{classclass_file_ad333f860948c0bde09aa10927101246d}{set\+Classes}} (\mbox{\hyperlink{classlinked_list}{linked\+List}} classes)
 \begin{DoxyCompactList}\small\item\em sets the list of classes \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classclass_file_a17153b9673a207c2cd4867764d7d016e}{clear\+Class\+List}} ()
 \begin{DoxyCompactList}\small\item\em clears the list of classes \end{DoxyCompactList}\item 
@@ -31,7 +31,7 @@ static void \mbox{\hyperlink{classclass_file_aac42ce46019fb341d569738735fb803e}{
 \begin{DoxyCompactList}\small\item\em adds a new class to the class file in use \end{DoxyCompactList}\item 
 static Q\+Url \mbox{\hyperlink{classclass_file_a608fca7344bf95ac899d4dd1a2476ddf}{get\+Current\+Class\+File\+Path}} ()
 \begin{DoxyCompactList}\small\item\em returns the full file path of the class file \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}{remove\+Class}} (Q\+String selected\+Class)
+static void \mbox{\hyperlink{classclass_file_abbf04f6befc2d81ae9b9ba5b48d16cbd}{remove\+Class}} (int index)
 \begin{DoxyCompactList}\small\item\em removes a class from the class file in use \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classclass_file_acaa61fac9a1e77cab6f0d1484496196c}{set\+Current\+Class\+File\+Path}} (Q\+Url class\+File\+Path)
 \begin{DoxyCompactList}\small\item\em sets the full file path of the class file to be loaded \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -42,7 +42,7 @@ This class manages all class file functionaility.
 
 This class contains all functions attributing to the creation, loading and managing of class files. It also holds the current loaded class list and the full file path of the class file in use 
 
-Definition at line 11 of file classfile.\+h.
+Definition at line 15 of file classfile.\+h.
 
 
 
@@ -112,11 +112,11 @@ clears the current Q\+String\+List of classes to be rewritten
 
 Definition at line 42 of file classfile.\+cpp.
 
-\mbox{\Hypertarget{classclass_file_a8a01daae03eba240985d737465a516b3}\label{classclass_file_a8a01daae03eba240985d737465a516b3}} 
+\mbox{\Hypertarget{classclass_file_ad685e07e0ca637eecc4379a52964fd7f}\label{classclass_file_ad685e07e0ca637eecc4379a52964fd7f}} 
 \index{classFile@{classFile}!getClasses@{getClasses}}
 \index{getClasses@{getClasses}!classFile@{classFile}}
 \doxysubsubsection{\texorpdfstring{getClasses()}{getClasses()}}
-{\footnotesize\ttfamily Q\+String\+List class\+File\+::get\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinked_list}{linked\+List}} class\+File\+::get\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -140,11 +140,11 @@ returns the full file path of the class file that is currently in use
 
 Definition at line 77 of file classfile.\+cpp.
 
-\mbox{\Hypertarget{classclass_file_a066742982c131f52560afacd0cfcd3e3}\label{classclass_file_a066742982c131f52560afacd0cfcd3e3}} 
+\mbox{\Hypertarget{classclass_file_ae015f5aafd0671ae79998eef093e3068}\label{classclass_file_ae015f5aafd0671ae79998eef093e3068}} 
 \index{classFile@{classFile}!readClassFile@{readClassFile}}
 \index{readClassFile@{readClassFile}!classFile@{classFile}}
 \doxysubsubsection{\texorpdfstring{readClassFile()}{readClassFile()}}
-{\footnotesize\ttfamily Q\+String\+List class\+File\+::read\+Class\+File (\begin{DoxyParamCaption}\item[{Q\+Url}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinked_list}{linked\+List}} class\+File\+::read\+Class\+File (\begin{DoxyParamCaption}\item[{Q\+Url}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -159,11 +159,11 @@ reads the class file selected by the user by reading each line individually and 
 
 Definition at line 13 of file classfile.\+cpp.
 
-\mbox{\Hypertarget{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}\label{classclass_file_a2d772a521db4fcc5239b235048fa8ceb}} 
+\mbox{\Hypertarget{classclass_file_abbf04f6befc2d81ae9b9ba5b48d16cbd}\label{classclass_file_abbf04f6befc2d81ae9b9ba5b48d16cbd}} 
 \index{classFile@{classFile}!removeClass@{removeClass}}
 \index{removeClass@{removeClass}!classFile@{classFile}}
 \doxysubsubsection{\texorpdfstring{removeClass()}{removeClass()}}
-{\footnotesize\ttfamily void class\+File\+::remove\+Class (\begin{DoxyParamCaption}\item[{Q\+String}]{selected\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void class\+File\+::remove\+Class (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -178,11 +178,11 @@ removes all instances of a class name entered from the class Q\+String\+List and
 
 Definition at line 86 of file classfile.\+cpp.
 
-\mbox{\Hypertarget{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}\label{classclass_file_a7e49303869cbf62d6f0d86fa4111703e}} 
+\mbox{\Hypertarget{classclass_file_ad333f860948c0bde09aa10927101246d}\label{classclass_file_ad333f860948c0bde09aa10927101246d}} 
 \index{classFile@{classFile}!setClasses@{setClasses}}
 \index{setClasses@{setClasses}!classFile@{classFile}}
 \doxysubsubsection{\texorpdfstring{setClasses()}{setClasses()}}
-{\footnotesize\ttfamily void class\+File\+::set\+Classes (\begin{DoxyParamCaption}\item[{Q\+String\+List}]{classes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void class\+File\+::set\+Classes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinked_list}{linked\+List}}}]{classes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -214,5 +214,5 @@ sets the full file path of the class file to be loaded
 \end{DoxyParams}
 
 
-Definition at line 103 of file classfile.\+cpp.
+Definition at line 104 of file classfile.\+cpp.
 

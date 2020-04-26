@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1input__adapter">
+<title>nlohmann::detail::input_adapter Class Reference</title>
+<indexterm><primary>nlohmann::detail::input_adapter</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a19fb8c28f37b23099a4353acf0a9a2f1">input_adapter</link> (std::FILE *file)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1ae89f11268d4724b3080473f7218abe86">input_adapter</link> (std::istream &amp;i)</para>
+
+<para>input adapter for input stream </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1af002dd2e53ac0855a03cb68d0ce626b2">input_adapter</link> (std::istream &amp;&amp;i)</para>
+
+<para>input adapter for input stream </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a32f5ddd06562edce43ee86f5b5c2031b">input_adapter</link> (const std::wstring &amp;ws)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a58163eaa485b17dd878d3c782efc1e43">input_adapter</link> (const std::u16string &amp;ws)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1abe0015ae09e855f502620315b9dcc3db">input_adapter</link> (const std::u32string &amp;ws)</para>
+</listitem>
+            <listitem><para>template&lt;typename CharT , typename std::enable_if&lt; std::is_pointer&lt; CharT &gt;::value and std::is_integral&lt; typename std::remove_pointer&lt; CharT &gt;::type &gt;::value and sizeof(typename std::remove_pointer&lt; CharT &gt;::type)==1, int &gt;::type  = 0&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a37816622d79ab4a1a76f4d7e872b65e1">input_adapter</link> (CharT b, std::size_t l)</para>
+
+<para>input adapter for buffer </para>
+</listitem>
+            <listitem><para>template&lt;typename CharT , typename std::enable_if&lt; std::is_pointer&lt; CharT &gt;::value and std::is_integral&lt; typename std::remove_pointer&lt; CharT &gt;::type &gt;::value and sizeof(typename std::remove_pointer&lt; CharT &gt;::type)==1, int &gt;::type  = 0&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a86f035d9c4319360014b922b5e433ced">input_adapter</link> (CharT b)</para>
+
+<para>input adapter for string literal </para>
+</listitem>
+            <listitem><para>template&lt;class IteratorType , typename std::enable_if&lt; std::is_same&lt; typename iterator_traits&lt; IteratorType &gt;::iterator_category, std::random_access_iterator_tag &gt;::value, int &gt;::type  = 0&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1ad6824b0f792691f75186c527fa31a6b4">input_adapter</link> (IteratorType first, IteratorType last)</para>
+
+<para>input adapter for iterator range with contiguous storage </para>
+</listitem>
+            <listitem><para>template&lt;class T , std::size_t N&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1aa2392138bf8307df1994dc7eb22d51ce">input_adapter</link> (T(&amp;array)[N])</para>
+
+<para>input adapter for array </para>
+</listitem>
+            <listitem><para>template&lt;class ContiguousContainer , typename std::enable_if&lt; not std::is_pointer&lt; ContiguousContainer &gt;::value and std::is_base_of&lt; std::random_access_iterator_tag, typename iterator_traits&lt; decltype(std::begin(std::declval&lt; ContiguousContainer const &gt;()))&gt;::iterator_category &gt;::value , int , ::type  = 0&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a887307cfa15a418470b3c34088fc8352">input_adapter</link> (const ContiguousContainer &amp;c)</para>
+
+<para>input adapter for contiguous container </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1input__adapter_1a4ef04b9490247fc38f3d1c2a9e18789b">operator input_adapter_t</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">input_adapter_t</link> <link linkend="_classnlohmann_1_1detail_1_1input__adapter_1ad5a11d0b65b68f6950cfbe8c8366b7da">ia</link> = nullptr</para>
+
+<para>the actual adapter </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 4555 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a19fb8c28f37b23099a4353acf0a9a2f1"/>    <section>
+    <title>input_adapter()<computeroutput>[1/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (std::FILE * file)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 4560 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1ae89f11268d4724b3080473f7218abe86"/>    <section>
+    <title>input_adapter()<computeroutput>[2/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (std::istream &amp; i)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for input stream </para>
+</para>
+<para>
+Definition at line 4563 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1af002dd2e53ac0855a03cb68d0ce626b2"/>    <section>
+    <title>input_adapter()<computeroutput>[3/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (std::istream &amp;&amp; i)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for input stream </para>
+</para>
+<para>
+Definition at line 4567 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a32f5ddd06562edce43ee86f5b5c2031b"/>    <section>
+    <title>input_adapter()<computeroutput>[4/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (const std::wstring &amp; ws)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 4570 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a58163eaa485b17dd878d3c782efc1e43"/>    <section>
+    <title>input_adapter()<computeroutput>[5/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (const std::u16string &amp; ws)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 4573 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1abe0015ae09e855f502620315b9dcc3db"/>    <section>
+    <title>input_adapter()<computeroutput>[6/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::input_adapter (const std::u32string &amp; ws)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 4576 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a37816622d79ab4a1a76f4d7e872b65e1"/>    <section>
+    <title>input_adapter()<computeroutput>[7/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<computeroutput>template&lt;typename CharT , typename std::enable_if&lt; std::is_pointer&lt; CharT &gt;::value and std::is_integral&lt; typename std::remove_pointer&lt; CharT &gt;::type &gt;::value and sizeof(typename std::remove_pointer&lt; CharT &gt;::type)==1, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput>nlohmann::detail::input_adapter::input_adapter (CharT b, std::size_t l)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for buffer </para>
+</para>
+<para>
+Definition at line 4586 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a86f035d9c4319360014b922b5e433ced"/>    <section>
+    <title>input_adapter()<computeroutput>[8/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<computeroutput>template&lt;typename CharT , typename std::enable_if&lt; std::is_pointer&lt; CharT &gt;::value and std::is_integral&lt; typename std::remove_pointer&lt; CharT &gt;::type &gt;::value and sizeof(typename std::remove_pointer&lt; CharT &gt;::type)==1, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput>nlohmann::detail::input_adapter::input_adapter (CharT b)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for string literal </para>
+</para>
+<para>
+Definition at line 4598 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1ad6824b0f792691f75186c527fa31a6b4"/>    <section>
+    <title>input_adapter()<computeroutput>[9/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<computeroutput>template&lt;class IteratorType , typename std::enable_if&lt; std::is_same&lt; typename iterator_traits&lt; IteratorType &gt;::iterator_category, std::random_access_iterator_tag &gt;::value, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput>nlohmann::detail::input_adapter::input_adapter (IteratorType first, IteratorType last)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for iterator range with contiguous storage </para>
+</para>
+<para>
+Definition at line 4607 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1aa2392138bf8307df1994dc7eb22d51ce"/>    <section>
+    <title>input_adapter()<computeroutput>[10/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<computeroutput>template&lt;class T , std::size_t N&gt; </computeroutput><para><computeroutput>nlohmann::detail::input_adapter::input_adapter (T(&amp;) array[N])<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for array </para>
+</para>
+<para>
+Definition at line 4642 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a887307cfa15a418470b3c34088fc8352"/>    <section>
+    <title>input_adapter()<computeroutput>[11/11]</computeroutput></title>
+<indexterm><primary>input_adapter</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>input_adapter</secondary></indexterm>
+<computeroutput>template&lt;class ContiguousContainer , typename std::enable_if&lt; not std::is_pointer&lt; ContiguousContainer &gt;::value and std::is_base_of&lt; std::random_access_iterator_tag, typename iterator_traits&lt; decltype(std::begin(std::declval&lt; ContiguousContainer const &gt;()))&gt;::iterator_category &gt;::value , int , ::type  = 0&gt; </computeroutput><para><computeroutput>nlohmann::detail::input_adapter::input_adapter (const ContiguousContainer &amp; c)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>input adapter for contiguous container </para>
+</para>
+<para>
+Definition at line 4650 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1a4ef04b9490247fc38f3d1c2a9e18789b"/>    <section>
+    <title>operator input_adapter_t()</title>
+<indexterm><primary>operator input_adapter_t</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>operator input_adapter_t</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::input_adapter::operator <link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">input_adapter_t</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 4653 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1input__adapter_1ad5a11d0b65b68f6950cfbe8c8366b7da"/>    <section>
+    <title>ia</title>
+<indexterm><primary>ia</primary><secondary>nlohmann::detail::input_adapter</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter</primary><secondary>ia</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">input_adapter_t</link> nlohmann::detail::input_adapter::ia = nullptr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the actual adapter </para>
+</para>
+<para>
+Definition at line 4660 of file json.hpp.</para>
+</section>
+</section>
+</section>

@@ -145,9 +145,6 @@ private slots:
     ///detects when push button to create a square is pressed
     void on_pushButton_clicked();
 
-
-//    void writeJson();
-
     void readJson();
 
     void on_annotationFileExplorerButton_clicked();

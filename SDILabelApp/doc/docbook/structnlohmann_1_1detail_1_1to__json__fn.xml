@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1to__json__fn">
+<title>nlohmann::detail::to_json_fn Struct Reference</title>
+<indexterm><primary>nlohmann::detail::to_json_fn</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename BasicJsonType , typename T &gt; </para><para>auto <link linkend="_structnlohmann_1_1detail_1_1to__json__fn_1aecfb5114c8a737fc89d98589482795b8">operator()</link> (BasicJsonType &amp;j, T &amp;&amp;val) const noexcept(noexcept(<link linkend="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490">to_json</link>(j, std::forward&lt; T &gt;(val)))) -&gt; decltype(<link linkend="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490">to_json</link>(j, std::forward&lt; T &gt;(val)), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 4133 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1to__json__fn_1aecfb5114c8a737fc89d98589482795b8"/>    <section>
+    <title>operator()()</title>
+<indexterm><primary>operator()</primary><secondary>nlohmann::detail::to_json_fn</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::to_json_fn</primary><secondary>operator()</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T &gt; </computeroutput><para><computeroutput>auto nlohmann::detail::to_json_fn::operator() (BasicJsonType &amp; j, T &amp;&amp; val) const -&gt; decltype(<link linkend="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490">to_json</link>(j, std::forward&lt;T&gt;(val)), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())
+    <computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4136 of file json.hpp.</para>
+</section>
+</section>
+</section>

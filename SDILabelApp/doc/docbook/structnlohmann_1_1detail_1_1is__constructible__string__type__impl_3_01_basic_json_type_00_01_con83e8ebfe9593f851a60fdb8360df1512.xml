@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512">
+<title>nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt; Struct Template Reference</title>
+<indexterm><primary>nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr auto <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512_1a3aeae0de0fc37bd5acf3c9d39b132678">value</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType, typename ConstructibleStringType&gt;
+struct nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</title></simplesect>
+
+<para>
+Definition at line 3006 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512_1a3aeae0de0fc37bd5acf3c9d39b132678"/>    <section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleStringType &gt; </computeroutput><para><computeroutput>constexpr auto <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl">nlohmann::detail::is_constructible_string_type_impl</link>&lt; BasicJsonType, ConstructibleStringType, <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">enable_if_t</link>&lt; <link linkend="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def">is_detected_exact</link>&lt; typename BasicJsonType::string_t::value_type, <link linkend="_namespacenlohmann_1_1detail_1af91beae90c2fb0f931079b3d50a343bc">value_type_t</link>, ConstructibleStringType &gt;::value &gt; &gt;::value<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting>=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::is_constructible&lt;ConstructibleStringType,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">typename</emphasis>&#32;BasicJsonType::string_t&gt;<link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512_1a3aeae0de0fc37bd5acf3c9d39b132678">::value</link>
+</programlisting><para>
+Definition at line 3011 of file json.hpp.</para>
+</section>
+</section>
+</section>

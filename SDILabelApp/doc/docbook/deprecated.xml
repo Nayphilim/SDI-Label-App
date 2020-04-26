@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_deprecated">
+
+<para><variablelist>
+<varlistentry><term>Member <link linkend="_classnlohmann_1_1basic__json_1a0a8051760196ac813fd5eb3c8d5a2976">nlohmann::basic_json::iterator_wrapper</link>  (reference ref) noexcept</term>
+<listitem>
+<para><anchor xml:id="_deprecated_1_deprecated000001"/>This stream operator is deprecated and will be removed in future 4.0.0 of the library. Please use <link linkend="_classnlohmann_1_1basic__json_1a5961446010dfc494e0c247b4e9026977">items()</link> instead; that is, replace <computeroutput>json::iterator_wrapper(j)</computeroutput> with <computeroutput>j.items()</computeroutput>.  </para>
+</listitem></varlistentry>
+<varlistentry><term>Member <link linkend="_classnlohmann_1_1basic__json_1a60ca396028b8d9714c6e10efbf475af6">nlohmann::basic_json::operator&lt;&lt;</link>  (<link linkend="_classnlohmann_1_1basic__json">basic_json</link> &amp;j, std::istream &amp;i)</term>
+<listitem>
+<para><anchor xml:id="_deprecated_1_deprecated000003"/>This stream operator is deprecated and will be removed in version 4.0.0 of the library. Please use <link linkend="_classnlohmann_1_1basic__json_1aaf363408931d76472ded14017e59c9e8">operator&gt;&gt;(std::istream&amp;, basic_json&amp;)</link> instead; that is, replace calls like <computeroutput>j &lt;&lt; i;</computeroutput> with <computeroutput>i &gt;&gt; j;</computeroutput>.  </para>
+</listitem></varlistentry>
+<varlistentry><term>Member <link linkend="_classnlohmann_1_1basic__json_1a34d6a60dd99e9f33b8273a1c8db5669b">nlohmann::basic_json::operator&gt;&gt;</link>  (const <link linkend="_classnlohmann_1_1basic__json">basic_json</link> &amp;j, std::ostream &amp;o)</term>
+<listitem>
+<para><anchor xml:id="_deprecated_1_deprecated000002"/>This stream operator is deprecated and will be removed in future 4.0.0 of the library. Please use <link linkend="_classnlohmann_1_1basic__json_1a5e34c5435e557d0bf666bd7311211405">operator&lt;&lt;(std::ostream&amp;, const basic_json&amp;)</link> instead; that is, replace calls like <computeroutput>j &gt;&gt; o;</computeroutput> with <computeroutput>o &lt;&lt; j;</computeroutput>. </para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+</section>

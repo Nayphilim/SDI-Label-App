@@ -1,0 +1,611 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1json__sax">
+<title>nlohmann::json_sax&lt; BasicJsonType &gt; Struct Template Reference</title>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary></indexterm>
+<para>
+
+<para>SAX interface. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_structnlohmann_1_1json__sax_1a0cef30121f02b7fee85e9708148ea0aa">number_integer_t</link> = typename BasicJsonType::number_integer_t</para>
+
+<para>type for (signed) integers </para>
+</listitem>
+            <listitem><para>using <link linkend="_structnlohmann_1_1json__sax_1a32028cc056ae0f43aaae331cdbbbf856">number_unsigned_t</link> = typename BasicJsonType::number_unsigned_t</para>
+
+<para>type for unsigned integers </para>
+</listitem>
+            <listitem><para>using <link linkend="_structnlohmann_1_1json__sax_1a390c209bffd8c4800c8f3076dc465a20">number_float_t</link> = typename BasicJsonType::number_float_t</para>
+
+<para>type for floating-point numbers </para>
+</listitem>
+            <listitem><para>using <link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> = typename BasicJsonType::string_t</para>
+
+<para>type for strings </para>
+</listitem>
+            <listitem><para>using <link linkend="_structnlohmann_1_1json__sax_1a0ef406ba81eef08aadf4a9ef48d742bd">binary_t</link> = typename BasicJsonType::binary_t</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a0ad26edef3f8d530dcec3192bba82df6">null</link> ()=0</para>
+
+<para>a null value was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a82ed080814fa656191a537284bb0c575">boolean</link> (bool val)=0</para>
+
+<para>a boolean value was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1affa7a78b8e9cc9cc3ac99927143142a5">number_integer</link> (<link linkend="_structnlohmann_1_1json__sax_1a0cef30121f02b7fee85e9708148ea0aa">number_integer_t</link> val)=0</para>
+
+<para>an integer number was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1ad9b253083e0509923ba195136f49face">number_unsigned</link> (<link linkend="_structnlohmann_1_1json__sax_1a32028cc056ae0f43aaae331cdbbbf856">number_unsigned_t</link> val)=0</para>
+
+<para>an unsigned integer number was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1ae7c31614e8a82164d2d7f8dbf4671b25">number_float</link> (<link linkend="_structnlohmann_1_1json__sax_1a390c209bffd8c4800c8f3076dc465a20">number_float_t</link> val, const <link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp;s)=0</para>
+
+<para>an floating-point number was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a07eab82f6c82d606787eee9ad73d2bda">string</link> (<link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp;val)=0</para>
+
+<para>a string was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a38c2dbde07138cc436ea7fbf22c1e92d">binary</link> (<link linkend="_structnlohmann_1_1json__sax_1a0ef406ba81eef08aadf4a9ef48d742bd">binary_t</link> &amp;val)=0</para>
+
+<para>a binary string was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a0671528b0debb5a348169d61f0382a0f">start_object</link> (std::size_t elements)=0</para>
+
+<para>the beginning of an object was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a2e0c7ecd80b18d18a8cc76f71cfc2028">key</link> (<link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp;val)=0</para>
+
+<para>an object key was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1ad0c722d53ff97be700ccf6a9468bd456">end_object</link> ()=0</para>
+
+<para>the end of an object was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a5c53878cf08d463eb4e7ca0270532572">start_array</link> (std::size_t elements)=0</para>
+
+<para>the beginning of an array was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a235ee975617f28e6a996d1e36a282312">end_array</link> ()=0</para>
+
+<para>the end of an array was read </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_structnlohmann_1_1json__sax_1a60287e3bd85f489e04c83f7e3b76e613">parse_error</link> (std::size_t position, const std::string &amp;last_token, const <link linkend="_classnlohmann_1_1detail_1_1exception">detail::exception</link> &amp;ex)=0</para>
+
+<para>a parse error occurred </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_structnlohmann_1_1json__sax_1af31bacfa81aa7818d8639d1da65c8eb5">~json_sax</link> ()=default</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType&gt;
+struct nlohmann::json_sax&lt; BasicJsonType &gt;</title></simplesect>
+
+
+<para>SAX interface. </para>
+
+
+
+<para>This class describes the SAX interface used by <link linkend="_classnlohmann_1_1basic__json_1ada69b327dbaf7a7a221d3b3ee8d1cb1c">nlohmann::json::sax_parse</link>. Each function is called in different situations while the input is parsed. The boolean return value informs the parser whether to continue processing the input. </para>
+<para>
+Definition at line 4691 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_structnlohmann_1_1json__sax_1a0ef406ba81eef08aadf4a9ef48d742bd"/>    <section>
+    <title>binary_t</title>
+<indexterm><primary>binary_t</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>binary_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::<link linkend="_structnlohmann_1_1json__sax_1a0ef406ba81eef08aadf4a9ef48d742bd">binary_t</link> =  typename BasicJsonType::binary_t</computeroutput></para><para>
+Definition at line 4701 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a390c209bffd8c4800c8f3076dc465a20"/>    <section>
+    <title>number_float_t</title>
+<indexterm><primary>number_float_t</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_float_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::<link linkend="_structnlohmann_1_1json__sax_1a390c209bffd8c4800c8f3076dc465a20">number_float_t</link> =  typename BasicJsonType::number_float_t</computeroutput></para><para>
+
+<para>type for floating-point numbers </para>
+</para>
+<para>
+Definition at line 4698 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a0cef30121f02b7fee85e9708148ea0aa"/>    <section>
+    <title>number_integer_t</title>
+<indexterm><primary>number_integer_t</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_integer_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::<link linkend="_structnlohmann_1_1json__sax_1a0cef30121f02b7fee85e9708148ea0aa">number_integer_t</link> =  typename BasicJsonType::number_integer_t</computeroutput></para><para>
+
+<para>type for (signed) integers </para>
+</para>
+<para>
+Definition at line 4694 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a32028cc056ae0f43aaae331cdbbbf856"/>    <section>
+    <title>number_unsigned_t</title>
+<indexterm><primary>number_unsigned_t</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_unsigned_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::<link linkend="_structnlohmann_1_1json__sax_1a32028cc056ae0f43aaae331cdbbbf856">number_unsigned_t</link> =  typename BasicJsonType::number_unsigned_t</computeroutput></para><para>
+
+<para>type for unsigned integers </para>
+</para>
+<para>
+Definition at line 4696 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e"/>    <section>
+    <title>string_t</title>
+<indexterm><primary>string_t</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>string_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::<link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> =  typename BasicJsonType::string_t</computeroutput></para><para>
+
+<para>type for strings </para>
+</para>
+<para>
+Definition at line 4700 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structnlohmann_1_1json__sax_1af31bacfa81aa7818d8639d1da65c8eb5"/>    <section>
+    <title>~json_sax()</title>
+<indexterm><primary>~json_sax</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>~json_sax</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::~<link linkend="_structnlohmann_1_1json__sax">json_sax</link> ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structnlohmann_1_1json__sax_1a38c2dbde07138cc436ea7fbf22c1e92d"/>    <section>
+    <title>binary()</title>
+<indexterm><primary>binary</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>binary</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::binary (<link linkend="_structnlohmann_1_1json__sax_1a0ef406ba81eef08aadf4a9ef48d742bd">binary_t</link> &amp; val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>a binary string was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>binary value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>It is safe to move the passed binary. </para>
+</note>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a82ed080814fa656191a537284bb0c575"/>    <section>
+    <title>boolean()</title>
+<indexterm><primary>boolean</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>boolean</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::boolean (bool val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>a boolean value was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>boolean value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a235ee975617f28e6a996d1e36a282312"/>    <section>
+    <title>end_array()</title>
+<indexterm><primary>end_array</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>end_array</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::end_array ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>the end of an array was read </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1ad0c722d53ff97be700ccf6a9468bd456"/>    <section>
+    <title>end_object()</title>
+<indexterm><primary>end_object</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>end_object</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::end_object ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>the end of an object was read </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a2e0c7ecd80b18d18a8cc76f71cfc2028"/>    <section>
+    <title>key()</title>
+<indexterm><primary>key</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>key</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::key (<link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp; val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>an object key was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>object key </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>It is safe to move the passed string. </para>
+</note>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a0ad26edef3f8d530dcec3192bba82df6"/>    <section>
+    <title>null()</title>
+<indexterm><primary>null</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>null</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::null ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>a null value was read </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1ae7c31614e8a82164d2d7f8dbf4671b25"/>    <section>
+    <title>number_float()</title>
+<indexterm><primary>number_float</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_float</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::number_float (<link linkend="_structnlohmann_1_1json__sax_1a390c209bffd8c4800c8f3076dc465a20">number_float_t</link> val, const <link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp; s)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>an floating-point number was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>floating-point value </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>raw token value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1affa7a78b8e9cc9cc3ac99927143142a5"/>    <section>
+    <title>number_integer()</title>
+<indexterm><primary>number_integer</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_integer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::number_integer (<link linkend="_structnlohmann_1_1json__sax_1a0cef30121f02b7fee85e9708148ea0aa">number_integer_t</link> val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>an integer number was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>integer value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1ad9b253083e0509923ba195136f49face"/>    <section>
+    <title>number_unsigned()</title>
+<indexterm><primary>number_unsigned</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>number_unsigned</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::number_unsigned (<link linkend="_structnlohmann_1_1json__sax_1a32028cc056ae0f43aaae331cdbbbf856">number_unsigned_t</link> val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>an unsigned integer number was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>unsigned integer value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a60287e3bd85f489e04c83f7e3b76e613"/>    <section>
+    <title>parse_error()</title>
+<indexterm><primary>parse_error</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>parse_error</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::parse_error (std::size_t position, const std::string &amp; last_token, const <link linkend="_classnlohmann_1_1detail_1_1exception">detail::exception</link> &amp; ex)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>a parse error occurred </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>the position in the input where the error occurs </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>last_token</entry>
+                                <entry>
+<para>the last read token </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ex</entry>
+                                <entry>
+<para>an exception object describing the error </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed (must return false) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a5c53878cf08d463eb4e7ca0270532572"/>    <section>
+    <title>start_array()</title>
+<indexterm><primary>start_array</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>start_array</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::start_array (std::size_t elements)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>the beginning of an array was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>elements</entry>
+                                <entry>
+<para>number of array elements or -1 if unknown </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>binary formats may report the number of elements </para>
+</note>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a0671528b0debb5a348169d61f0382a0f"/>    <section>
+    <title>start_object()</title>
+<indexterm><primary>start_object</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>start_object</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::start_object (std::size_t elements)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>the beginning of an object was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>elements</entry>
+                                <entry>
+<para>number of object elements or -1 if unknown </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>binary formats may report the number of elements </para>
+</note>
+</para>
+    </section><anchor xml:id="_structnlohmann_1_1json__sax_1a07eab82f6c82d606787eee9ad73d2bda"/>    <section>
+    <title>string()</title>
+<indexterm><primary>string</primary><secondary>nlohmann::json_sax&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_sax&lt; BasicJsonType &gt;</primary><secondary>string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_structnlohmann_1_1json__sax">nlohmann::json_sax</link>&lt; BasicJsonType &gt;::string (<link linkend="_structnlohmann_1_1json__sax_1ae01977a9f3c5b3667b7a2929ed91061e">string_t</link> &amp; val)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>a string was read </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>val</entry>
+                                <entry>
+<para>string value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether parsing should proceed </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>It is safe to move the passed string. </para>
+</note>
+</para>
+</section>
+</section>
+</section>

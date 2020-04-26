@@ -13,7 +13,7 @@ Shape::Shape(std::string type)
          points.push_back({80,10});
          points.push_back({170,10});
          points.push_back({190,60});
-         points.push_back({10,60});
+         points.push_back({60,60});
  }
  else if (type == "triangle"){
          points.push_back({75,25});
@@ -30,7 +30,7 @@ QRectF Shape::boundingRect() const
         return QRectF(0,0,120,120);
     }
     else if (type == "trapezium"){
-        return QRectF(0,0,200,70);
+        return QRectF(50,-5,150,70);
             }
     else if (type == "triangle"){
         return QRectF(0,0,150,150);

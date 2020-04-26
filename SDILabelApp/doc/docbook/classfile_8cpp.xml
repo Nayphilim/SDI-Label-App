@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classfile_8cpp">
+<title>classfile.cpp File Reference</title>
+<indexterm><primary>classfile.cpp</primary></indexterm>
+<programlisting>#include &quot;classfile.h&quot;
+#include &lt;iostream&gt;
+</programlisting><simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classlinked_list">linkedList</link> <link linkend="_classfile_8cpp_1a1142529b9694577b6c2db3e8bb7bd45f">Classes</link></para>
+</listitem>
+            <listitem><para>QUrl <link linkend="_classfile_8cpp_1ad928b4e33b9968319e9cc180f86e23ad">CurrentClassFilePath</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_classfile_8cpp_1a1142529b9694577b6c2db3e8bb7bd45f"/>    <section>
+    <title>Classes</title>
+<indexterm><primary>Classes</primary><secondary>classfile.cpp</secondary></indexterm>
+<indexterm><primary>classfile.cpp</primary><secondary>Classes</secondary></indexterm>
+<para><computeroutput><link linkend="_classlinked_list">linkedList</link> Classes</computeroutput></para><para>
+Definition at line 5 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classfile_8cpp_1ad928b4e33b9968319e9cc180f86e23ad"/>    <section>
+    <title>CurrentClassFilePath</title>
+<indexterm><primary>CurrentClassFilePath</primary><secondary>classfile.cpp</secondary></indexterm>
+<indexterm><primary>classfile.cpp</primary><secondary>CurrentClassFilePath</secondary></indexterm>
+<para><computeroutput>QUrl CurrentClassFilePath</computeroutput></para><para>
+Definition at line 6 of file classfile.cpp.</para>
+</section>
+</section>
+</section>

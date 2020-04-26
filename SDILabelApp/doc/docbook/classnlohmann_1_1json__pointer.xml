@@ -1,0 +1,1605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1json__pointer">
+<title>nlohmann::json_pointer&lt; BasicJsonType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary></indexterm>
+<para>
+
+<para>JSON Pointer. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer_1a7f32d7c62841f0c4a6784cf741a6e4f8">json_pointer</link> (const std::string &amp;s=&quot;&quot;)</para>
+
+<para>create JSON pointer </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classnlohmann_1_1json__pointer_1a3d4b15d32d096e3776c5d2c773b524f5">to_string</link> () const</para>
+
+<para>return a string representation of the JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer_1ae9015c658f99cf3d48a8563accc79988">operator std::string</link> () const</para>
+
+<para>return a string representation of the JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp; <link linkend="_classnlohmann_1_1json__pointer_1a7395bd0af29ac23fd3f21543c935cdfa">operator/=</link> (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp;ptr)</para>
+
+<para>append another JSON pointer at the end of this JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp; <link linkend="_classnlohmann_1_1json__pointer_1abdd21567b2b1d69329af0f520335e68b">operator/=</link> (std::string token)</para>
+
+<para>append an unescaped reference token at the end of this JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp; <link linkend="_classnlohmann_1_1json__pointer_1a7de51480324eb1c5a89ed552cd699875">operator/=</link> (std::size_t array_idx)</para>
+
+<para>append an array index at the end of this JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer_1afdaacce1edb7145e0434e014f0e8685a">parent_pointer</link> () const</para>
+
+<para>returns the parent of this JSON pointer </para>
+</listitem>
+            <listitem><para>void <link linkend="_classnlohmann_1_1json__pointer_1a4b1ee4d511ca195bed896a3da47e264c">pop_back</link> ()</para>
+
+<para>remove last reference token </para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_classnlohmann_1_1json__pointer_1a213bc67c32a30c68ac6bf06f5195d482">back</link> () const</para>
+
+<para>return last reference token </para>
+</listitem>
+            <listitem><para>void <link linkend="_classnlohmann_1_1json__pointer_1a697d12b5bd6205f8866691b166b7c7dc">push_back</link> (const std::string &amp;token)</para>
+
+<para>append an unescaped token at the end of the reference pointer </para>
+</listitem>
+            <listitem><para>void <link linkend="_classnlohmann_1_1json__pointer_1ac228b13596d3c34185da9fe61b570194">push_back</link> (std::string &amp;&amp;token)</para>
+
+<para>append an unescaped token at the end of the reference pointer </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1json__pointer_1a649252bda4a2e75a0915b11a25d8bcc3">empty</link> () const noexcept</para>
+
+<para>return whether pointer points to the root document </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer_1a00eff109d9a0091e42ada9b16b90c8d9">top</link> () const</para>
+</listitem>
+            <listitem><para>BasicJsonType &amp; <link linkend="_classnlohmann_1_1json__pointer_1a583c726016f440ffe65553935c101ff5">get_and_create</link> (BasicJsonType &amp;j) const</para>
+
+<para>create and return a reference to the pointed to value </para>
+</listitem>
+            <listitem><para>BasicJsonType &amp; <link linkend="_classnlohmann_1_1json__pointer_1a577512ee6b7f030e8872b4d29fa5c3e5">get_unchecked</link> (BasicJsonType *ptr) const</para>
+
+<para>return a reference to the pointed to value </para>
+</listitem>
+            <listitem><para>BasicJsonType &amp; <link linkend="_classnlohmann_1_1json__pointer_1a366d68a67e40d86676d3bdb52e167294">get_checked</link> (BasicJsonType *ptr) const</para>
+</listitem>
+            <listitem><para>const BasicJsonType &amp; <link linkend="_classnlohmann_1_1json__pointer_1ad6a01f8e1556eef68e5a49b33fef1548">get_unchecked</link> (const BasicJsonType *ptr) const</para>
+
+<para>return a const reference to the pointed to value </para>
+</listitem>
+            <listitem><para>const BasicJsonType &amp; <link linkend="_classnlohmann_1_1json__pointer_1a55a5bbbc3007e479607304a3e8cb9bf5">get_checked</link> (const BasicJsonType *ptr) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1json__pointer_1a90d38e45e2d3add52d824bc55da8f772">contains</link> (const BasicJsonType *ptr) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_classnlohmann_1_1json__pointer_1ac53f5b79dd91da78743c437832f57ce4">array_index</link> (const std::string &amp;s)</para>
+</listitem>
+            <listitem><para>static std::vector&lt; std::string &gt; <link linkend="_classnlohmann_1_1json__pointer_1ae01c32c6a071c2e5198d5dfcce290e50">split</link> (const std::string &amp;reference_string)</para>
+
+<para>split the string input to reference tokens </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classnlohmann_1_1json__pointer_1aa7649d30da9fc10b0e20704a27aea2a9">replace_substring</link> (std::string &amp;s, const std::string &amp;f, const std::string &amp;t)</para>
+
+<para>replace all occurrences of a substring by another string </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classnlohmann_1_1json__pointer_1a8abf3577f9a0087f29a233893cdc73ad">escape</link> (std::string s)</para>
+
+<para>escape &quot;~&quot; to &quot;~0&quot; and &quot;/&quot; to &quot;~1&quot; </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classnlohmann_1_1json__pointer_1ab85442d5fbcc289b79beeefc2175446f">unescape</link> (std::string &amp;s)</para>
+
+<para>unescape &quot;~1&quot; to tilde and &quot;~0&quot; to slash (order is important!) </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classnlohmann_1_1json__pointer_1ab0d7759d0caa6a0c0187916da28e6ee7">flatten</link> (const std::string &amp;reference_string, const BasicJsonType &amp;value, BasicJsonType &amp;result)</para>
+</listitem>
+            <listitem><para>static BasicJsonType <link linkend="_classnlohmann_1_1json__pointer_1a920065221e3c81676c3211c100d024a7">unflatten</link> (const BasicJsonType &amp;value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_classnlohmann_1_1json__pointer_1a07a990a6838de4f38ee9d881e7b9fd61">reference_tokens</link></para>
+
+<para>the reference tokens </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classnlohmann_1_1json__pointer_1ada3100cdb8700566051828f1355fa745">basic_json</link></para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer_1a90a11fe6c7f37b1746a3ff9cb24b0d53">operator/</link> (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp;lhs, const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp;rhs)</para>
+
+<para>create a new JSON pointer by appending the right JSON pointer at the end of the left JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer_1a926c9065dbed1bedc17857a813f7a46f">operator/</link> (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp;ptr, std::string token)</para>
+
+<para>create a new JSON pointer by appending the unescaped token at the end of the JSON pointer </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer_1af5a4bc4f82113c271c9a0cd4d3b5f31c">operator/</link> (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> &amp;ptr, std::size_t array_idx)</para>
+
+<para>create a new JSON pointer by appending the array-index-token at the end of the JSON pointer </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1json__pointer_1a4667ef558c8c3f8a646bfda0c6654653">operator==</link> (<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> const &amp;lhs, <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> const &amp;rhs) noexcept</para>
+
+<para>compares two JSON pointers for equality </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1json__pointer_1a6779edcf28e6f018a3bbb29c0b4b5e1e">operator!=</link> (<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> const &amp;lhs, <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> const &amp;rhs) noexcept</para>
+
+<para>compares two JSON pointers for inequality </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType&gt;
+class nlohmann::json_pointer&lt; BasicJsonType &gt;</title></simplesect>
+
+
+<para>JSON Pointer. </para>
+
+
+
+<para>A JSON pointer defines a string syntax for identifying a specific value within a JSON document. It can be used with functions <computeroutput>at</computeroutput> and <computeroutput>operator[]</computeroutput>. Furthermore, JSON pointers are the base for JSON patches.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link xlink:href="https://tools.ietf.org/html/rfc6901">RFC 6901</link></para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2753 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1json__pointer_1a7f32d7c62841f0c4a6784cf741a6e4f8"/>    <section>
+    <title>json_pointer()</title>
+<indexterm><primary>json_pointer</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>json_pointer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> (const std::string &amp; s = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>create JSON pointer </para>
+</para>
+
+<para>Create a JSON pointer according to the syntax described in <link xlink:href="https://tools.ietf.org/html/rfc6901#section-3">Section 3 of RFC6901</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>string representing the JSON pointer; if omitted, the empty string is assumed which references the whole JSON value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.107</entry>
+                                <entry>
+<para>if the given JSON pointer <emphasis>s</emphasis> is nonempty and does not begin with a slash (<computeroutput>/</computeroutput>); see example below</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.108</entry>
+                                <entry>
+<para>if a tilde (<computeroutput>~</computeroutput>) in the given JSON pointer <emphasis>s</emphasis> is not followed by <computeroutput>0</computeroutput> (representing <computeroutput>~</computeroutput>) or <computeroutput>1</computeroutput> (representing <computeroutput>/</computeroutput>); see example below</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                @liveexample{The example shows the construction several valid JSON pointers as well as the exceptional behavior.,<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10855 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1json__pointer_1ac53f5b79dd91da78743c437832f57ce4"/>    <section>
+    <title>array_index()</title>
+<indexterm><primary>array_index</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>array_index</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static int <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::array_index (const std::string &amp; s)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>reference token to be converted into an array index</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>integer representation of <emphasis>s</emphasis> </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out_of_range.404</entry>
+                                <entry>
+<para>if string <emphasis>s</emphasis> could not be converted to an integer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11139 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a213bc67c32a30c68ac6bf06f5195d482"/>    <section>
+    <title>back()</title>
+<indexterm><primary>back</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>back</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const std::string&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::back ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return last reference token </para>
+</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>not <computeroutput><link linkend="_classnlohmann_1_1json__pointer_1a649252bda4a2e75a0915b11a25d8bcc3">empty()</link></computeroutput> </para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para>last reference token</para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>back</computeroutput>.,json_pointer__back}</para>
+
+<para>@complexity Constant.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out_of_range.405</entry>
+                                <entry>
+<para>if JSON pointer has no parent</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11079 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a90d38e45e2d3add52d824bc55da8f772"/>    <section>
+    <title>contains()</title>
+<indexterm><primary>contains</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>contains</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::contains (const BasicJsonType * ptr) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.106</entry>
+                                <entry>
+<para>if an array index begins with &apos;0&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if an array index was not a number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11464 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a649252bda4a2e75a0915b11a25d8bcc3"/>    <section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>empty</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::empty ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return whether pointer points to the root document </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true iff the JSON pointer points to the root document</para>
+</formalpara>
+@complexity Constant.</para>
+
+<para>@exceptionsafety No-throw guarantee: this function never throws exceptions.</para>
+
+<para>@liveexample{The example shows the result of <computeroutput>empty</computeroutput> for different JSON Pointers.,json_pointer__empty}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11126 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a8abf3577f9a0087f29a233893cdc73ad"/>    <section>
+    <title>escape()</title>
+<indexterm><primary>escape</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>escape</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static std::string <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::escape (std::string s)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>escape &quot;~&quot; to &quot;~0&quot; and &quot;/&quot; to &quot;~1&quot; </para>
+</para>
+<para>
+Definition at line 11611 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ab0d7759d0caa6a0c0187916da28e6ee7"/>    <section>
+    <title>flatten()</title>
+<indexterm><primary>flatten</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>flatten</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::flatten (const std::string &amp; reference_string, const BasicJsonType &amp; value, BasicJsonType &amp; result)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reference_string</entry>
+                                <entry>
+<para>the reference string to the current value </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>the value to consider </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>result</entry>
+                                <entry>
+<para>the result object to insert values to</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Empty objects or arrays are flattened to <computeroutput>null</computeroutput>. </para>
+</note>
+</para>
+<para>
+Definition at line 11632 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a583c726016f440ffe65553935c101ff5"/>    <section>
+    <title>get_and_create()</title>
+<indexterm><primary>get_and_create</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>get_and_create</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>BasicJsonType&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::get_and_create (BasicJsonType &amp; j) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>create and return a reference to the pointed to value </para>
+</para>
+
+<para>@complexity Linear in the number of reference tokens.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if array index is not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type_error.313</entry>
+                                <entry>
+<para>if value cannot be unflattened </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11195 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a366d68a67e40d86676d3bdb52e167294"/>    <section>
+    <title>get_checked()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>get_checked</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>get_checked</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>BasicJsonType&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::get_checked (BasicJsonType * ptr) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.106</entry>
+                                <entry>
+<para>if an array index begins with &apos;0&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if an array index was not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.402</entry>
+                                <entry>
+<para>if the array index &apos;-&apos; is used </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.404</entry>
+                                <entry>
+<para>if the JSON pointer can not be resolved </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11329 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a55a5bbbc3007e479607304a3e8cb9bf5"/>    <section>
+    <title>get_checked()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>get_checked</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>get_checked</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const BasicJsonType&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::get_checked (const BasicJsonType * ptr) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.106</entry>
+                                <entry>
+<para>if an array index begins with &apos;0&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if an array index was not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.402</entry>
+                                <entry>
+<para>if the array index &apos;-&apos; is used </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.404</entry>
+                                <entry>
+<para>if the JSON pointer can not be resolved </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11423 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a577512ee6b7f030e8872b4d29fa5c3e5"/>    <section>
+    <title>get_unchecked()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>get_unchecked</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>get_unchecked</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>BasicJsonType&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::get_unchecked (BasicJsonType * ptr) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>return a reference to the pointed to value </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This version does not throw if a value is not present, but tries to create nested values instead. For instance, calling this function with pointer <computeroutput>&quot;/this/that&quot;</computeroutput> on a null value is equivalent to calling <computeroutput>operator[](&quot;this&quot;).operator[](&quot;that&quot;)</computeroutput> on that value, effectively changing the null value to an object.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>a JSON value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>reference to the JSON value pointed to by the JSON pointer</para>
+</formalpara>
+@complexity Linear in the length of the JSON pointer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.106</entry>
+                                <entry>
+<para>if an array index begins with &apos;0&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if an array index was not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.404</entry>
+                                <entry>
+<para>if the JSON pointer can not be resolved </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11268 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ad6a01f8e1556eef68e5a49b33fef1548"/>    <section>
+    <title>get_unchecked()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>get_unchecked</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>get_unchecked</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const BasicJsonType&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::get_unchecked (const BasicJsonType * ptr) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>return a const reference to the pointed to value </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>a JSON value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>const reference to the JSON value pointed to by the JSON pointer</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.106</entry>
+                                <entry>
+<para>if an array index begins with &apos;0&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if an array index was not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.402</entry>
+                                <entry>
+<para>if the array index &apos;-&apos; is used </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out_of_range.404</entry>
+                                <entry>
+<para>if the JSON pointer can not be resolved </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11379 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ae9015c658f99cf3d48a8563accc79988"/>    <section>
+    <title>operator std::string()</title>
+<indexterm><primary>operator std::string</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator std::string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::operator std::string ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return a string representation of the JSON pointer </para>
+</para>
+
+<para><formalpara><title>Invariant</title>
+
+<para>For each JSON pointer <computeroutput>ptr</computeroutput>, it holds: <literallayout><computeroutput>ptr&#32;==&#32;json_pointer(ptr.to_string());
+</computeroutput></literallayout></para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para>a string representation of the JSON pointer</para>
+</formalpara>
+@liveexample{The example shows the result of <computeroutput>to_string</computeroutput>.,json_pointer__to_string}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10884 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a7395bd0af29ac23fd3f21543c935cdfa"/>    <section>
+    <title>operator/=()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>operator/=</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::operator/= (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; &amp; ptr)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>append another JSON pointer at the end of this JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>JSON pointer to append </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>JSON pointer with <emphasis>ptr</emphasis> appended</para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/=</computeroutput>.,json_pointer__operator_add}</para>
+
+<para>@complexity Linear in the length of <emphasis>ptr</emphasis>.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1abdd21567b2b1d69329af0f520335e68b">operator/=(std::string)</link> to append a reference token </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7de51480324eb1c5a89ed552cd699875">operator/=(std::size_t)</link> to append an array index </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a90a11fe6c7f37b1746a3ff9cb24b0d53">operator/(const json_pointer&amp;, const json_pointer&amp;)</link> for a binary operator</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10905 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a7de51480324eb1c5a89ed552cd699875"/>    <section>
+    <title>operator/=()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>operator/=</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::operator/= (std::size_t array_idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>append an array index at the end of this JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>array_idx</entry>
+                                <entry>
+<para>array index to append </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>JSON pointer with <emphasis>array_idx</emphasis> appended</para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/=</computeroutput>.,json_pointer__operator_add}</para>
+
+<para>@complexity Amortized constant.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7395bd0af29ac23fd3f21543c935cdfa">operator/=(const json_pointer&amp;)</link> to append a JSON pointer </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1abdd21567b2b1d69329af0f520335e68b">operator/=(std::string)</link> to append a reference token </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a926c9065dbed1bedc17857a813f7a46f">operator/(const json_pointer&amp;, std::string)</link> for a binary operator</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10951 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1abdd21567b2b1d69329af0f520335e68b"/>    <section>
+    <title>operator/=()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>operator/=</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&amp; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::operator/= (std::string token)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>append an unescaped reference token at the end of this JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>token</entry>
+                                <entry>
+<para>reference token to append </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>JSON pointer with <emphasis>token</emphasis> appended without escaping <emphasis>token</emphasis> </para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/=</computeroutput>.,json_pointer__operator_add}</para>
+
+<para>@complexity Amortized constant.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7395bd0af29ac23fd3f21543c935cdfa">operator/=(const json_pointer&amp;)</link> to append a JSON pointer </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7de51480324eb1c5a89ed552cd699875">operator/=(std::size_t)</link> to append an array index </para>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1af5a4bc4f82113c271c9a0cd4d3b5f31c">operator/(const json_pointer&amp;, std::size_t)</link> for a binary operator</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10929 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1afdaacce1edb7145e0434e014f0e8685a"/>    <section>
+    <title>parent_pointer()</title>
+<indexterm><primary>parent_pointer</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>parent_pointer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::parent_pointer ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>returns the parent of this JSON pointer </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>parent of this JSON pointer; in case this JSON pointer is the root, the root itself is returned</para>
+</formalpara>
+@complexity Linear in the length of the JSON pointer.</para>
+
+<para>@liveexample{The example shows the result of <computeroutput>parent_pointer</computeroutput> for different JSON Pointers.,json_pointer__parent_pointer}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11030 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a4b1ee4d511ca195bed896a3da47e264c"/>    <section>
+    <title>pop_back()</title>
+<indexterm><primary>pop_back</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>pop_back</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::pop_back ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>remove last reference token </para>
+</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>not <computeroutput><link linkend="_classnlohmann_1_1json__pointer_1a649252bda4a2e75a0915b11a25d8bcc3">empty()</link></computeroutput></para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>pop_back</computeroutput>.,json_pointer__pop_back}</para>
+
+<para>@complexity Constant.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out_of_range.405</entry>
+                                <entry>
+<para>if JSON pointer has no parent</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11055 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a697d12b5bd6205f8866691b166b7c7dc"/>    <section>
+    <title>push_back()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>push_back</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>push_back</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::push_back (const std::string &amp; token)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>append an unescaped token at the end of the reference pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>token</entry>
+                                <entry>
+<para>token to add</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                @complexity Amortized constant.</para>
+
+<para>@liveexample{The example shows the result of <computeroutput>push_back</computeroutput> for different JSON Pointers.,json_pointer__push_back}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11101 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ac228b13596d3c34185da9fe61b570194"/>    <section>
+    <title>push_back()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>push_back</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>push_back</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::push_back (std::string &amp;&amp; token)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>append an unescaped token at the end of the reference pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>token</entry>
+                                <entry>
+<para>token to add</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                @complexity Amortized constant.</para>
+
+<para>@liveexample{The example shows the result of <computeroutput>push_back</computeroutput> for different JSON Pointers.,json_pointer__push_back}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11107 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1aa7649d30da9fc10b0e20704a27aea2a9"/>    <section>
+    <title>replace_substring()</title>
+<indexterm><primary>replace_substring</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>replace_substring</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::replace_substring (std::string &amp; s, const std::string &amp; f, const std::string &amp; t)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>replace all occurrences of a substring by another string </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>the string to manipulate; changed so that all occurrences of <emphasis>f</emphasis> are replaced with <emphasis>t</emphasis> </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>the substring to replace with <emphasis>t</emphasis> </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>t</entry>
+                                <entry>
+<para>the string to replace <emphasis>f</emphasis> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Precondition</title>
+
+<para>The search string <emphasis>f</emphasis> must not be empty. <emphasis role="bold">This precondition is enforced with an assertion.</emphasis></para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11599 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ae01c32c6a071c2e5198d5dfcce290e50"/>    <section>
+    <title>split()</title>
+<indexterm><primary>split</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>split</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static std::vector&lt;std::string&gt; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::split (const std::string &amp; reference_string)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>split the string input to reference tokens </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is only called by the <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> constructor. All exceptions below are documented there.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.107</entry>
+                                <entry>
+<para>if the pointer is not empty or begins with &apos;/&apos; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.108</entry>
+                                <entry>
+<para>if character &apos;~&apos; is not followed by &apos;0&apos; or &apos;1&apos; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11524 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a3d4b15d32d096e3776c5d2c773b524f5"/>    <section>
+    <title>to_string()</title>
+<indexterm><primary>to_string</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>to_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::string <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::to_string ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return a string representation of the JSON pointer </para>
+</para>
+
+<para><formalpara><title>Invariant</title>
+
+<para>For each JSON pointer <computeroutput>ptr</computeroutput>, it holds: <literallayout><computeroutput>ptr&#32;==&#32;json_pointer(ptr.to_string());
+</computeroutput></literallayout></para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para>a string representation of the JSON pointer</para>
+</formalpara>
+@liveexample{The example shows the result of <computeroutput>to_string</computeroutput>.,json_pointer__to_string}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 2.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10873 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a00eff109d9a0091e42ada9b16b90c8d9"/>    <section>
+    <title>top()</title>
+<indexterm><primary>top</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>top</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::top ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11175 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1ab85442d5fbcc289b79beeefc2175446f"/>    <section>
+    <title>unescape()</title>
+<indexterm><primary>unescape</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>unescape</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static void <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::unescape (std::string &amp; s)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>unescape &quot;~1&quot; to tilde and &quot;~0&quot; to slash (order is important!) </para>
+</para>
+<para>
+Definition at line 11619 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a920065221e3c81676c3211c100d024a7"/>    <section>
+    <title>unflatten()</title>
+<indexterm><primary>unflatten</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>unflatten</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static BasicJsonType <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::unflatten (const BasicJsonType &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>flattened JSON</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>unflattened JSON</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.109</entry>
+                                <entry>
+<para>if array index is not a number </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type_error.314</entry>
+                                <entry>
+<para>if value is not an object </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type_error.315</entry>
+                                <entry>
+<para>if object values are not primitive </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>type_error.313</entry>
+                                <entry>
+<para>if value cannot be unflattened </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 11695 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1json__pointer_1ada3100cdb8700566051828f1355fa745"/>    <section>
+    <title>basic_json</title>
+<indexterm><primary>basic_json</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>basic_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>friend class <link linkend="_classnlohmann_1_1basic__json">basic_json</link><computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line 10831 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a6779edcf28e6f018a3bbb29c0b4b5e1e"/>    <section>
+    <title>operator!=</title>
+<indexterm><primary>operator!=</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool operator!= (<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; const &amp; lhs, <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; const &amp; rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>compares two JSON pointers for inequality </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>lhs</entry>
+                                <entry>
+<para>JSON pointer to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>rhs</entry>
+                                <entry>
+<para>JSON pointer to compare </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether <emphasis>lhs</emphasis> is not equal <emphasis>rhs</emphasis> </para>
+</formalpara>
+@complexity Linear in the length of the JSON pointer</para>
+
+<para>@exceptionsafety No-throw guarantee: this function never throws exceptions. </para>
+<para>
+Definition at line 11750 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a90a11fe6c7f37b1746a3ff9cb24b0d53"/>    <section>
+    <title>operator/<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>operator/</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> operator/ (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; &amp; lhs, const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; &amp; rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>create a new JSON pointer by appending the right JSON pointer at the end of the left JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>lhs</entry>
+                                <entry>
+<para>JSON pointer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>rhs</entry>
+                                <entry>
+<para>JSON pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>a new JSON pointer with <emphasis>rhs</emphasis> appended to <emphasis>lhs</emphasis> </para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/</computeroutput>.,json_pointer__operator_add_binary}</para>
+
+<para>@complexity Linear in the length of <emphasis>lhs</emphasis> and <emphasis>rhs</emphasis>.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7395bd0af29ac23fd3f21543c935cdfa">operator/=(const json_pointer&amp;)</link> to append a JSON pointer</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10971 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1af5a4bc4f82113c271c9a0cd4d3b5f31c"/>    <section>
+    <title>operator/<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>operator/</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> operator/ (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; &amp; ptr, std::size_t array_idx)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>create a new JSON pointer by appending the array-index-token at the end of the JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>JSON pointer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>array_idx</entry>
+                                <entry>
+<para>array index </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>a new JSON pointer with <emphasis>array_idx</emphasis> appended to <emphasis>ptr</emphasis> </para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/</computeroutput>.,json_pointer__operator_add_binary}</para>
+
+<para>@complexity Linear in the length of <emphasis>ptr</emphasis>.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1a7de51480324eb1c5a89ed552cd699875">operator/=(std::size_t)</link> to append an array index</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 11012 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a926c9065dbed1bedc17857a813f7a46f"/>    <section>
+    <title>operator/<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>operator/</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator/</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1json__pointer">json_pointer</link> operator/ (const <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; &amp; ptr, std::string token)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>create a new JSON pointer by appending the unescaped token at the end of the JSON pointer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>JSON pointer </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>token</entry>
+                                <entry>
+<para>reference token </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>a new JSON pointer with unescaped <emphasis>token</emphasis> appended to <emphasis>ptr</emphasis> </para>
+</formalpara>
+@liveexample{The example shows the usage of <computeroutput>operator/</computeroutput>.,json_pointer__operator_add_binary}</para>
+
+<para>@complexity Linear in the length of <emphasis>ptr</emphasis>.</para>
+
+<para><formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1json__pointer_1abdd21567b2b1d69329af0f520335e68b">operator/=(std::string)</link> to append a reference token</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.6.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10992 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1json__pointer_1a4667ef558c8c3f8a646bfda0c6654653"/>    <section>
+    <title>operator==</title>
+<indexterm><primary>operator==</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool operator== (<link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; const &amp; lhs, <link linkend="_classnlohmann_1_1json__pointer">json_pointer</link>&lt; BasicJsonType &gt; const &amp; rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>compares two JSON pointers for equality </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>lhs</entry>
+                                <entry>
+<para>JSON pointer to compare </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>rhs</entry>
+                                <entry>
+<para>JSON pointer to compare </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether <emphasis>lhs</emphasis> is equal to <emphasis>rhs</emphasis> </para>
+</formalpara>
+@complexity Linear in the length of the JSON pointer</para>
+
+<para>@exceptionsafety No-throw guarantee: this function never throws exceptions. </para>
+<para>
+Definition at line 11733 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1json__pointer_1a07a990a6838de4f38ee9d881e7b9fd61"/>    <section>
+    <title>reference_tokens</title>
+<indexterm><primary>reference_tokens</primary><secondary>nlohmann::json_pointer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::json_pointer&lt; BasicJsonType &gt;</primary><secondary>reference_tokens</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::vector&lt;std::string&gt; <link linkend="_classnlohmann_1_1json__pointer">nlohmann::json_pointer</link>&lt; BasicJsonType &gt;::reference_tokens<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the reference tokens </para>
+</para>
+<para>
+Definition at line 11757 of file json.hpp.</para>
+</section>
+</section>
+</section>

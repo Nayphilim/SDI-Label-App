@@ -1,0 +1,335 @@
+\hypertarget{classlinked_list}{}\doxysection{linked\+List Class Reference}
+\label{classlinked_list}\index{linkedList@{linkedList}}
+
+
+This class handles the linked list data structure.  
+
+
+
+
+{\ttfamily \#include $<$linked\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlinked_list_a9c60821596e60f06c51e72c15f919709}{linked\+List}} ()
+\item 
+void \mbox{\hyperlink{classlinked_list_a4ec828f689e7a68d2a12d34bbd82431a}{create\+Node}} (Q\+String value)
+\begin{DoxyCompactList}\small\item\em creates a new node at the end of the list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a61ef20668de2a5d640fef96021cca41b}{insert\+Start}} (Q\+String value)
+\begin{DoxyCompactList}\small\item\em inserts a new node at the start of the linked list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a2f20beca703b80dcebc5117c66dd4b0c}{insert\+Position}} (int pos, Q\+String value)
+\begin{DoxyCompactList}\small\item\em inserts a new node at the given position in the linked list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a4aa7d151f5de99341407a46160bf3d1a}{delete\+First}} ()
+\begin{DoxyCompactList}\small\item\em deletes the first node in the linked list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a8945e30dba885ff8c99074ce2a658404}{delete\+Last}} ()
+\begin{DoxyCompactList}\small\item\em deletes last node in the linked list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a29fce399760c75b81988ac7a0f2fd8f6}{delete\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em deletes a node at a given position \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlinked_list_a6e3062bc159e356bf8c9728b8f2e8bcf}{size}} ()
+\begin{DoxyCompactList}\small\item\em returns the number of nodes in the linked list \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlinked_list_a3cd83ba0e5cde130e463e49e261f7c22}{contains}} (Q\+String value)
+\begin{DoxyCompactList}\small\item\em tests if a given value is present in a linked list and returns true if it is \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_ab01d7b2db94e35c1c70e459235190311}{delete\+List}} ()
+\begin{DoxyCompactList}\small\item\em deletes the linked list entirely and frees the memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_aa8c64de096751f98a71eede2e660682b}{swap}} (int posA, int posB)
+\begin{DoxyCompactList}\small\item\em swap two nodes positions in the linked list \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{classlinked_list_afccfea0c3ea2c5ab90e6c892eed287a2}{get\+Data\+At\+Pos}} (int i)
+\begin{DoxyCompactList}\small\item\em returns the data in a node at a given position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlinked_list_a25e5abd299c58387f1660bf49c660454}{delete\+Data}} (Q\+String data)
+\begin{DoxyCompactList}\small\item\em delete the node that has the given data in \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{classlinked_list_ad4a1059170d4c4428581707ab1c1af1e}{node\+At\+Pos}} (int pos)
+\begin{DoxyCompactList}\small\item\em returns a pointer to the node at the position given \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{classlinked_list_acef1e648b177e866f2962f4bfa6fda95}{head}}
+\begin{DoxyCompactList}\small\item\em pointers to the head and tail of the linked list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{classlinked_list_a1827bc84093365c8045d9cacc92bdafe}{tail}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles the linked list data structure. 
+
+This class contains all the functions needed to utilise a linked list for the storage of Q\+Strings and allows for sorting 
+
+Definition at line 15 of file linked\+List.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlinked_list_a9c60821596e60f06c51e72c15f919709}\label{classlinked_list_a9c60821596e60f06c51e72c15f919709}} 
+\index{linkedList@{linkedList}!linkedList@{linkedList}}
+\index{linkedList@{linkedList}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{linkedList()}{linkedList()}}
+{\footnotesize\ttfamily linked\+List\+::linked\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file linked\+List.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlinked_list_a3cd83ba0e5cde130e463e49e261f7c22}\label{classlinked_list_a3cd83ba0e5cde130e463e49e261f7c22}} 
+\index{linkedList@{linkedList}!contains@{contains}}
+\index{contains@{contains}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool linked\+List\+::contains (\begin{DoxyParamCaption}\item[{Q\+String}]{value }\end{DoxyParamCaption})}
+
+
+
+tests if a given value is present in a linked list and returns true if it is 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & This is the data being tested if it already exists in the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a4ec828f689e7a68d2a12d34bbd82431a}\label{classlinked_list_a4ec828f689e7a68d2a12d34bbd82431a}} 
+\index{linkedList@{linkedList}!createNode@{createNode}}
+\index{createNode@{createNode}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{createNode()}{createNode()}}
+{\footnotesize\ttfamily void linked\+List\+::create\+Node (\begin{DoxyParamCaption}\item[{Q\+String}]{value }\end{DoxyParamCaption})}
+
+
+
+creates a new node at the end of the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & This is the data that is being put into the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a25e5abd299c58387f1660bf49c660454}\label{classlinked_list_a25e5abd299c58387f1660bf49c660454}} 
+\index{linkedList@{linkedList}!deleteData@{deleteData}}
+\index{deleteData@{deleteData}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{deleteData()}{deleteData()}}
+{\footnotesize\ttfamily void linked\+List\+::delete\+Data (\begin{DoxyParamCaption}\item[{Q\+String}]{data }\end{DoxyParamCaption})}
+
+
+
+delete the node that has the given data in 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & is the data given to find the node that contains it \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a4aa7d151f5de99341407a46160bf3d1a}\label{classlinked_list_a4aa7d151f5de99341407a46160bf3d1a}} 
+\index{linkedList@{linkedList}!deleteFirst@{deleteFirst}}
+\index{deleteFirst@{deleteFirst}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{deleteFirst()}{deleteFirst()}}
+{\footnotesize\ttfamily void linked\+List\+::delete\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deletes the first node in the linked list 
+
+Necessary as handling a deletion of a head or the first node is different to other nodes 
+
+Definition at line 50 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a8945e30dba885ff8c99074ce2a658404}\label{classlinked_list_a8945e30dba885ff8c99074ce2a658404}} 
+\index{linkedList@{linkedList}!deleteLast@{deleteLast}}
+\index{deleteLast@{deleteLast}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{deleteLast()}{deleteLast()}}
+{\footnotesize\ttfamily void linked\+List\+::delete\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deletes last node in the linked list 
+
+created in case of situations that we do not know the size of the linked list but want to delete the last node 
+
+Definition at line 57 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_ab01d7b2db94e35c1c70e459235190311}\label{classlinked_list_ab01d7b2db94e35c1c70e459235190311}} 
+\index{linkedList@{linkedList}!deleteList@{deleteList}}
+\index{deleteList@{deleteList}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{deleteList()}{deleteList()}}
+{\footnotesize\ttfamily void linked\+List\+::delete\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deletes the linked list entirely and frees the memory 
+
+
+
+Definition at line 111 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a29fce399760c75b81988ac7a0f2fd8f6}\label{classlinked_list_a29fce399760c75b81988ac7a0f2fd8f6}} 
+\index{linkedList@{linkedList}!deletePosition@{deletePosition}}
+\index{deletePosition@{deletePosition}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{deletePosition()}{deletePosition()}}
+{\footnotesize\ttfamily void linked\+List\+::delete\+Position (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+deletes a node at a given position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & This is the index in the linked list selected to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_afccfea0c3ea2c5ab90e6c892eed287a2}\label{classlinked_list_afccfea0c3ea2c5ab90e6c892eed287a2}} 
+\index{linkedList@{linkedList}!getDataAtPos@{getDataAtPos}}
+\index{getDataAtPos@{getDataAtPos}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{getDataAtPos()}{getDataAtPos()}}
+{\footnotesize\ttfamily Q\+String linked\+List\+::get\+Data\+At\+Pos (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+returns the data in a node at a given position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & is the index of the node in the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a2f20beca703b80dcebc5117c66dd4b0c}\label{classlinked_list_a2f20beca703b80dcebc5117c66dd4b0c}} 
+\index{linkedList@{linkedList}!insertPosition@{insertPosition}}
+\index{insertPosition@{insertPosition}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{insertPosition()}{insertPosition()}}
+{\footnotesize\ttfamily void linked\+List\+::insert\+Position (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{Q\+String}]{value }\end{DoxyParamCaption})}
+
+
+
+inserts a new node at the given position in the linked list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & This is the position in the linked list for the node to be created \\
+\hline
+{\em value} & This is the data to be inserted into the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a61ef20668de2a5d640fef96021cca41b}\label{classlinked_list_a61ef20668de2a5d640fef96021cca41b}} 
+\index{linkedList@{linkedList}!insertStart@{insertStart}}
+\index{insertStart@{insertStart}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{insertStart()}{insertStart()}}
+{\footnotesize\ttfamily void linked\+List\+::insert\+Start (\begin{DoxyParamCaption}\item[{Q\+String}]{value }\end{DoxyParamCaption})}
+
+
+
+inserts a new node at the start of the linked list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & This is the data that is being put into the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_ad4a1059170d4c4428581707ab1c1af1e}\label{classlinked_list_ad4a1059170d4c4428581707ab1c1af1e}} 
+\index{linkedList@{linkedList}!nodeAtPos@{nodeAtPos}}
+\index{nodeAtPos@{nodeAtPos}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{nodeAtPos()}{nodeAtPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}} $\ast$ linked\+List\+::node\+At\+Pos (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+returns a pointer to the node at the position given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & This is the index of the node to be returned \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_a6e3062bc159e356bf8c9728b8f2e8bcf}\label{classlinked_list_a6e3062bc159e356bf8c9728b8f2e8bcf}} 
+\index{linkedList@{linkedList}!size@{size}}
+\index{size@{size}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int linked\+List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of nodes in the linked list 
+
+
+
+Definition at line 87 of file linked\+List.\+cpp.
+
+\mbox{\Hypertarget{classlinked_list_aa8c64de096751f98a71eede2e660682b}\label{classlinked_list_aa8c64de096751f98a71eede2e660682b}} 
+\index{linkedList@{linkedList}!swap@{swap}}
+\index{swap@{swap}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void linked\+List\+::swap (\begin{DoxyParamCaption}\item[{int}]{posA,  }\item[{int}]{posB }\end{DoxyParamCaption})}
+
+
+
+swap two nodes positions in the linked list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em posA} & and\\
+\hline
+{\em posB} & are the postions of the nodes in the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file linked\+List.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlinked_list_acef1e648b177e866f2962f4bfa6fda95}\label{classlinked_list_acef1e648b177e866f2962f4bfa6fda95}} 
+\index{linkedList@{linkedList}!head@{head}}
+\index{head@{head}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}}$\ast$ linked\+List\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pointers to the head and tail of the linked list 
+
+
+
+Definition at line 59 of file linked\+List.\+h.
+
+\mbox{\Hypertarget{classlinked_list_a1827bc84093365c8045d9cacc92bdafe}\label{classlinked_list_a1827bc84093365c8045d9cacc92bdafe}} 
+\index{linkedList@{linkedList}!tail@{tail}}
+\index{tail@{tail}!linkedList@{linkedList}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnode}{node}} $\ast$ linked\+List\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 59 of file linked\+List.\+h.
+

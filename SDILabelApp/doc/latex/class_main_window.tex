@@ -2,7 +2,7 @@
 \label{class_main_window}\index{MainWindow@{MainWindow}}
 
 
-This class handles all G\+UI components.  
+This class handles all G\+UI components for the main window.  
 
 
 
@@ -22,6 +22,18 @@ Inheritance diagram for Main\+Window\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Initialises the main windows G\+UI by building the UI elements. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_main_window_a231bd3a42b9b7772c22e465edd936fe0}{image\+File\+Name}}
+\item 
+\mbox{\hyperlink{mainwindow_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{class_main_window_aeacbfcad1f0ecf750b1ef9b01af9c54f}{annotation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a6b8e934fca603cf7678eabb9a6dfc709}{key\+Press\+Event}} (Q\+Key\+Event $\ast$)
+\begin{DoxyCompactList}\small\item\em detects what key was pressed and performs an action based on it \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,20 +56,54 @@ void \mbox{\hyperlink{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}{on\+\
 void \mbox{\hyperlink{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}{on\+\_\+new\+Class\+List\+Button\+\_\+clicked}} ()
 \begin{DoxyCompactList}\small\item\em opens the class list creator dialog \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_a056f58a64d709e528724e5721071aa5f}{on\+\_\+image\+File\+List\+Sort\+Box\+\_\+current\+Index\+Changed}} (int index)
-\begin{DoxyCompactList}\small\item\em Detects when the user selects a new sort mode and applies that sort (not finished) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Detects when the user selects a new sort mode and applies that sort. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a51803ceb1205b806c7c0ca6c9c44da43}{sort\+Alphabetically}} (Q\+Dir directory)
+\begin{DoxyCompactList}\small\item\em sorts list of image files loaded alphabetically \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a1802f2d37404a8dbeb2340f338db64e0}{sort\+Reversed\+Alphabetically}} (Q\+Dir directory)
+\begin{DoxyCompactList}\small\item\em sorts list of image files loaded reversed alphabetically \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2b8d27637a98660d1e2a3b10558c5f9d}{sort\+Newest}} (Q\+Dir directory)
+\begin{DoxyCompactList}\small\item\em sorts list of image files loaded by the newest file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a189aba7ddc7bb1e3e5267607ca8a0459}{sort\+Oldest}} (Q\+Dir directory)
+\begin{DoxyCompactList}\small\item\em sorts list of image files loaded by the oldest file \end{DoxyCompactList}\item 
+Q\+Dir \mbox{\hyperlink{class_main_window_a2af2707210007ecf84d6651cd2fd9593}{get\+Image\+File\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em returns the full directory of the image files to be loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ac808121d8c0678ecd476834daecc8e23}{on\+\_\+class\+File\+Sort\+Box\+\_\+current\+Index\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Detects when the user selects a new sort mode and applies that sort. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em detects when push button to create a square is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a3e56380e3bdc18c62af46174491af2c1}{read\+Json}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_af005db3b9f409e6865ab13a9eace92ce}{on\+\_\+annotation\+File\+Explorer\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae9c04710b1865c0d1e7af2dda80f5944}{on\+\_\+annotation\+Save\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}{on\+\_\+push\+Button\+\_\+3\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em detects when push button to create a triangle is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae80a036ef40bb6ac0165471f71fef287}{on\+\_\+push\+Button\+\_\+4\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em detects when push button to create a trapezium is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}{on\+\_\+push\+Button\+\_\+6\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em detects when push button to scale a shape is pressed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a14e9271a3995832756de649c4964e3c2}{save\+Json}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a39f55ae1517c6e680817d77003000f56}{on\+\_\+actionhelp\+\_\+triggered}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+Q\+Graphics\+Scene $\ast$ \mbox{\hyperlink{class_main_window_a51ac2b126495216832501cea3929c6f6}{scene}}
+\item 
+\mbox{\hyperlink{class_shape}{Shape}} $\ast$ \mbox{\hyperlink{class_main_window_a540d13637219a1efd84d9ba377dc0e17}{shape}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class handles all G\+UI components. 
+This class handles all G\+UI components for the main window. 
 
 This class initialises the main window and handles all signals sent from the G\+UI. It also handles loading the image file through open\+CV. 
 
-Definition at line 27 of file mainwindow.\+h.
+Definition at line 40 of file mainwindow.\+h.
 
 
 
@@ -74,7 +120,7 @@ Initialises the main windows G\+UI by building the UI elements.
 
 
 
-Definition at line 6 of file mainwindow.\+cpp.
+Definition at line 5 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
 \index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
@@ -84,7 +130,7 @@ Definition at line 6 of file mainwindow.\+cpp.
 
 
 
-Definition at line 17 of file mainwindow.\+cpp.
+Definition at line 21 of file mainwindow.\+cpp.
 
 
 
@@ -106,7 +152,21 @@ Loads the image based on the file path in the image file path box and the name o
 \end{DoxyParams}
 
 
-Definition at line 22 of file mainwindow.\+cpp.
+Definition at line 28 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a2af2707210007ecf84d6651cd2fd9593}\label{class_main_window_a2af2707210007ecf84d6651cd2fd9593}} 
+\index{MainWindow@{MainWindow}!getImageFileDirectory@{getImageFileDirectory}}
+\index{getImageFileDirectory@{getImageFileDirectory}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getImageFileDirectory}{getImageFileDirectory}}
+{\footnotesize\ttfamily Q\+Dir Main\+Window\+::get\+Image\+File\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+returns the full directory of the image files to be loaded 
+
+returns the diretory displayed in the image\+File\+Directory text box 
+
+Definition at line 140 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_af5dc7dac41604a78af3059650c5baeee}\label{class_main_window_af5dc7dac41604a78af3059650c5baeee}} 
 \index{MainWindow@{MainWindow}!getImageFilePath@{getImageFilePath}}
@@ -120,7 +180,51 @@ Gets the file path of the image folder the user selected.
 
 Gets the path based on what is entered into the image file box either by being manually typed by the user or automatically filled when selecting a folder through the file explorer 
 
-Definition at line 56 of file mainwindow.\+cpp.
+Definition at line 68 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a6b8e934fca603cf7678eabb9a6dfc709}\label{class_main_window_a6b8e934fca603cf7678eabb9a6dfc709}} 
+\index{MainWindow@{MainWindow}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Key\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+detects what key was pressed and performs an action based on it 
+
+currently handles a delete key press which deletes the last selected shape 
+
+Definition at line 346 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a39f55ae1517c6e680817d77003000f56}\label{class_main_window_a39f55ae1517c6e680817d77003000f56}} 
+\index{MainWindow@{MainWindow}!on\_actionhelp\_triggered@{on\_actionhelp\_triggered}}
+\index{on\_actionhelp\_triggered@{on\_actionhelp\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionhelp\_triggered}{on\_actionhelp\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+actionhelp\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 364 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_af005db3b9f409e6865ab13a9eace92ce}\label{class_main_window_af005db3b9f409e6865ab13a9eace92ce}} 
+\index{MainWindow@{MainWindow}!on\_annotationFileExplorerButton\_clicked@{on\_annotationFileExplorerButton\_clicked}}
+\index{on\_annotationFileExplorerButton\_clicked@{on\_annotationFileExplorerButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_annotationFileExplorerButton\_clicked}{on\_annotationFileExplorerButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+annotation\+File\+Explorer\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 340 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ae9c04710b1865c0d1e7af2dda80f5944}\label{class_main_window_ae9c04710b1865c0d1e7af2dda80f5944}} 
+\index{MainWindow@{MainWindow}!on\_annotationSaveButton\_clicked@{on\_annotationSaveButton\_clicked}}
+\index{on\_annotationSaveButton\_clicked@{on\_annotationSaveButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_annotationSaveButton\_clicked}{on\_annotationSaveButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+annotation\+Save\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 244 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a751904e6d2c6fdea46f70a89cc833809}\label{class_main_window_a751904e6d2c6fdea46f70a89cc833809}} 
 \index{MainWindow@{MainWindow}!on\_classesFileExplorerButton\_clicked@{on\_classesFileExplorerButton\_clicked}}
@@ -134,7 +238,26 @@ Loads the class file selected by the user.
 
 Opens a file dialog for the user to select a $\ast$.names file on their pc and then clears the class list and loads the new one. It also sets the class list file path box to the full file path of the file loaded 
 
-Definition at line 62 of file mainwindow.\+cpp.
+Definition at line 74 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ac808121d8c0678ecd476834daecc8e23}\label{class_main_window_ac808121d8c0678ecd476834daecc8e23}} 
+\index{MainWindow@{MainWindow}!on\_classFileSortBox\_currentIndexChanged@{on\_classFileSortBox\_currentIndexChanged}}
+\index{on\_classFileSortBox\_currentIndexChanged@{on\_classFileSortBox\_currentIndexChanged}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_classFileSortBox\_currentIndexChanged}{on\_classFileSortBox\_currentIndexChanged}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+class\+File\+Sort\+Box\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Detects when the user selects a new sort mode and applies that sort. 
+
+Uses bubble sort to sort the class file linked list into order 
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the option pressed by the user in the drop down menu \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a056f58a64d709e528724e5721071aa5f}\label{class_main_window_a056f58a64d709e528724e5721071aa5f}} 
 \index{MainWindow@{MainWindow}!on\_imageFileListSortBox\_currentIndexChanged@{on\_imageFileListSortBox\_currentIndexChanged}}
@@ -144,11 +267,11 @@ Definition at line 62 of file mainwindow.\+cpp.
 
 
 
-Detects when the user selects a new sort mode and applies that sort (not finished) 
+Detects when the user selects a new sort mode and applies that sort. 
 
 
 
-Definition at line 102 of file mainwindow.\+cpp.
+Definition at line 119 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a3a25784791c0b0d1855ba9906298e2ad}\label{class_main_window_a3a25784791c0b0d1855ba9906298e2ad}} 
 \index{MainWindow@{MainWindow}!on\_ImagesFileExplorerButton\_clicked@{on\_ImagesFileExplorerButton\_clicked}}
@@ -162,7 +285,7 @@ signals sent from the image file explorer button being clicked
 
 Opens the file explorer for the user to select a folder containing images 
 
-Definition at line 31 of file mainwindow.\+cpp.
+Definition at line 38 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a2fee526a00523cc9ff28da3685148874}\label{class_main_window_a2fee526a00523cc9ff28da3685148874}} 
 \index{MainWindow@{MainWindow}!on\_ImagesFileList\_itemDoubleClicked@{on\_ImagesFileList\_itemDoubleClicked}}
@@ -181,7 +304,7 @@ Converts the name of the item from the image file list to a basic string and req
 \end{DoxyParams}
 
 
-Definition at line 48 of file mainwindow.\+cpp.
+Definition at line 55 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}\label{class_main_window_a32f8acd83ce67a48d0e10c32f57ca7ef}} 
 \index{MainWindow@{MainWindow}!on\_manageClassesButton\_clicked@{on\_manageClassesButton\_clicked}}
@@ -195,7 +318,7 @@ opens the class manager dialog
 
 Updates the class list and file path box when the dialog is closed 
 
-Definition at line 79 of file mainwindow.\+cpp.
+Definition at line 96 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}\label{class_main_window_ae92a2cb4f45d8dbc66350dde9f65d3bb}} 
 \index{MainWindow@{MainWindow}!on\_newClassListButton\_clicked@{on\_newClassListButton\_clicked}}
@@ -209,7 +332,159 @@ opens the class list creator dialog
 
 loads the new class file when closed 
 
-Definition at line 91 of file mainwindow.\+cpp.
+Definition at line 108 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}\label{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}}
+\index{on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_3\_clicked}{on\_pushButton\_3\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+3\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+detects when push button to create a triangle is pressed 
+
+
+
+Definition at line 211 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ae80a036ef40bb6ac0165471f71fef287}\label{class_main_window_ae80a036ef40bb6ac0165471f71fef287}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}}
+\index{on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_4\_clicked}{on\_pushButton\_4\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+4\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+detects when push button to create a trapezium is pressed 
+
+
+
+Definition at line 218 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}\label{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_6\_clicked@{on\_pushButton\_6\_clicked}}
+\index{on\_pushButton\_6\_clicked@{on\_pushButton\_6\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_6\_clicked}{on\_pushButton\_6\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+6\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+detects when push button to scale a shape is pressed 
+
+
+
+Definition at line 227 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}\label{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+detects when push button to create a square is pressed 
+
+
+
+Definition at line 204 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a3e56380e3bdc18c62af46174491af2c1}\label{class_main_window_a3e56380e3bdc18c62af46174491af2c1}} 
+\index{MainWindow@{MainWindow}!readJson@{readJson}}
+\index{readJson@{readJson}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{readJson}{readJson}}
+{\footnotesize\ttfamily void Main\+Window\+::read\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 306 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a14e9271a3995832756de649c4964e3c2}\label{class_main_window_a14e9271a3995832756de649c4964e3c2}} 
+\index{MainWindow@{MainWindow}!saveJson@{saveJson}}
+\index{saveJson@{saveJson}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{saveJson}{saveJson}}
+{\footnotesize\ttfamily void Main\+Window\+::save\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line 248 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a51803ceb1205b806c7c0ca6c9c44da43}\label{class_main_window_a51803ceb1205b806c7c0ca6c9c44da43}} 
+\index{MainWindow@{MainWindow}!sortAlphabetically@{sortAlphabetically}}
+\index{sortAlphabetically@{sortAlphabetically}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sortAlphabetically}{sortAlphabetically}}
+{\footnotesize\ttfamily void Main\+Window\+::sort\+Alphabetically (\begin{DoxyParamCaption}\item[{Q\+Dir}]{directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sorts list of image files loaded alphabetically 
+
+sorts the image files directly as they are being read in from the directory 
+\begin{DoxyParams}{Parameters}
+{\em directory} & is the full directory of the image files being loaded \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 145 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a2b8d27637a98660d1e2a3b10558c5f9d}\label{class_main_window_a2b8d27637a98660d1e2a3b10558c5f9d}} 
+\index{MainWindow@{MainWindow}!sortNewest@{sortNewest}}
+\index{sortNewest@{sortNewest}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sortNewest}{sortNewest}}
+{\footnotesize\ttfamily void Main\+Window\+::sort\+Newest (\begin{DoxyParamCaption}\item[{Q\+Dir}]{directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sorts list of image files loaded by the newest file 
+
+sorts the image files directly as they are being read in from the directory 
+\begin{DoxyParams}{Parameters}
+{\em directory} & is the full directory of the image files being loaded \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 157 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a189aba7ddc7bb1e3e5267607ca8a0459}\label{class_main_window_a189aba7ddc7bb1e3e5267607ca8a0459}} 
+\index{MainWindow@{MainWindow}!sortOldest@{sortOldest}}
+\index{sortOldest@{sortOldest}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sortOldest}{sortOldest}}
+{\footnotesize\ttfamily void Main\+Window\+::sort\+Oldest (\begin{DoxyParamCaption}\item[{Q\+Dir}]{directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sorts list of image files loaded by the oldest file 
+
+sorts the image files directly as they are being read in from the directory 
+\begin{DoxyParams}{Parameters}
+{\em directory} & is the full directory of the image files being loaded \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 163 of file mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a1802f2d37404a8dbeb2340f338db64e0}\label{class_main_window_a1802f2d37404a8dbeb2340f338db64e0}} 
+\index{MainWindow@{MainWindow}!sortReversedAlphabetically@{sortReversedAlphabetically}}
+\index{sortReversedAlphabetically@{sortReversedAlphabetically}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sortReversedAlphabetically}{sortReversedAlphabetically}}
+{\footnotesize\ttfamily void Main\+Window\+::sort\+Reversed\+Alphabetically (\begin{DoxyParamCaption}\item[{Q\+Dir}]{directory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+sorts list of image files loaded reversed alphabetically 
+
+sorts the image files directly as they are being read in from the directory 
+\begin{DoxyParams}{Parameters}
+{\em directory} & is the full directory of the image files being loaded \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_a4b40abe2f047252b374bd3d8745e9fdf}\label{class_main_window_a4b40abe2f047252b374bd3d8745e9fdf}} 
 \index{MainWindow@{MainWindow}!updateClassFileList@{updateClassFileList}}
@@ -223,7 +498,7 @@ Updates thes class file list.
 
 Updates the class list to show new/removed class names or to show an entirely new list of classes from a newly loaded file 
 
-Definition at line 71 of file mainwindow.\+cpp.
+Definition at line 83 of file mainwindow.\+cpp.
 
 \mbox{\Hypertarget{class_main_window_af86beb5a792ccd3148ec45cebf0c04f4}\label{class_main_window_af86beb5a792ccd3148ec45cebf0c04f4}} 
 \index{MainWindow@{MainWindow}!updateImageFileList@{updateImageFileList}}
@@ -242,11 +517,51 @@ Uses the filepath provided by the users selection of folder and gets all png and
 \end{DoxyParams}
 
 
-Definition at line 41 of file mainwindow.\+cpp.
+Definition at line 48 of file mainwindow.\+cpp.
 
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_aeacbfcad1f0ecf750b1ef9b01af9c54f}\label{class_main_window_aeacbfcad1f0ecf750b1ef9b01af9c54f}} 
+\index{MainWindow@{MainWindow}!annotation@{annotation}}
+\index{annotation@{annotation}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{annotation}{annotation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mainwindow_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} Main\+Window\+::annotation}
+
+
+
+Definition at line 49 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a231bd3a42b9b7772c22e465edd936fe0}\label{class_main_window_a231bd3a42b9b7772c22e465edd936fe0}} 
+\index{MainWindow@{MainWindow}!imageFileName@{imageFileName}}
+\index{imageFileName@{imageFileName}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{imageFileName}{imageFileName}}
+{\footnotesize\ttfamily std\+::string Main\+Window\+::image\+File\+Name}
+
+
+
+Definition at line 48 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a51ac2b126495216832501cea3929c6f6}\label{class_main_window_a51ac2b126495216832501cea3929c6f6}} 
+\index{MainWindow@{MainWindow}!scene@{scene}}
+\index{scene@{scene}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene$\ast$ Main\+Window\+::scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 178 of file mainwindow.\+h.
+
+\mbox{\Hypertarget{class_main_window_a540d13637219a1efd84d9ba377dc0e17}\label{class_main_window_a540d13637219a1efd84d9ba377dc0e17}} 
+\index{MainWindow@{MainWindow}!shape@{shape}}
+\index{shape@{shape}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{shape}{shape}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shape}{Shape}}$\ast$ Main\+Window\+::shape\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 179 of file mainwindow.\+h.
+
 \mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
 \index{MainWindow@{MainWindow}!ui@{ui}}
 \index{ui@{ui}!MainWindow@{MainWindow}}
@@ -255,5 +570,5 @@ Definition at line 41 of file mainwindow.\+cpp.
 
 
 
-Definition at line 95 of file mainwindow.\+h.
+Definition at line 177 of file mainwindow.\+h.
 

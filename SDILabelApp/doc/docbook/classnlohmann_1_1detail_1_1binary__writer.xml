@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1binary__writer">
+<title>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary></indexterm>
+<para>
+
+<para>serialization to CBOR and MessagePack values </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a373289af95a946c19bb4a58a5df71a78">binary_writer</link> (<link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">output_adapter_t</link>&lt; CharType &gt; adapter)</para>
+
+<para>create a binary writer </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a9ffc566db5219b473762462234b47db9">write_bson</link> (const BasicJsonType &amp;j)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1aa0ab8d27fd88a33a2f801413ac4c7fbc">write_cbor</link> (const BasicJsonType &amp;j)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1ae4e0852b64102ce4b07d99f08f828b7c">write_msgpack</link> (const BasicJsonType &amp;j)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a0f6c65053d859269f88eb4ebb0cd7060">write_ubjson</link> (const BasicJsonType &amp;j, const bool use_count, const bool use_type, const bool add_prefix=true)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_signed&lt; char &gt;::value &gt; *  = nullptr&gt; </para><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1ab77aa48692bd4e64e4f051ce6aeb6d2d">to_char_type</link> (std::uint8_t x) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_unsigned&lt; char &gt;::value &gt; *  = nullptr&gt; </para><para>static CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a5e46f0dd3550901b15cf85265808d1ec">to_char_type</link> (std::uint8_t x) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename C  = CharType, enable_if_t&lt; std::is_unsigned&lt; C &gt;::value &gt; *  = nullptr&gt; </para><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1ab77aa48692bd4e64e4f051ce6aeb6d2d">to_char_type</link> (std::uint8_t x) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename InputCharType , typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_signed&lt; char &gt;::value and std::is_same&lt; char, typename std::remove_cv&lt; InputCharType &gt;::type &gt;::value &gt; *  = nullptr&gt; </para><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a2c2b2132ce56b3b45593374b622baa67">to_char_type</link> (InputCharType x) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> = typename BasicJsonType::string_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a8ca261057172ac9987a934f588aa1f16">internal_binary_t</link> = typename BasicJsonType::internal_binary_t</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a1b5b7f5c03b1f8b1f59ea61db9634108">write_bson_entry_header</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const std::uint8_t element_type)</para>
+
+<para>Writes the given <emphasis>element_type</emphasis> and <emphasis>name</emphasis> to the output adapter. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1ae099435e1df3096e0fc78333282f8f67">write_bson_boolean</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const bool value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and boolean value <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a263ec18815467bb9919021ef126919ca">write_bson_double</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const double value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and double value <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a5e6574416915208fc035b57338ae3252">write_bson_string</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and string value <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a9927c1110b18661e0224a76156e5a7a9">write_bson_null</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and null value. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a553ad4dbdf27238eef90867e4bf2f3e5">write_bson_integer</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const std::int64_t value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and integer <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a5e295ed1be6af6260d2a65f7397c3742">write_bson_unsigned</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const std::uint64_t value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and unsigned <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a6231302930265eccb3f56c378f7b0661">write_bson_object_entry</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const typename BasicJsonType::object_t &amp;value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and object <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a025212bd170253638b9f05b3b6aa5bf9">write_bson_array</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const typename BasicJsonType::array_t &amp;value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and array <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a17b78c39aa2dd4f4f37c818eb687aee0">write_bson_binary</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a8ca261057172ac9987a934f588aa1f16">internal_binary_t</link> &amp;value)</para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and binary value <emphasis>value</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a7ff58bf1a80018148bed860667ffca07">write_bson_element</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const BasicJsonType &amp;j)</para>
+
+<para>Serializes the JSON value <emphasis>j</emphasis> to BSON and associates it with the key <emphasis>name</emphasis>. </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29b3e0f83a8e5f2307804023109ba2c9">write_bson_object</link> (const typename BasicJsonType::object_t &amp;value)</para>
+</listitem>
+            <listitem><para>template&lt;typename NumberType , typename std::enable_if&lt; std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f">write_number_with_ubjson_prefix</link> (const NumberType n, const bool add_prefix)</para>
+</listitem>
+            <listitem><para>template&lt;typename NumberType , typename std::enable_if&lt; std::is_unsigned&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f">write_number_with_ubjson_prefix</link> (const NumberType n, const bool add_prefix)</para>
+</listitem>
+            <listitem><para>template&lt;typename NumberType , typename std::enable_if&lt; std::is_signed&lt; NumberType &gt;::value and not std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f">write_number_with_ubjson_prefix</link> (const NumberType n, const bool add_prefix)</para>
+</listitem>
+            <listitem><para>CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a4c129249a5aee8e4ec8add6c6184e4f7">ubjson_prefix</link> (const BasicJsonType &amp;j) const noexcept</para>
+
+<para>determine the type prefix of container values </para>
+</listitem>
+            <listitem><para>template&lt;typename NumberType , bool OutputIsLittleEndian = false&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a6e11b7227fcecc25a548ed45507b7d1c">write_number</link> (const NumberType n)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a5bae2f1db2c511b869dffaddf15a1653">calc_bson_entry_header_size</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name)</para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1aea44fd97a5cb9b4f175e66e3e4fdf158">calc_bson_string_size</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;value)</para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1aeab70c895931b96ea598306b37eca271">calc_bson_integer_size</link> (const std::int64_t value)</para>
+</listitem>
+            <listitem><para>static constexpr std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1aa1d6bb9f3af16f07ce2440c354b5787b">calc_bson_unsigned_size</link> (const std::uint64_t value) noexcept</para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1af08f9302a02516ff8cf358a99aaa1ddf">calc_bson_array_size</link> (const typename BasicJsonType::array_t &amp;value)</para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a13065c47b5c9e73df2cef1b903fd827a">calc_bson_binary_size</link> (const typename BasicJsonType::internal_binary_t &amp;value)</para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a1e4372c5984184eb5bcc09af1fcc2ee0">calc_bson_element_size</link> (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp;name, const BasicJsonType &amp;j)</para>
+
+<para>Calculates the size necessary to serialize the JSON value <emphasis>j</emphasis> with its <emphasis>name</emphasis>. </para>
+</listitem>
+            <listitem><para>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1acc6f1cc1fd370ee84ebc8cf7b8712840">calc_bson_object_size</link> (const typename BasicJsonType::object_t &amp;value)</para>
+
+<para>Calculates the size of the BSON serialization of the given JSON-object <emphasis>j</emphasis>. </para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a2b5cb010077da6241a18bb334736464c">get_cbor_float_prefix</link> (float)</para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1afe5ac43e05973ba09ee79227bb589b59">get_cbor_float_prefix</link> (double)</para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1ad452d114696407b98abc69b6001c270e">get_msgpack_float_prefix</link> (float)</para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a47234a6e7ac9206d43553985f4cacbf2">get_msgpack_float_prefix</link> (double)</para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a6837b20574152f7f645d0f6cd9fafdeb">get_ubjson_float_prefix</link> (float)</para>
+</listitem>
+            <listitem><para>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a19eb47a53dbbe28f319532bef25d84e6">get_ubjson_float_prefix</link> (double)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const bool <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a048887c907afe39759b777e8c888414c">is_little_endian</link> = <link linkend="_classnlohmann_1_1detail_1_1binary__reader">binary_reader</link>&lt;BasicJsonType&gt;::little_endianess()</para>
+
+<para>whether we can assume little endianess </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">output_adapter_t</link>&lt; CharType &gt; <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a6f15b782a7900f50ef37d123008e601b">oa</link> = nullptr</para>
+
+<para>the output </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType, typename CharType&gt;
+class nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</title></simplesect>
+
+
+<para>serialization to CBOR and MessagePack values </para>
+<para>
+Definition at line 11992 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a8ca261057172ac9987a934f588aa1f16"/>    <section>
+    <title>internal_binary_t</title>
+<indexterm><primary>internal_binary_t</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>internal_binary_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::<link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a8ca261057172ac9987a934f588aa1f16">internal_binary_t</link> =  typename BasicJsonType::internal_binary_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11995 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8"/>    <section>
+    <title>string_t</title>
+<indexterm><primary>string_t</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>string_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::<link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> =  typename BasicJsonType::string_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11994 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a373289af95a946c19bb4a58a5df71a78"/>    <section>
+    <title>binary_writer()</title>
+<indexterm><primary>binary_writer</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>binary_writer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::<link linkend="_classnlohmann_1_1detail_1_1binary__writer">binary_writer</link> (<link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">output_adapter_t</link>&lt; CharType &gt; adapter)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>create a binary writer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>adapter</entry>
+                                <entry>
+<para>output adapter to write to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 12003 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1af08f9302a02516ff8cf358a99aaa1ddf"/>    <section>
+    <title>calc_bson_array_size()</title>
+<indexterm><primary>calc_bson_array_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_array_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_array_size (const typename BasicJsonType::array_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of the BSON-encoded array <emphasis>value</emphasis> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13006 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a13065c47b5c9e73df2cef1b903fd827a"/>    <section>
+    <title>calc_bson_binary_size()</title>
+<indexterm><primary>calc_bson_binary_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_binary_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_binary_size (const typename BasicJsonType::internal_binary_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of the BSON-encoded binary array <emphasis>value</emphasis> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13021 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a1e4372c5984184eb5bcc09af1fcc2ee0"/>    <section>
+    <title>calc_bson_element_size()</title>
+<indexterm><primary>calc_bson_element_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_element_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_element_size (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const BasicJsonType &amp; j)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the size necessary to serialize the JSON value <emphasis>j</emphasis> with its <emphasis>name</emphasis>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The calculated size for the BSON document entry for <emphasis>j</emphasis> with the given <emphasis>name</emphasis>. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13070 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a5bae2f1db2c511b869dffaddf15a1653"/>    <section>
+    <title>calc_bson_entry_header_size()</title>
+<indexterm><primary>calc_bson_entry_header_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_entry_header_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_entry_header_size (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of a BSON document entry header, including the id marker and the entry name size (and its null-terminator). </para>
+</formalpara>
+</para>
+<para>
+Definition at line 12859 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1aeab70c895931b96ea598306b37eca271"/>    <section>
+    <title>calc_bson_integer_size()</title>
+<indexterm><primary>calc_bson_integer_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_integer_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_integer_size (const std::int64_t value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of the BSON-encoded integer <emphasis>value</emphasis> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 12936 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1acc6f1cc1fd370ee84ebc8cf7b8712840"/>    <section>
+    <title>calc_bson_object_size()</title>
+<indexterm><primary>calc_bson_object_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_object_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_object_size (const typename BasicJsonType::object_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the size of the BSON serialization of the given JSON-object <emphasis>j</emphasis>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Precondition</title>
+
+<para>j.type() == <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13164 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1aea44fd97a5cb9b4f175e66e3e4fdf158"/>    <section>
+    <title>calc_bson_string_size()</title>
+<indexterm><primary>calc_bson_string_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_string_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_string_size (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of the BSON-encoded string in <emphasis>value</emphasis> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 12906 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1aa1d6bb9f3af16f07ce2440c354b5787b"/>    <section>
+    <title>calc_bson_unsigned_size()</title>
+<indexterm><primary>calc_bson_unsigned_size</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>calc_bson_unsigned_size</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr std::size_t <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::calc_bson_unsigned_size (const std::uint64_t value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>The size of the BSON-encoded unsigned integer in <emphasis>j</emphasis> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 12964 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1afe5ac43e05973ba09ee79227bb589b59"/>    <section>
+    <title>get_cbor_float_prefix()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>get_cbor_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_cbor_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_cbor_float_prefix (double )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13200 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a2b5cb010077da6241a18bb334736464c"/>    <section>
+    <title>get_cbor_float_prefix()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>get_cbor_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_cbor_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_cbor_float_prefix (float )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13195 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a47234a6e7ac9206d43553985f4cacbf2"/>    <section>
+    <title>get_msgpack_float_prefix()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>get_msgpack_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_msgpack_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_msgpack_float_prefix (double )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13214 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1ad452d114696407b98abc69b6001c270e"/>    <section>
+    <title>get_msgpack_float_prefix()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>get_msgpack_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_msgpack_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_msgpack_float_prefix (float )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13209 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a19eb47a53dbbe28f319532bef25d84e6"/>    <section>
+    <title>get_ubjson_float_prefix()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>get_ubjson_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_ubjson_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_ubjson_float_prefix (double )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13429 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a6837b20574152f7f645d0f6cd9fafdeb"/>    <section>
+    <title>get_ubjson_float_prefix()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>get_ubjson_float_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>get_ubjson_float_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::get_ubjson_float_prefix (float )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13424 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a2c2b2132ce56b3b45593374b622baa67"/>    <section>
+    <title>to_char_type()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>to_char_type</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>to_char_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename InputCharType , typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_signed&lt; char &gt;::value and std::is_same&lt; char, typename std::remove_cv&lt; InputCharType &gt;::type &gt;::value &gt; *  = nullptr&gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::to_char_type (InputCharType x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 13502 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1ab77aa48692bd4e64e4f051ce6aeb6d2d"/>    <section>
+    <title>to_char_type()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>to_char_type</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>to_char_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_signed&lt; char &gt;::value &gt; *  = nullptr&gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::to_char_type (std::uint8_t x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 13473 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a5e46f0dd3550901b15cf85265808d1ec"/>    <section>
+    <title>to_char_type()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>to_char_type</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>to_char_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename C  = CharType, enable_if_t&lt; std::is_signed&lt; C &gt;::value and std::is_unsigned&lt; char &gt;::value &gt; *  = nullptr&gt; </computeroutput><para><computeroutput>static CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::to_char_type (std::uint8_t x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 13480 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1ab77aa48692bd4e64e4f051ce6aeb6d2d"/>    <section>
+    <title>to_char_type()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>to_char_type</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>to_char_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename C  = CharType, enable_if_t&lt; std::is_unsigned&lt; C &gt;::value &gt; *  = nullptr&gt; </computeroutput><para><computeroutput>static constexpr CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::to_char_type (std::uint8_t x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 13491 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a4c129249a5aee8e4ec8add6c6184e4f7"/>    <section>
+    <title>ubjson_prefix()</title>
+<indexterm><primary>ubjson_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>ubjson_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>CharType <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::ubjson_prefix (const BasicJsonType &amp; j) const<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>determine the type prefix of container values </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function does not need to be 100% accurate when it comes to integer limits. In case a number exceeds the limits of int64_t, this will be detected by a later call to function write_number_with_ubjson_prefix. Therefore, we return &apos;L&apos; for any value that does not fit the previous limits. </para>
+</note>
+</para>
+<para>
+Definition at line 13352 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a9ffc566db5219b473762462234b47db9"/>    <section>
+    <title>write_bson()</title>
+<indexterm><primary>write_bson</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson (const BasicJsonType &amp; j)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Precondition</title>
+
+<para>j.type() == <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 12012 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a025212bd170253638b9f05b3b6aa5bf9"/>    <section>
+    <title>write_bson_array()</title>
+<indexterm><primary>write_bson_array</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_array</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_array (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const typename BasicJsonType::array_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and array <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 13029 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a17b78c39aa2dd4f4f37c818eb687aee0"/>    <section>
+    <title>write_bson_binary()</title>
+<indexterm><primary>write_bson_binary</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_binary</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_binary (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a8ca261057172ac9987a934f588aa1f16">internal_binary_t</link> &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and binary value <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 13048 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1ae099435e1df3096e0fc78333282f8f67"/>    <section>
+    <title>write_bson_boolean()</title>
+<indexterm><primary>write_bson_boolean</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_boolean</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_boolean (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const bool value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and boolean value <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12886 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a263ec18815467bb9919021ef126919ca"/>    <section>
+    <title>write_bson_double()</title>
+<indexterm><primary>write_bson_double</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_double</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_double (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const double value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and double value <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12896 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a7ff58bf1a80018148bed860667ffca07"/>    <section>
+    <title>write_bson_element()</title>
+<indexterm><primary>write_bson_element</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_element</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_element (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const BasicJsonType &amp; j)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Serializes the JSON value <emphasis>j</emphasis> to BSON and associates it with the key <emphasis>name</emphasis>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>The name to associate with the JSON entity <emphasis>j</emphasis> within the current BSON document </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The size of the BSON entry </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13118 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a1b5b7f5c03b1f8b1f59ea61db9634108"/>    <section>
+    <title>write_bson_entry_header()</title>
+<indexterm><primary>write_bson_entry_header</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_entry_header</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_entry_header (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const std::uint8_t element_type)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes the given <emphasis>element_type</emphasis> and <emphasis>name</emphasis> to the output adapter. </para>
+</para>
+<para>
+Definition at line 12874 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a553ad4dbdf27238eef90867e4bf2f3e5"/>    <section>
+    <title>write_bson_integer()</title>
+<indexterm><primary>write_bson_integer</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_integer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_integer (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const std::int64_t value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and integer <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12946 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a9927c1110b18661e0224a76156e5a7a9"/>    <section>
+    <title>write_bson_null()</title>
+<indexterm><primary>write_bson_null</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_null</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_null (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and null value. </para>
+</para>
+<para>
+Definition at line 12928 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a29b3e0f83a8e5f2307804023109ba2c9"/>    <section>
+    <title>write_bson_object()</title>
+<indexterm><primary>write_bson_object</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_object</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_object (const typename BasicJsonType::object_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Precondition</title>
+
+<para>j.type() == <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13179 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a6231302930265eccb3f56c378f7b0661"/>    <section>
+    <title>write_bson_object_entry()</title>
+<indexterm><primary>write_bson_object_entry</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_object_entry</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_object_entry (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const typename BasicJsonType::object_t &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and object <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12996 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a5e6574416915208fc035b57338ae3252"/>    <section>
+    <title>write_bson_string()</title>
+<indexterm><primary>write_bson_string</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_string (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and string value <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12914 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a5e295ed1be6af6260d2a65f7397c3742"/>    <section>
+    <title>write_bson_unsigned()</title>
+<indexterm><primary>write_bson_unsigned</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_bson_unsigned</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_bson_unsigned (const <link linkend="_classnlohmann_1_1detail_1_1binary__writer_1a29f2ae7a5c4a8c1dae47b3b2310de8a8">string_t</link> &amp; name, const std::uint64_t value)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Writes a BSON element with key <emphasis>name</emphasis> and unsigned <emphasis>value</emphasis>. </para>
+</para>
+<para>
+Definition at line 12974 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1aa0ab8d27fd88a33a2f801413ac4c7fbc"/>    <section>
+    <title>write_cbor()</title>
+<indexterm><primary>write_cbor</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_cbor</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_cbor (const BasicJsonType &amp; j)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 12032 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1ae4e0852b64102ce4b07d99f08f828b7c"/>    <section>
+    <title>write_msgpack()</title>
+<indexterm><primary>write_msgpack</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_msgpack</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_msgpack (const BasicJsonType &amp; j)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 12315 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a6e11b7227fcecc25a548ed45507b7d1c"/>    <section>
+    <title>write_number()</title>
+<indexterm><primary>write_number</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_number</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename NumberType , bool OutputIsLittleEndian = false&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_number (const NumberType n)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13450 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f"/>    <section>
+    <title>write_number_with_ubjson_prefix()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>write_number_with_ubjson_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_number_with_ubjson_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename NumberType , typename std::enable_if&lt; std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix (const NumberType n, const bool add_prefix)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13226 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f"/>    <section>
+    <title>write_number_with_ubjson_prefix()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>write_number_with_ubjson_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_number_with_ubjson_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename NumberType , typename std::enable_if&lt; std::is_unsigned&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix (const NumberType n, const bool add_prefix)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13239 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a0ea6745f944c0c61672146886b4ee90f"/>    <section>
+    <title>write_number_with_ubjson_prefix()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>write_number_with_ubjson_prefix</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_number_with_ubjson_prefix</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><computeroutput>template&lt;typename NumberType , typename std::enable_if&lt; std::is_signed&lt; NumberType &gt;::value and not std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix (const NumberType n, const bool add_prefix)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 13292 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a0f6c65053d859269f88eb4ebb0cd7060"/>    <section>
+    <title>write_ubjson()</title>
+<indexterm><primary>write_ubjson</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>write_ubjson</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::write_ubjson (const BasicJsonType &amp; j, const bool use_count, const bool use_type, const bool add_prefix = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>j</entry>
+                                <entry>
+<para>JSON value to serialize </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>use_count</entry>
+                                <entry>
+<para>whether to use &apos;#&apos; prefixes (optimized format) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>use_type</entry>
+                                <entry>
+<para>whether to use &apos;$&apos; prefixes (optimized format) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>add_prefix</entry>
+                                <entry>
+<para>whether prefixes need to be used for this value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 12652 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a048887c907afe39759b777e8c888414c"/>    <section>
+    <title>is_little_endian</title>
+<indexterm><primary>is_little_endian</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>is_little_endian</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput>const bool <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::is_little_endian = <link linkend="_classnlohmann_1_1detail_1_1binary__reader">binary_reader</link>&lt;BasicJsonType&gt;::little_endianess()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>whether we can assume little endianess </para>
+</para>
+<para>
+Definition at line 13509 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1binary__writer_1a6f15b782a7900f50ef37d123008e601b"/>    <section>
+    <title>oa</title>
+<indexterm><primary>oa</primary><secondary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::binary_writer&lt; BasicJsonType, CharType &gt;</primary><secondary>oa</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CharType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">output_adapter_t</link>&lt;CharType&gt; <link linkend="_classnlohmann_1_1detail_1_1binary__writer">nlohmann::detail::binary_writer</link>&lt; BasicJsonType, CharType &gt;::oa = nullptr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the output </para>
+</para>
+<para>
+Definition at line 13512 of file json.hpp.</para>
+</section>
+</section>
+</section>

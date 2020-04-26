@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1is__iterator__traits">
+<title>nlohmann::detail::is_iterator_traits&lt; T, typename &gt; Struct Template Reference</title>
+<indexterm><primary>nlohmann::detail::is_iterator_traits&lt; T, typename &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::is_iterator_traits&lt; T, typename &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structnlohmann_1_1detail_1_1is__iterator__traits.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T, typename = void&gt;
+struct nlohmann::detail::is_iterator_traits&lt; T, typename &gt;</title></simplesect>
+
+<para>
+Definition at line 2900 of file json.hpp.</para>
+</section>
+</section>

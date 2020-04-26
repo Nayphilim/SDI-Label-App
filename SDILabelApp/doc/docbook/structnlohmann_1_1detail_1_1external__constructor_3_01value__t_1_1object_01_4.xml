@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4">
+<title>nlohmann::detail::external_constructor&lt; value_t::object &gt; Struct Reference</title>
+<indexterm><primary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a3a369c5d49596dd4411e368425f9ac7a">construct</link> (BasicJsonType &amp;j, const typename BasicJsonType::object_t &amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a1e044961affbd6417386d6e9f1d545e9">construct</link> (BasicJsonType &amp;j, typename BasicJsonType::object_t &amp;&amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleObjectType , enable_if_t&lt; not std::is_same&lt; CompatibleObjectType, typename BasicJsonType::object_t &gt;::value, int &gt;  = 0&gt; </para><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a91f89abe0ec4dec59099b691682ff927">construct</link> (BasicJsonType &amp;j, const CompatibleObjectType &amp;obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 3968 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a91f89abe0ec4dec59099b691682ff927"/>    <section>
+    <title>construct()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>construct</primary><secondary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</primary><secondary>construct</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleObjectType , enable_if_t&lt; not std::is_same&lt; CompatibleObjectType, typename BasicJsonType::object_t &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor">nlohmann::detail::external_constructor</link>&lt; <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> &gt;::construct (BasicJsonType &amp; j, const CompatibleObjectType &amp; obj)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 3988 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a3a369c5d49596dd4411e368425f9ac7a"/>    <section>
+    <title>construct()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>construct</primary><secondary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</primary><secondary>construct</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor">nlohmann::detail::external_constructor</link>&lt; <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> &gt;::construct (BasicJsonType &amp; j, const typename BasicJsonType::object_t &amp; obj)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 3971 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4_1a1e044961affbd6417386d6e9f1d545e9"/>    <section>
+    <title>construct()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>construct</primary><secondary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::external_constructor&lt; value_t::object &gt;</primary><secondary>construct</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_structnlohmann_1_1detail_1_1external__constructor">nlohmann::detail::external_constructor</link>&lt; <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link> &gt;::construct (BasicJsonType &amp; j, typename BasicJsonType::object_t &amp;&amp; obj)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 3979 of file json.hpp.</para>
+</section>
+</section>
+</section>

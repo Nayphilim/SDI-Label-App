@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1parse__error">
+<title>nlohmann::detail::parse_error Class Reference</title>
+<indexterm><primary>nlohmann::detail::parse_error</primary></indexterm>
+<para>
+
+<para>exception indicating a parse error </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::parse_error:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1parse__error.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> <link linkend="_classnlohmann_1_1detail_1_1parse__error_1a137ea4d27de45d8a844fd13451d40f3d">create</link> (int id_, const <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> &amp;pos, const std::string &amp;what_arg)</para>
+
+<para>create a parse error exception </para>
+</listitem>
+            <listitem><para>static <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> <link linkend="_classnlohmann_1_1detail_1_1parse__error_1a9fd60ad6bce80fd99686ad332faefd37">create</link> (int id_, std::size_t byte_, const std::string &amp;what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const std::size_t <link linkend="_classnlohmann_1_1detail_1_1parse__error_1a9505aaa1ca943be927eec7cc579592ff">byte</link></para>
+
+<para>byte index of the parse error </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1parse__error_1a0ea816ea3521d7109407948cb1b850f7">parse_error</link> (int id_, std::size_t byte_, const char *what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_classnlohmann_1_1detail_1_1parse__error_1aefe74adeaa48781464ba2fd2ec63d221">position_string</link> (const <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> &amp;pos)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>exception indicating a parse error </para>
+
+
+
+<para>This exception is thrown by the library when a parse error occurs. Parse errors can occur during the deserialization of JSON text, CBOR, MessagePack, as well as when using JSON Patch.</para>
+
+<para>Member <emphasis>byte</emphasis> holds the byte index of the last read character in the input file.</para>
+
+<para>Exceptions have ids 1xx.</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>name / id </para>
+</entry><entry>
+<para>example message </para>
+</entry><entry>
+<para>description  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>json.exception.parse_error.101 </para>
+</entry><entry>
+<para>parse error at 2: unexpected end of input; expected string literal </para>
+</entry><entry>
+<para>This error indicates a syntax error while deserializing a JSON text. The error message describes that an unexpected token (character) was encountered, and the member <emphasis>byte</emphasis> indicates the error position.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.102 </para>
+</entry><entry>
+<para>parse error at 14: missing or wrong low surrogate </para>
+</entry><entry>
+<para>JSON uses the <computeroutput>\uxxxx</computeroutput> format to describe Unicode characters. Code points above above 0xFFFF are split into two <computeroutput>\uxxxx</computeroutput> entries (&quot;surrogate pairs&quot;). This error indicates that the surrogate pair is incomplete or contains an invalid code point.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.103 </para>
+</entry><entry>
+<para>parse error: code points above 0x10FFFF are invalid </para>
+</entry><entry>
+<para>Unicode supports code points up to 0x10FFFF. Code points above 0x10FFFF are invalid.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.104 </para>
+</entry><entry>
+<para>parse error: JSON patch must be an array of objects </para>
+</entry><entry>
+<para><link xlink:href="https://tools.ietf.org/html/rfc6902">RFC 6902</link> requires a JSON Patch document to be a JSON document that represents an array of objects.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.105 </para>
+</entry><entry>
+<para>parse error: operation must have string member &apos;op&apos; </para>
+</entry><entry>
+<para>An operation of a JSON Patch document must contain exactly one &quot;op&quot; member, whose value indicates the operation to perform. Its value must be one of &quot;add&quot;, &quot;remove&quot;, &quot;replace&quot;, &quot;move&quot;, &quot;copy&quot;, or &quot;test&quot;; other values are errors.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.106 </para>
+</entry><entry>
+<para>parse error: array index &apos;01&apos; must not begin with &apos;0&apos; </para>
+</entry><entry>
+<para>An array index in a JSON Pointer (<link xlink:href="https://tools.ietf.org/html/rfc6901">RFC 6901</link>) may be <computeroutput>0</computeroutput> or any number without a leading <computeroutput>0</computeroutput>.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.107 </para>
+</entry><entry>
+<para>parse error: JSON pointer must be empty or begin with &apos;/&apos; - was: &apos;foo&apos; </para>
+</entry><entry>
+<para>A JSON Pointer must be a Unicode string containing a sequence of zero or more reference tokens, each prefixed by a <computeroutput>/</computeroutput> character.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.108 </para>
+</entry><entry>
+<para>parse error: escape character &apos;~&apos; must be followed with &apos;0&apos; or &apos;1&apos; </para>
+</entry><entry>
+<para>In a JSON Pointer, only <computeroutput>~0</computeroutput> and <computeroutput>~1</computeroutput> are valid escape sequences.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.109 </para>
+</entry><entry>
+<para>parse error: array index &apos;one&apos; is not a number </para>
+</entry><entry>
+<para>A JSON Pointer array index must be a number.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.110 </para>
+</entry><entry>
+<para>parse error at 1: cannot read 2 bytes from vector </para>
+</entry><entry>
+<para>When parsing CBOR or MessagePack, the byte vector ends before the complete value has been read.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.112 </para>
+</entry><entry>
+<para>parse error at 1: error reading CBOR; last byte: 0xF8 </para>
+</entry><entry>
+<para>Not all types of CBOR or MessagePack are supported. This exception occurs if an unsupported byte was read.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.113 </para>
+</entry><entry>
+<para>parse error at 2: expected a CBOR string; last byte: 0x98 </para>
+</entry><entry>
+<para>While parsing a map key, a value that is not a string has been read.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.parse_error.114 </para>
+</entry><entry>
+<para>parse error: Unsupported BSON record type 0x0F </para>
+</entry><entry>
+<para>The parsing of the corresponding BSON record type is not implemented (yet).  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para><note><title>Note</title>
+
+<para>For an input with n bytes, 1 is the index of the first character and n+1 is the index of the terminating null byte or the end of file. This also holds true when reading a byte vector (CBOR or MessagePack).</para>
+</note>
+@liveexample{The following code shows how a <computeroutput><link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link></computeroutput> exception can be caught.,<link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link>}</para>
+
+<para><formalpara><title>See also</title>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1exception">exception</link> for the base class of the library exceptions </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">invalid_iterator</link> for exceptions indicating errors with iterators </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> for exceptions indicating executing a member function with a wrong type </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link> for exceptions indicating access out of the defined range </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1other__error">other_error</link> for exceptions indicating other library errors</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2252 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parse__error_1a0ea816ea3521d7109407948cb1b850f7"/>    <section>
+    <title>parse_error()</title>
+<indexterm><primary>parse_error</primary><secondary>nlohmann::detail::parse_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parse_error</primary><secondary>parse_error</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::parse_error::parse_error (int id_, std::size_t byte_, const char * what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 2291 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parse__error_1a137ea4d27de45d8a844fd13451d40f3d"/>    <section>
+    <title>create()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>create</primary><secondary>nlohmann::detail::parse_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parse_error</primary><secondary>create</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> nlohmann::detail::parse_error::create (int id_, const <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> &amp; pos, const std::string &amp; what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>create a parse error exception </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id_</entry>
+                                <entry>
+<para>the id of the exception </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>pos</entry>
+                                <entry>
+<para>the position where the error occurred (or with chars_read_total=0 if the position cannot be determined) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>what_arg</entry>
+                                <entry>
+<para>the explanatory string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para><link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> object </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2264 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parse__error_1a9fd60ad6bce80fd99686ad332faefd37"/>    <section>
+    <title>create()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>create</primary><secondary>nlohmann::detail::parse_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parse_error</primary><secondary>create</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> nlohmann::detail::parse_error::create (int id_, std::size_t byte_, const std::string &amp; what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 2271 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parse__error_1aefe74adeaa48781464ba2fd2ec63d221"/>    <section>
+    <title>position_string()</title>
+<indexterm><primary>position_string</primary><secondary>nlohmann::detail::parse_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parse_error</primary><secondary>position_string</secondary></indexterm>
+<para><computeroutput>static std::string nlohmann::detail::parse_error::position_string (const <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> &amp; pos)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 2294 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parse__error_1a9505aaa1ca943be927eec7cc579592ff"/>    <section>
+    <title>byte</title>
+<indexterm><primary>byte</primary><secondary>nlohmann::detail::parse_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parse_error</primary><secondary>byte</secondary></indexterm>
+<para><computeroutput>const std::size_t nlohmann::detail::parse_error::byte</computeroutput></para><para>
+
+<para>byte index of the parse error </para>
+</para>
+
+<para>The byte index of the last read character in the input file.</para>
+
+<para><note><title>Note</title>
+
+<para>For an input with n bytes, 1 is the index of the first character and n+1 is the index of the terminating null byte or the end of file. This also holds true when reading a byte vector (CBOR or MessagePack). </para>
+</note>
+</para>
+<para>
+Definition at line 2288 of file json.hpp.</para>
+</section>
+</section>
+</section>

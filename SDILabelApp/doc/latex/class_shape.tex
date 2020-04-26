@@ -1,0 +1,169 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+{\ttfamily \#include $<$shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_aa66b5ff3b5750eb6744c4d1131e5adf1}{Shape}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em initialises the \mbox{\hyperlink{class_shape}{Shape}} to be created \end{DoxyCompactList}\item 
+Q\+RectF \mbox{\hyperlink{class_shape_a909265e8432ddaac6735c3de577b30c8}{bounding\+Rect}} () const override
+\begin{DoxyCompactList}\small\item\em used to initialise an area for shapes to be drawn and interacted with \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ac9c52ce7a63cfa48788004f8da8eea78}{drop\+Event}} (Q\+Graphics\+Scene\+Drag\+Drop\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em overrides the drop\+Event to allow for the shape to accept the class file text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a4c6782bcbc2ec70d4d7b982d042078e8}{paint}} (Q\+Painter $\ast$painter, const Q\+Style\+Option\+Graphics\+Item $\ast$option, Q\+Widget $\ast$widget=nullptr) override
+\begin{DoxyCompactList}\small\item\em overrides the paint to allow for painting the specified shape \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ac0e93d2d728d04605359ec900f03c6a3}{set\+Text}} (const Q\+String \&\mbox{\hyperlink{class_shape_a27b18c54fff2d5d71ffb55f14ee75e30}{text}})
+\begin{DoxyCompactList}\small\item\em initialises the information for which will allow for the shape to place the \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_shape_a27b18c54fff2d5d71ffb55f14ee75e30}{text}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_shape_abf7cc76cffe32f9132c8dbc3108a7a56}{type}}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_shape_adc9eca468ed8b641e55b912862f172b3}{points}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \mbox{\hyperlink{class_shape_a8a31300847a541b8139b08c7ca8a4520}{m\+\_\+text}}
+\begin{DoxyCompactList}\small\item\em initialises the text for class placing \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 17 of file shape.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_aa66b5ff3b5750eb6744c4d1131e5adf1}\label{class_shape_aa66b5ff3b5750eb6744c4d1131e5adf1}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})}
+
+
+
+initialises the \mbox{\hyperlink{class_shape}{Shape}} to be created 
+
+
+
+Definition at line 3 of file shape.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a909265e8432ddaac6735c3de577b30c8}\label{class_shape_a909265e8432ddaac6735c3de577b30c8}} 
+\index{Shape@{Shape}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily Q\+RectF Shape\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+used to initialise an area for shapes to be drawn and interacted with 
+
+
+
+Definition at line 27 of file shape.\+cpp.
+
+\mbox{\Hypertarget{class_shape_ac9c52ce7a63cfa48788004f8da8eea78}\label{class_shape_ac9c52ce7a63cfa48788004f8da8eea78}} 
+\index{Shape@{Shape}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}}
+{\footnotesize\ttfamily void Shape\+::drop\+Event (\begin{DoxyParamCaption}\item[{Q\+Graphics\+Scene\+Drag\+Drop\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+overrides the drop\+Event to allow for the shape to accept the class file text 
+
+
+
+Definition at line 67 of file shape.\+cpp.
+
+\mbox{\Hypertarget{class_shape_a4c6782bcbc2ec70d4d7b982d042078e8}\label{class_shape_a4c6782bcbc2ec70d4d7b982d042078e8}} 
+\index{Shape@{Shape}!paint@{paint}}
+\index{paint@{paint}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Shape\+::paint (\begin{DoxyParamCaption}\item[{Q\+Painter $\ast$}]{painter,  }\item[{const Q\+Style\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{Q\+Widget $\ast$}]{widget = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+overrides the paint to allow for painting the specified shape 
+
+
+
+Definition at line 40 of file shape.\+cpp.
+
+\mbox{\Hypertarget{class_shape_ac0e93d2d728d04605359ec900f03c6a3}\label{class_shape_ac0e93d2d728d04605359ec900f03c6a3}} 
+\index{Shape@{Shape}!setText@{setText}}
+\index{setText@{setText}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Shape\+::set\+Text (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{text }\end{DoxyParamCaption})}
+
+
+
+initialises the information for which will allow for the shape to place the 
+
+
+
+Definition at line 60 of file shape.\+cpp.
+
+\mbox{\Hypertarget{class_shape_a27b18c54fff2d5d71ffb55f14ee75e30}\label{class_shape_a27b18c54fff2d5d71ffb55f14ee75e30}} 
+\index{Shape@{Shape}!text@{text}}
+\index{text@{text}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily Q\+String Shape\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 30 of file shape.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_shape_a8a31300847a541b8139b08c7ca8a4520}\label{class_shape_a8a31300847a541b8139b08c7ca8a4520}} 
+\index{Shape@{Shape}!m\_text@{m\_text}}
+\index{m\_text@{m\_text}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{m\_text}{m\_text}}
+{\footnotesize\ttfamily Q\+String Shape\+::m\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+initialises the text for class placing 
+
+
+
+Definition at line 35 of file shape.\+h.
+
+\mbox{\Hypertarget{class_shape_adc9eca468ed8b641e55b912862f172b3}\label{class_shape_adc9eca468ed8b641e55b912862f172b3}} 
+\index{Shape@{Shape}!points@{points}}
+\index{points@{points}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$int$>$ $>$ Shape\+::points}
+
+
+
+Definition at line 32 of file shape.\+h.
+
+\mbox{\Hypertarget{class_shape_abf7cc76cffe32f9132c8dbc3108a7a56}\label{class_shape_abf7cc76cffe32f9132c8dbc3108a7a56}} 
+\index{Shape@{Shape}!type@{type}}
+\index{type@{type}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Shape\+::type}
+
+
+
+Definition at line 31 of file shape.\+h.
+

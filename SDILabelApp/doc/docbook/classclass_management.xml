@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classclass_management">
+<title>classManagement Class Reference</title>
+<indexterm><primary>classManagement</primary></indexterm>
+<para>
+
+<para>This class handles the dialog for managing classes. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;classmanagement.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for classManagement:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classclass_management.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classclass_management_1af14c1ee978056dcac2921379a820944a">classManagement</link> (QWidget *parent=nullptr)</para>
+
+<para>Initialises the <link linkend="_classclass_management">classManagement</link> GUI but buidling the UI elements. </para>
+</listitem>
+            <listitem><para><link linkend="_classclass_management_1adeddbee0b425d1979519ffbdbf127cdc">~classManagement</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classclass_management_1aeceb97cd4c2a7a97c6c5a707cd773a10">loadClassList</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classclass_management_1a89544d21322a694eb6834854e498aab8">on_classList_itemDoubleClicked</link> (QListWidgetItem *item)</para>
+
+<para>Gets the name of the item in the class list selected and sets it as the text of the selected class box. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classclass_management_1addf268c6b9d264cd0668df5c92d3ba9a">on_addButton_clicked</link> ()</para>
+
+<para>adds the chosen class name to the class file loaded </para>
+</listitem>
+            <listitem><para>void <link linkend="_classclass_management_1a9d0b21453f2dc0ca18bd5cc7daf5721f">on_removeButton_clicked</link> ()</para>
+
+<para>removes the chosen class name from the class field loaded </para>
+</listitem>
+            <listitem><para>void <link linkend="_classclass_management_1a832ba9e152cfc5ba4336c64861463512">on_okButton_clicked</link> ()</para>
+
+<para>closes the class management dialog </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::classManagement * <link linkend="_classclass_management_1a9ef91ac9253ac4d033ba05b2f30213ea">ui</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class handles the dialog for managing classes. </para>
+
+
+
+<para>handles the dialog created when you select the manage classes button on the home screen. Allows for the adding and removing of class names to the class file loaded </para>
+<para>
+Definition at line 15 of file classmanagement.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classclass_management_1af14c1ee978056dcac2921379a820944a"/>    <section>
+    <title>classManagement()</title>
+<indexterm><primary>classManagement</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>classManagement</secondary></indexterm>
+<para><computeroutput>classManagement::classManagement (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Initialises the <link linkend="_classclass_management">classManagement</link> GUI but buidling the UI elements. </para>
+</para>
+<para>
+Definition at line 5 of file classmanagement.cpp.</para>
+    </section><anchor xml:id="_classclass_management_1adeddbee0b425d1979519ffbdbf127cdc"/>    <section>
+    <title>~classManagement()</title>
+<indexterm><primary>~classManagement</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>~classManagement</secondary></indexterm>
+<para><computeroutput>classManagement::~classManagement ( )</computeroutput></para><para>
+Definition at line 13 of file classmanagement.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classclass_management_1aeceb97cd4c2a7a97c6c5a707cd773a10"/>    <section>
+    <title>loadClassList()</title>
+<indexterm><primary>loadClassList</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>loadClassList</secondary></indexterm>
+<para><computeroutput>void classManagement::loadClassList ( )</computeroutput></para><para>
+Definition at line 18 of file classmanagement.cpp.</para>
+    </section><anchor xml:id="_classclass_management_1addf268c6b9d264cd0668df5c92d3ba9a"/>    <section>
+    <title>on_addButton_clicked</title>
+<indexterm><primary>on_addButton_clicked</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>on_addButton_clicked</secondary></indexterm>
+<para><computeroutput>void classManagement::on_addButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>adds the chosen class name to the class file loaded </para>
+</para>
+
+<para>adds the chosen class name to the class file by calling the addClass() function in <link linkend="_classclass_file">classFile</link> </para>
+<para>
+Definition at line 32 of file classmanagement.cpp.</para>
+    </section><anchor xml:id="_classclass_management_1a89544d21322a694eb6834854e498aab8"/>    <section>
+    <title>on_classList_itemDoubleClicked</title>
+<indexterm><primary>on_classList_itemDoubleClicked</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>on_classList_itemDoubleClicked</secondary></indexterm>
+<para><computeroutput>void classManagement::on_classList_itemDoubleClicked (QListWidgetItem * item)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Gets the name of the item in the class list selected and sets it as the text of the selected class box. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*item</entry>
+                                <entry>
+<para>is a reference to the QListWidgetItem that was double clicked </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 27 of file classmanagement.cpp.</para>
+    </section><anchor xml:id="_classclass_management_1a832ba9e152cfc5ba4336c64861463512"/>    <section>
+    <title>on_okButton_clicked</title>
+<indexterm><primary>on_okButton_clicked</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>on_okButton_clicked</secondary></indexterm>
+<para><computeroutput>void classManagement::on_okButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>closes the class management dialog </para>
+</para>
+
+<para>when closes the program updates the class list and file path box </para>
+<para>
+Definition at line 55 of file classmanagement.cpp.</para>
+    </section><anchor xml:id="_classclass_management_1a9d0b21453f2dc0ca18bd5cc7daf5721f"/>    <section>
+    <title>on_removeButton_clicked</title>
+<indexterm><primary>on_removeButton_clicked</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>on_removeButton_clicked</secondary></indexterm>
+<para><computeroutput>void classManagement::on_removeButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>removes the chosen class name from the class field loaded </para>
+</para>
+
+<para>removes the chosen class name from the class file by calling the removeClass() function in <link linkend="_classclass_file">classFile</link> </para>
+<para>
+Definition at line 48 of file classmanagement.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classclass_management_1a9ef91ac9253ac4d033ba05b2f30213ea"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>classManagement</secondary></indexterm>
+<indexterm><primary>classManagement</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::classManagement* classManagement::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 46 of file classmanagement.h.</para>
+</section>
+</section>
+</section>

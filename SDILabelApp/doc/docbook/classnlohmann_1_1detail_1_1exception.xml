@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1exception">
+<title>nlohmann::detail::exception Class Reference</title>
+<indexterm><primary>nlohmann::detail::exception</primary></indexterm>
+<para>
+
+<para>general exception of the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::exception:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1exception.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_classnlohmann_1_1detail_1_1exception_1a11fe48748e811531614c84883b00ccd5">what</link> () const noexcept override</para>
+
+<para>returns the explanatory string </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const int <link linkend="_classnlohmann_1_1detail_1_1exception_1a0d4589a3fb54e81646d986c05efa3b9a">id</link></para>
+
+<para>the id of the exception </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1exception_1ae323ad0d53bc724414c2233164e65657">exception</link> (int id_, const char *what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_classnlohmann_1_1detail_1_1exception_1abf41a7e9178356314082284e6cfea278">name</link> (const std::string &amp;ename, int id_)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::runtime_error <link linkend="_classnlohmann_1_1detail_1_1exception_1ad54778dc4f125488cbce8ec276dfdde2">m</link></para>
+
+<para>an exception object as storage for error messages </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>general exception of the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class </para>
+
+
+
+<para>This class is an extension of <computeroutput>std::exception</computeroutput> objects with a member <emphasis>id</emphasis> for exception ids. It is used as the base class for all exceptions thrown by the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class. This class can hence be used as &quot;wildcard&quot; to catch exceptions.</para>
+
+<para>Subclasses:<itemizedlist>
+<listitem>
+<para><link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> for exceptions indicating a parse error</para>
+</listitem><listitem>
+<para><link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">invalid_iterator</link> for exceptions indicating errors with iterators</para>
+</listitem><listitem>
+<para><link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> for exceptions indicating executing a member function with a wrong type</para>
+</listitem><listitem>
+<para><link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link> for exceptions indicating access out of the defined range</para>
+</listitem><listitem>
+<para><link linkend="_classnlohmann_1_1detail_1_1other__error">other_error</link> for exceptions indicating other library errors</para>
+</listitem></itemizedlist>
+</para>
+
+<para>@liveexample{The following code shows how arbitrary library exceptions can be caught.,exception}</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 3.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2181 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1exception_1ae323ad0d53bc724414c2233164e65657"/>    <section>
+    <title>exception()</title>
+<indexterm><primary>exception</primary><secondary>nlohmann::detail::exception</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::exception</primary><secondary>exception</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::exception::exception (int id_, const char * what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 2196 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1exception_1abf41a7e9178356314082284e6cfea278"/>    <section>
+    <title>name()</title>
+<indexterm><primary>name</primary><secondary>nlohmann::detail::exception</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::exception</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>static std::string nlohmann::detail::exception::name (const std::string &amp; ename, int id_)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 2198 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1exception_1a11fe48748e811531614c84883b00ccd5"/>    <section>
+    <title>what()</title>
+<indexterm><primary>what</primary><secondary>nlohmann::detail::exception</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::exception</primary><secondary>what</secondary></indexterm>
+<para><computeroutput>const <link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char* nlohmann::detail::exception::what ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>returns the explanatory string </para>
+</para>
+<para>
+Definition at line 2186 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1exception_1a0d4589a3fb54e81646d986c05efa3b9a"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>nlohmann::detail::exception</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::exception</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>const int nlohmann::detail::exception::id</computeroutput></para><para>
+
+<para>the id of the exception </para>
+</para>
+<para>
+Definition at line 2192 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1exception_1ad54778dc4f125488cbce8ec276dfdde2"/>    <section>
+    <title>m</title>
+<indexterm><primary>m</primary><secondary>nlohmann::detail::exception</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::exception</primary><secondary>m</secondary></indexterm>
+<para><computeroutput>std::runtime_error nlohmann::detail::exception::m<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>an exception object as storage for error messages </para>
+</para>
+<para>
+Definition at line 2205 of file json.hpp.</para>
+</section>
+</section>
+</section>

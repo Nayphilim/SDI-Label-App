@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_main_window">
+<title>MainWindow Class Reference</title>
+<indexterm><primary>MainWindow</primary></indexterm>
+<para>
+
+<para>This class handles all GUI components for the main window. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;mainwindow.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for MainWindow:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_main_window.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_main_window_1a996c5a2b6f77944776856f08ec30858d">MainWindow</link> (QWidget *parent=nullptr)</para>
+
+<para>Initialises the main windows GUI by building the UI elements. </para>
+</listitem>
+            <listitem><para><link linkend="_class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_main_window_1a231bd3a42b9b7772c22e465edd936fe0">imageFileName</link></para>
+</listitem>
+            <listitem><para><link linkend="_mainwindow_8h_1ab701e3ac61a85b337ec5c1abaad6742d">json</link> <link linkend="_class_main_window_1aeacbfcad1f0ecf750b1ef9b01af9c54f">annotation</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_main_window_1a6b8e934fca603cf7678eabb9a6dfc709">keyPressEvent</link> (QKeyEvent *)</para>
+
+<para>detects what key was pressed and performs an action based on it </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Slots    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_main_window_1a3a25784791c0b0d1855ba9906298e2ad">on_ImagesFileExplorerButton_clicked</link> ()</para>
+
+<para>signals sent from the image file explorer button being clicked </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1af86beb5a792ccd3148ec45cebf0c04f4">updateImageFileList</link> (QString filePath)</para>
+
+<para>Updates the list of image files in the UI with all image files contained in the folder the user has selected. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a2fee526a00523cc9ff28da3685148874">on_ImagesFileList_itemDoubleClicked</link> (QListWidgetItem *item)</para>
+
+<para>Handles signals sent from the image file list items being double clicked. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a29482b591941977dfa55c23923da6519">DisplayImage</link> (std::string fileName)</para>
+
+<para>Displays the requested image from the image file list to the UI. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_main_window_1af5dc7dac41604a78af3059650c5baeee">getImageFilePath</link> ()</para>
+
+<para>Gets the file path of the image folder the user selected. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a751904e6d2c6fdea46f70a89cc833809">on_classesFileExplorerButton_clicked</link> ()</para>
+
+<para>Loads the class file selected by the user. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a4b40abe2f047252b374bd3d8745e9fdf">updateClassFileList</link> ()</para>
+
+<para>Updates thes class file list. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a32f8acd83ce67a48d0e10c32f57ca7ef">on_manageClassesButton_clicked</link> ()</para>
+
+<para>opens the class manager dialog </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1ae92a2cb4f45d8dbc66350dde9f65d3bb">on_newClassListButton_clicked</link> ()</para>
+
+<para>opens the class list creator dialog </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a056f58a64d709e528724e5721071aa5f">on_imageFileListSortBox_currentIndexChanged</link> (int index)</para>
+
+<para>Detects when the user selects a new sort mode and applies that sort. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a51803ceb1205b806c7c0ca6c9c44da43">sortAlphabetically</link> (QDir directory)</para>
+
+<para>sorts list of image files loaded alphabetically </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a1802f2d37404a8dbeb2340f338db64e0">sortReversedAlphabetically</link> (QDir directory)</para>
+
+<para>sorts list of image files loaded reversed alphabetically </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a2b8d27637a98660d1e2a3b10558c5f9d">sortNewest</link> (QDir directory)</para>
+
+<para>sorts list of image files loaded by the newest file </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a189aba7ddc7bb1e3e5267607ca8a0459">sortOldest</link> (QDir directory)</para>
+
+<para>sorts list of image files loaded by the oldest file </para>
+</listitem>
+            <listitem><para>QDir <link linkend="_class_main_window_1a2af2707210007ecf84d6651cd2fd9593">getImageFileDirectory</link> ()</para>
+
+<para>returns the full directory of the image files to be loaded </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1ac808121d8c0678ecd476834daecc8e23">on_classFileSortBox_currentIndexChanged</link> (int index)</para>
+
+<para>Detects when the user selects a new sort mode and applies that sort. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a4de79c63c7fa0b8d7c468ac71f20be81">on_pushButton_clicked</link> ()</para>
+
+<para>detects when push button to create a square is pressed </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a3e56380e3bdc18c62af46174491af2c1">readJson</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1af005db3b9f409e6865ab13a9eace92ce">on_annotationFileExplorerButton_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1ae9c04710b1865c0d1e7af2dda80f5944">on_annotationSaveButton_clicked</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a12cf88402a93adef89645ba4e4cb7be1">on_pushButton_3_clicked</link> ()</para>
+
+<para>detects when push button to create a triangle is pressed </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1ae80a036ef40bb6ac0165471f71fef287">on_pushButton_4_clicked</link> ()</para>
+
+<para>detects when push button to create a trapezium is pressed </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a5677e5be1a8cf54c442cf4a285db7233">on_pushButton_6_clicked</link> ()</para>
+
+<para>detects when push button to scale a shape is pressed </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a14e9271a3995832756de649c4964e3c2">saveJson</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_main_window_1a39f55ae1517c6e680817d77003000f56">on_actionhelp_triggered</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ui::MainWindow * <link linkend="_class_main_window_1a35466a70ed47252a0191168126a352a5">ui</link></para>
+</listitem>
+            <listitem><para>QGraphicsScene * <link linkend="_class_main_window_1a51ac2b126495216832501cea3929c6f6">scene</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_shape">Shape</link> * <link linkend="_class_main_window_1a540d13637219a1efd84d9ba377dc0e17">shape</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class handles all GUI components for the main window. </para>
+
+
+
+<para>This class initialises the main window and handles all signals sent from the GUI. It also handles loading the image file through openCV. </para>
+<para>
+Definition at line 40 of file mainwindow.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_main_window_1a996c5a2b6f77944776856f08ec30858d"/>    <section>
+    <title>MainWindow()</title>
+<indexterm><primary>MainWindow</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>MainWindow</secondary></indexterm>
+<para><computeroutput>MainWindow::MainWindow (QWidget * parent = <computeroutput>nullptr</computeroutput>
+)</computeroutput></para><para>
+
+<para>Initialises the main windows GUI by building the UI elements. </para>
+</para>
+<para>
+Definition at line 5 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7"/>    <section>
+    <title>~MainWindow()</title>
+<indexterm><primary>~MainWindow</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>~MainWindow</secondary></indexterm>
+<para><computeroutput>MainWindow::~MainWindow ( )</computeroutput></para><para>
+Definition at line 21 of file mainwindow.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_main_window_1a29482b591941977dfa55c23923da6519"/>    <section>
+    <title>DisplayImage</title>
+<indexterm><primary>DisplayImage</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>DisplayImage</secondary></indexterm>
+<para><computeroutput>void MainWindow::DisplayImage (std::string fileName)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Displays the requested image from the image file list to the UI. </para>
+</para>
+
+<para>Loads the image based on the file path in the image file path box and the name of the image file in the image file list as a openCV mat and then converts it to a QImage to be displayed to the UI in a QLabel 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fileName</entry>
+                                <entry>
+<para>String name of the image file that is to be displayed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 28 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a2af2707210007ecf84d6651cd2fd9593"/>    <section>
+    <title>getImageFileDirectory</title>
+<indexterm><primary>getImageFileDirectory</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>getImageFileDirectory</secondary></indexterm>
+<para><computeroutput>QDir MainWindow::getImageFileDirectory ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>returns the full directory of the image files to be loaded </para>
+</para>
+
+<para>returns the diretory displayed in the imageFileDirectory text box </para>
+<para>
+Definition at line 140 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1af5dc7dac41604a78af3059650c5baeee"/>    <section>
+    <title>getImageFilePath</title>
+<indexterm><primary>getImageFilePath</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>getImageFilePath</secondary></indexterm>
+<para><computeroutput>std::string MainWindow::getImageFilePath ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Gets the file path of the image folder the user selected. </para>
+</para>
+
+<para>Gets the path based on what is entered into the image file box either by being manually typed by the user or automatically filled when selecting a folder through the file explorer </para>
+<para>
+Definition at line 68 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a6b8e934fca603cf7678eabb9a6dfc709"/>    <section>
+    <title>keyPressEvent()</title>
+<indexterm><primary>keyPressEvent</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>keyPressEvent</secondary></indexterm>
+<para><computeroutput>void MainWindow::keyPressEvent (QKeyEvent * event)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>detects what key was pressed and performs an action based on it </para>
+</para>
+
+<para>currently handles a delete key press which deletes the last selected shape </para>
+<para>
+Definition at line 346 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a39f55ae1517c6e680817d77003000f56"/>    <section>
+    <title>on_actionhelp_triggered</title>
+<indexterm><primary>on_actionhelp_triggered</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_actionhelp_triggered</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_actionhelp_triggered ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 364 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1af005db3b9f409e6865ab13a9eace92ce"/>    <section>
+    <title>on_annotationFileExplorerButton_clicked</title>
+<indexterm><primary>on_annotationFileExplorerButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_annotationFileExplorerButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_annotationFileExplorerButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 340 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1ae9c04710b1865c0d1e7af2dda80f5944"/>    <section>
+    <title>on_annotationSaveButton_clicked</title>
+<indexterm><primary>on_annotationSaveButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_annotationSaveButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_annotationSaveButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 244 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a751904e6d2c6fdea46f70a89cc833809"/>    <section>
+    <title>on_classesFileExplorerButton_clicked</title>
+<indexterm><primary>on_classesFileExplorerButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_classesFileExplorerButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_classesFileExplorerButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Loads the class file selected by the user. </para>
+</para>
+
+<para>Opens a file dialog for the user to select a *.names file on their pc and then clears the class list and loads the new one. It also sets the class list file path box to the full file path of the file loaded </para>
+<para>
+Definition at line 74 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1ac808121d8c0678ecd476834daecc8e23"/>    <section>
+    <title>on_classFileSortBox_currentIndexChanged</title>
+<indexterm><primary>on_classFileSortBox_currentIndexChanged</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_classFileSortBox_currentIndexChanged</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_classFileSortBox_currentIndexChanged (int index)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Detects when the user selects a new sort mode and applies that sort. </para>
+</para>
+
+<para>Uses bubble sort to sort the class file linked list into order 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>index</entry>
+                                <entry>
+<para>the index of the option pressed by the user in the drop down menu </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 169 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a056f58a64d709e528724e5721071aa5f"/>    <section>
+    <title>on_imageFileListSortBox_currentIndexChanged</title>
+<indexterm><primary>on_imageFileListSortBox_currentIndexChanged</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_imageFileListSortBox_currentIndexChanged</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_imageFileListSortBox_currentIndexChanged (int index)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Detects when the user selects a new sort mode and applies that sort. </para>
+</para>
+<para>
+Definition at line 119 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a3a25784791c0b0d1855ba9906298e2ad"/>    <section>
+    <title>on_ImagesFileExplorerButton_clicked</title>
+<indexterm><primary>on_ImagesFileExplorerButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_ImagesFileExplorerButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_ImagesFileExplorerButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>signals sent from the image file explorer button being clicked </para>
+</para>
+
+<para>Opens the file explorer for the user to select a folder containing images </para>
+<para>
+Definition at line 38 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a2fee526a00523cc9ff28da3685148874"/>    <section>
+    <title>on_ImagesFileList_itemDoubleClicked</title>
+<indexterm><primary>on_ImagesFileList_itemDoubleClicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_ImagesFileList_itemDoubleClicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_ImagesFileList_itemDoubleClicked (QListWidgetItem * item)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Handles signals sent from the image file list items being double clicked. </para>
+</para>
+
+<para>Converts the name of the item from the image file list to a basic string and requests for the image to be displayed 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>*item</entry>
+                                <entry>
+<para>is a pointer to the item that the user has double clicked on in the image file list </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 55 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a32f8acd83ce67a48d0e10c32f57ca7ef"/>    <section>
+    <title>on_manageClassesButton_clicked</title>
+<indexterm><primary>on_manageClassesButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_manageClassesButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_manageClassesButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>opens the class manager dialog </para>
+</para>
+
+<para>Updates the class list and file path box when the dialog is closed </para>
+<para>
+Definition at line 96 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1ae92a2cb4f45d8dbc66350dde9f65d3bb"/>    <section>
+    <title>on_newClassListButton_clicked</title>
+<indexterm><primary>on_newClassListButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_newClassListButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_newClassListButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>opens the class list creator dialog </para>
+</para>
+
+<para>loads the new class file when closed </para>
+<para>
+Definition at line 108 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a12cf88402a93adef89645ba4e4cb7be1"/>    <section>
+    <title>on_pushButton_3_clicked</title>
+<indexterm><primary>on_pushButton_3_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_pushButton_3_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_pushButton_3_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>detects when push button to create a triangle is pressed </para>
+</para>
+<para>
+Definition at line 211 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1ae80a036ef40bb6ac0165471f71fef287"/>    <section>
+    <title>on_pushButton_4_clicked</title>
+<indexterm><primary>on_pushButton_4_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_pushButton_4_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_pushButton_4_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>detects when push button to create a trapezium is pressed </para>
+</para>
+<para>
+Definition at line 218 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a5677e5be1a8cf54c442cf4a285db7233"/>    <section>
+    <title>on_pushButton_6_clicked</title>
+<indexterm><primary>on_pushButton_6_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_pushButton_6_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_pushButton_6_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>detects when push button to scale a shape is pressed </para>
+</para>
+<para>
+Definition at line 227 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a4de79c63c7fa0b8d7c468ac71f20be81"/>    <section>
+    <title>on_pushButton_clicked</title>
+<indexterm><primary>on_pushButton_clicked</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>on_pushButton_clicked</secondary></indexterm>
+<para><computeroutput>void MainWindow::on_pushButton_clicked ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>detects when push button to create a square is pressed </para>
+</para>
+<para>
+Definition at line 204 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a3e56380e3bdc18c62af46174491af2c1"/>    <section>
+    <title>readJson</title>
+<indexterm><primary>readJson</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>readJson</secondary></indexterm>
+<para><computeroutput>void MainWindow::readJson ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 306 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a14e9271a3995832756de649c4964e3c2"/>    <section>
+    <title>saveJson</title>
+<indexterm><primary>saveJson</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>saveJson</secondary></indexterm>
+<para><computeroutput>void MainWindow::saveJson ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+Definition at line 248 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a51803ceb1205b806c7c0ca6c9c44da43"/>    <section>
+    <title>sortAlphabetically</title>
+<indexterm><primary>sortAlphabetically</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>sortAlphabetically</secondary></indexterm>
+<para><computeroutput>void MainWindow::sortAlphabetically (QDir directory)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sorts list of image files loaded alphabetically </para>
+</para>
+
+<para>sorts the image files directly as they are being read in from the directory 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directory</entry>
+                                <entry>
+<para>is the full directory of the image files being loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 145 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a2b8d27637a98660d1e2a3b10558c5f9d"/>    <section>
+    <title>sortNewest</title>
+<indexterm><primary>sortNewest</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>sortNewest</secondary></indexterm>
+<para><computeroutput>void MainWindow::sortNewest (QDir directory)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sorts list of image files loaded by the newest file </para>
+</para>
+
+<para>sorts the image files directly as they are being read in from the directory 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directory</entry>
+                                <entry>
+<para>is the full directory of the image files being loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 157 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a189aba7ddc7bb1e3e5267607ca8a0459"/>    <section>
+    <title>sortOldest</title>
+<indexterm><primary>sortOldest</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>sortOldest</secondary></indexterm>
+<para><computeroutput>void MainWindow::sortOldest (QDir directory)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sorts list of image files loaded by the oldest file </para>
+</para>
+
+<para>sorts the image files directly as they are being read in from the directory 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directory</entry>
+                                <entry>
+<para>is the full directory of the image files being loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 163 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a1802f2d37404a8dbeb2340f338db64e0"/>    <section>
+    <title>sortReversedAlphabetically</title>
+<indexterm><primary>sortReversedAlphabetically</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>sortReversedAlphabetically</secondary></indexterm>
+<para><computeroutput>void MainWindow::sortReversedAlphabetically (QDir directory)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>sorts list of image files loaded reversed alphabetically </para>
+</para>
+
+<para>sorts the image files directly as they are being read in from the directory 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>directory</entry>
+                                <entry>
+<para>is the full directory of the image files being loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 151 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1a4b40abe2f047252b374bd3d8745e9fdf"/>    <section>
+    <title>updateClassFileList</title>
+<indexterm><primary>updateClassFileList</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>updateClassFileList</secondary></indexterm>
+<para><computeroutput>void MainWindow::updateClassFileList ( )<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Updates thes class file list. </para>
+</para>
+
+<para>Updates the class list to show new/removed class names or to show an entirely new list of classes from a newly loaded file </para>
+<para>
+Definition at line 83 of file mainwindow.cpp.</para>
+    </section><anchor xml:id="_class_main_window_1af86beb5a792ccd3148ec45cebf0c04f4"/>    <section>
+    <title>updateImageFileList</title>
+<indexterm><primary>updateImageFileList</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>updateImageFileList</secondary></indexterm>
+<para><computeroutput>void MainWindow::updateImageFileList (QString filePath)<computeroutput>[private]</computeroutput>, <computeroutput>[slot]</computeroutput></computeroutput></para><para>
+
+<para>Updates the list of image files in the UI with all image files contained in the folder the user has selected. </para>
+</para>
+
+<para>Uses the filepath provided by the users selection of folder and gets all png and jpg files and adds them to a list of strings which are then added to the list widget 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filePath</entry>
+                                <entry>
+<para>A QString of the file path to the selected folder containing the image files that need to be loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 48 of file mainwindow.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_main_window_1aeacbfcad1f0ecf750b1ef9b01af9c54f"/>    <section>
+    <title>annotation</title>
+<indexterm><primary>annotation</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>annotation</secondary></indexterm>
+<para><computeroutput><link linkend="_mainwindow_8h_1ab701e3ac61a85b337ec5c1abaad6742d">json</link> MainWindow::annotation</computeroutput></para><para>
+Definition at line 49 of file mainwindow.h.</para>
+    </section><anchor xml:id="_class_main_window_1a231bd3a42b9b7772c22e465edd936fe0"/>    <section>
+    <title>imageFileName</title>
+<indexterm><primary>imageFileName</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>imageFileName</secondary></indexterm>
+<para><computeroutput>std::string MainWindow::imageFileName</computeroutput></para><para>
+Definition at line 48 of file mainwindow.h.</para>
+    </section><anchor xml:id="_class_main_window_1a51ac2b126495216832501cea3929c6f6"/>    <section>
+    <title>scene</title>
+<indexterm><primary>scene</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>scene</secondary></indexterm>
+<para><computeroutput>QGraphicsScene* MainWindow::scene<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 178 of file mainwindow.h.</para>
+    </section><anchor xml:id="_class_main_window_1a540d13637219a1efd84d9ba377dc0e17"/>    <section>
+    <title>shape</title>
+<indexterm><primary>shape</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>shape</secondary></indexterm>
+<para><computeroutput><link linkend="_class_shape">Shape</link>* MainWindow::shape<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 179 of file mainwindow.h.</para>
+    </section><anchor xml:id="_class_main_window_1a35466a70ed47252a0191168126a352a5"/>    <section>
+    <title>ui</title>
+<indexterm><primary>ui</primary><secondary>MainWindow</secondary></indexterm>
+<indexterm><primary>MainWindow</primary><secondary>ui</secondary></indexterm>
+<para><computeroutput>Ui::MainWindow* MainWindow::ui<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 177 of file mainwindow.h.</para>
+</section>
+</section>
+</section>

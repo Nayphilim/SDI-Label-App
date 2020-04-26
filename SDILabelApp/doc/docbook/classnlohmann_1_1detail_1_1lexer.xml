@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1lexer">
+<title>nlohmann::detail::lexer&lt; BasicJsonType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary></indexterm>
+<para>
+
+<para>lexical analysis </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> { 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a42dd1a73d072bb6bf3f494f22b15db8e">token_type::uninitialized</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a85cc1a37b0aaa52de40e72f0ed4e0c0d">token_type::literal_true</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098afab1694b1b3937a079f4625fe0b6108b">token_type::literal_false</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098ab7ae4c0e46d86f884677768160b26e9e">token_type::literal_null</link>, 
+
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a2b490e8bf366b4cbe3ebd99b26ce15ce">token_type::value_string</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098aaf1f040fcd2f674d2e5893d7a731078f">token_type::value_unsigned</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a5064b6655d88a50ae16665cf7751c0ee">token_type::value_integer</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a0d2671a6f81efb91e77f6ac3bdb11443">token_type::value_float</link>, 
+
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a16c226b4425b68560fea322b46dabe01">token_type::begin_array</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a9a9ffd53b6869d4eca271b1ed5b57fe8">token_type::begin_object</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a2f3e68e7f111a1e5c7728742b3ca2b7f">token_type::end_array</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a7d5b4427866814de4d8f132721d59c87">token_type::end_object</link>, 
+
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098acc3c64f8ae08c00de1b33f19a4d2913a">token_type::name_separator</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a745373036100d7392ad62c617cab59af">token_type::value_separator</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a456e19aeafa334241c7ff3f589547f9d">token_type::parse_error</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098aca11f56dd477c09e06583dbdcda0985f">token_type::end_of_input</link>, 
+
+<link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098ad2a8e6f6721cccec0b466301dd9495a5">token_type::literal_or_value</link>
+ }</para>
+
+<para>token types for the parser </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1ab6818e0fc05f4a52c65aeb967dd79919">lexer</link> (<link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> &amp;&amp;adapter)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a2e8ce2a0d266d148b69dfbcc2e4ad71a">lexer</link> (const <link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a9045348915010649fad1f15e80b6e34d">lexer</link> (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1lexer_1a33e97dee7c5faf1b36aff5b74a6c8f55">operator=</link> (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1lexer_1af8ab91a774484fa220ba073421c8f452">operator=</link> (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a2f2ef6f5aca9a0c48fcfb1290f7b2b0d">~lexer</link> ()=default</para>
+</listitem>
+            <listitem><para>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1afa338d17c0a7e834c73104258a2c8ced">get_number_integer</link> () const noexcept</para>
+
+<para>return integer value </para>
+</listitem>
+            <listitem><para>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a56640fb92293e0c17742ca3c814d74d6">get_number_unsigned</link> () const noexcept</para>
+
+<para>return unsigned integer value </para>
+</listitem>
+            <listitem><para>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1ac013af35a21e9387993b19da5b3e0ae2">get_number_float</link> () const noexcept</para>
+
+<para>return floating-point value </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1lexer_1a54aa290ff2f60218a8f35f1ebf81666d">get_string</link> ()</para>
+
+<para>return current string value (implicitly resets the token; useful only once) </para>
+</listitem>
+            <listitem><para>constexpr <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1abf5143501435f9f79898c1ff238c2622">get_position</link> () const noexcept</para>
+
+<para>return position of last read token </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classnlohmann_1_1detail_1_1lexer_1a4aef7e72e539be04e139c34872421f2a">get_token_string</link> () const</para>
+
+<para>return the last read token (for errors only). </para>
+</listitem>
+            <listitem><para>constexpr const <link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_classnlohmann_1_1detail_1_1lexer_1a14cf32c36b043db47510ae183d38ce5b">get_error_message</link> () const noexcept</para>
+
+<para>return syntax error message </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1lexer_1a709afd52def2e258dac0b8a67dc4ea26">skip_bom</link> ()</para>
+
+<para>skip the UTF-8 byte order mark </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1aac3041cd2b9291e64fee38db422863c9">scan</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> static const <link linkend="_json_8hpp_1a0d17bf1a54fc45a04ced6d3aa86a96e3">JSON_HEDLEY_CONST</link> char * <link linkend="_classnlohmann_1_1detail_1_1lexer_1a06f5e2129cffcc72eee84d88e126e3e3">token_type_name</link> (const <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> t) noexcept</para>
+
+<para>return name of values of type token_type (only used for errors) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> = typename BasicJsonType::number_integer_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> = typename BasicJsonType::number_unsigned_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> = typename BasicJsonType::number_float_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link> = typename BasicJsonType::string_t</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classnlohmann_1_1detail_1_1lexer_1a820b20e25ff255c3c791c37f2bf48380">get_codepoint</link> ()</para>
+
+<para>get codepoint from 4 hex characters following <computeroutput>\u</computeroutput> </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1lexer_1a2faa544ab5475523ead81f9cdef41a0a">next_byte_in_range</link> (std::initializer_list&lt; int &gt; ranges)</para>
+
+<para>check if the next byte(s) are inside a given range </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1ad271045d1c91df9d6a119482b4aeae7f">scan_string</link> ()</para>
+
+<para>scan a string literal </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a6bd7e6cdb0380a9df663f1c7f115f34f">scan_number</link> ()</para>
+
+<para>scan a number literal </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a6f717deb553337736f27cdacccaee536">scan_literal</link> (const char *literal_text, const std::size_t length, <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> return_type)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1acba34bc18af19f93186e682d02c3942d">reset</link> () noexcept</para>
+
+<para>reset token_buffer; current character is beginning of token </para>
+</listitem>
+            <listitem><para>std::char_traits&lt; char &gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1lexer_1a901e45a34e1fb1d97ab62350b0c3ef26">get</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a626f145768762057dc68a4666eb577db">unget</link> ()</para>
+
+<para>unget current character (read it again on next get) </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1acec899d31af1fd647911e46e8535c283">add</link> (int c)</para>
+
+<para>add a character to token_buffer </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000">JSON_HEDLEY_PURE</link> char <link linkend="_classnlohmann_1_1detail_1_1lexer_1ae90334f30e7c12d5394c116bcfecac19">get_decimal_point</link> () noexcept</para>
+
+<para>return the locale-dependent decimal point </para>
+</listitem>
+            <listitem><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a1a2d4cc5d9fed4783aa2a98497925511">strtof</link> (float &amp;f, const char *str, char **endptr) noexcept</para>
+</listitem>
+            <listitem><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a8cd877d10b31bc819e4f030292737ea6">strtof</link> (double &amp;f, const char *str, char **endptr) noexcept</para>
+</listitem>
+            <listitem><para>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a0e28dda9a1e007d55d03e8d39dd3b9fa">strtof</link> (long double &amp;f, const char *str, char **endptr) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7e69cd9d51451fd798eaf501b40421f">ia</link> = nullptr</para>
+
+<para>input adapter </para>
+</listitem>
+            <listitem><para>std::char_traits&lt; char &gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1lexer_1a47169f9aaf0da4c9885e61d3109859aa">current</link> = std::char_traits&lt;char&gt;::eof()</para>
+
+<para>the current character </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1lexer_1ae8bedb97b907ba6347c5b2f2666ca01f">next_unget</link> = false</para>
+
+<para>whether the next <link linkend="_classnlohmann_1_1detail_1_1lexer_1a901e45a34e1fb1d97ab62350b0c3ef26">get()</link> call should just return current </para>
+</listitem>
+            <listitem><para><link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a932a1b4133619f08fc7442b52368385e">position</link> {}</para>
+
+<para>the start position of the current token </para>
+</listitem>
+            <listitem><para>std::vector&lt; char &gt; <link linkend="_classnlohmann_1_1detail_1_1lexer_1ad2960e3d54af8fb8d572a8f6f7731d62">token_string</link> {}</para>
+
+<para>raw input token string (for error messages) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a8f43746570e5cadbc9b2b6b0c4c8e051">token_buffer</link> {}</para>
+
+<para>buffer for variable-length tokens (numbers, strings) </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classnlohmann_1_1detail_1_1lexer_1ae2a15e440f1889e0ab0c6a35344e48df">error_message</link> = &quot;&quot;</para>
+
+<para>a description of occurred lexer errors </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a353d8eeca5b2f21b3e88540c17afb9bc">value_integer</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1af250180459c23ca71c3e10a99fb5ba3e">value_unsigned</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer_1a861ce804da2d257ee373d1e0b55780e1">value_float</link> = 0</para>
+</listitem>
+            <listitem><para>const char <link linkend="_classnlohmann_1_1detail_1_1lexer_1a16593b0475f6d1cddd5eaf7c045771f3">decimal_point_char</link> = &apos;.&apos;</para>
+
+<para>the decimal point </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType&gt;
+class nlohmann::detail::lexer&lt; BasicJsonType &gt;</title></simplesect>
+
+
+<para>lexical analysis </para>
+
+
+
+<para>This class organizes the lexical analysis during JSON deserialization. </para>
+<para>
+Definition at line 7894 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619"/>    <section>
+    <title>number_float_t</title>
+<indexterm><primary>number_float_t</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>number_float_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> =  typename BasicJsonType::number_float_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 7898 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c"/>    <section>
+    <title>number_integer_t</title>
+<indexterm><primary>number_integer_t</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>number_integer_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> =  typename BasicJsonType::number_integer_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 7896 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a"/>    <section>
+    <title>number_unsigned_t</title>
+<indexterm><primary>number_unsigned_t</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>number_unsigned_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> =  typename BasicJsonType::number_unsigned_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 7897 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795"/>    <section>
+    <title>string_t</title>
+<indexterm><primary>string_t</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>string_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link> =  typename BasicJsonType::string_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 7899 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098"/>    <section>
+    <title>token_type</title>
+<indexterm><primary>token_type</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>token_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>enum <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">nlohmann::detail::lexer::token_type</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>token types for the parser </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>uninitialized</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>uninitialized</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a42dd1a73d072bb6bf3f494f22b15db8e"/>uninitialized</entry><entry>
+<para>indicating the scanner is uninitialized </para>
+</entry></row><row><entry><indexterm><primary>literal_true</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>literal_true</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a85cc1a37b0aaa52de40e72f0ed4e0c0d"/>literal_true</entry><entry>
+<para>the <computeroutput>true</computeroutput> literal </para>
+</entry></row><row><entry><indexterm><primary>literal_false</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>literal_false</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098afab1694b1b3937a079f4625fe0b6108b"/>literal_false</entry><entry>
+<para>the <computeroutput>false</computeroutput> literal </para>
+</entry></row><row><entry><indexterm><primary>literal_null</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>literal_null</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098ab7ae4c0e46d86f884677768160b26e9e"/>literal_null</entry><entry>
+<para>the <computeroutput>null</computeroutput> literal </para>
+</entry></row><row><entry><indexterm><primary>value_string</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_string</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a2b490e8bf366b4cbe3ebd99b26ce15ce"/>value_string</entry><entry>
+<para>a string &#8211; use <link linkend="_classnlohmann_1_1detail_1_1lexer_1a54aa290ff2f60218a8f35f1ebf81666d">get_string()</link> for actual value </para>
+</entry></row><row><entry><indexterm><primary>value_unsigned</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_unsigned</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098aaf1f040fcd2f674d2e5893d7a731078f"/>value_unsigned</entry><entry>
+<para>an unsigned integer &#8211; use <link linkend="_classnlohmann_1_1detail_1_1lexer_1a56640fb92293e0c17742ca3c814d74d6">get_number_unsigned()</link> for actual value </para>
+</entry></row><row><entry><indexterm><primary>value_integer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_integer</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a5064b6655d88a50ae16665cf7751c0ee"/>value_integer</entry><entry>
+<para>a signed integer &#8211; use <link linkend="_classnlohmann_1_1detail_1_1lexer_1afa338d17c0a7e834c73104258a2c8ced">get_number_integer()</link> for actual value </para>
+</entry></row><row><entry><indexterm><primary>value_float</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_float</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a0d2671a6f81efb91e77f6ac3bdb11443"/>value_float</entry><entry>
+<para>an floating point number &#8211; use <link linkend="_classnlohmann_1_1detail_1_1lexer_1ac013af35a21e9387993b19da5b3e0ae2">get_number_float()</link> for actual value </para>
+</entry></row><row><entry><indexterm><primary>begin_array</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>begin_array</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a16c226b4425b68560fea322b46dabe01"/>begin_array</entry><entry>
+<para>the character for array begin <computeroutput>[</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>begin_object</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>begin_object</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a9a9ffd53b6869d4eca271b1ed5b57fe8"/>begin_object</entry><entry>
+<para>the character for object begin <computeroutput>{</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>end_array</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>end_array</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a2f3e68e7f111a1e5c7728742b3ca2b7f"/>end_array</entry><entry>
+<para>the character for array end <computeroutput>]</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>end_object</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>end_object</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a7d5b4427866814de4d8f132721d59c87"/>end_object</entry><entry>
+<para>the character for object end <computeroutput>}</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>name_separator</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>name_separator</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098acc3c64f8ae08c00de1b33f19a4d2913a"/>name_separator</entry><entry>
+<para>the name separator <computeroutput>:</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>value_separator</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_separator</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a745373036100d7392ad62c617cab59af"/>value_separator</entry><entry>
+<para>the value separator <computeroutput>,</computeroutput> </para>
+</entry></row><row><entry><indexterm><primary>parse_error</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>parse_error</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a456e19aeafa334241c7ff3f589547f9d"/>parse_error</entry><entry>
+<para>indicating a parse error </para>
+</entry></row><row><entry><indexterm><primary>end_of_input</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>end_of_input</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098aca11f56dd477c09e06583dbdcda0985f"/>end_of_input</entry><entry>
+<para>indicating the end of the input buffer </para>
+</entry></row><row><entry><indexterm><primary>literal_or_value</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>literal_or_value</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098ad2a8e6f6721cccec0b466301dd9495a5"/>literal_or_value</entry><entry>
+<para>a literal or the begin of a value (only for diagnostics) </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 7903 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ab6818e0fc05f4a52c65aeb967dd79919"/>    <section>
+    <title>lexer()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>lexer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>lexer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> (<link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> &amp;&amp; adapter)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+Definition at line 7970 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a2e8ce2a0d266d148b69dfbcc2e4ad71a"/>    <section>
+    <title>lexer()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>lexer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>lexer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> (const <link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt; BasicJsonType &gt; &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a9045348915010649fad1f15e80b6e34d"/>    <section>
+    <title>lexer()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>lexer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>lexer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt; BasicJsonType &gt; &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a2f2ef6f5aca9a0c48fcfb1290f7b2b0d"/>    <section>
+    <title>~lexer()</title>
+<indexterm><primary>~lexer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>~lexer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::~<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link> ( )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1acec899d31af1fd647911e46e8535c283"/>    <section>
+    <title>add()</title>
+<indexterm><primary>add</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>add</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::add (int c)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>add a character to token_buffer </para>
+</para>
+<para>
+Definition at line 9174 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a901e45a34e1fb1d97ab62350b0c3ef26"/>    <section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::char_traits&lt;char&gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9110 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a820b20e25ff255c3c791c37f2bf48380"/>    <section>
+    <title>get_codepoint()</title>
+<indexterm><primary>get_codepoint</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_codepoint</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>int <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_codepoint ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>get codepoint from 4 hex characters following <computeroutput>\u</computeroutput> </para>
+</para>
+
+<para>For input &quot;\u c1 c2 c3 c4&quot; the codepoint is: (c1 * 0x1000) + (c2 * 0x0100) + (c3 * 0x0010) + c4 = (c1 &lt;&lt; 12) + (c2 &lt;&lt; 8) + (c3 &lt;&lt; 4) + (c4 &lt;&lt; 0)</para>
+
+<para>Furthermore, the possible characters &apos;0&apos;..&apos;9&apos;, &apos;A&apos;..&apos;F&apos;, and &apos;a&apos;..&apos;f&apos; must be converted to the integers 0x0..0x9, 0xA..0xF, 0xA..0xF, resp. The conversion is done by subtracting the offset (0x30, 0x37, and 0x57) between the ASCII value of the character and the desired integer value.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>codepoint (0x0000..0xFFFF) or -1 in case of an error (e.g. EOF or non-hex character) </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8013 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ae90334f30e7c12d5394c116bcfecac19"/>    <section>
+    <title>get_decimal_point()</title>
+<indexterm><primary>get_decimal_point</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_decimal_point</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_json_8hpp_1af5c84b7d1a43361bdc14cc6941078000">JSON_HEDLEY_PURE</link> char <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_decimal_point ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return the locale-dependent decimal point </para>
+</para>
+<para>
+Definition at line 7987 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a14cf32c36b043db47510ae183d38ce5b"/>    <section>
+    <title>get_error_message()</title>
+<indexterm><primary>get_error_message</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_error_message</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>constexpr const <link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char* <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_error_message ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return syntax error message </para>
+</para>
+<para>
+Definition at line 9246 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ac013af35a21e9387993b19da5b3e0ae2"/>    <section>
+    <title>get_number_float()</title>
+<indexterm><primary>get_number_float</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_number_float</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_number_float ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return floating-point value </para>
+</para>
+<para>
+Definition at line 9197 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1afa338d17c0a7e834c73104258a2c8ced"/>    <section>
+    <title>get_number_integer()</title>
+<indexterm><primary>get_number_integer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_number_integer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_number_integer ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return integer value </para>
+</para>
+<para>
+Definition at line 9185 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a56640fb92293e0c17742ca3c814d74d6"/>    <section>
+    <title>get_number_unsigned()</title>
+<indexterm><primary>get_number_unsigned</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_number_unsigned</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_number_unsigned ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return unsigned integer value </para>
+</para>
+<para>
+Definition at line 9191 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1abf5143501435f9f79898c1ff238c2622"/>    <section>
+    <title>get_position()</title>
+<indexterm><primary>get_position</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_position</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>constexpr <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_position ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return position of last read token </para>
+</para>
+<para>
+Definition at line 9213 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a54aa290ff2f60218a8f35f1ebf81666d"/>    <section>
+    <title>get_string()</title>
+<indexterm><primary>get_string</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_string ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return current string value (implicitly resets the token; useful only once) </para>
+</para>
+<para>
+Definition at line 9203 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a4aef7e72e539be04e139c34872421f2a"/>    <section>
+    <title>get_token_string()</title>
+<indexterm><primary>get_token_string</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>get_token_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::string <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::get_token_string ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return the last read token (for errors only). </para>
+</para>
+
+<para>Will never contain EOF (an arbitrary value that is not a valid char value, often -1), because 255 may legitimately occur. May contain NUL, which should be escaped. </para>
+<para>
+Definition at line 9221 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a2faa544ab5475523ead81f9cdef41a0a"/>    <section>
+    <title>next_byte_in_range()</title>
+<indexterm><primary>next_byte_in_range</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>next_byte_in_range</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::next_byte_in_range (std::initializer_list&lt; int &gt; ranges)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>check if the next byte(s) are inside a given range </para>
+</para>
+
+<para>Adds the current byte and, for each passed range, reads a new byte and checks if it is inside the range. If a violation was detected, set up an error message and return false. Otherwise, return true.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ranges</entry>
+                                <entry>
+<para>list of integers; interpreted as list of pairs of inclusive lower and upper bound, respectively</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Precondition</title>
+
+<para>The passed list <emphasis>ranges</emphasis> must have 2, 4, or 6 elements; that is, 1, 2, or 3 pairs. This precondition is enforced by an assertion.</para>
+</formalpara>
+<formalpara><title>Returns</title>
+
+<para>true if and only if no range violation was detected </para>
+</formalpara>
+</para>
+<para>
+Definition at line 8061 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1af8ab91a774484fa220ba073421c8f452"/>    <section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::operator= (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt; BasicJsonType &gt; &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a33e97dee7c5faf1b36aff5b74a6c8f55"/>    <section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::operator= (<link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt; BasicJsonType &gt; &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1acba34bc18af19f93186e682d02c3942d"/>    <section>
+    <title>reset()</title>
+<indexterm><primary>reset</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>reset</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::reset ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>reset token_buffer; current character is beginning of token </para>
+</para>
+<para>
+Definition at line 9093 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1aac3041cd2b9291e64fee38db422863c9"/>    <section>
+    <title>scan()</title>
+<indexterm><primary>scan</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>scan</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::scan ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 9273 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a6f717deb553337736f27cdacccaee536"/>    <section>
+    <title>scan_literal()</title>
+<indexterm><primary>scan_literal</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>scan_literal</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::scan_literal (const char * literal_text, const std::size_t length, <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> return_type)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>literal_text</entry>
+                                <entry>
+<para>the literal text to expect </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>length</entry>
+                                <entry>
+<para>the length of the passed literal text </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>return_type</entry>
+                                <entry>
+<para>the token type to return on success </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 9073 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a6bd7e6cdb0380a9df663f1c7f115f34f"/>    <section>
+    <title>scan_number()</title>
+<indexterm><primary>scan_number</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>scan_number</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::scan_number ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>scan a number literal </para>
+</para>
+
+<para>This function scans a string according to Sect. 6 of RFC 7159.</para>
+
+<para>The function is realized with a deterministic finite state machine derived from the grammar described in RFC 7159. Starting in state &quot;init&quot;, the input is read and used to determined the next state. Only state &quot;done&quot; accepts the number. State &quot;error&quot; is a trap state to model errors. In the table below, &quot;anything&quot; means any character but the ones listed before.</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="8" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+      <colspec colname='c4'/>
+      <colspec colname='c5'/>
+      <colspec colname='c6'/>
+      <colspec colname='c7'/>
+      <colspec colname='c8'/>
+<thead>
+      <row >
+<entry>
+<para>state </para>
+</entry><entry>
+<para>0 </para>
+</entry><entry>
+<para>1-9 </para>
+</entry><entry>
+<para>e E </para>
+</entry><entry>
+<para>+ </para>
+</entry><entry>
+<para>- </para>
+</entry><entry>
+<para>. </para>
+</entry><entry>
+<para>anything  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>init </para>
+</entry><entry>
+<para>zero </para>
+</entry><entry>
+<para>any1 </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>minus </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error]  </para>
+</entry></row>
+      <row >
+<entry>
+<para>minus </para>
+</entry><entry>
+<para>zero </para>
+</entry><entry>
+<para>any1 </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error]  </para>
+</entry></row>
+      <row >
+<entry>
+<para>zero </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>exponent </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>decimal1 </para>
+</entry><entry>
+<para>done  </para>
+</entry></row>
+      <row >
+<entry>
+<para>any1 </para>
+</entry><entry>
+<para>any1 </para>
+</entry><entry>
+<para>any1 </para>
+</entry><entry>
+<para>exponent </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>decimal1 </para>
+</entry><entry>
+<para>done  </para>
+</entry></row>
+      <row >
+<entry>
+<para>decimal1 </para>
+</entry><entry>
+<para>decimal2 </para>
+</entry><entry>
+<para>decimal2 </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error]  </para>
+</entry></row>
+      <row >
+<entry>
+<para>decimal2 </para>
+</entry><entry>
+<para>decimal2 </para>
+</entry><entry>
+<para>decimal2 </para>
+</entry><entry>
+<para>exponent </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done  </para>
+</entry></row>
+      <row >
+<entry>
+<para>exponent </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>sign </para>
+</entry><entry>
+<para>sign </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error]  </para>
+</entry></row>
+      <row >
+<entry>
+<para>sign </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error] </para>
+</entry><entry>
+<para>[error]  </para>
+</entry></row>
+      <row >
+<entry>
+<para>any2 </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>any2 </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done </para>
+</entry><entry>
+<para>done  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para>The state machine is realized with one label per state (prefixed with &quot;scan_number_&quot;) and <computeroutput>goto</computeroutput> statements between them. The state machine contains cycles, but any cycle can be left when EOF is read. Therefore, the function is guaranteed to terminate.</para>
+
+<para>During scanning, the read bytes are stored in token_buffer. This string is then converted to a signed integer, an unsigned integer, or a floating-point number.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098aaf1f040fcd2f674d2e5893d7a731078f">token_type::value_unsigned</link>, <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a5064b6655d88a50ae16665cf7751c0ee">token_type::value_integer</link>, or <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a0d2671a6f81efb91e77f6ac3bdb11443">token_type::value_float</link> if number could be successfully scanned, <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a456e19aeafa334241c7ff3f589547f9d">token_type::parse_error</link> otherwise</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The scanner is independent of the current locale. Internally, the locale&apos;s decimal point is used instead of <computeroutput>.</computeroutput> to work with the locale-dependent converters. </para>
+</note>
+</para>
+<para>
+Definition at line 8742 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ad271045d1c91df9d6a119482b4aeae7f"/>    <section>
+    <title>scan_string()</title>
+<indexterm><primary>scan_string</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>scan_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::scan_string ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>scan a string literal </para>
+</para>
+
+<para>This function scans a string according to Sect. 7 of RFC 7159. While scanning, bytes are escaped and copied into buffer token_buffer. Then the function returns successfully, token_buffer is <emphasis>not</emphasis> null-terminated (as it may contain \0 bytes), and token_buffer.size() is the number of bytes in the string.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a2b490e8bf366b4cbe3ebd99b26ce15ce">token_type::value_string</link> if string could be successfully scanned, <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098a456e19aeafa334241c7ff3f589547f9d">token_type::parse_error</link> otherwise</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>In case of errors, variable error_message contains a textual description. </para>
+</note>
+</para>
+<para>
+Definition at line 8098 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a709afd52def2e258dac0b8a67dc4ea26"/>    <section>
+    <title>skip_bom()</title>
+<indexterm><primary>skip_bom</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>skip_bom</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::skip_bom ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>skip the UTF-8 byte order mark </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true iff there is no BOM or the correct BOM has been skipped </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9259 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a8cd877d10b31bc819e4f030292737ea6"/>    <section>
+    <title>strtof()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>strtof</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>strtof</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::strtof (double &amp; f, const char * str, char ** endptr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 8691 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a1a2d4cc5d9fed4783aa2a98497925511"/>    <section>
+    <title>strtof()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>strtof</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>strtof</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::strtof (float &amp; f, const char * str, char ** endptr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 8685 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a0e28dda9a1e007d55d03e8d39dd3b9fa"/>    <section>
+    <title>strtof()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>strtof</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>strtof</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>static <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::strtof (long double &amp; f, const char * str, char ** endptr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 8697 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a06f5e2129cffcc72eee84d88e126e3e3"/>    <section>
+    <title>token_type_name()</title>
+<indexterm><primary>token_type_name</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>token_type_name</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> static const <link linkend="_json_8hpp_1a0d17bf1a54fc45a04ced6d3aa86a96e3">JSON_HEDLEY_CONST</link> char* <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::token_type_name (const <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">token_type</link> t)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return name of values of type token_type (only used for errors) </para>
+</para>
+<para>
+Definition at line 7927 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a626f145768762057dc68a4666eb577db"/>    <section>
+    <title>unget()</title>
+<indexterm><primary>unget</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>unget</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::unget ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>unget current character (read it again on next get) </para>
+</para>
+
+<para>We implement unget by setting variable next_unget to true. The input is not changed - we just simulate ungetting by modifying chars_read_total, chars_read_current_line, and token_string. The next call to <link linkend="_classnlohmann_1_1detail_1_1lexer_1a901e45a34e1fb1d97ab62350b0c3ef26">get()</link> will behave as if the unget character is read again. </para>
+<para>
+Definition at line 9147 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a47169f9aaf0da4c9885e61d3109859aa"/>    <section>
+    <title>current</title>
+<indexterm><primary>current</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>current</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::char_traits&lt;char&gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::current = std::char_traits&lt;char&gt;::eof()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the current character </para>
+</para>
+<para>
+Definition at line 9349 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a16593b0475f6d1cddd5eaf7c045771f3"/>    <section>
+    <title>decimal_point_char</title>
+<indexterm><primary>decimal_point_char</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>decimal_point_char</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const char <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::decimal_point_char = &apos;.&apos;<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the decimal point </para>
+</para>
+<para>
+Definition at line 9372 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ae2a15e440f1889e0ab0c6a35344e48df"/>    <section>
+    <title>error_message</title>
+<indexterm><primary>error_message</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>error_message</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const char* <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::error_message = &quot;&quot;<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>a description of occurred lexer errors </para>
+</para>
+<para>
+Definition at line 9364 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1aa7e69cd9d51451fd798eaf501b40421f"/>    <section>
+    <title>ia</title>
+<indexterm><primary>ia</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>ia</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::ia = nullptr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>input adapter </para>
+</para>
+<para>
+Definition at line 9346 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ae8bedb97b907ba6347c5b2f2666ca01f"/>    <section>
+    <title>next_unget</title>
+<indexterm><primary>next_unget</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>next_unget</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::next_unget = false<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>whether the next <link linkend="_classnlohmann_1_1detail_1_1lexer_1a901e45a34e1fb1d97ab62350b0c3ef26">get()</link> call should just return current </para>
+</para>
+<para>
+Definition at line 9352 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a932a1b4133619f08fc7442b52368385e"/>    <section>
+    <title>position</title>
+<indexterm><primary>position</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>position</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::position {}<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the start position of the current token </para>
+</para>
+<para>
+Definition at line 9355 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a8f43746570e5cadbc9b2b6b0c4c8e051"/>    <section>
+    <title>token_buffer</title>
+<indexterm><primary>token_buffer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>token_buffer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1ab63d35c658887592a4b09ad26eb4c795">string_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::token_buffer {}<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>buffer for variable-length tokens (numbers, strings) </para>
+</para>
+<para>
+Definition at line 9361 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1ad2960e3d54af8fb8d572a8f6f7731d62"/>    <section>
+    <title>token_string</title>
+<indexterm><primary>token_string</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>token_string</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::vector&lt;char&gt; <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::token_string {}<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>raw input token string (for error messages) </para>
+</para>
+<para>
+Definition at line 9358 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a861ce804da2d257ee373d1e0b55780e1"/>    <section>
+    <title>value_float</title>
+<indexterm><primary>value_float</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_float</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1aa7f9e7b2bcd311fb86e2da43761a6619">number_float_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::value_float = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9369 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1a353d8eeca5b2f21b3e88540c17afb9bc"/>    <section>
+    <title>value_integer</title>
+<indexterm><primary>value_integer</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_integer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a9cd1b11cc67edbfb2613c788b5bd337c">number_integer_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::value_integer = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9367 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1lexer_1af250180459c23ca71c3e10a99fb5ba3e"/>    <section>
+    <title>value_unsigned</title>
+<indexterm><primary>value_unsigned</primary><secondary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::lexer&lt; BasicJsonType &gt;</primary><secondary>value_unsigned</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1lexer_1a105d1dfeab414a572655895cdd96a52a">number_unsigned_t</link> <link linkend="_classnlohmann_1_1detail_1_1lexer">nlohmann::detail::lexer</link>&lt; BasicJsonType &gt;::value_unsigned = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9368 of file json.hpp.</para>
+</section>
+</section>
+</section>

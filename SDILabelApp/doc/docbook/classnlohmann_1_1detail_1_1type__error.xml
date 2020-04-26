@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1type__error">
+<title>nlohmann::detail::type_error Class Reference</title>
+<indexterm><primary>nlohmann::detail::type_error</primary></indexterm>
+<para>
+
+<para>exception indicating executing a member function with a wrong type </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::type_error:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1type__error.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> <link linkend="_classnlohmann_1_1detail_1_1type__error_1aecc083aea4b698c33d042670ba50c10f">create</link> (int id_, const std::string &amp;what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1type__error_1aa01edaa0bf18b853368f0b900e485cd7">type_error</link> (int id_, const char *what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>exception indicating executing a member function with a wrong type </para>
+
+
+
+<para>This exception is thrown in case of a type error; that is, a library function is executed on a JSON value whose type does not match the expected semantics.</para>
+
+<para>Exceptions have ids 3xx.</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>name / id </para>
+</entry><entry>
+<para>example message </para>
+</entry><entry>
+<para>description  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>json.exception.type_error.301 </para>
+</entry><entry>
+<para>cannot create object from initializer list </para>
+</entry><entry>
+<para>To create an object from an initializer list, the initializer list must consist only of a list of pairs whose first element is a string. When this constraint is violated, an array is created instead.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.302 </para>
+</entry><entry>
+<para>type must be object, but is array </para>
+</entry><entry>
+<para>During implicit or explicit value conversion, the JSON type must be compatible to the target type. For instance, a JSON string can only be converted into string types, but not into numbers or boolean types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.303 </para>
+</entry><entry>
+<para>incompatible ReferenceType for get_ref, actual type is object </para>
+</entry><entry>
+<para>To retrieve a reference to a value stored in a <link linkend="_classnlohmann_1_1basic__json">basic_json</link> object with get_ref, the type of the reference must match the value type. For instance, for a JSON array, the <emphasis>ReferenceType</emphasis> must be array_t &amp;.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.304 </para>
+</entry><entry>
+<para>cannot use at() with string </para>
+</entry><entry>
+<para>The at() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.305 </para>
+</entry><entry>
+<para>cannot use operator[] with string </para>
+</entry><entry>
+<para>The operator[] member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.306 </para>
+</entry><entry>
+<para>cannot use value() with string </para>
+</entry><entry>
+<para>The value() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.307 </para>
+</entry><entry>
+<para>cannot use erase() with string </para>
+</entry><entry>
+<para>The erase() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.308 </para>
+</entry><entry>
+<para>cannot use push_back() with string </para>
+</entry><entry>
+<para>The push_back() and operator+= member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.309 </para>
+</entry><entry>
+<para>cannot use insert() with </para>
+</entry><entry>
+<para>The insert() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.310 </para>
+</entry><entry>
+<para>cannot use swap() with number </para>
+</entry><entry>
+<para>The swap() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.311 </para>
+</entry><entry>
+<para>cannot use emplace_back() with string </para>
+</entry><entry>
+<para>The emplace_back() member function can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.312 </para>
+</entry><entry>
+<para>cannot use update() with string </para>
+</entry><entry>
+<para>The update() member functions can only be executed for certain JSON types.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.313 </para>
+</entry><entry>
+<para>invalid value to unflatten </para>
+</entry><entry>
+<para>The unflatten function converts an object whose keys are JSON Pointers back into an arbitrary nested JSON value. The JSON Pointers must not overlap, because then the resulting value would not be well defined.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.314 </para>
+</entry><entry>
+<para>only objects can be unflattened </para>
+</entry><entry>
+<para>The unflatten function only works for an object whose keys are JSON Pointers.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.315 </para>
+</entry><entry>
+<para>values in object must be primitive </para>
+</entry><entry>
+<para>The unflatten function only works for an object whose keys are JSON Pointers and whose values are primitive.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.316 </para>
+</entry><entry>
+<para>invalid UTF-8 byte at index 10: 0x7E </para>
+</entry><entry>
+<para>The dump function only works with UTF-8 encoded strings; that is, if you assign a <computeroutput>std::string</computeroutput> to a JSON value, make sure it is UTF-8 encoded.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.type_error.317 </para>
+</entry><entry>
+<para>JSON value cannot be serialized to requested format </para>
+</entry><entry>
+<para>The dynamic type of the object cannot be represented in the requested serialization format (e.g. a raw <computeroutput>true</computeroutput> or <computeroutput>null</computeroutput> JSON object cannot be serialized to BSON)  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para>@liveexample{The following code shows how a <computeroutput><link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link></computeroutput> exception can be caught.,<link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link>}</para>
+
+<para><formalpara><title>See also</title>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1exception">exception</link> for the base class of the library exceptions </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> for exceptions indicating a parse error </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">invalid_iterator</link> for exceptions indicating errors with iterators </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link> for exceptions indicating access out of the defined range </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1other__error">other_error</link> for exceptions indicating other library errors</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2392 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1type__error_1aa01edaa0bf18b853368f0b900e485cd7"/>    <section>
+    <title>type_error()</title>
+<indexterm><primary>type_error</primary><secondary>nlohmann::detail::type_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::type_error</primary><secondary>type_error</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::type_error::type_error (int id_, const char * what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 2403 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1type__error_1aecc083aea4b698c33d042670ba50c10f"/>    <section>
+    <title>create()</title>
+<indexterm><primary>create</primary><secondary>nlohmann::detail::type_error</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::type_error</primary><secondary>create</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> nlohmann::detail::type_error::create (int id_, const std::string &amp; what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 2395 of file json.hpp.</para>
+</section>
+</section>
+</section>

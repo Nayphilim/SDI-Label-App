@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_unionnlohmann_1_1basic__json_1_1json__value">
+<title>nlohmann::basic_json::json_value Union Reference</title>
+<indexterm><primary>nlohmann::basic_json::json_value</primary></indexterm>
+<para>
+
+<para>a JSON value </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1addaa9da9958343a8687079c6c8561828">json_value</link> ()=default</para>
+
+<para>default constructor (for null values) </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a359b6d7bdd95150e28a21c2def590b3b">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a8cc04e22d7ef18efd2d34bc04eb6a1b2">boolean_t</link> v) noexcept</para>
+
+<para>constructor for booleans </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a7bd504626c862a55f3e464089390be61">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">number_integer_t</link> v) noexcept</para>
+
+<para>constructor for numbers (integer) </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a356100d324dddcc0ed1bdcca086bc809">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">number_unsigned_t</link> v) noexcept</para>
+
+<para>constructor for numbers (unsigned) </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a5f3f88981a4c2a2a19aeb650e37bb117">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">number_float_t</link> v) noexcept</para>
+
+<para>constructor for numbers (floating-point) </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a5b3c9b26efff2a7e4ff417df750db888">json_value</link> (<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> t)</para>
+
+<para>constructor for empty values of a given type </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a7d36046b1d3a41021459229963aa906d">json_value</link> (const <link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link> &amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for strings </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a16cf11cea854b7d33ece1204c044d91d">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link> &amp;&amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for rvalue strings </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a9d5a9dd88cf61a0fa90fec56d035273d">json_value</link> (const <link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link> &amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for objects </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a03d2d3f64da9403ffc2393c4b419e514">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link> &amp;&amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for rvalue objects </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a11a68bfcc7bd3623023594705788f25b">json_value</link> (const <link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link> &amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for arrays </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1ae9a619d174aa0f8020847e965db7752d">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link> &amp;&amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for rvalue arrays </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a2807432b367e5bd4e49f76c206b5cecf">json_value</link> (const <link linkend="_classnlohmann_1_1basic__json_1a6d9574e10ab63f4a4f48edde42e739d1">binary_t</link> &amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for binary arrays </para>
+</listitem>
+            <listitem><para><link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a15baffa618c4e5bacd7daf7bba0f8e74">json_value</link> (<link linkend="_classnlohmann_1_1basic__json_1a6d9574e10ab63f4a4f48edde42e739d1">binary_t</link> &amp;&amp;<link linkend="_classnlohmann_1_1basic__json_1ab29a59d20767180d6d2fe4f5054dd245">value</link>)</para>
+
+<para>constructor for rvalue binary arrays </para>
+</listitem>
+            <listitem><para>void <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a394e69339c27a67170aacb49e36243ea">destroy</link> (<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> t) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link> * <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a9a17d18e60b32adfe4f7f978d3ab5f15">object</link></para>
+
+<para>object (stored with pointer to save storage) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link> * <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a230c40872531081809d0265a45e1a3be">array</link></para>
+
+<para>array (stored with pointer to save storage) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link> * <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a9eb894164977ae59922dddc11e1d901d">string</link></para>
+
+<para>string (stored with pointer to save storage) </para>
+</listitem>
+            <listitem><para><link linkend="_structnlohmann_1_1basic__json_1_1internal__binary__t">internal_binary_t</link> * <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a33cab36fba98a79a7359328cea2bd90d">binary</link></para>
+
+<para>binary (stored with pointer to save storage) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a8cc04e22d7ef18efd2d34bc04eb6a1b2">boolean_t</link> <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a10e0feb275d431d984cefd4b293d42d5">boolean</link></para>
+
+<para>boolean </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">number_integer_t</link> <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a36022bc146c1c190fb77f51ab654964d">number_integer</link></para>
+
+<para>number (integer) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">number_unsigned_t</link> <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a9a865e1935c91145c9d73aa1d925ce6b">number_unsigned</link></para>
+
+<para>number (unsigned integer) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">number_float_t</link> <link linkend="_unionnlohmann_1_1basic__json_1_1json__value_1a685ff0842614609b61fd634a6c958ca6">number_float</link></para>
+
+<para>number (floating-point) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>a JSON value </para>
+
+
+
+<para>The actual storage for a JSON value of the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class. This union combines the different storage types for the JSON value types defined in <link linkend="_classnlohmann_1_1basic__json_1a4e43b685789a169bca7e69b3104c86d1">value_t</link>.</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>JSON type </para>
+</entry><entry>
+<para>value_t type </para>
+</entry><entry>
+<para>used type  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>object </para>
+</entry><entry>
+<para>object </para>
+</entry><entry>
+<para>pointer to <link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>array </para>
+</entry><entry>
+<para>array </para>
+</entry><entry>
+<para>pointer to <link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>string </para>
+</entry><entry>
+<para>string </para>
+</entry><entry>
+<para>pointer to <link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>boolean </para>
+</entry><entry>
+<para>boolean </para>
+</entry><entry>
+<para><link linkend="_classnlohmann_1_1basic__json_1a8cc04e22d7ef18efd2d34bc04eb6a1b2">boolean_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>number </para>
+</entry><entry>
+<para>number_integer </para>
+</entry><entry>
+<para><link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">number_integer_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>number </para>
+</entry><entry>
+<para>number_unsigned </para>
+</entry><entry>
+<para><link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">number_unsigned_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>number </para>
+</entry><entry>
+<para>number_float </para>
+</entry><entry>
+<para><link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">number_float_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>binary </para>
+</entry><entry>
+<para>binary </para>
+</entry><entry>
+<para>pointer to <link linkend="_structnlohmann_1_1basic__json_1_1internal__binary__t">internal_binary_t</link>  </para>
+</entry></row>
+      <row >
+<entry>
+<para>null </para>
+</entry><entry>
+<para>null </para>
+</entry><entry>
+<para><emphasis>no value is stored</emphasis>  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Variable-length types (objects, arrays, and strings) are stored as pointers. The size of the union should not exceed 64 bits if the default value types are used.</para>
+</note>
+<formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 16440 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1addaa9da9958343a8687079c6c8561828"/>    <section>
+    <title>json_value()<computeroutput>[1/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value ( )<computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>default constructor (for null values) </para>
+</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a359b6d7bdd95150e28a21c2def590b3b"/>    <section>
+    <title>json_value()<computeroutput>[2/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a8cc04e22d7ef18efd2d34bc04eb6a1b2">boolean_t</link> v)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>constructor for booleans </para>
+</para>
+<para>
+Definition at line 16462 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a7bd504626c862a55f3e464089390be61"/>    <section>
+    <title>json_value()<computeroutput>[3/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">number_integer_t</link> v)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>constructor for numbers (integer) </para>
+</para>
+<para>
+Definition at line 16464 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a356100d324dddcc0ed1bdcca086bc809"/>    <section>
+    <title>json_value()<computeroutput>[4/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">number_unsigned_t</link> v)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>constructor for numbers (unsigned) </para>
+</para>
+<para>
+Definition at line 16466 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a5f3f88981a4c2a2a19aeb650e37bb117"/>    <section>
+    <title>json_value()<computeroutput>[5/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">number_float_t</link> v)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>constructor for numbers (floating-point) </para>
+</para>
+<para>
+Definition at line 16468 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a5b3c9b26efff2a7e4ff417df750db888"/>    <section>
+    <title>json_value()<computeroutput>[6/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> t)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for empty values of a given type </para>
+</para>
+<para>
+Definition at line 16470 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a7d36046b1d3a41021459229963aa906d"/>    <section>
+    <title>json_value()<computeroutput>[7/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (const <link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link> &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for strings </para>
+</para>
+<para>
+Definition at line 16541 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a16cf11cea854b7d33ece1204c044d91d"/>    <section>
+    <title>json_value()<computeroutput>[8/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link> &amp;&amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for rvalue strings </para>
+</para>
+<para>
+Definition at line 16547 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a9d5a9dd88cf61a0fa90fec56d035273d"/>    <section>
+    <title>json_value()<computeroutput>[9/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (const <link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link> &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for objects </para>
+</para>
+<para>
+Definition at line 16553 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a03d2d3f64da9403ffc2393c4b419e514"/>    <section>
+    <title>json_value()<computeroutput>[10/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link> &amp;&amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for rvalue objects </para>
+</para>
+<para>
+Definition at line 16559 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a11a68bfcc7bd3623023594705788f25b"/>    <section>
+    <title>json_value()<computeroutput>[11/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (const <link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link> &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for arrays </para>
+</para>
+<para>
+Definition at line 16565 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1ae9a619d174aa0f8020847e965db7752d"/>    <section>
+    <title>json_value()<computeroutput>[12/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link> &amp;&amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for rvalue arrays </para>
+</para>
+<para>
+Definition at line 16571 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a2807432b367e5bd4e49f76c206b5cecf"/>    <section>
+    <title>json_value()<computeroutput>[13/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (const <link linkend="_classnlohmann_1_1basic__json_1a6d9574e10ab63f4a4f48edde42e739d1">binary_t</link> &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for binary arrays </para>
+</para>
+<para>
+Definition at line 16577 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a15baffa618c4e5bacd7daf7bba0f8e74"/>    <section>
+    <title>json_value()<computeroutput>[14/14]</computeroutput></title>
+<indexterm><primary>json_value</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>json_value</secondary></indexterm>
+<para><computeroutput>nlohmann::basic_json::json_value::json_value (<link linkend="_classnlohmann_1_1basic__json_1a6d9574e10ab63f4a4f48edde42e739d1">binary_t</link> &amp;&amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>constructor for rvalue binary arrays </para>
+</para>
+<para>
+Definition at line 16583 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a394e69339c27a67170aacb49e36243ea"/>    <section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>void nlohmann::basic_json::json_value::destroy (<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> t)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 16588 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a230c40872531081809d0265a45e1a3be"/>    <section>
+    <title>array</title>
+<indexterm><primary>array</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>array</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a69524b1f8f42c0a81b86cee3fc54e034">array_t</link>* nlohmann::basic_json::json_value::array</computeroutput></para><para>
+
+<para>array (stored with pointer to save storage) </para>
+</para>
+<para>
+Definition at line 16445 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a33cab36fba98a79a7359328cea2bd90d"/>    <section>
+    <title>binary</title>
+<indexterm><primary>binary</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>binary</secondary></indexterm>
+<para><computeroutput><link linkend="_structnlohmann_1_1basic__json_1_1internal__binary__t">internal_binary_t</link>* nlohmann::basic_json::json_value::binary</computeroutput></para><para>
+
+<para>binary (stored with pointer to save storage) </para>
+</para>
+<para>
+Definition at line 16449 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a10e0feb275d431d984cefd4b293d42d5"/>    <section>
+    <title>boolean</title>
+<indexterm><primary>boolean</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>boolean</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a8cc04e22d7ef18efd2d34bc04eb6a1b2">boolean_t</link> nlohmann::basic_json::json_value::boolean</computeroutput></para><para>
+
+<para>boolean </para>
+</para>
+<para>
+Definition at line 16451 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a685ff0842614609b61fd634a6c958ca6"/>    <section>
+    <title>number_float</title>
+<indexterm><primary>number_float</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>number_float</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">number_float_t</link> nlohmann::basic_json::json_value::number_float</computeroutput></para><para>
+
+<para>number (floating-point) </para>
+</para>
+<para>
+Definition at line 16457 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a36022bc146c1c190fb77f51ab654964d"/>    <section>
+    <title>number_integer</title>
+<indexterm><primary>number_integer</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>number_integer</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">number_integer_t</link> nlohmann::basic_json::json_value::number_integer</computeroutput></para><para>
+
+<para>number (integer) </para>
+</para>
+<para>
+Definition at line 16453 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a9a865e1935c91145c9d73aa1d925ce6b"/>    <section>
+    <title>number_unsigned</title>
+<indexterm><primary>number_unsigned</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>number_unsigned</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">number_unsigned_t</link> nlohmann::basic_json::json_value::number_unsigned</computeroutput></para><para>
+
+<para>number (unsigned integer) </para>
+</para>
+<para>
+Definition at line 16455 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a9a17d18e60b32adfe4f7f978d3ab5f15"/>    <section>
+    <title>object</title>
+<indexterm><primary>object</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>object</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a949272bf6af5eb8eab9675505422f5b3">object_t</link>* nlohmann::basic_json::json_value::object</computeroutput></para><para>
+
+<para>object (stored with pointer to save storage) </para>
+</para>
+<para>
+Definition at line 16443 of file json.hpp.</para>
+    </section><anchor xml:id="_unionnlohmann_1_1basic__json_1_1json__value_1a9eb894164977ae59922dddc11e1d901d"/>    <section>
+    <title>string</title>
+<indexterm><primary>string</primary><secondary>nlohmann::basic_json::json_value</secondary></indexterm>
+<indexterm><primary>nlohmann::basic_json::json_value</primary><secondary>string</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1basic__json_1a561057a2cc70397ad0ab890745d1d7c7">string_t</link>* nlohmann::basic_json::json_value::string</computeroutput></para><para>
+
+<para>string (stored with pointer to save storage) </para>
+</para>
+<para>
+Definition at line 16447 of file json.hpp.</para>
+</section>
+</section>
+</section>

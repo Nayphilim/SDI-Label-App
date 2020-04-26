@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator">
+<title>nlohmann::detail::json_reverse_iterator&lt; Base &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary></indexterm>
+<para>
+
+<para>a template for a reverse iterator class </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::json_reverse_iterator&lt; Base &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1json__reverse__iterator.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> = std::ptrdiff_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6b2ef1d632fe49bfcc22fbd1abd62395">base_iterator</link> = std::reverse_iterator&lt; Base &gt;</para>
+
+<para>shortcut to the reverse iterator adapter </para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> = typename Base::reference</para>
+
+<para>the reference type for the pointed-to element </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a0246de16ece16293f2917dfa5d96e278">json_reverse_iterator</link> (const typename base_iterator::iterator_type &amp;it) noexcept</para>
+
+<para>create reverse iterator from iterator </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6c2d025530114ed989188e8adfc8467e">json_reverse_iterator</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6b2ef1d632fe49bfcc22fbd1abd62395">base_iterator</link> &amp;it) noexcept</para>
+
+<para>create reverse iterator from base class </para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a43dceb18497ff745d936068c77c8cd56">operator++</link> (int)</para>
+
+<para>post-increment (it++) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a26caf0069a50ce4ecb010a1453e883fc">operator++</link> ()</para>
+
+<para>pre-increment (++it) </para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a7bbf1ecd75b7a0a488608a2760237c9f">operator--</link> (int)</para>
+
+<para>post-decrement (it&#8211;) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a2488d6a902103610943920ac49d12a04">operator--</link> ()</para>
+
+<para>pre-decrement (&#8211;it) </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a4e5d0a3bee433104ef87366e00536e01">operator+=</link> (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i)</para>
+
+<para>add to iterator </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1aabf172b436988e2edde22f13f27caaed">operator+</link> (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i) const</para>
+
+<para>add to iterator </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a549c6eb10b6434eaf772f71d129a6d79">operator-</link> (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i) const</para>
+
+<para>subtract from iterator </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1aaaa6c0b1d74e74e35e5f7b56dfd6c5d1">operator-</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> &amp;other) const</para>
+
+<para>return difference </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a8ed9e445e03c49c46612eb7f7d55bb61">operator[]</link> (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> n) const</para>
+
+<para>access to successor </para>
+</listitem>
+            <listitem><para>auto <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1adc648a641e8e9a1072c5abd56ad06401">key</link> () const -&gt; decltype(std::declval&lt; Base &gt;().key())</para>
+
+<para>return the key of an object iterator </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1ae22803d442d483041d17239615f83b58">value</link> () const</para>
+
+<para>return the value of an iterator </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Base&gt;
+class nlohmann::detail::json_reverse_iterator&lt; Base &gt;</title></simplesect>
+
+
+<para>a template for a reverse iterator class </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Base</entry>
+                                <entry>
+<para>the base iterator type to reverse. Valid types are iterator (to create reverse_iterator) and const_iterator (to create const_reverse_iterator).</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                @requirement The class satisfies the following concept requirements:<itemizedlist>
+<listitem>
+<para><link xlink:href="https://en.cppreference.com/w/cpp/named_req/BidirectionalIterator">BidirectionalIterator</link>: The iterator that can be moved can be moved in both directions (i.e. incremented and decremented).</para>
+</listitem><listitem>
+<para><link xlink:href="https://en.cppreference.com/w/cpp/named_req/OutputIterator">OutputIterator</link>: It is possible to write to the pointed-to element (only if <emphasis>Base</emphasis> is iterator).</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 10717 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6b2ef1d632fe49bfcc22fbd1abd62395"/>    <section>
+    <title>base_iterator</title>
+<indexterm><primary>base_iterator</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>base_iterator</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6b2ef1d632fe49bfcc22fbd1abd62395">base_iterator</link> =  std::reverse_iterator&lt;Base&gt;</computeroutput></para><para>
+
+<para>shortcut to the reverse iterator adapter </para>
+</para>
+<para>
+Definition at line 10722 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45"/>    <section>
+    <title>difference_type</title>
+<indexterm><primary>difference_type</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>difference_type</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> =  std::ptrdiff_t</computeroutput></para><para>
+Definition at line 10720 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1"/>    <section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>reference</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> =  typename Base::reference</computeroutput></para><para>
+
+<para>the reference type for the pointed-to element </para>
+</para>
+<para>
+Definition at line 10724 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a0246de16ece16293f2917dfa5d96e278"/>    <section>
+    <title>json_reverse_iterator()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>json_reverse_iterator</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>json_reverse_iterator</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> (const typename base_iterator::iterator_type &amp; it)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>create reverse iterator from iterator </para>
+</para>
+<para>
+Definition at line 10727 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6c2d025530114ed989188e8adfc8467e"/>    <section>
+    <title>json_reverse_iterator()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>json_reverse_iterator</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>json_reverse_iterator</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a6b2ef1d632fe49bfcc22fbd1abd62395">base_iterator</link> &amp; it)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>create reverse iterator from base class </para>
+</para>
+<para>
+Definition at line 10731 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1adc648a641e8e9a1072c5abd56ad06401"/>    <section>
+    <title>key()</title>
+<indexterm><primary>key</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>key</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>auto <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::key ( ) const -&gt; decltype(std::declval&lt;Base&gt;().key())
+    <computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return the key of an object iterator </para>
+</para>
+<para>
+Definition at line 10788 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1aabf172b436988e2edde22f13f27caaed"/>    <section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator+</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator+ (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>add to iterator </para>
+</para>
+<para>
+Definition at line 10764 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a26caf0069a50ce4ecb010a1453e883fc"/>    <section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>pre-increment (++it) </para>
+</para>
+<para>
+Definition at line 10740 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a43dceb18497ff745d936068c77c8cd56"/>    <section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator++ (int )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>post-increment (it++) </para>
+</para>
+<para>
+Definition at line 10734 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a4e5d0a3bee433104ef87366e00536e01"/>    <section>
+    <title>operator+=()</title>
+<indexterm><primary>operator+=</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator+=</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator+= (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>add to iterator </para>
+</para>
+<para>
+Definition at line 10758 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1aaaa6c0b1d74e74e35e5f7b56dfd6c5d1"/>    <section>
+    <title>operator-()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator-</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator-</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator- (const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link>&lt; Base &gt; &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return difference </para>
+</para>
+<para>
+Definition at line 10776 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a549c6eb10b6434eaf772f71d129a6d79"/>    <section>
+    <title>operator-()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator-</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator-</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator- (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> i) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>subtract from iterator </para>
+</para>
+<para>
+Definition at line 10770 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a2488d6a902103610943920ac49d12a04"/>    <section>
+    <title>operator--()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator-- ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>pre-decrement (&#8211;it) </para>
+</para>
+<para>
+Definition at line 10752 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a7bbf1ecd75b7a0a488608a2760237c9f"/>    <section>
+    <title>operator--()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator-- (int )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>post-decrement (it&#8211;) </para>
+</para>
+<para>
+Definition at line 10746 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a8ed9e445e03c49c46612eb7f7d55bb61"/>    <section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::operator[] (<link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a9ab55987c05ec6427ad36082e351cc45">difference_type</link> n) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>access to successor </para>
+</para>
+<para>
+Definition at line 10782 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__reverse__iterator_1ae22803d442d483041d17239615f83b58"/>    <section>
+    <title>value()</title>
+<indexterm><primary>value</primary><secondary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_reverse_iterator&lt; Base &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;typename Base &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator_1a42f51a69bac7b2aebb613b2164e457f1">reference</link> <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">nlohmann::detail::json_reverse_iterator</link>&lt; Base &gt;::value ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>return the value of an iterator </para>
+</para>
+<para>
+Definition at line 10795 of file json.hpp.</para>
+</section>
+</section>
+</section>

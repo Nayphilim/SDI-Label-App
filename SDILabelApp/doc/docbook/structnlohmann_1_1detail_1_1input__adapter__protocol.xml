@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1input__adapter__protocol">
+<title>nlohmann::detail::input_adapter_protocol Struct Reference</title>
+<indexterm><primary>nlohmann::detail::input_adapter_protocol</primary></indexterm>
+<para>
+
+<para>abstract input adapter interface </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::input_adapter_protocol:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structnlohmann_1_1detail_1_1input__adapter__protocol.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::char_traits&lt; char &gt;::int_type <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol_1aac10a6a4048a8ce8e2ed50277692a3ca">get_character</link> ()=0</para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol_1a92dac74def4ac5adacd0684088bd4082">~input_adapter_protocol</link> ()=default</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>abstract input adapter interface </para>
+
+
+
+<para>Produces a stream of std::char_traits&lt;char&gt;::int_type characters from a std::istream, a buffer, or some other input type. Accepts the return of exactly one non-EOF character for future input. The int_type characters returned consist of all valid char values as positive values (typically unsigned char), plus an EOF value outside that range, specified by the value of the function std::char_traits&lt;char&gt;::eof(). This value is typically -1, but could be any arbitrary value which is not a valid char value. </para>
+<para>
+Definition at line 4262 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1input__adapter__protocol_1a92dac74def4ac5adacd0684088bd4082"/>    <section>
+    <title>~input_adapter_protocol()</title>
+<indexterm><primary>~input_adapter_protocol</primary><secondary>nlohmann::detail::input_adapter_protocol</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter_protocol</primary><secondary>~input_adapter_protocol</secondary></indexterm>
+<para><computeroutput>virtual nlohmann::detail::input_adapter_protocol::~input_adapter_protocol ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1input__adapter__protocol_1aac10a6a4048a8ce8e2ed50277692a3ca"/>    <section>
+    <title>get_character()</title>
+<indexterm><primary>get_character</primary><secondary>nlohmann::detail::input_adapter_protocol</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::input_adapter_protocol</primary><secondary>get_character</secondary></indexterm>
+<para><computeroutput>virtual std::char_traits&lt;char&gt;::int_type nlohmann::detail::input_adapter_protocol::get_character ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</para>
+<para>
+Implemented in <link linkend="_classnlohmann_1_1detail_1_1input__stream__adapter_1ae0760af923583de6354725e901d1869d">nlohmann::detail::input_stream_adapter</link>, <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1abb62b34cf77e557ce5321b7f2490c3b0">nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</link>, <link linkend="_classnlohmann_1_1detail_1_1input__buffer__adapter_1ae9e195b04f3551fafb0925aafba00124">nlohmann::detail::input_buffer_adapter</link>, and <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter_1a0d4ff48617c8f63c30babdfd09482329">nlohmann::detail::file_input_adapter</link>.</para>
+</section>
+</section>
+</section>

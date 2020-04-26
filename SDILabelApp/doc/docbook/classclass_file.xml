@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classclass_file">
+<title>classFile Class Reference</title>
+<indexterm><primary>classFile</primary></indexterm>
+<para>
+
+<para>This class manages all class file functionaility. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;classfile.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classclass_file_1a5433f3373caf5cc760317dc358269a60">classFile</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classlinked_list">linkedList</link> <link linkend="_classclass_file_1ad685e07e0ca637eecc4379a52964fd7f">getClasses</link> ()</para>
+
+<para>returns the list of classes in loaded class file </para>
+</listitem>
+            <listitem><para>static <link linkend="_classlinked_list">linkedList</link> <link linkend="_classclass_file_1ae015f5aafd0671ae79998eef093e3068">readClassFile</link> (QUrl filePath)</para>
+
+<para>reads the class file selected </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classclass_file_1ad333f860948c0bde09aa10927101246d">setClasses</link> (<link linkend="_classlinked_list">linkedList</link> classes)</para>
+
+<para>sets the list of classes </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classclass_file_1a17153b9673a207c2cd4867764d7d016e">clearClassList</link> ()</para>
+
+<para>clears the list of classes </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classclass_file_1a14bddfc9866ab3385e883574efb7bccf">checkExisting</link> (QString selectedClass)</para>
+
+<para>checks if a class already exists inside a class file </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classclass_file_1aac42ce46019fb341d569738735fb803e">addClass</link> (QString selectedClass)</para>
+
+<para>adds a new class to the class file in use </para>
+</listitem>
+            <listitem><para>static QUrl <link linkend="_classclass_file_1a608fca7344bf95ac899d4dd1a2476ddf">getCurrentClassFilePath</link> ()</para>
+
+<para>returns the full file path of the class file </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classclass_file_1abbf04f6befc2d81ae9b9ba5b48d16cbd">removeClass</link> (int index)</para>
+
+<para>removes a class from the class file in use </para>
+</listitem>
+            <listitem><para>static void <link linkend="_classclass_file_1acaa61fac9a1e77cab6f0d1484496196c">setCurrentClassFilePath</link> (QUrl classFilePath)</para>
+
+<para>sets the full file path of the class file to be loaded </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class manages all class file functionaility. </para>
+
+
+
+<para>This class contains all functions attributing to the creation, loading and managing of class files. It also holds the current loaded class list and the full file path of the class file in use </para>
+<para>
+Definition at line 15 of file classfile.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classclass_file_1a5433f3373caf5cc760317dc358269a60"/>    <section>
+    <title>classFile()</title>
+<indexterm><primary>classFile</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>classFile</secondary></indexterm>
+<para><computeroutput>classFile::classFile ( )</computeroutput></para><para>
+Definition at line 8 of file classfile.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classclass_file_1aac42ce46019fb341d569738735fb803e"/>    <section>
+    <title>addClass()</title>
+<indexterm><primary>addClass</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>addClass</secondary></indexterm>
+<para><computeroutput>void classFile::addClass (QString selectedClass)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>adds a new class to the class file in use </para>
+</para>
+
+<para>adds a new class to the class file loaded as well as appending it to the class list 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>selectedClass</entry>
+                                <entry>
+<para>is the class name to be added </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 54 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1a14bddfc9866ab3385e883574efb7bccf"/>    <section>
+    <title>checkExisting()</title>
+<indexterm><primary>checkExisting</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>checkExisting</secondary></indexterm>
+<para><computeroutput>bool classFile::checkExisting (QString selectedClass)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>checks if a class already exists inside a class file </para>
+</para>
+
+<para>checks for duplicate class names that are in the loaded class file. Using a combination of QRegularExpression and the QStringList function indexOf will return -1 if it does not contain the string given as a parameter 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>selectedClass</entry>
+                                <entry>
+<para>is the class name that is being compared for duplicates </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 46 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1a17153b9673a207c2cd4867764d7d016e"/>    <section>
+    <title>clearClassList()</title>
+<indexterm><primary>clearClassList</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>clearClassList</secondary></indexterm>
+<para><computeroutput>void classFile::clearClassList ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>clears the list of classes </para>
+</para>
+
+<para>clears the current QStringList of classes to be rewritten </para>
+<para>
+Definition at line 42 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1ad685e07e0ca637eecc4379a52964fd7f"/>    <section>
+    <title>getClasses()</title>
+<indexterm><primary>getClasses</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>getClasses</secondary></indexterm>
+<para><computeroutput><link linkend="_classlinked_list">linkedList</link> classFile::getClasses ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>returns the list of classes in loaded class file </para>
+</para>
+<para>
+Definition at line 34 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1a608fca7344bf95ac899d4dd1a2476ddf"/>    <section>
+    <title>getCurrentClassFilePath()</title>
+<indexterm><primary>getCurrentClassFilePath</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>getCurrentClassFilePath</secondary></indexterm>
+<para><computeroutput>QUrl classFile::getCurrentClassFilePath ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>returns the full file path of the class file </para>
+</para>
+
+<para>returns the full file path of the class file that is currently in use </para>
+<para>
+Definition at line 77 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1ae015f5aafd0671ae79998eef093e3068"/>    <section>
+    <title>readClassFile()</title>
+<indexterm><primary>readClassFile</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>readClassFile</secondary></indexterm>
+<para><computeroutput><link linkend="_classlinked_list">linkedList</link> classFile::readClassFile (QUrl filePath)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>reads the class file selected </para>
+</para>
+
+<para>reads the class file selected by the user by reading each line individually and appending it to a QStringList 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>filePath</entry>
+                                <entry>
+<para>is the full path to the selected class file that is being read </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 13 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1abbf04f6befc2d81ae9b9ba5b48d16cbd"/>    <section>
+    <title>removeClass()</title>
+<indexterm><primary>removeClass</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>removeClass</secondary></indexterm>
+<para><computeroutput>void classFile::removeClass (int index)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>removes a class from the class file in use </para>
+</para>
+
+<para>removes all instances of a class name entered from the class QStringList and then rewrites the the file with the new QStringList 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>selectedClass</entry>
+                                <entry>
+<para>is the class name selected to be removed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 86 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1ad333f860948c0bde09aa10927101246d"/>    <section>
+    <title>setClasses()</title>
+<indexterm><primary>setClasses</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>setClasses</secondary></indexterm>
+<para><computeroutput>void classFile::setClasses (<link linkend="_classlinked_list">linkedList</link> classes)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>sets the list of classes </para>
+</para>
+
+<para>sets the QStringList of classes that will be displayed in the class list widget and will be saved to the file 
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>classes</entry>
+                                <entry>
+<para>is the new list of classes to be set </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 38 of file classfile.cpp.</para>
+    </section><anchor xml:id="_classclass_file_1acaa61fac9a1e77cab6f0d1484496196c"/>    <section>
+    <title>setCurrentClassFilePath()</title>
+<indexterm><primary>setCurrentClassFilePath</primary><secondary>classFile</secondary></indexterm>
+<indexterm><primary>classFile</primary><secondary>setCurrentClassFilePath</secondary></indexterm>
+<para><computeroutput>void classFile::setCurrentClassFilePath (QUrl classFilePath)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>sets the full file path of the class file to be loaded </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>classFilePath</entry>
+                                <entry>
+<para>is the full file path of the class file to be loaded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 104 of file classfile.cpp.</para>
+</section>
+</section>
+</section>

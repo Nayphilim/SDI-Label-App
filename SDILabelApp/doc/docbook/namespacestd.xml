@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacestd">
+<title>std Namespace Reference</title>
+<indexterm><primary>std</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structstd_1_1hash_3_01nlohmann_1_1json_01_4">hash&lt; nlohmann::json &gt;</link></para>
+
+<para>hash value for JSON objects </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structstd_1_1less_3_1_1nlohmann_1_1detail_1_1value__t_01_4">less&lt;::nlohmann::detail::value_t &gt;</link></para>
+
+<para>specialization for std::less&lt;value_t&gt; </para>
+</listitem>
+            <listitem><para>class <link linkend="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4">tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classstd_1_1tuple__size_3_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4">tuple_size&lt;::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;&gt; </para><para>void <link linkend="_namespacestd_1ace192546038d61d9c28ddfe0c3d732de">swap&lt; nlohmann::json &gt;</link> (<link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp;j1, <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp;j2) noexcept(is_nothrow_move_constructible&lt; <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &gt;::value and is_nothrow_move_assignable&lt; <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &gt;::value)</para>
+
+<para>exchanges the values of two JSON objects </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacestd_1ace192546038d61d9c28ddfe0c3d732de"/>    <section>
+    <title>swap&lt; nlohmann::json &gt;()</title>
+<indexterm><primary>swap&lt; nlohmann::json &gt;</primary><secondary>std</secondary></indexterm>
+<indexterm><primary>std</primary><secondary>swap&lt; nlohmann::json &gt;</secondary></indexterm>
+<computeroutput>template&lt;&gt; </computeroutput><para><computeroutput>void std::swap&lt; <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &gt; (<link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp; j1, <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link> &amp; j2)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>exchanges the values of two JSON objects </para>
+</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 24045 of file json.hpp.</para>
+</section>
+</section>
+</section>

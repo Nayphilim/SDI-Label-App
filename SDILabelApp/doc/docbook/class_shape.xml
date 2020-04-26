@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_shape">
+<title>Shape Class Reference</title>
+<indexterm><primary>Shape</primary></indexterm>
+<para>
+<computeroutput>#include &lt;shape.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Shape:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_shape.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_shape_1aa66b5ff3b5750eb6744c4d1131e5adf1">Shape</link> (std::string)</para>
+
+<para>initialises the <link linkend="_class_shape">Shape</link> to be created </para>
+</listitem>
+            <listitem><para>QRectF <link linkend="_class_shape_1a909265e8432ddaac6735c3de577b30c8">boundingRect</link> () const override</para>
+
+<para>used to initialise an area for shapes to be drawn and interacted with </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_1ac9c52ce7a63cfa48788004f8da8eea78">dropEvent</link> (QGraphicsSceneDragDropEvent *event) override</para>
+
+<para>overrides the dropEvent to allow for the shape to accept the class file text </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_1a4c6782bcbc2ec70d4d7b982d042078e8">paint</link> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=nullptr) override</para>
+
+<para>overrides the paint to allow for painting the specified shape </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_shape_1ac0e93d2d728d04605359ec900f03c6a3">setText</link> (const QString &amp;<link linkend="_class_shape_1a27b18c54fff2d5d71ffb55f14ee75e30">text</link>)</para>
+
+<para>initialises the information for which will allow for the shape to place the </para>
+</listitem>
+            <listitem><para>QString <link linkend="_class_shape_1a27b18c54fff2d5d71ffb55f14ee75e30">text</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_shape_1abf7cc76cffe32f9132c8dbc3108a7a56">type</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; std::vector&lt; int &gt; &gt; <link linkend="_class_shape_1adc9eca468ed8b641e55b912862f172b3">points</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>QString <link linkend="_class_shape_1a8a31300847a541b8139b08c7ca8a4520">m_text</link></para>
+
+<para>initialises the text for class placing </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 17 of file shape.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_shape_1aa66b5ff3b5750eb6744c4d1131e5adf1"/>    <section>
+    <title>Shape()</title>
+<indexterm><primary>Shape</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>Shape</secondary></indexterm>
+<para><computeroutput>Shape::Shape (std::string type)</computeroutput></para><para>
+
+<para>initialises the <link linkend="_class_shape">Shape</link> to be created </para>
+</para>
+<para>
+Definition at line 3 of file shape.cpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_shape_1a909265e8432ddaac6735c3de577b30c8"/>    <section>
+    <title>boundingRect()</title>
+<indexterm><primary>boundingRect</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>boundingRect</secondary></indexterm>
+<para><computeroutput>QRectF Shape::boundingRect ( ) const<computeroutput>[override]</computeroutput></computeroutput></para><para>
+
+<para>used to initialise an area for shapes to be drawn and interacted with </para>
+</para>
+<para>
+Definition at line 27 of file shape.cpp.</para>
+    </section><anchor xml:id="_class_shape_1ac9c52ce7a63cfa48788004f8da8eea78"/>    <section>
+    <title>dropEvent()</title>
+<indexterm><primary>dropEvent</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>dropEvent</secondary></indexterm>
+<para><computeroutput>void Shape::dropEvent (QGraphicsSceneDragDropEvent * event)<computeroutput>[override]</computeroutput></computeroutput></para><para>
+
+<para>overrides the dropEvent to allow for the shape to accept the class file text </para>
+</para>
+<para>
+Definition at line 67 of file shape.cpp.</para>
+    </section><anchor xml:id="_class_shape_1a4c6782bcbc2ec70d4d7b982d042078e8"/>    <section>
+    <title>paint()</title>
+<indexterm><primary>paint</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>paint</secondary></indexterm>
+<para><computeroutput>void Shape::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[override]</computeroutput></computeroutput></para><para>
+
+<para>overrides the paint to allow for painting the specified shape </para>
+</para>
+<para>
+Definition at line 40 of file shape.cpp.</para>
+    </section><anchor xml:id="_class_shape_1ac0e93d2d728d04605359ec900f03c6a3"/>    <section>
+    <title>setText()</title>
+<indexterm><primary>setText</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>setText</secondary></indexterm>
+<para><computeroutput>void Shape::setText (const QString &amp; text)</computeroutput></para><para>
+
+<para>initialises the information for which will allow for the shape to place the </para>
+</para>
+<para>
+Definition at line 60 of file shape.cpp.</para>
+    </section><anchor xml:id="_class_shape_1a27b18c54fff2d5d71ffb55f14ee75e30"/>    <section>
+    <title>text()</title>
+<indexterm><primary>text</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>QString Shape::text ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 30 of file shape.h.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_shape_1a8a31300847a541b8139b08c7ca8a4520"/>    <section>
+    <title>m_text</title>
+<indexterm><primary>m_text</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>m_text</secondary></indexterm>
+<para><computeroutput>QString Shape::m_text<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>initialises the text for class placing </para>
+</para>
+<para>
+Definition at line 35 of file shape.h.</para>
+    </section><anchor xml:id="_class_shape_1adc9eca468ed8b641e55b912862f172b3"/>    <section>
+    <title>points</title>
+<indexterm><primary>points</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>points</secondary></indexterm>
+<para><computeroutput>std::vector&lt;std::vector&lt;int&gt; &gt; Shape::points</computeroutput></para><para>
+Definition at line 32 of file shape.h.</para>
+    </section><anchor xml:id="_class_shape_1abf7cc76cffe32f9132c8dbc3108a7a56"/>    <section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>Shape</secondary></indexterm>
+<indexterm><primary>Shape</primary><secondary>type</secondary></indexterm>
+<para><computeroutput>std::string Shape::type</computeroutput></para><para>
+Definition at line 31 of file shape.h.</para>
+</section>
+</section>
+</section>

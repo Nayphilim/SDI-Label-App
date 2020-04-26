@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter">
+<title>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1wide__string__input__adapter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a85c8bddae20bc00d64dd7a2c87109357">wide_string_input_adapter</link> (const WideStringType &amp;w) noexcept</para>
+</listitem>
+            <listitem><para>std::char_traits&lt; char &gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1abb62b34cf77e557ce5321b7f2490c3b0">get_character</link> () noexcept override</para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;size_t T&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1ab718e44c524fa7ec74b0a0ae1ad64ca4">fill_buffer</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const WideStringType &amp; <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a30fcb522f072d58eb0fb52cfb784e9c9">str</link></para>
+
+<para>the wstring to process </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a196fe1fb07310dc8c2ca3a0a9ef9b27a">current_wchar</link> = 0</para>
+
+<para>index of the current wchar in str </para>
+</listitem>
+            <listitem><para>std::array&lt; std::char_traits&lt; char &gt;::int_type, 4 &gt; <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1af0854ae66725357d074912379a235128">utf8_bytes</link> = {{0, 0, 0, 0}}</para>
+
+<para>a buffer for UTF-8 bytes </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a6d87bc3e8b427e06cda936383283e0c4">utf8_bytes_index</link> = 0</para>
+
+<para>index to the utf8_codes array for the next valid byte </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a9fc33bf0974526336e53ea530c7097ff">utf8_bytes_filled</link> = 0</para>
+
+<para>number of valid bytes in the utf8_codes array </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename WideStringType&gt;
+class nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</title></simplesect>
+
+<para>
+Definition at line 4509 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a85c8bddae20bc00d64dd7a2c87109357"/>    <section>
+    <title>wide_string_input_adapter()</title>
+<indexterm><primary>wide_string_input_adapter</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>wide_string_input_adapter</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::<link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">wide_string_input_adapter</link> (const WideStringType &amp; w)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4512 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1ab718e44c524fa7ec74b0a0ae1ad64ca4"/>    <section>
+    <title>fill_buffer()</title>
+<indexterm><primary>fill_buffer</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>fill_buffer</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><computeroutput>template&lt;size_t T&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::fill_buffer ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 4535 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1abb62b34cf77e557ce5321b7f2490c3b0"/>    <section>
+    <title>get_character()</title>
+<indexterm><primary>get_character</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>get_character</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>std::char_traits&lt;char&gt;::int_type <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::get_character ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>get a character [0,255] or std::char_traits&lt;char&gt;::eof(). </para>
+</para>
+<para>
+Implements <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol_1aac10a6a4048a8ce8e2ed50277692a3ca">nlohmann::detail::input_adapter_protocol</link>.</para>
+<para>
+Definition at line 4516 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a196fe1fb07310dc8c2ca3a0a9ef9b27a"/>    <section>
+    <title>current_wchar</title>
+<indexterm><primary>current_wchar</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>current_wchar</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::current_wchar = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>index of the current wchar in str </para>
+</para>
+<para>
+Definition at line 4544 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a30fcb522f072d58eb0fb52cfb784e9c9"/>    <section>
+    <title>str</title>
+<indexterm><primary>str</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>str</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>const WideStringType&amp; <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::str<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the wstring to process </para>
+</para>
+<para>
+Definition at line 4541 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1af0854ae66725357d074912379a235128"/>    <section>
+    <title>utf8_bytes</title>
+<indexterm><primary>utf8_bytes</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>utf8_bytes</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>std::array&lt;std::char_traits&lt;char&gt;::int_type, 4&gt; <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::utf8_bytes = {{0, 0, 0, 0}}<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>a buffer for UTF-8 bytes </para>
+</para>
+<para>
+Definition at line 4547 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a9fc33bf0974526336e53ea530c7097ff"/>    <section>
+    <title>utf8_bytes_filled</title>
+<indexterm><primary>utf8_bytes_filled</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>utf8_bytes_filled</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::utf8_bytes_filled = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>number of valid bytes in the utf8_codes array </para>
+</para>
+<para>
+Definition at line 4552 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1wide__string__input__adapter_1a6d87bc3e8b427e06cda936383283e0c4"/>    <section>
+    <title>utf8_bytes_index</title>
+<indexterm><primary>utf8_bytes_index</primary><secondary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::wide_string_input_adapter&lt; WideStringType &gt;</primary><secondary>utf8_bytes_index</secondary></indexterm>
+<computeroutput>template&lt;typename WideStringType &gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">nlohmann::detail::wide_string_input_adapter</link>&lt; WideStringType &gt;::utf8_bytes_index = 0<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>index to the utf8_codes array for the next valid byte </para>
+</para>
+<para>
+Definition at line 4550 of file json.hpp.</para>
+</section>
+</section>
+</section>

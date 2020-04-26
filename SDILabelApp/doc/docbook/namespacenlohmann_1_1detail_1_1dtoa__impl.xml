@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl">
+<title>nlohmann::detail::dtoa_impl Namespace Reference</title>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary></indexterm>
+<para>
+
+<para>implements the Grisu2 algorithm for binary to decimal floating-point conversion. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries">boundaries</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1cached__power">cached_power</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename Target , typename Source &gt; </para><para>Target <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a1c5d30eb51e5e994a3f48bde104d2ce8">reinterpret_bits</link> (const Source source)</para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries">boundaries</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a22b6e37654ac93c6d0d9c06ec1bf5ded">compute_boundaries</link> (FloatType value)</para>
+</listitem>
+            <listitem><para><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1cached__power">cached_power</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1adbf329a18c5cf854a3477327afd2200b">get_cached_power_for_binary_exponent</link> (int e)</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a36ded358763b5dbcea9867660fbe4e28">find_largest_pow10</link> (const std::uint32_t n, std::uint32_t &amp;pow10)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a5bc841e0bee12fd6489d49cf7bd07bb4">grisu2_round</link> (char *buf, int len, std::uint64_t dist, std::uint64_t delta, std::uint64_t rest, std::uint64_t ten_k)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a9b899c72b0e1e3dd46d75c2b4e6bcdfb">grisu2_digit_gen</link> (char *buffer, int &amp;length, int &amp;decimal_exponent, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> M_minus, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> w, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> M_plus)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a05b681dcb8569b9784c6dccfadb01633">grisu2</link> (char *buf, int &amp;len, int &amp;decimal_exponent, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> m_minus, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> v, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> m_plus)</para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1aab7a9670a4f4704a5d0347ad7588576b">grisu2</link> (char *buf, int &amp;len, int &amp;decimal_exponent, FloatType value)</para>
+</listitem>
+            <listitem><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ad90f19ed10d8133b727df4b9bc5ddf5c">append_exponent</link> (char *buf, int e)</para>
+
+<para>appends a decimal representation of e to buf </para>
+</listitem>
+            <listitem><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ab441f2761e33839ca48bc2225e14a2a9">format_buffer</link> (char *buf, int len, int decimal_exponent, int min_exp, int max_exp)</para>
+
+<para>prettify v = buf * 10^decimal_exponent </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>constexpr int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ac1ea1316de0b4a219f707c76b1db1966">kAlpha</link> = -60</para>
+</listitem>
+            <listitem><para>constexpr int <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a4a750fcc38da1ce68b7e25ab3a230e20">kGamma</link> = -32</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>implements the Grisu2 algorithm for binary to decimal floating-point conversion. </para>
+
+<para>This implementation is a slightly modified version of the reference implementation which may be obtained from <link xlink:href="http://florian.loitsch.com/publications">http://florian.loitsch.com/publications</link> (bench.tar.gz).</para>
+
+<para>The code is distributed under the MIT license, Copyright (c) 2009 Florian Loitsch.</para>
+
+<para>For a detailed description of the algorithm see:</para>
+
+<para>[1] Loitsch, &quot;Printing Floating-Point Numbers Quickly and Accurately with
+    Integers&quot;, Proceedings of the ACM SIGPLAN 2010 Conference on Programming Language Design and Implementation, PLDI 2010 [2] Burger, Dybvig, &quot;Printing Floating-Point Numbers Quickly and Accurately&quot;, Proceedings of the ACM SIGPLAN 1996 Conference on Programming Language Design and Implementation, PLDI 1996 </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ad90f19ed10d8133b727df4b9bc5ddf5c"/>    <section>
+    <title>append_exponent()</title>
+<indexterm><primary>append_exponent</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>append_exponent</secondary></indexterm>
+<para><computeroutput><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char* nlohmann::detail::dtoa_impl::append_exponent (char * buf, int e)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>appends a decimal representation of e to buf </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>a pointer to the element following the exponent. </para>
+</formalpara>
+<formalpara><title>Precondition</title>
+
+<para>-1000 &lt; e &lt; 1000 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 14460 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a22b6e37654ac93c6d0d9c06ec1bf5ded"/>    <section>
+    <title>compute_boundaries()</title>
+<indexterm><primary>compute_boundaries</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>compute_boundaries</secondary></indexterm>
+<computeroutput>template&lt;typename FloatType &gt; </computeroutput><para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries">boundaries</link> nlohmann::detail::dtoa_impl::compute_boundaries (FloatType value)</computeroutput></para>
+<para>Compute the (normalized) diyfp representing the input number &apos;value&apos; and its boundaries.</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>value must be finite and positive </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13719 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a36ded358763b5dbcea9867660fbe4e28"/>    <section>
+    <title>find_largest_pow10()</title>
+<indexterm><primary>find_largest_pow10</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>find_largest_pow10</secondary></indexterm>
+<para><computeroutput>int nlohmann::detail::dtoa_impl::find_largest_pow10 (const std::uint32_t n, std::uint32_t &amp; pow10)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>For n != 0, returns k, such that pow10 := 10^(k-1) &lt;= n &lt; 10^k. For n == 0, returns 1 and sets pow10 := 1. </para>
+<para>
+Definition at line 14022 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ab441f2761e33839ca48bc2225e14a2a9"/>    <section>
+    <title>format_buffer()</title>
+<indexterm><primary>format_buffer</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>format_buffer</secondary></indexterm>
+<para><computeroutput><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char* nlohmann::detail::dtoa_impl::format_buffer (char * buf, int len, int decimal_exponent, int min_exp, int max_exp)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>prettify v = buf * 10^decimal_exponent </para>
+</para>
+
+<para>If v is in the range [10^min_exp, 10^max_exp) it will be printed in fixed-point notation. Otherwise it will be printed in exponential notation.</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>min_exp &lt; 0 </para>
+
+<para>max_exp &gt; 0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 14512 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1adbf329a18c5cf854a3477327afd2200b"/>    <section>
+    <title>get_cached_power_for_binary_exponent()</title>
+<indexterm><primary>get_cached_power_for_binary_exponent</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>get_cached_power_for_binary_exponent</secondary></indexterm>
+<para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1cached__power">cached_power</link> nlohmann::detail::dtoa_impl::get_cached_power_for_binary_exponent (int e)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>For a normalized diyfp w = f * 2^e, this function returns a (normalized) cached power-of-ten c = f_c * 2^e_c, such that the exponent of the product w * c satisfies (Definition 3.2 from [1]) <literallayout><computeroutput> alpha &lt;= e_c + e + q &lt;= gamma.
+</computeroutput></literallayout> </para>
+<para>
+Definition at line 13858 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a05b681dcb8569b9784c6dccfadb01633"/>    <section>
+    <title>grisu2()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>grisu2</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>grisu2</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::dtoa_impl::grisu2 (char * buf, int &amp; len, int &amp; decimal_exponent, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> m_minus, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> v, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> m_plus)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>v = buf * 10^decimal_exponent len is the length of the buffer (number of decimal digits) The buffer must be large enough, i.e. &gt;= max_digits10. </para>
+<para>
+Definition at line 14360 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1aab7a9670a4f4704a5d0347ad7588576b"/>    <section>
+    <title>grisu2()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>grisu2</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>grisu2</secondary></indexterm>
+<computeroutput>template&lt;typename FloatType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::dtoa_impl::grisu2 (char * buf, int &amp; len, int &amp; decimal_exponent, FloatType value)</computeroutput></para>
+<para>v = buf * 10^decimal_exponent len is the length of the buffer (number of decimal digits) The buffer must be large enough, i.e. &gt;= max_digits10. </para>
+<para>
+Definition at line 14420 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a9b899c72b0e1e3dd46d75c2b4e6bcdfb"/>    <section>
+    <title>grisu2_digit_gen()</title>
+<indexterm><primary>grisu2_digit_gen</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>grisu2_digit_gen</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::dtoa_impl::grisu2_digit_gen (char * buffer, int &amp; length, int &amp; decimal_exponent, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> M_minus, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> w, <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> M_plus)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Generates V = buffer * 10^decimal_exponent, such that M- &lt;= V &lt;= M+. M- and M+ must be normalized and share the same exponent -60 &lt;= e &lt;= -32. </para>
+<para>
+Definition at line 14119 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a5bc841e0bee12fd6489d49cf7bd07bb4"/>    <section>
+    <title>grisu2_round()</title>
+<indexterm><primary>grisu2_round</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>grisu2_round</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::dtoa_impl::grisu2_round (char * buf, int len, std::uint64_t dist, std::uint64_t delta, std::uint64_t rest, std::uint64_t ten_k)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 14078 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a1c5d30eb51e5e994a3f48bde104d2ce8"/>    <section>
+    <title>reinterpret_bits()</title>
+<indexterm><primary>reinterpret_bits</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>reinterpret_bits</secondary></indexterm>
+<computeroutput>template&lt;typename Target , typename Source &gt; </computeroutput><para><computeroutput>Target nlohmann::detail::dtoa_impl::reinterpret_bits (const Source source)</computeroutput></para><para>
+Definition at line 13578 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1ac1ea1316de0b4a219f707c76b1db1966"/>    <section>
+    <title>kAlpha</title>
+<indexterm><primary>kAlpha</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>kAlpha</secondary></indexterm>
+<para><computeroutput>constexpr int nlohmann::detail::dtoa_impl::kAlpha = -60<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line 13841 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1_1dtoa__impl_1a4a750fcc38da1ce68b7e25ab3a230e20"/>    <section>
+    <title>kGamma</title>
+<indexterm><primary>kGamma</primary><secondary>nlohmann::detail::dtoa_impl</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl</primary><secondary>kGamma</secondary></indexterm>
+<para><computeroutput>constexpr int nlohmann::detail::dtoa_impl::kGamma = -32<computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line 13842 of file json.hpp.</para>
+</section>
+</section>
+</section>

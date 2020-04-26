@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classfile_8h">
+<title>classfile.h File Reference</title>
+<indexterm><primary>classfile.h</primary></indexterm>
+<programlisting>#include &quot;mainwindow.h&quot;
+#include &quot;linkedList.h&quot;
+#include &lt;QTextStream&gt;
+#include &lt;algorithm&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classclass_file">classFile</link></para>
+
+<para>This class manages all class file functionaility. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

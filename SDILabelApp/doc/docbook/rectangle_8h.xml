@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rectangle_8h">
+<title>rectangle.h File Reference</title>
+<indexterm><primary>rectangle.h</primary></indexterm>
+<programlisting>#include &lt;QPainter&gt;
+#include &lt;QGraphicsItem&gt;
+#include &lt;QGraphicsScene&gt;
+#include &lt;QtCore&gt;
+#include &lt;QPaintEvent&gt;
+#include &lt;QGraphicsSceneDragDropEvent&gt;
+#include &lt;QMimeData&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_rectangle">Rectangle</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1priority__tag_3_010_01_4">
+<title>nlohmann::detail::priority_tag&lt; 0 &gt; Struct Reference</title>
+<indexterm><primary>nlohmann::detail::priority_tag&lt; 0 &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 2546 of file json.hpp.</para>
+</section>
+</section>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainwindow_8h">
+<title>mainwindow.h File Reference</title>
+<indexterm><primary>mainwindow.h</primary></indexterm>
+<programlisting>#include &lt;QMainWindow&gt;
+#include &quot;ui_mainwindow.h&quot;
+#include &quot;classfile.h&quot;
+#include &quot;classmanagement.h&quot;
+#include &quot;classlistcreator.h&quot;
+#include &quot;linkedList.h&quot;
+#include &lt;QTimer&gt;
+#include &lt;QFileDialog&gt;
+#include &lt;QString&gt;
+#include &lt;QMessageBox&gt;
+#include &lt;QDir&gt;
+#include &lt;QPixmap&gt;
+#include &lt;QtCore&gt;
+#include &lt;QtGui&gt;
+#include &lt;QGraphicsItem&gt;
+#include &lt;QGraphicsView&gt;
+#include &lt;QGraphicsScene&gt;
+#include &lt;QGraphicsSceneMouseEvent&gt;
+#include &lt;QKeyEvent&gt;
+#include &quot;shape.h&quot;
+#include &lt;json.hpp&gt;
+#include &lt;QListWidget&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_main_window">MainWindow</link></para>
+
+<para>This class handles all GUI components for the main window. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para> <link linkend="_namespace_ui">Ui</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_mainwindow_8h_1ab701e3ac61a85b337ec5c1abaad6742d">json</link> = <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_mainwindow_8h_1ab701e3ac61a85b337ec5c1abaad6742d"/>    <section>
+    <title>json</title>
+<indexterm><primary>json</primary><secondary>mainwindow.h</secondary></indexterm>
+<indexterm><primary>mainwindow.h</primary><secondary>json</secondary></indexterm>
+<para><computeroutput>using <link linkend="_mainwindow_8h_1ab701e3ac61a85b337ec5c1abaad6742d">json</link> =  <link linkend="_namespacenlohmann_1a2bfd99e845a2e5cd90aeaf1b1431f474">nlohmann::json</link></computeroutput></para><para>
+Definition at line 33 of file mainwindow.h.</para>
+</section>
+</section>
+</section>

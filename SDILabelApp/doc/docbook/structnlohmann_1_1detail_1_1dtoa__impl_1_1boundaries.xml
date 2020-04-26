@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries">
+<title>nlohmann::detail::dtoa_impl::boundaries Struct Reference</title>
+<indexterm><primary>nlohmann::detail::dtoa_impl::boundaries</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1ad1668c60aeade5f2557fafed8b8aee1a">w</link></para>
+</listitem>
+            <listitem><para><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1aec4e5028333c01f3229062f31ce16763">minus</link></para>
+</listitem>
+            <listitem><para><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1a3321ae2816a6ec5250a0d8e29f798232">plus</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 13705 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1aec4e5028333c01f3229062f31ce16763"/>    <section>
+    <title>minus</title>
+<indexterm><primary>minus</primary><secondary>nlohmann::detail::dtoa_impl::boundaries</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::boundaries</primary><secondary>minus</secondary></indexterm>
+<para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::boundaries::minus</computeroutput></para><para>
+Definition at line 13708 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1a3321ae2816a6ec5250a0d8e29f798232"/>    <section>
+    <title>plus</title>
+<indexterm><primary>plus</primary><secondary>nlohmann::detail::dtoa_impl::boundaries</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::boundaries</primary><secondary>plus</secondary></indexterm>
+<para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::boundaries::plus</computeroutput></para><para>
+Definition at line 13709 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1boundaries_1ad1668c60aeade5f2557fafed8b8aee1a"/>    <section>
+    <title>w</title>
+<indexterm><primary>w</primary><secondary>nlohmann::detail::dtoa_impl::boundaries</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::boundaries</primary><secondary>w</secondary></indexterm>
+<para><computeroutput><link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::boundaries::w</computeroutput></para><para>
+Definition at line 13707 of file json.hpp.</para>
+</section>
+</section>
+</section>

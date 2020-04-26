@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1parser">
+<title>nlohmann::detail::parser&lt; BasicJsonType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary></indexterm>
+<para>
+
+<para>syntax analysis </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebe">parse_event_t</link> : uint8_t { 
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeae73f17027cb0acbb537f29d0a6944b26">parse_event_t::object_start</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeaf63e2a2468a37aa4f394fcc3bcb8249c">parse_event_t::object_end</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeaa4388a3d92419edbb1c6efd4d52461f3">parse_event_t::array_start</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea49642fb732aa2e112188fba1f9d3ef7f">parse_event_t::array_end</link>, 
+
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea3c6e0b8a9c15224a8228b9a98ca1531d">parse_event_t::key</link>, 
+<link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea2063c1608d6e0baf80249c42e2be5804">parse_event_t::value</link>
+ }</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> = std::function&lt; bool(int depth, <link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebe">parse_event_t</link> event, BasicJsonType &amp;parsed)&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1parser_1a1a2bd258b7e99f86b7e6a3c41373ba55">parser</link> (<link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> &amp;&amp;adapter, const <link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> cb=nullptr, const bool allow_exceptions_=true)</para>
+
+<para>a parser reading from an input adapter </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1parser_1a14338d8f3174601c0b2b7ef28752ab17">parse</link> (const bool strict, BasicJsonType &amp;result)</para>
+
+<para>public parser interface </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classnlohmann_1_1detail_1_1parser_1a20997b42262856935b60fc91bf05bf3f">accept</link> (const bool strict=true)</para>
+
+<para>public accept interface </para>
+</listitem>
+            <listitem><para>template&lt;typename SAX &gt; </para><para>bool <link linkend="_classnlohmann_1_1detail_1_1parser_1a14e34931965064b26e118eb72cbd5e25">sax_parse</link> (SAX *sax, const bool strict=true)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1aa0362897269e0a7e50ae07be05f42d8e">number_integer_t</link> = typename BasicJsonType::number_integer_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1a3773ccef366c61da2e6a8c0eda36d0ec">number_unsigned_t</link> = typename BasicJsonType::number_unsigned_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1a8ca8e734da0632c2731fc3b9547dcf28">number_float_t</link> = typename BasicJsonType::number_float_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1af67b9b0405262c40be2b13adaab8b046">string_t</link> = typename BasicJsonType::string_t</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1a16030c5af158a94d1c799f82ff3a0147">lexer_t</link> = <link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt; BasicJsonType &gt;</para>
+</listitem>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> = typename <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">lexer_t::token_type</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename SAX &gt; </para><para>bool <link linkend="_classnlohmann_1_1detail_1_1parser_1ad256ac6f45b213d29096a04b5aa3c587">sax_parse_internal</link> (SAX *sax)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1parser_1a33f3859d0dd402445b5859070fd24bab">get_token</link> ()</para>
+
+<para>get next token from lexer </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classnlohmann_1_1detail_1_1parser_1a1328166d9e9b655399fdc890d47e4990">exception_message</link> (const <link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> expected, const std::string &amp;context)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> <link linkend="_classnlohmann_1_1detail_1_1parser_1a7600d272ec605e3ffdc8512b3585f476">callback</link> = nullptr</para>
+
+<para>callback function </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1parser_1a932e49f6f4d291557846744319245994">last_token</link> = token_type::uninitialized</para>
+
+<para>the type of the last read token </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1parser_1a16030c5af158a94d1c799f82ff3a0147">lexer_t</link> <link linkend="_classnlohmann_1_1detail_1_1parser_1a22dcc815551a4052b87797b34171b352">m_lexer</link></para>
+
+<para>the lexer </para>
+</listitem>
+            <listitem><para>const bool <link linkend="_classnlohmann_1_1detail_1_1parser_1a3de1ea054cfa606e79fa07741f081b5f">allow_exceptions</link> = true</para>
+
+<para>whether to throw exceptions in case of errors </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType&gt;
+class nlohmann::detail::parser&lt; BasicJsonType &gt;</title></simplesect>
+
+
+<para>syntax analysis </para>
+
+
+
+<para>This class implements a recursive descent parser. </para>
+<para>
+Definition at line 9417 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a16030c5af158a94d1c799f82ff3a0147"/>    <section>
+    <title>lexer_t</title>
+<indexterm><primary>lexer_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>lexer_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1a16030c5af158a94d1c799f82ff3a0147">lexer_t</link> =  <link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link>&lt;BasicJsonType&gt;<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9423 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a8ca8e734da0632c2731fc3b9547dcf28"/>    <section>
+    <title>number_float_t</title>
+<indexterm><primary>number_float_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>number_float_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1a8ca8e734da0632c2731fc3b9547dcf28">number_float_t</link> =  typename BasicJsonType::number_float_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9421 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1aa0362897269e0a7e50ae07be05f42d8e"/>    <section>
+    <title>number_integer_t</title>
+<indexterm><primary>number_integer_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>number_integer_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1aa0362897269e0a7e50ae07be05f42d8e">number_integer_t</link> =  typename BasicJsonType::number_integer_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9419 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a3773ccef366c61da2e6a8c0eda36d0ec"/>    <section>
+    <title>number_unsigned_t</title>
+<indexterm><primary>number_unsigned_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>number_unsigned_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1a3773ccef366c61da2e6a8c0eda36d0ec">number_unsigned_t</link> =  typename BasicJsonType::number_unsigned_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9420 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1"/>    <section>
+    <title>parser_callback_t</title>
+<indexterm><primary>parser_callback_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>parser_callback_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> =  std::function&lt;bool(int depth, <link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebe">parse_event_t</link> event, BasicJsonType&amp; parsed)&gt;</computeroutput></para><para>
+Definition at line 9444 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1af67b9b0405262c40be2b13adaab8b046"/>    <section>
+    <title>string_t</title>
+<indexterm><primary>string_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>string_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1af67b9b0405262c40be2b13adaab8b046">string_t</link> =  typename BasicJsonType::string_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9422 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117"/>    <section>
+    <title>token_type</title>
+<indexterm><primary>token_type</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>token_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> =  typename <link linkend="_classnlohmann_1_1detail_1_1lexer_1a3f313cdbe187cababfc5e06f0b69b098">lexer_t::token_type</link><computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9424 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebe"/>    <section>
+    <title>parse_event_t</title>
+<indexterm><primary>parse_event_t</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>parse_event_t</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>enum <link linkend="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebe">nlohmann::detail::parser::parse_event_t</link> : uint8_t<computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>object_start</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>object_start</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeae73f17027cb0acbb537f29d0a6944b26"/>object_start</entry><entry>
+<para>the parser read <computeroutput>{</computeroutput> and started to process a JSON object </para>
+</entry></row><row><entry><indexterm><primary>object_end</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>object_end</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeaf63e2a2468a37aa4f394fcc3bcb8249c"/>object_end</entry><entry>
+<para>the parser read <computeroutput>}</computeroutput> and finished processing a JSON object </para>
+</entry></row><row><entry><indexterm><primary>array_start</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>array_start</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebeaa4388a3d92419edbb1c6efd4d52461f3"/>array_start</entry><entry>
+<para>the parser read <computeroutput>[</computeroutput> and started to process a JSON array </para>
+</entry></row><row><entry><indexterm><primary>array_end</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>array_end</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea49642fb732aa2e112188fba1f9d3ef7f"/>array_end</entry><entry>
+<para>the parser read <computeroutput>]</computeroutput> and finished processing a JSON array </para>
+</entry></row><row><entry><indexterm><primary>key</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>key</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea3c6e0b8a9c15224a8228b9a98ca1531d"/>key</entry><entry>
+<para>the parser read a key of a value in an object </para>
+</entry></row><row><entry><indexterm><primary>value</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>value</secondary></indexterm>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a37ac88c864dda495f72cb62776b0bebea2063c1608d6e0baf80249c42e2be5804"/>value</entry><entry>
+<para>the parser finished reading a JSON value </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 9427 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a1a2bd258b7e99f86b7e6a3c41373ba55"/>    <section>
+    <title>parser()</title>
+<indexterm><primary>parser</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>parser</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1parser">parser</link> (<link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">detail::input_adapter_t</link> &amp;&amp; adapter, const <link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> cb = <computeroutput>nullptr</computeroutput>
+, const bool allow_exceptions_ = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>a parser reading from an input adapter </para>
+</para>
+<para>
+Definition at line 9447 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a20997b42262856935b60fc91bf05bf3f"/>    <section>
+    <title>accept()</title>
+<indexterm><primary>accept</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>accept</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::accept (const bool strict = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>public accept interface </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>strict</entry>
+                                <entry>
+<para>whether to expect the last token to be EOF </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>whether the input is a proper JSON text </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9527 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a1328166d9e9b655399fdc890d47e4990"/>    <section>
+    <title>exception_message()</title>
+<indexterm><primary>exception_message</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>exception_message</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>std::string <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::exception_message (const <link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> expected, const std::string &amp; context)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9842 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a33f3859d0dd402445b5859070fd24bab"/>    <section>
+    <title>get_token()</title>
+<indexterm><primary>get_token</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>get_token</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::get_token ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>get next token from lexer </para>
+</para>
+<para>
+Definition at line 9837 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a14338d8f3174601c0b2b7ef28752ab17"/>    <section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>parse</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::parse (const bool strict, BasicJsonType &amp; result)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>public parser interface </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>strict</entry>
+                                <entry>
+<para>whether to expect the last token to be EOF </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>result</entry>
+                                <entry>
+<para>parsed JSON value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>parse_error.101</entry>
+                                <entry>
+<para>in case of an unexpected token </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.102</entry>
+                                <entry>
+<para>if to_unicode fails or surrogate error </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>parse_error.103</entry>
+                                <entry>
+<para>if to_unicode fails </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line 9466 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a14e34931965064b26e118eb72cbd5e25"/>    <section>
+    <title>sax_parse()</title>
+<indexterm><primary>sax_parse</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>sax_parse</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><computeroutput>template&lt;typename SAX &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::sax_parse (SAX * sax, const bool strict = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 9535 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1ad256ac6f45b213d29096a04b5aa3c587"/>    <section>
+    <title>sax_parse_internal()</title>
+<indexterm><primary>sax_parse_internal</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>sax_parse_internal</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><computeroutput>template&lt;typename SAX &gt; </computeroutput><para><computeroutput>bool <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::sax_parse_internal (SAX * sax)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9555 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a3de1ea054cfa606e79fa07741f081b5f"/>    <section>
+    <title>allow_exceptions</title>
+<indexterm><primary>allow_exceptions</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>allow_exceptions</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const bool <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::allow_exceptions = true<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>whether to throw exceptions in case of errors </para>
+</para>
+<para>
+Definition at line 9879 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a7600d272ec605e3ffdc8512b3585f476"/>    <section>
+    <title>callback</title>
+<indexterm><primary>callback</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>callback</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1parser_1ad250ad4f2b4af4a497e727c963162ff1">parser_callback_t</link> <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::callback = nullptr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>callback function </para>
+</para>
+<para>
+Definition at line 9873 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a932e49f6f4d291557846744319245994"/>    <section>
+    <title>last_token</title>
+<indexterm><primary>last_token</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>last_token</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1parser_1a21d247111b332785b7acf3f8e487d117">token_type</link> <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::last_token = token_type::uninitialized<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the type of the last read token </para>
+</para>
+<para>
+Definition at line 9875 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1parser_1a22dcc815551a4052b87797b34171b352"/>    <section>
+    <title>m_lexer</title>
+<indexterm><primary>m_lexer</primary><secondary>nlohmann::detail::parser&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::parser&lt; BasicJsonType &gt;</primary><secondary>m_lexer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1parser_1a16030c5af158a94d1c799f82ff3a0147">lexer_t</link> <link linkend="_classnlohmann_1_1detail_1_1parser">nlohmann::detail::parser</link>&lt; BasicJsonType &gt;::m_lexer<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>the lexer </para>
+</para>
+<para>
+Definition at line 9877 of file json.hpp.</para>
+</section>
+</section>
+</section>

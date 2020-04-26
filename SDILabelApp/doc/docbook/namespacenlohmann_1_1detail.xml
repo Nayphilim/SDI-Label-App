@@ -1,0 +1,1213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacenlohmann_1_1detail">
+<title>nlohmann::detail Namespace Reference</title>
+<indexterm><primary>nlohmann::detail</primary></indexterm>
+<para>
+
+<para>detail namespace with internal helper functions </para>
+ 
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para> <link linkend="_namespacenlohmann_1_1detail_1_1dtoa__impl">dtoa_impl</link></para>
+
+<para>implements the Grisu2 algorithm for binary to decimal floating-point conversion. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1binary__reader">binary_reader</link></para>
+
+<para>deserialization of CBOR, MessagePack, and UBJSON values </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1binary__writer">binary_writer</link></para>
+
+<para>serialization to CBOR and MessagePack values </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction">conjunction</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction_3_01_b1_01_4">conjunction&lt; B1 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1conjunction_3_01_b1_00_01_bn_8_8_8_01_4">conjunction&lt; B1, Bn... &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1detector_3_01_default_00_01void__t_3_01_op_3_01_args_8_8_8_01_4_01_4_00_01_op_00_01_args_8_8_8_01_4">detector&lt; Default, void_t&lt; Op&lt; Args... &gt; &gt;, Op, Args... &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1exception">exception</link></para>
+
+<para>general exception of the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor">external_constructor</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1array_01_4">external_constructor&lt; value_t::array &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1binary_01_4">external_constructor&lt; value_t::binary &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1boolean_01_4">external_constructor&lt; value_t::boolean &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__float_01_4">external_constructor&lt; value_t::number_float &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__integer_01_4">external_constructor&lt; value_t::number_integer &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1number__unsigned_01_4">external_constructor&lt; value_t::number_unsigned &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1object_01_4">external_constructor&lt; value_t::object &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1external__constructor_3_01value__t_1_1string_01_4">external_constructor&lt; value_t::string &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1file__input__adapter">file_input_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1from__json__fn">from_json_fn</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__from__json">has_from_json</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__from__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01e29213c543deddccc314d19cbaf9f3b4">has_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json">has_non_default_from_json</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207">has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__to__json">has_to_json</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1has__to__json_3_01_basic_json_type_00_01_t_00_01enable__if__t_3_01nob111e71d40e2273c290d1ce5c6a3b84f">has_to_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1index__sequence">index_sequence</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__adapter">input_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol">input_adapter_protocol</link></para>
+
+<para>abstract input adapter interface </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__buffer__adapter">input_buffer_adapter</link></para>
+
+<para>input adapter for buffer input </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1input__stream__adapter">input_stream_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1internal__iterator">internal_iterator</link></para>
+
+<para>an iterator value </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">invalid_iterator</link></para>
+
+<para>exception indicating errors with iterators </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__basic__json">is_basic_json</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__basic__json_3_01_n_l_o_h_m_a_n_n___b_a_s_i_c___j_s_o_n___t_p_l_01_4">is_basic_json&lt; NLOHMANN_BASIC_JSON_TPL &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type">is_compatible_array_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type__impl">is_compatible_array_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__array__type__impl_3_01_basic_json_type_00_01_compati04c4671a9fa75002365be1949a74f972">is_compatible_array_type_impl&lt; BasicJsonType, CompatibleArrayType, enable_if_t&lt; is_detected&lt; value_type_t, CompatibleArrayType &gt;::value and is_detected&lt; iterator_t, CompatibleArrayType &gt;::value and not is_iterator_traits&lt; iterator_traits&lt; CompatibleArrayType &gt; &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type">is_compatible_integer_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type__impl">is_compatible_integer_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__integer__type__impl_3_01_real_integer_type_00_01_com5aa74bcf254245a639da00509f4d2655">is_compatible_integer_type_impl&lt; RealIntegerType, CompatibleNumberIntegerType, enable_if_t&lt; std::is_integral&lt; RealIntegerType &gt;::value and std::is_integral&lt; CompatibleNumberIntegerType &gt;::value and not std::is_same&lt; bool, CompatibleNumberIntegerType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type">is_compatible_object_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type__impl">is_compatible_object_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__object__type__impl_3_01_basic_json_type_00_01_compatfbe9a153c4ecce445c98bbdd2d65f605">is_compatible_object_type_impl&lt; BasicJsonType, CompatibleObjectType, enable_if_t&lt; is_detected&lt; mapped_type_t, CompatibleObjectType &gt;::value and is_detected&lt; key_type_t, CompatibleObjectType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type">is_compatible_string_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type__impl">is_compatible_string_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__string__type__impl_3_01_basic_json_type_00_01_compat6590904cab40fc73f430e4c7518179a2">is_compatible_string_type_impl&lt; BasicJsonType, CompatibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, CompatibleStringType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type">is_compatible_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type__impl">is_compatible_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__compatible__type__impl_3_01_basic_json_type_00_01_compatible_typ632bee7ec037fc0233f1bbe9dd7d8874">is_compatible_type_impl&lt; BasicJsonType, CompatibleType, enable_if_t&lt; is_complete_type&lt; CompatibleType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__complete__type">is_complete_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__complete__type_3_01_t_00_01decltype_07void_07sizeof_07_t_08_08_08_4">is_complete_type&lt; T, decltype(void(sizeof(T)))&gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type">is_constructible_array_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl">is_constructible_array_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_cons437c79c936c626a4ffcf289ee9218c26">is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; not std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value and std::is_default_constructible&lt; ConstructibleArrayType &gt;::value and(std::is_move_assignable&lt; ConstructibleArrayType &gt;::value or std::is_copy_assignable&lt; ConstructibleArrayType &gt;::value) andis_detected&lt; value_type_t, ConstructibleArrayType &gt;::value andis_detected&lt; iterator_t, ConstructibleArrayType &gt;::value andis_complete_type&lt; detected_t&lt; value_type_t, ConstructibleArrayType &gt; &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__array__type__impl_3_01_basic_json_type_00_01_cons8cf88e17d5eaa68665a8fb4b97604b0e">is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type">is_constructible_object_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type__impl">is_constructible_object_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__object__type__impl_3_01_basic_json_type_00_01_con6e3270de8050717120afcafe87648413">is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType, enable_if_t&lt; is_detected&lt; mapped_type_t, ConstructibleObjectType &gt;::value and is_detected&lt; key_type_t, ConstructibleObjectType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type">is_constructible_string_type</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl">is_constructible_string_type_impl</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__string__type__impl_3_01_basic_json_type_00_01_con83e8ebfe9593f851a60fdb8360df1512">is_constructible_string_type_impl&lt; BasicJsonType, ConstructibleStringType, enable_if_t&lt; is_detected_exact&lt; typename BasicJsonType::string_t::value_type, value_type_t, ConstructibleStringType &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__tuple">is_constructible_tuple</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__constructible__tuple_3_01_t1_00_01std_1_1tuple_3_01_args_8_8_8_01_4_01_4">is_constructible_tuple&lt; T1, std::tuple&lt; Args... &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__iterator__traits">is_iterator_traits</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__iterator__traits_3_01iterator__traits_3_01_t_01_4_01_4">is_iterator_traits&lt; iterator_traits&lt; T &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__json__ref">is_json_ref</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__json__ref_3_01json__ref_3_01_t_01_4_01_4">is_json_ref&lt; json_ref&lt; T &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__sax">is_sax</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1is__sax__static__asserts">is_sax_static_asserts</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iter__impl">iter_impl</link></para>
+
+<para>a template for a bidirectional iterator for the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class This class implements a both iterators (iterator and const_iterator) for the <link linkend="_classnlohmann_1_1basic__json">basic_json</link> class. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy">iteration_proxy</link></para>
+
+<para>proxy class for the items() function </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">iteration_proxy_value</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits">iterator_traits</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits_3_01_t_01_5_00_01enable__if__t_3_01std_1_1is__objec8d960665487688165530972cda4f1bea">iterator_traits&lt; T *, enable_if_t&lt; std::is_object&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__traits_3_01_t_00_01enable__if__t_3_01_9std_1_1is__pointer_3_01_t_01_4_1_1value_01_4_01_4">iterator_traits&lt; T, enable_if_t&lt; !std::is_pointer&lt; T &gt;::value &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__types">iterator_types</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1iterator__types_3_01_it_00_01void__t_3_01typename_01_it_1_1differenc4a413e9bd546446175f10f15c5631361">iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__reverse__iterator">json_reverse_iterator</link></para>
+
+<para>a template for a reverse iterator class </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__acceptor">json_sax_acceptor</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__dom__callback__parser">json_sax_dom_callback_parser</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1json__sax__dom__parser">json_sax_dom_parser</link></para>
+
+<para>SAX implementation to create a JSON value from SAX events. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1lexer">lexer</link></para>
+
+<para>lexical analysis </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence">make_index_sequence</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence_3_010_01_4">make_index_sequence&lt; 0 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence_3_011_01_4">make_index_sequence&lt; 1 &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1make__void">make_void</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1merge__and__renumber">merge_and_renumber</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1merge__and__renumber_3_01index__sequence_3_01_i1_8_8_8_01_4_00_01indf5ec8c9c7b5107e4b381e3ca4c1be2ca">merge_and_renumber&lt; index_sequence&lt; I1... &gt;, index_sequence&lt; I2... &gt; &gt;</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1nonesuch">nonesuch</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1other__error">other_error</link></para>
+
+<para>exception indicating other library errors </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link></para>
+
+<para>exception indicating access out of the defined range </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__adapter">output_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1output__adapter__protocol">output_adapter_protocol</link></para>
+
+<para>abstract output adapter interface </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__stream__adapter">output_stream_adapter</link></para>
+
+<para>output adapter for output streams </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__string__adapter">output_string_adapter</link></para>
+
+<para>output adapter for basic_string </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1output__vector__adapter">output_vector_adapter</link></para>
+
+<para>output adapter for byte vectors </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link></para>
+
+<para>exception indicating a parse error </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1parser">parser</link></para>
+
+<para>syntax analysis </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1position__t">position_t</link></para>
+
+<para>struct to capture the start position of the current token </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1priority__tag_3_010_01_4">priority_tag&lt; 0 &gt;</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1serializer">serializer</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1static__const">static_const</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1to__json__fn">to_json_fn</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link></para>
+
+<para>exception indicating executing a member function with a wrong type </para>
+</listitem>
+            <listitem><para>class <link linkend="_classnlohmann_1_1detail_1_1wide__string__input__adapter">wide_string_input_adapter</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1wide__string__input__helper">wide_string_input_helper</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structnlohmann_1_1detail_1_1wide__string__input__helper_3_01_wide_string_type_00_012_01_4">wide_string_input_helper&lt; WideStringType, 2 &gt;</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;bool B, typename T  = void&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">enable_if_t</link> = typename std::enable_if&lt; B, T &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a53a082eedad9f4729fcd8fed552a21f7">uncvref_t</link> = typename std::remove_cv&lt; typename std::remove_reference&lt; T &gt;::type &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;typename... Ts&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a24800493c6ec02ce033dcbb47b7fd28e">index_sequence_for</link> = <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence">make_index_sequence</link>&lt; sizeof...(Ts)&gt;</para>
+</listitem>
+            <listitem><para>template&lt;typename ... Ts&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a92a167c49c6697b6ffe4f79492c705e5">void_t</link> = typename <link linkend="_structnlohmann_1_1detail_1_1make__void">make_void</link>&lt; Ts... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9135fcf616d6ac6e231a86e0a055ac44">is_detected</link> = typename <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt; <link linkend="_structnlohmann_1_1detail_1_1nonesuch">nonesuch</link>, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args... &gt;::<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link></para>
+</listitem>
+            <listitem><para>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">detected_t</link> = typename <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt; <link linkend="_structnlohmann_1_1detail_1_1nonesuch">nonesuch</link>, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce">detected_or</link> = <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt; Default, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args... &gt;</para>
+</listitem>
+            <listitem><para>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a7ac5b8ef0363101275a2827b3b117dcf">detected_or_t</link> = typename <link linkend="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce">detected_or</link>&lt; Default, Op, Args... &gt;::type</para>
+</listitem>
+            <listitem><para>template&lt;class Expected , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def">is_detected_exact</link> = std::is_same&lt; Expected, <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">detected_t</link>&lt; Op, Args... &gt; &gt;</para>
+</listitem>
+            <listitem><para>template&lt;class To , template&lt; class... &gt; class Op, class... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a5262e531c46e357b33007060f294673b">is_detected_convertible</link> = std::is_convertible&lt; <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">detected_t</link>&lt; Op, Args... &gt;, To &gt;</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9c1795c148875722f8482d39e0eb9364">mapped_type_t</link> = typename T::mapped_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a66dfe39f03b05d6b7265a0ff748d64ef">key_type_t</link> = typename T::key_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af91beae90c2fb0f931079b3d50a343bc">value_type_t</link> = typename T::value_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a3603b59a17d1c5e15050743b847992f2">difference_type_t</link> = typename T::difference_type</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a26dc71e2dd9336587e56062178f9abce">pointer_t</link> = typename T::pointer</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a082bdafd3b4c61d9d1e92b35b8f75ee3">reference_t</link> = typename T::reference</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ad22d2aa3aab018050ae519f6754366e1">iterator_category_t</link> = typename T::iterator_category</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9ff93db146174305bce1bc4c54703e11">iterator_t</link> = typename T::iterator</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af846b6cf2f926009ff3a7a61495ca383">to_json_function</link> = decltype(T::to_json(std::declval&lt; Args &gt;()...))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename... Args&gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a1711ee5cef66a0523055c8d9f024f322">from_json_function</link> = decltype(T::from_json(std::declval&lt; Args &gt;()...))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename U &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ab4d22cdb6521ee3508db496dea66711e">get_template_function</link> = decltype(std::declval&lt; T &gt;().template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt; U &gt;())</para>
+</listitem>
+            <listitem><para>using <link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">input_adapter_t</link> = std::shared_ptr&lt; <link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol">input_adapter_protocol</link> &gt;</para>
+
+<para>a type to simplify interfaces </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ac1b4e524746bf8b790b2b776048b93c4">null_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().null())</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a45ec87326503b8884b664a9ef23a6c99">boolean_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().boolean(std::declval&lt; bool &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Integer &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a4a3e14a011b9ea1ff849fc6d2411e6a0">number_integer_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_integer(std::declval&lt; Integer &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Unsigned &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a74da7b17bda76f65d276feb18209c913">number_unsigned_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_unsigned(std::declval&lt; Unsigned &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Float , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1ad42df56e913abe26ed556e0e92f386f4">number_float_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().number_float(std::declval&lt; Float &gt;(), std::declval&lt; const String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a27c3fc3bd42ac406f763184aa8ae4cb0">string_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().string(std::declval&lt; String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a5fff1e6dcaabd367d9b1109a5682f9d4">start_object_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().start_object(std::declval&lt; std::size_t &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename String &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a44869ca9f422b260625d78e4e8121559">key_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().key(std::declval&lt; String &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1af52d6d2521c386998ae940d118182ebc">end_object_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().end_object())</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a80273cecc45765d7b2826ec931fbffdd">start_array_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().start_array(std::declval&lt; std::size_t &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1aec53c029383b34a72182210e58fadb79">end_array_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().end_array())</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Exception &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a264d4d58bc1fd82bcc7bf6bf73d6acad">parse_error_function_t</link> = decltype(std::declval&lt; T &amp; &gt;().<link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link>(std::declval&lt; std::size_t &gt;(), std::declval&lt; const std::string &amp; &gt;(), std::declval&lt; const Exception &amp; &gt;()))</para>
+</listitem>
+            <listitem><para>template&lt;typename CharType &gt; </para><para>using <link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">output_adapter_t</link> = std::shared_ptr&lt; <link linkend="_structnlohmann_1_1detail_1_1output__adapter__protocol">output_adapter_protocol</link>&lt; CharType &gt; &gt;</para>
+
+<para>a type to simplify interfaces </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> : std::uint8_t { 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a37a6259cc0c1dae299a7866489dff0bd">value_t::null</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666">value_t::object</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985af1f713c9e000f5d3f280adbd124df4f5">value_t::array</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ab45cffe084dd3d20d928bee85e7b0f21">value_t::string</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a84e2c64f38f78ba3ea5c905ab5a2da27">value_t::boolean</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a5763da164f8659d94a56e29df64b4bcc">value_t::number_integer</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985adce7cc8ec29055c4158828921f2f265e">value_t::number_unsigned</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ad9966ecb59667235a57b4b999a649eef">value_t::number_float</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a9d7183f16acce70658f686ae7f1a4d20">value_t::binary</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a94708897ec9db8647dfe695714c98e46">value_t::discarded</link>
+ }</para>
+
+<para>the JSON type enumeration </para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40">input_format_t</link> { 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a466deec76ecdf5fca6d38571f6324d54">input_format_t::json</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40aaf9de350d652f0c9055ddab514bd23ea">input_format_t::cbor</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40ac40d516627022a54003ac2b74a82688a">input_format_t::msgpack</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a4537f20910e85437f6d07701864084e8">input_format_t::ubjson</link>, 
+
+<link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a0b6879b186bfb2b1ec65d2460e4eccd4">input_format_t::bson</link>
+ }</para>
+
+<para>the supported input formats </para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967df">error_handler_t</link> { <link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa2133fd717402a7966ee88d06f9e0b792">error_handler_t::strict</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa9dde360102c103867bd2f45872f1129c">error_handler_t::replace</link>, 
+<link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa567bc1d268f135496de3d5b946b691f3">error_handler_t::ignore</link>
+ }</para>
+
+<para>how to treat decoding errors </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_namespacenlohmann_1_1detail_1a09169efff3bd1771fff29bd92cea19e0">operator&lt;</link> (const <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> lhs, const <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> rhs) noexcept</para>
+
+<para>comparison operator for JSON types </para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a1f0395aad0fe853a4539288749d3a603">from_json</link> (const BasicJsonType &amp;j, typename std::nullptr_t &amp;n)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a85955b9c6dd31846e4b8e891f78614b6">get_arithmetic_value</link> (const BasicJsonType &amp;j, ArithmeticType &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a58117f225f43d03e3a0a4a6f3d77c9d9">from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::boolean_t &amp;b)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ad74d89f77ada7a57eff38b43d4bf2335">from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::string_t &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleStringType , enable_if_t&lt; is_constructible_string_type&lt; BasicJsonType, ConstructibleStringType &gt;::value and not std::is_same&lt; typename BasicJsonType::string_t, ConstructibleStringType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a2932f2bc2943dac6d51669312f4fc0f5">from_json</link> (const BasicJsonType &amp;j, ConstructibleStringType &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a7cb5dd7d46a60e65f9a8e0873b3f7dd8">from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_float_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ace4d5680ba413d9fd897ccb5d9c61a1c">from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_unsigned_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a047d881e611fcac709dc318f730a1732">from_json</link> (const BasicJsonType &amp;j, typename BasicJsonType::number_integer_t &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a5440d650150d01e8015133521351b459">from_json</link> (const BasicJsonType &amp;j, EnumType &amp;e)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , typename Allocator , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a5cfb765aad92795abd7fda29d017272a">from_json</link> (const BasicJsonType &amp;j, std::forward_list&lt; T, Allocator &gt; &amp;l)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a3df497b1d3977f071b488ecac1401517">from_json</link> (const BasicJsonType &amp;j, std::valarray&lt; T &gt; &amp;l)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a7deb2db8eed6f1762373dde7a6595760">from_json</link> (const BasicJsonType &amp;j, T(&amp;arr)[N]) -&gt; decltype(j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt; T &gt;(), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a40f7bb070a60e8ba14fffb9c117fcbd8">from_json_array_impl</link> (const BasicJsonType &amp;j, typename BasicJsonType::array_t &amp;arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 3 &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1aba0ce45ebb69fd2c7132a00f9a56b503">from_json_array_impl</link> (const BasicJsonType &amp;j, std::array&lt; T, N &gt; &amp;arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 2 &gt;) -&gt; decltype(j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt; T &gt;(), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a464e1246f3df7edea79c3f81ab701edd">from_json_array_impl</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 1 &gt;) -&gt; decltype(arr.reserve(std::declval&lt; typename ConstructibleArrayType::size_type &gt;()), j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt; typename ConstructibleArrayType::value_type &gt;(), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a20cf21255e75cff1ffb0869c2c545e63">from_json_array_impl</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 0 &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleArrayType , enable_if_t&lt; is_constructible_array_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_object_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_string_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_basic_json&lt; ConstructibleArrayType &gt;::value, int &gt;  = 0&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1a14d8cdf544585f1c38eab6a0820e55f7">from_json</link> (const BasicJsonType &amp;j, ConstructibleArrayType &amp;arr) -&gt; decltype(<link linkend="_namespacenlohmann_1_1detail_1a40f7bb070a60e8ba14fffb9c117fcbd8">from_json_array_impl</link>(j, arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 3 &gt;</para>
+</listitem>
+            <listitem><para>j template <link linkend="_namespacenlohmann_1_1detail_1ad9e016d7b6a3cd2847027950aa0aac3b">get&lt; typename ConstructibleArrayType::value_type &gt;</link> ()</para>
+</listitem>
+            <listitem><para>j template <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> ())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ConstructibleObjectType , enable_if_t&lt; is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a5b24896e5f5db6af06d939dde4b63fe1">from_json</link> (const BasicJsonType &amp;j, ConstructibleObjectType &amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_unsigned_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_integer_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_float_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a839b0ab50d2c9bce669068f56bc41202">from_json</link> (const BasicJsonType &amp;j, ArithmeticType &amp;val)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename A1 , typename A2 &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1aae9f9c2601074e323d49428132cc293d">from_json</link> (const BasicJsonType &amp;j, std::pair&lt; A1, A2 &gt; &amp;p)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a28253915d9db4a0112d60eaee0422949">from_json_tuple_impl</link> (const BasicJsonType &amp;j, Tuple &amp;t, <link linkend="_structnlohmann_1_1detail_1_1index__sequence">index_sequence</link>&lt; Idx... &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename... Args&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a8b99ec9b29f3f20a18fc4281fb784e49">from_json</link> (const BasicJsonType &amp;j, std::tuple&lt; Args... &gt; &amp;t)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Key , typename Value , typename Compare , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ae93147a54d2740228ef16a5e6210ca3e">from_json</link> (const BasicJsonType &amp;j, std::map&lt; Key, Value, Compare, Allocator &gt; &amp;m)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Key , typename Value , typename Hash , typename KeyEqual , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1aef5c8ea108f4d2b03fb4a635617510de">from_json</link> (const BasicJsonType &amp;j, std::unordered_map&lt; Key, Value, Hash, KeyEqual, Allocator &gt; &amp;m)</para>
+</listitem>
+            <listitem><para>template&lt;typename string_type &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a3c45286b0a2f15ea0a756cb87a76cf9b">int_to_string</link> (string_type &amp;target, std::size_t value)</para>
+</listitem>
+            <listitem><para>template&lt;std::size_t N, typename IteratorType , enable_if_t&lt; N==0, int &gt;  = 0&gt; </para><para>auto <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link> (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt; &amp;i) -&gt; decltype(i.key())</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490">to_json</link> (BasicJsonType &amp;j, T b) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleString , enable_if_t&lt; std::is_constructible&lt; typename BasicJsonType::string_t, CompatibleString &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a7356ed05cdbbb080cee80e1211e1c6c9">to_json</link> (BasicJsonType &amp;j, const CompatibleString &amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a4aa1ca6b7c61bf19d1f30ea5b669f68e">to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::string_t &amp;&amp;s)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename FloatType , enable_if_t&lt; std::is_floating_point&lt; FloatType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a22bffdc8bc7e43af380ba2050696b230">to_json</link> (BasicJsonType &amp;j, FloatType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleNumberUnsignedType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_unsigned_t, CompatibleNumberUnsignedType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ae5fd66b5517b3b5a6c6b9fd9f29ba8dc">to_json</link> (BasicJsonType &amp;j, CompatibleNumberUnsignedType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleNumberIntegerType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_integer_t, CompatibleNumberIntegerType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a91fe576be579c8c2fdd14610605c6dd2">to_json</link> (BasicJsonType &amp;j, CompatibleNumberIntegerType val) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a0c8b159dba71981d6c555d284cf6e2bf">to_json</link> (BasicJsonType &amp;j, EnumType e) noexcept</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1aeca6fb5fede5ed1e12a4420d98a5692b">to_json</link> (BasicJsonType &amp;j, const std::vector&lt; bool &gt; &amp;e)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleArrayType , enable_if_t&lt; is_compatible_array_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_object_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_string_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_basic_json&lt; CompatibleArrayType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a3afebc132c5ff83f9cd160e52030fdfd">to_json</link> (BasicJsonType &amp;j, const CompatibleArrayType &amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; T, BasicJsonType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a7f7c7b9760161b774cdc0b4b838fae64">to_json</link> (BasicJsonType &amp;j, const std::valarray&lt; T &gt; &amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1aa0fd1b5788e9ba37e31da43dda738cb5">to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::array_t &amp;&amp;arr)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename CompatibleObjectType , enable_if_t&lt; is_compatible_object_type&lt; BasicJsonType, CompatibleObjectType &gt;::value and not is_basic_json&lt; CompatibleObjectType &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a24c9c12f3839c94e09532f08de85e949">to_json</link> (BasicJsonType &amp;j, const CompatibleObjectType &amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType &gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ac9f7a5542851c61d93740148eaec509f">to_json</link> (BasicJsonType &amp;j, typename BasicJsonType::object_t &amp;&amp;obj)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , std::size_t N, enable_if_t&lt; not std::is_constructible&lt; typename BasicJsonType::string_t, const T(&amp;)[N]&gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a20ea5175c8999fc8b673e46b892f71f6">to_json</link> (BasicJsonType &amp;j, const T(&amp;arr)[N])</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T1 , typename T2 , enable_if_t&lt; std::is_constructible&lt; BasicJsonType, T1 &gt;::value &amp;&amp;std::is_constructible&lt; BasicJsonType, T2 &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1ab64eeb55b44db44eb8e9070229eb97df">to_json</link> (BasicJsonType &amp;j, const std::pair&lt; T1, T2 &gt; &amp;p)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, iteration_proxy_value&lt; typename BasicJsonType::iterator &gt;&gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1aaa77b0c9745130b77733a92a1a2e82ec">to_json</link> (BasicJsonType &amp;j, const T &amp;b)</para>
+</listitem>
+            <listitem><para>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </para><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_namespacenlohmann_1_1detail_1a510dfa15b01e9a8afe31600a27b28199">to_json_tuple_impl</link> (BasicJsonType &amp;j, const Tuple &amp;t, <link linkend="_structnlohmann_1_1detail_1_1index__sequence">index_sequence</link>&lt; Idx... &gt;)</para>
+</listitem>
+            <listitem><para>template&lt;typename FloatType &gt; </para><para><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char * <link linkend="_namespacenlohmann_1_1detail_1a6cca370ac6c99294dbe4fe24716a57dd">to_chars</link> (char *first, const char *last, FloatType value)</para>
+
+<para>generates a decimal representation of the floating-point number value in [first, last). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>detail namespace with internal helper functions </para>
+
+<para>This namespace collects functions that should not be exposed, implementations of some <link linkend="_classnlohmann_1_1basic__json">basic_json</link> methods, and meta-programming helpers.</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 2.1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a45ec87326503b8884b664a9ef23a6c99"/>    <section>
+    <title>boolean_function_t</title>
+<indexterm><primary>boolean_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>boolean_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a45ec87326503b8884b664a9ef23a6c99">nlohmann::detail::boolean_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().boolean(std::declval&lt;bool&gt;()))</computeroutput></para><para>
+Definition at line 5452 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce"/>    <section>
+    <title>detected_or</title>
+<indexterm><primary>detected_or</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>detected_or</secondary></indexterm>
+<computeroutput>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce">nlohmann::detail::detected_or</link> = typedef <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt;Default, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args...&gt;</computeroutput></para><para>
+Definition at line 2687 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7ac5b8ef0363101275a2827b3b117dcf"/>    <section>
+    <title>detected_or_t</title>
+<indexterm><primary>detected_or_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>detected_or_t</secondary></indexterm>
+<computeroutput>template&lt;class Default , template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a7ac5b8ef0363101275a2827b3b117dcf">nlohmann::detail::detected_or_t</link> = typedef typename <link linkend="_namespacenlohmann_1_1detail_1a240ce21919ab08e8a6cb3a5cfa412bce">detected_or</link>&lt;Default, Op, Args...&gt;::type</computeroutput></para><para>
+Definition at line 2690 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d"/>    <section>
+    <title>detected_t</title>
+<indexterm><primary>detected_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>detected_t</secondary></indexterm>
+<computeroutput>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">nlohmann::detail::detected_t</link> = typedef typename <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt;<link linkend="_structnlohmann_1_1detail_1_1nonesuch">nonesuch</link>, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args...&gt;::type</computeroutput></para><para>
+Definition at line 2684 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a3603b59a17d1c5e15050743b847992f2"/>    <section>
+    <title>difference_type_t</title>
+<indexterm><primary>difference_type_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>difference_type_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a3603b59a17d1c5e15050743b847992f2">nlohmann::detail::difference_type_t</link> = typedef typename T::difference_type</computeroutput></para><para>
+Definition at line 2826 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c"/>    <section>
+    <title>enable_if_t</title>
+<indexterm><primary>enable_if_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>enable_if_t</secondary></indexterm>
+<computeroutput>template&lt;bool B, typename T  = void&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">nlohmann::detail::enable_if_t</link> = typedef typename std::enable_if&lt;B, T&gt;::type</computeroutput></para><para>
+Definition at line 2508 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aec53c029383b34a72182210e58fadb79"/>    <section>
+    <title>end_array_function_t</title>
+<indexterm><primary>end_array_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>end_array_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1aec53c029383b34a72182210e58fadb79">nlohmann::detail::end_array_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().end_array())</computeroutput></para><para>
+Definition at line 5486 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1af52d6d2521c386998ae940d118182ebc"/>    <section>
+    <title>end_object_function_t</title>
+<indexterm><primary>end_object_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>end_object_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1af52d6d2521c386998ae940d118182ebc">nlohmann::detail::end_object_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().end_object())</computeroutput></para><para>
+Definition at line 5479 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a1711ee5cef66a0523055c8d9f024f322"/>    <section>
+    <title>from_json_function</title>
+<indexterm><primary>from_json_function</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_function</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a1711ee5cef66a0523055c8d9f024f322">nlohmann::detail::from_json_function</link> = typedef decltype(T::from_json(std::declval&lt;Args&gt;()...))</computeroutput></para><para>
+Definition at line 2844 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ab4d22cdb6521ee3508db496dea66711e"/>    <section>
+    <title>get_template_function</title>
+<indexterm><primary>get_template_function</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>get_template_function</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename U &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1ab4d22cdb6521ee3508db496dea66711e">nlohmann::detail::get_template_function</link> = typedef decltype(std::declval&lt;T&gt;().template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt;U&gt;())</computeroutput></para><para>
+Definition at line 2847 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a24800493c6ec02ce033dcbb47b7fd28e"/>    <section>
+    <title>index_sequence_for</title>
+<indexterm><primary>index_sequence_for</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>index_sequence_for</secondary></indexterm>
+<computeroutput>template&lt;typename... Ts&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a24800493c6ec02ce033dcbb47b7fd28e">nlohmann::detail::index_sequence_for</link> = typedef <link linkend="_structnlohmann_1_1detail_1_1make__index__sequence">make_index_sequence</link>&lt;sizeof...(Ts)&gt;</computeroutput></para><para>
+Definition at line 2542 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2"/>    <section>
+    <title>input_adapter_t</title>
+<indexterm><primary>input_adapter_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>input_adapter_t</secondary></indexterm>
+<para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1ae132f8cd5bb24c5e9b40ad0eafedf1c2">nlohmann::detail::input_adapter_t</link> = typedef std::shared_ptr&lt;<link linkend="_structnlohmann_1_1detail_1_1input__adapter__protocol">input_adapter_protocol</link>&gt;</computeroutput></para><para>
+
+<para>a type to simplify interfaces </para>
+</para>
+<para>
+Definition at line 4270 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a9135fcf616d6ac6e231a86e0a055ac44"/>    <section>
+    <title>is_detected</title>
+<indexterm><primary>is_detected</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>is_detected</secondary></indexterm>
+<computeroutput>template&lt;template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a9135fcf616d6ac6e231a86e0a055ac44">nlohmann::detail::is_detected</link> = typedef typename <link linkend="_structnlohmann_1_1detail_1_1detector">detector</link>&lt;<link linkend="_structnlohmann_1_1detail_1_1nonesuch">nonesuch</link>, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>, Op, Args...&gt;::<link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link></computeroutput></para><para>
+Definition at line 2681 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a5262e531c46e357b33007060f294673b"/>    <section>
+    <title>is_detected_convertible</title>
+<indexterm><primary>is_detected_convertible</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>is_detected_convertible</secondary></indexterm>
+<computeroutput>template&lt;class To , template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a5262e531c46e357b33007060f294673b">nlohmann::detail::is_detected_convertible</link> = typedef std::is_convertible&lt;<link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">detected_t</link>&lt;Op, Args...&gt;, To&gt;</computeroutput></para><para>
+Definition at line 2697 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def"/>    <section>
+    <title>is_detected_exact</title>
+<indexterm><primary>is_detected_exact</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>is_detected_exact</secondary></indexterm>
+<computeroutput>template&lt;class Expected , template&lt; class... &gt; class Op, class... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def">nlohmann::detail::is_detected_exact</link> = typedef std::is_same&lt;Expected, <link linkend="_namespacenlohmann_1_1detail_1a37e97a32d0b94ce5f745427e4e40204d">detected_t</link>&lt;Op, Args...&gt; &gt;</computeroutput></para><para>
+Definition at line 2693 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ad22d2aa3aab018050ae519f6754366e1"/>    <section>
+    <title>iterator_category_t</title>
+<indexterm><primary>iterator_category_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>iterator_category_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1ad22d2aa3aab018050ae519f6754366e1">nlohmann::detail::iterator_category_t</link> = typedef typename T::iterator_category</computeroutput></para><para>
+Definition at line 2835 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a9ff93db146174305bce1bc4c54703e11"/>    <section>
+    <title>iterator_t</title>
+<indexterm><primary>iterator_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>iterator_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a9ff93db146174305bce1bc4c54703e11">nlohmann::detail::iterator_t</link> = typedef typename T::iterator</computeroutput></para><para>
+Definition at line 2838 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a44869ca9f422b260625d78e4e8121559"/>    <section>
+    <title>key_function_t</title>
+<indexterm><primary>key_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>key_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename String &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a44869ca9f422b260625d78e4e8121559">nlohmann::detail::key_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().key(std::declval&lt;String&amp;&gt;()))</computeroutput></para><para>
+Definition at line 5476 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a66dfe39f03b05d6b7265a0ff748d64ef"/>    <section>
+    <title>key_type_t</title>
+<indexterm><primary>key_type_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>key_type_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a66dfe39f03b05d6b7265a0ff748d64ef">nlohmann::detail::key_type_t</link> = typedef typename T::key_type</computeroutput></para><para>
+Definition at line 2820 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a9c1795c148875722f8482d39e0eb9364"/>    <section>
+    <title>mapped_type_t</title>
+<indexterm><primary>mapped_type_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>mapped_type_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a9c1795c148875722f8482d39e0eb9364">nlohmann::detail::mapped_type_t</link> = typedef typename T::mapped_type</computeroutput></para><para>
+Definition at line 2817 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ac1b4e524746bf8b790b2b776048b93c4"/>    <section>
+    <title>null_function_t</title>
+<indexterm><primary>null_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>null_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1ac1b4e524746bf8b790b2b776048b93c4">nlohmann::detail::null_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().null())</computeroutput></para><para>
+Definition at line 5448 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ad42df56e913abe26ed556e0e92f386f4"/>    <section>
+    <title>number_float_function_t</title>
+<indexterm><primary>number_float_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_float_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Float , typename String &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1ad42df56e913abe26ed556e0e92f386f4">nlohmann::detail::number_float_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().number_float( std::declval&lt;Float&gt;(), std::declval&lt;const String&amp;&gt;()))</computeroutput></para><para>
+Definition at line 5464 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a4a3e14a011b9ea1ff849fc6d2411e6a0"/>    <section>
+    <title>number_integer_function_t</title>
+<indexterm><primary>number_integer_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_integer_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Integer &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a4a3e14a011b9ea1ff849fc6d2411e6a0">nlohmann::detail::number_integer_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().number_integer(std::declval&lt;Integer&gt;()))</computeroutput></para><para>
+Definition at line 5456 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a74da7b17bda76f65d276feb18209c913"/>    <section>
+    <title>number_unsigned_function_t</title>
+<indexterm><primary>number_unsigned_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_unsigned_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Unsigned &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a74da7b17bda76f65d276feb18209c913">nlohmann::detail::number_unsigned_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().number_unsigned(std::declval&lt;Unsigned&gt;()))</computeroutput></para><para>
+Definition at line 5460 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556"/>    <section>
+    <title>output_adapter_t</title>
+<indexterm><primary>output_adapter_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>output_adapter_t</secondary></indexterm>
+<computeroutput>template&lt;typename CharType &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a9b680ddfb58f27eb53a67229447fc556">nlohmann::detail::output_adapter_t</link> = typedef std::shared_ptr&lt;<link linkend="_structnlohmann_1_1detail_1_1output__adapter__protocol">output_adapter_protocol</link>&lt;CharType&gt; &gt;</computeroutput></para><para>
+
+<para>a type to simplify interfaces </para>
+</para>
+<para>
+Definition at line 11881 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a264d4d58bc1fd82bcc7bf6bf73d6acad"/>    <section>
+    <title>parse_error_function_t</title>
+<indexterm><primary>parse_error_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>parse_error_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Exception &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a264d4d58bc1fd82bcc7bf6bf73d6acad">nlohmann::detail::parse_error_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().<link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link>( std::declval&lt;std::size_t&gt;(), std::declval&lt;const std::string&amp;&gt;(), std::declval&lt;const Exception&amp;&gt;()))</computeroutput></para><para>
+Definition at line 5491 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a26dc71e2dd9336587e56062178f9abce"/>    <section>
+    <title>pointer_t</title>
+<indexterm><primary>pointer_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>pointer_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a26dc71e2dd9336587e56062178f9abce">nlohmann::detail::pointer_t</link> = typedef typename T::pointer</computeroutput></para><para>
+Definition at line 2829 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a082bdafd3b4c61d9d1e92b35b8f75ee3"/>    <section>
+    <title>reference_t</title>
+<indexterm><primary>reference_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>reference_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a082bdafd3b4c61d9d1e92b35b8f75ee3">nlohmann::detail::reference_t</link> = typedef typename T::reference</computeroutput></para><para>
+Definition at line 2832 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a80273cecc45765d7b2826ec931fbffdd"/>    <section>
+    <title>start_array_function_t</title>
+<indexterm><primary>start_array_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>start_array_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a80273cecc45765d7b2826ec931fbffdd">nlohmann::detail::start_array_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().start_array(std::declval&lt;std::size_t&gt;()))</computeroutput></para><para>
+Definition at line 5483 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a5fff1e6dcaabd367d9b1109a5682f9d4"/>    <section>
+    <title>start_object_function_t</title>
+<indexterm><primary>start_object_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>start_object_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a5fff1e6dcaabd367d9b1109a5682f9d4">nlohmann::detail::start_object_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().start_object(std::declval&lt;std::size_t&gt;()))</computeroutput></para><para>
+Definition at line 5472 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a27c3fc3bd42ac406f763184aa8ae4cb0"/>    <section>
+    <title>string_function_t</title>
+<indexterm><primary>string_function_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>string_function_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename String &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a27c3fc3bd42ac406f763184aa8ae4cb0">nlohmann::detail::string_function_t</link> = typedef decltype(std::declval&lt;T&amp;&gt;().string(std::declval&lt;String&amp;&gt;()))</computeroutput></para><para>
+Definition at line 5468 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1af846b6cf2f926009ff3a7a61495ca383"/>    <section>
+    <title>to_json_function</title>
+<indexterm><primary>to_json_function</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json_function</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename... Args&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1af846b6cf2f926009ff3a7a61495ca383">nlohmann::detail::to_json_function</link> = typedef decltype(T::to_json(std::declval&lt;Args&gt;()...))</computeroutput></para><para>
+Definition at line 2841 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a53a082eedad9f4729fcd8fed552a21f7"/>    <section>
+    <title>uncvref_t</title>
+<indexterm><primary>uncvref_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>uncvref_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a53a082eedad9f4729fcd8fed552a21f7">nlohmann::detail::uncvref_t</link> = typedef typename std::remove_cv&lt;typename std::remove_reference&lt;T&gt;::type&gt;::type</computeroutput></para><para>
+Definition at line 2511 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1af91beae90c2fb0f931079b3d50a343bc"/>    <section>
+    <title>value_type_t</title>
+<indexterm><primary>value_type_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>value_type_t</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1af91beae90c2fb0f931079b3d50a343bc">nlohmann::detail::value_type_t</link> = typedef typename T::value_type</computeroutput></para><para>
+Definition at line 2823 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a92a167c49c6697b6ffe4f79492c705e5"/>    <section>
+    <title>void_t</title>
+<indexterm><primary>void_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>void_t</secondary></indexterm>
+<computeroutput>template&lt;typename ... Ts&gt; </computeroutput><para><computeroutput>using <link linkend="_namespacenlohmann_1_1detail_1a92a167c49c6697b6ffe4f79492c705e5">nlohmann::detail::void_t</link> = typedef typename <link linkend="_structnlohmann_1_1detail_1_1make__void">make_void</link>&lt;Ts...&gt;::type</computeroutput></para><para>
+Definition at line 2584 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967df"/>    <section>
+    <title>error_handler_t</title>
+<indexterm><primary>error_handler_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>error_handler_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967df">nlohmann::detail::error_handler_t</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>how to treat decoding errors </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>strict</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>strict</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa2133fd717402a7966ee88d06f9e0b792"/>strict</entry><entry>
+<para>throw a <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> exception in case of invalid UTF-8 </para>
+</entry></row><row><entry><indexterm><primary>replace</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>replace</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa9dde360102c103867bd2f45872f1129c"/>replace</entry><entry>
+<para>replace invalid UTF-8 sequences with U+FFFD </para>
+</entry></row><row><entry><indexterm><primary>ignore</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>ignore</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a5a76b60b26dc8c47256a996d18d967dfa567bc1d268f135496de3d5b946b691f3"/>ignore</entry><entry>
+<para>ignore invalid UTF-8 sequences </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 14667 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40"/>    <section>
+    <title>input_format_t</title>
+<indexterm><primary>input_format_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>input_format_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40">nlohmann::detail::input_format_t</link><computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>the supported input formats </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>json</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a466deec76ecdf5fca6d38571f6324d54"/>json</entry><entry></entry></row><row><entry><indexterm><primary>cbor</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>cbor</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40aaf9de350d652f0c9055ddab514bd23ea"/>cbor</entry><entry></entry></row><row><entry><indexterm><primary>msgpack</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>msgpack</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40ac40d516627022a54003ac2b74a82688a"/>msgpack</entry><entry></entry></row><row><entry><indexterm><primary>ubjson</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>ubjson</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a4537f20910e85437f6d07701864084e8"/>ubjson</entry><entry></entry></row><row><entry><indexterm><primary>bson</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>bson</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1aa554fc6a11519e4f347deb25a9f0db40a0b6879b186bfb2b1ec65d2460e4eccd4"/>bson</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 4245 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985"/>    <section>
+    <title>value_t</title>
+<indexterm><primary>value_t</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>value_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">nlohmann::detail::value_t</link> : std::uint8_t<computeroutput>[strong]</computeroutput></computeroutput></para><para>
+
+<para>the JSON type enumeration </para>
+</para>
+
+<para>This enumeration collects the different JSON types. It is internally used to distinguish the stored values, and the functions <link linkend="_classnlohmann_1_1basic__json_1afe9a6fe72337a174cfb117a2081d2cfc">basic_json::is_null()</link>, <link linkend="_classnlohmann_1_1basic__json_1ae3300a95d3bb4a55cb0e04b9f125e42f">basic_json::is_object()</link>, <link linkend="_classnlohmann_1_1basic__json_1a1859e0c783a24df797b758e3fc21b966">basic_json::is_array()</link>, <link linkend="_classnlohmann_1_1basic__json_1ae958b0bc067c82850145299711d8bcd5">basic_json::is_string()</link>, <link linkend="_classnlohmann_1_1basic__json_1a0bd23e6f679145905a78020c07547559">basic_json::is_boolean()</link>, <link linkend="_classnlohmann_1_1basic__json_1a5d5f20be10c6f6d263557def2ac504a3">basic_json::is_number()</link> (with <link linkend="_classnlohmann_1_1basic__json_1a145005bad4fcab4f8620efec8de019ad">basic_json::is_number_integer()</link>, <link linkend="_classnlohmann_1_1basic__json_1ac45bc02fd5f4f136f522844222012adc">basic_json::is_number_unsigned()</link>, and <link linkend="_classnlohmann_1_1basic__json_1a926df0038ca14568f88a92d0caeba044">basic_json::is_number_float()</link>), <link linkend="_classnlohmann_1_1basic__json_1a4fce66d66c424052b192ba45e08a661d">basic_json::is_discarded()</link>, <link linkend="_classnlohmann_1_1basic__json_1a422885c85f603a13c36f8d0ac5d9f278">basic_json::is_primitive()</link>, and <link linkend="_classnlohmann_1_1basic__json_1a5a53e5a09d9123bfeed6f664b1334f8c">basic_json::is_structured()</link> rely on it.</para>
+
+<para><note><title>Note</title>
+
+<para>There are three enumeration entries (number_integer, number_unsigned, and number_float), because the library distinguishes these three types for numbers: <link linkend="_classnlohmann_1_1basic__json_1a440094de5ef4e119b2771b549b33da70">basic_json::number_unsigned_t</link> is used for unsigned integers, <link linkend="_classnlohmann_1_1basic__json_1ab227d71ad47b6ed6a3acae52dedbb49d">basic_json::number_integer_t</link> is used for signed integers, and <link linkend="_classnlohmann_1_1basic__json_1ade1eb06e9fc3ff2ba1efd709b94b401d">basic_json::number_float_t</link> is used for floating-point numbers or to approximate integers which do not fit in the limits of their respective type.</para>
+</note>
+<formalpara><title>See also</title>
+
+<para><link linkend="_classnlohmann_1_1basic__json_1ad886f4baa2efb7ac6b0ca70dc72f3d18">basic_json::basic_json(const value_t value_type)</link> &#8211; create a JSON value with the default value for a given type</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>null</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>null</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a37a6259cc0c1dae299a7866489dff0bd"/>null</entry><entry>
+<para>null value </para>
+</entry></row><row><entry><indexterm><primary>object</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>object</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985aa8cfde6331bd59eb2ac96f8911c4b666"/>object</entry><entry>
+<para>object (unordered set of name/value pairs) </para>
+</entry></row><row><entry><indexterm><primary>array</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>array</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985af1f713c9e000f5d3f280adbd124df4f5"/>array</entry><entry>
+<para>array (ordered collection of values) </para>
+</entry></row><row><entry><indexterm><primary>string</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>string</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ab45cffe084dd3d20d928bee85e7b0f21"/>string</entry><entry>
+<para>string value </para>
+</entry></row><row><entry><indexterm><primary>boolean</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>boolean</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a84e2c64f38f78ba3ea5c905ab5a2da27"/>boolean</entry><entry>
+<para>boolean value </para>
+</entry></row><row><entry><indexterm><primary>number_integer</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_integer</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a5763da164f8659d94a56e29df64b4bcc"/>number_integer</entry><entry>
+<para>number value (signed integer) </para>
+</entry></row><row><entry><indexterm><primary>number_unsigned</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_unsigned</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985adce7cc8ec29055c4158828921f2f265e"/>number_unsigned</entry><entry>
+<para>number value (unsigned integer) </para>
+</entry></row><row><entry><indexterm><primary>number_float</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>number_float</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985ad9966ecb59667235a57b4b999a649eef"/>number_float</entry><entry>
+<para>number value (floating-point) </para>
+</entry></row><row><entry><indexterm><primary>binary</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>binary</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a9d7183f16acce70658f686ae7f1a4d20"/>binary</entry><entry>
+<para>binary array (ordered collection of bytes) </para>
+</entry></row><row><entry><indexterm><primary>discarded</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>discarded</secondary></indexterm>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985a94708897ec9db8647dfe695714c98e46"/>discarded</entry><entry>
+<para>discarded by the parser callback function </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 3185 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacenlohmann_1_1detail_1a839b0ab50d2c9bce669068f56bc41202"/>    <section>
+    <title>from_json()<computeroutput>[1/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_unsigned_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_integer_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::number_float_t &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, ArithmeticType &amp; val)</computeroutput></para><para>
+Definition at line 3489 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a14d8cdf544585f1c38eab6a0820e55f7"/>    <section>
+    <title>from_json()<computeroutput>[2/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleArrayType , enable_if_t&lt; is_constructible_array_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_object_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_constructible_string_type&lt; BasicJsonType, ConstructibleArrayType &gt;::value and not is_basic_json&lt; ConstructibleArrayType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput>auto nlohmann::detail::from_json (const BasicJsonType &amp; j, ConstructibleArrayType &amp; arr) -&gt; decltype(<link linkend="_namespacenlohmann_1_1detail_1a40f7bb070a60e8ba14fffb9c117fcbd8">from_json_array_impl</link>(j, arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt;3&gt; </computeroutput></para><para>
+Definition at line 3441 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a5b24896e5f5db6af06d939dde4b63fe1"/>    <section>
+    <title>from_json()<computeroutput>[3/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleObjectType , enable_if_t&lt; is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, ConstructibleObjectType &amp; obj)</computeroutput></para><para>
+Definition at line 3457 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a2932f2bc2943dac6d51669312f4fc0f5"/>    <section>
+    <title>from_json()<computeroutput>[4/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleStringType , enable_if_t&lt; is_constructible_string_type&lt; BasicJsonType, ConstructibleStringType &gt;::value and not std::is_same&lt; typename BasicJsonType::string_t, ConstructibleStringType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, ConstructibleStringType &amp; s)</computeroutput></para><para>
+Definition at line 3300 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a5440d650150d01e8015133521351b459"/>    <section>
+    <title>from_json()<computeroutput>[5/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, EnumType &amp; e)</computeroutput></para><para>
+Definition at line 3330 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a5cfb765aad92795abd7fda29d017272a"/>    <section>
+    <title>from_json()<computeroutput>[6/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , typename Allocator , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::forward_list&lt; T, Allocator &gt; &amp; l)</computeroutput></para><para>
+Definition at line 3340 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ae93147a54d2740228ef16a5e6210ca3e"/>    <section>
+    <title>from_json()<computeroutput>[7/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename Key , typename Value , typename Compare , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::map&lt; Key, Value, Compare, Allocator &gt; &amp; m)</computeroutput></para><para>
+Definition at line 3540 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aae9f9c2601074e323d49428132cc293d"/>    <section>
+    <title>from_json()<computeroutput>[8/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename A1 , typename A2 &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::pair&lt; A1, A2 &gt; &amp; p)</computeroutput></para><para>
+Definition at line 3520 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a8b99ec9b29f3f20a18fc4281fb784e49"/>    <section>
+    <title>from_json()<computeroutput>[9/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename... Args&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::tuple&lt; Args... &gt; &amp; t)</computeroutput></para><para>
+Definition at line 3532 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aef5c8ea108f4d2b03fb4a635617510de"/>    <section>
+    <title>from_json()<computeroutput>[10/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename Key , typename Value , typename Hash , typename KeyEqual , typename Allocator , typename  = enable_if_t&lt;not std::is_constructible&lt;                                     typename BasicJsonType::string_t, Key&gt;::value&gt;&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::unordered_map&lt; Key, Value, Hash, KeyEqual, Allocator &gt; &amp; m)</computeroutput></para><para>
+Definition at line 3560 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a3df497b1d3977f071b488ecac1401517"/>    <section>
+    <title>from_json()<computeroutput>[11/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; BasicJsonType, T &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, std::valarray&lt; T &gt; &amp; l)</computeroutput></para><para>
+Definition at line 3357 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7deb2db8eed6f1762373dde7a6595760"/>    <section>
+    <title>from_json()<computeroutput>[12/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </computeroutput><para><computeroutput>auto nlohmann::detail::from_json (const BasicJsonType &amp; j, T(&amp;) arr[N]) -&gt; decltype(j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt;T&gt;(), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())
+</computeroutput></para><para>
+Definition at line 3368 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a58117f225f43d03e3a0a4a6f3d77c9d9"/>    <section>
+    <title>from_json()<computeroutput>[13/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename BasicJsonType::boolean_t &amp; b)</computeroutput></para><para>
+Definition at line 3274 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7cb5dd7d46a60e65f9a8e0873b3f7dd8"/>    <section>
+    <title>from_json()<computeroutput>[14/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename BasicJsonType::number_float_t &amp; val)</computeroutput></para><para>
+Definition at line 3311 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a047d881e611fcac709dc318f730a1732"/>    <section>
+    <title>from_json()<computeroutput>[15/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename BasicJsonType::number_integer_t &amp; val)</computeroutput></para><para>
+Definition at line 3323 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ace4d5680ba413d9fd897ccb5d9c61a1c"/>    <section>
+    <title>from_json()<computeroutput>[16/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename BasicJsonType::number_unsigned_t &amp; val)</computeroutput></para><para>
+Definition at line 3317 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ad74d89f77ada7a57eff38b43d4bf2335"/>    <section>
+    <title>from_json()<computeroutput>[17/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename BasicJsonType::string_t &amp; s)</computeroutput></para><para>
+Definition at line 3284 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a1f0395aad0fe853a4539288749d3a603"/>    <section>
+    <title>from_json()<computeroutput>[18/18]</computeroutput></title>
+<indexterm><primary>from_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json (const BasicJsonType &amp; j, typename std::nullptr_t &amp; n)</computeroutput></para><para>
+Definition at line 3234 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a20cf21255e75cff1ffb0869c2c545e63"/>    <section>
+    <title>from_json_array_impl()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>from_json_array_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_array_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json_array_impl (const BasicJsonType &amp; j, ConstructibleArrayType &amp; arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 0 &gt; )</computeroutput></para><para>
+Definition at line 3416 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a464e1246f3df7edea79c3f81ab701edd"/>    <section>
+    <title>from_json_array_impl()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>from_json_array_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_array_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ConstructibleArrayType &gt; </computeroutput><para><computeroutput>auto nlohmann::detail::from_json_array_impl (const BasicJsonType &amp; j, ConstructibleArrayType &amp; arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 1 &gt; ) -&gt; decltype(
+    arr.reserve(std::declval&lt;typename ConstructibleArrayType::size_type&gt;()),
+    j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt;typename ConstructibleArrayType::value_type&gt;(),
+    <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())
+</computeroutput></para><para>
+Definition at line 3395 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aba0ce45ebb69fd2c7132a00f9a56b503"/>    <section>
+    <title>from_json_array_impl()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>from_json_array_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_array_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , std::size_t N&gt; </computeroutput><para><computeroutput>auto nlohmann::detail::from_json_array_impl (const BasicJsonType &amp; j, std::array&lt; T, N &gt; &amp; arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 2 &gt; ) -&gt; decltype(j.template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">get</link>&lt;T&gt;(), <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>())
+</computeroutput></para><para>
+Definition at line 3384 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a40f7bb070a60e8ba14fffb9c117fcbd8"/>    <section>
+    <title>from_json_array_impl()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>from_json_array_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_array_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json_array_impl (const BasicJsonType &amp; j, typename BasicJsonType::array_t &amp; arr, <link linkend="_structnlohmann_1_1detail_1_1priority__tag">priority_tag</link>&lt; 3 &gt; )</computeroutput></para><para>
+Definition at line 3378 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a28253915d9db4a0112d60eaee0422949"/>    <section>
+    <title>from_json_tuple_impl()</title>
+<indexterm><primary>from_json_tuple_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>from_json_tuple_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::from_json_tuple_impl (const BasicJsonType &amp; j, Tuple &amp; t, <link linkend="_structnlohmann_1_1detail_1_1index__sequence">index_sequence</link>&lt; Idx... &gt; )</computeroutput></para><para>
+Definition at line 3526 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6"/>    <section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>get</secondary></indexterm>
+<computeroutput>template&lt;std::size_t N, typename IteratorType , enable_if_t&lt; N==0, int &gt;  = 0&gt; </computeroutput><para><computeroutput>auto nlohmann::detail::get (const <link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt; &amp; i) -&gt; decltype(i.key())
+</computeroutput></para><para>
+Definition at line 3748 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ad9e016d7b6a3cd2847027950aa0aac3b"/>    <section>
+    <title>get&lt; typename ConstructibleArrayType::value_type &gt;()</title>
+<indexterm><primary>get&lt; typename ConstructibleArrayType::value_type &gt;</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>get&lt; typename ConstructibleArrayType::value_type &gt;</secondary></indexterm>
+<para><computeroutput>j template <link linkend="_namespacenlohmann_1_1detail_1acc422c11342b31368f610b6f96fcedc6">nlohmann::detail::get</link>&lt; typename ConstructibleArrayType::value_type &gt; ( )</computeroutput></para>    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a85955b9c6dd31846e4b8e891f78614b6"/>    <section>
+    <title>get_arithmetic_value()</title>
+<indexterm><primary>get_arithmetic_value</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>get_arithmetic_value</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename ArithmeticType , enable_if_t&lt; std::is_arithmetic&lt; ArithmeticType &gt;::value and not std::is_same&lt; ArithmeticType, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::get_arithmetic_value (const BasicJsonType &amp; j, ArithmeticType &amp; val)</computeroutput></para><para>
+Definition at line 3248 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a3c45286b0a2f15ea0a756cb87a76cf9b"/>    <section>
+    <title>int_to_string()</title>
+<indexterm><primary>int_to_string</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>int_to_string</secondary></indexterm>
+<computeroutput>template&lt;typename string_type &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::int_to_string (string_type &amp; target, std::size_t value)</computeroutput></para><para>
+Definition at line 3629 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a09169efff3bd1771fff29bd92cea19e0"/>    <section>
+    <title>operator&lt;()</title>
+<indexterm><primary>operator&lt;</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>bool nlohmann::detail::operator&lt; (const <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> lhs, const <link linkend="_namespacenlohmann_1_1detail_1a1ed8fc6239da25abcaf681d30ace4985">value_t</link> rhs)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>comparison operator for JSON types </para>
+</para>
+
+<para>Returns an ordering that is similar to Python:<itemizedlist>
+<listitem>
+<para>order: null &lt; boolean &lt; number &lt; object &lt; array &lt; string &lt; binary</para>
+</listitem><listitem>
+<para>furthermore, each type is not smaller than itself</para>
+</listitem><listitem>
+<para>discarded values are not comparable</para>
+</listitem><listitem>
+<para>binary is represented as a b&quot;&quot; string in python and directly comparable to a string; however, making a binary array directly comparable with a string would be surprising behavior in a JSON file.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara><title>Since</title>
+
+<para>version 1.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 3212 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a6cca370ac6c99294dbe4fe24716a57dd"/>    <section>
+    <title>to_chars()</title>
+<indexterm><primary>to_chars</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_chars</secondary></indexterm>
+<computeroutput>template&lt;typename FloatType &gt; </computeroutput><para><computeroutput><link linkend="_json_8hpp_1a5f2aaec3b681d0a72f7d6e90b70cdcd1">JSON_HEDLEY_RETURNS_NON_NULL</link> char* nlohmann::detail::to_chars (char * first, const char * last, FloatType value)</computeroutput></para><para>
+
+<para>generates a decimal representation of the floating-point number value in [first, last). </para>
+</para>
+
+<para>The format of the resulting decimal representation is similar to printf&apos;s g format. Returns an iterator pointing past-the-end of the decimal representation.</para>
+
+<para><note><title>Note</title>
+
+<para>The input number must be finite, i.e. NaN&apos;s and Inf&apos;s are not supported. </para>
+
+<para>The buffer must be large enough. </para>
+
+<para>The result is NOT null-terminated. </para>
+</note>
+</para>
+<para>
+Definition at line 14597 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a91fe576be579c8c2fdd14610605c6dd2"/>    <section>
+    <title>to_json()<computeroutput>[1/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleNumberIntegerType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_integer_t, CompatibleNumberIntegerType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, CompatibleNumberIntegerType val)<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4039 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ae5fd66b5517b3b5a6c6b9fd9f29ba8dc"/>    <section>
+    <title>to_json()<computeroutput>[2/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleNumberUnsignedType , enable_if_t&lt; is_compatible_integer_type&lt; typename BasicJsonType::number_unsigned_t, CompatibleNumberUnsignedType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, CompatibleNumberUnsignedType val)<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4032 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a3afebc132c5ff83f9cd160e52030fdfd"/>    <section>
+    <title>to_json()<computeroutput>[3/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleArrayType , enable_if_t&lt; is_compatible_array_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_object_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_compatible_string_type&lt; BasicJsonType, CompatibleArrayType &gt;::value and not is_basic_json&lt; CompatibleArrayType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const CompatibleArrayType &amp; arr)</computeroutput></para><para>
+Definition at line 4066 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a24c9c12f3839c94e09532f08de85e949"/>    <section>
+    <title>to_json()<computeroutput>[4/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleObjectType , enable_if_t&lt; is_compatible_object_type&lt; BasicJsonType, CompatibleObjectType &gt;::value and not is_basic_json&lt; CompatibleObjectType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const CompatibleObjectType &amp; obj)</computeroutput></para><para>
+Definition at line 4086 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7356ed05cdbbb080cee80e1211e1c6c9"/>    <section>
+    <title>to_json()<computeroutput>[5/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename CompatibleString , enable_if_t&lt; std::is_constructible&lt; typename BasicJsonType::string_t, CompatibleString &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const CompatibleString &amp; s)</computeroutput></para><para>
+Definition at line 4012 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ab64eeb55b44db44eb8e9070229eb97df"/>    <section>
+    <title>to_json()<computeroutput>[6/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T1 , typename T2 , enable_if_t&lt; std::is_constructible&lt; BasicJsonType, T1 &gt;::value &amp;&amp;std::is_constructible&lt; BasicJsonType, T2 &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const std::pair&lt; T1, T2 &gt; &amp; p)</computeroutput></para><para>
+Definition at line 4108 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a7f7c7b9760161b774cdc0b4b838fae64"/>    <section>
+    <title>to_json()<computeroutput>[7/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_convertible&lt; T, BasicJsonType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const std::valarray&lt; T &gt; &amp; arr)</computeroutput></para><para>
+Definition at line 4073 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aeca6fb5fede5ed1e12a4420d98a5692b"/>    <section>
+    <title>to_json()<computeroutput>[8/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const std::vector&lt; bool &gt; &amp; e)</computeroutput></para><para>
+Definition at line 4053 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aaa77b0c9745130b77733a92a1a2e82ec"/>    <section>
+    <title>to_json()<computeroutput>[9/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, iteration_proxy_value&lt; typename BasicJsonType::iterator &gt;&gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const T &amp; b)</computeroutput></para><para>
+Definition at line 4116 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a20ea5175c8999fc8b673e46b892f71f6"/>    <section>
+    <title>to_json()<computeroutput>[10/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , std::size_t N, enable_if_t&lt; not std::is_constructible&lt; typename BasicJsonType::string_t, const T(&amp;)[N]&gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, const T(&amp;) arr[N])</computeroutput></para><para>
+Definition at line 4102 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a0c8b159dba71981d6c555d284cf6e2bf"/>    <section>
+    <title>to_json()<computeroutput>[11/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename EnumType , enable_if_t&lt; std::is_enum&lt; EnumType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, EnumType e)<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4046 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a22bffdc8bc7e43af380ba2050696b230"/>    <section>
+    <title>to_json()<computeroutput>[12/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename FloatType , enable_if_t&lt; std::is_floating_point&lt; FloatType &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, FloatType val)<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4025 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a1a804b98cbe89b7e44b698f2ca860490"/>    <section>
+    <title>to_json()<computeroutput>[13/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T , enable_if_t&lt; std::is_same&lt; T, typename BasicJsonType::boolean_t &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, T b)<computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 4005 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1aa0fd1b5788e9ba37e31da43dda738cb5"/>    <section>
+    <title>to_json()<computeroutput>[14/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, typename BasicJsonType::array_t &amp;&amp; arr)</computeroutput></para><para>
+Definition at line 4079 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1ac9f7a5542851c61d93740148eaec509f"/>    <section>
+    <title>to_json()<computeroutput>[15/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, typename BasicJsonType::object_t &amp;&amp; obj)</computeroutput></para><para>
+Definition at line 4092 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a4aa1ca6b7c61bf19d1f30ea5b669f68e"/>    <section>
+    <title>to_json()<computeroutput>[16/16]</computeroutput></title>
+<indexterm><primary>to_json</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json (BasicJsonType &amp; j, typename BasicJsonType::string_t &amp;&amp; s)</computeroutput></para><para>
+Definition at line 4018 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a510dfa15b01e9a8afe31600a27b28199"/>    <section>
+    <title>to_json_tuple_impl()</title>
+<indexterm><primary>to_json_tuple_impl</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>to_json_tuple_impl</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename Tuple , std::size_t... Idx&gt; </computeroutput><para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::to_json_tuple_impl (BasicJsonType &amp; j, const Tuple &amp; t, <link linkend="_structnlohmann_1_1detail_1_1index__sequence">index_sequence</link>&lt; Idx... &gt; )</computeroutput></para><para>
+Definition at line 4122 of file json.hpp.</para>
+    </section><anchor xml:id="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d"/>    <section>
+    <title>void()</title>
+<indexterm><primary>void</primary><secondary>nlohmann::detail</secondary></indexterm>
+<indexterm><primary>nlohmann::detail</primary><secondary>void</secondary></indexterm>
+<para><computeroutput>j template nlohmann::detail::void ( )</computeroutput></para><para>
+Definition at line 3444 of file json.hpp.</para>
+</section>
+</section>
+</section>

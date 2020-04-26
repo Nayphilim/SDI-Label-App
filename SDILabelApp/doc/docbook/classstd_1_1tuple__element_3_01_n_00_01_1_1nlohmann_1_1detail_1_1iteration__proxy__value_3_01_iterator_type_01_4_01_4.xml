@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4">
+<title>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt; Class Template Reference</title>
+<indexterm><primary>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4_1ace1dfdb74841c2f58c064a50598188fd">type</link> = decltype(get&lt; N &gt;(std::declval&lt; ::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt; &gt;()))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;std::size_t N, typename IteratorType&gt;
+class std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</title></simplesect>
+
+<para>
+Definition at line 3779 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4_1ace1dfdb74841c2f58c064a50598188fd"/>    <section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</secondary></indexterm>
+<indexterm><primary>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</primary><secondary>type</secondary></indexterm>
+<computeroutput>template&lt;std::size_t N, typename IteratorType &gt; </computeroutput><para><computeroutput>using std::tuple_element&lt; N, ::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt; IteratorType &gt; &gt;::<link linkend="_classstd_1_1tuple__element_3_01_n_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01_iterator_type_01_4_01_4_1ace1dfdb74841c2f58c064a50598188fd">type</link> =  decltype( get&lt;N&gt;(std::declval &lt; ::<link linkend="_classnlohmann_1_1detail_1_1iteration__proxy__value">nlohmann::detail::iteration_proxy_value</link>&lt;IteratorType &gt; &gt; ()))</computeroutput></para><para>
+Definition at line 3784 of file json.hpp.</para>
+</section>
+</section>
+</section>

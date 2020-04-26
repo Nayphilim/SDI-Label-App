@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1json__ref">
+<title>nlohmann::detail::json_ref&lt; BasicJsonType &gt; Class Template Reference</title>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> = BasicJsonType</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1ae1adf5bcee8b6fa0c358710604fb1938">json_ref</link> (<link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> &amp;&amp;value)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a8c3eb3c6e952ed0cd7eece586ab4047c">json_ref</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> &amp;value)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1adfba2db547283a7c6a5df9a32e72efc5">json_ref</link> (std::initializer_list&lt; <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &gt; init)</para>
+</listitem>
+            <listitem><para>template&lt;class... Args, enable_if_t&lt; std::is_constructible&lt; value_type, Args... &gt;::value, int &gt;  = 0&gt; </para><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a8a31d6c588d6c3c06b62008fd5d36c6c">json_ref</link> (Args &amp;&amp;... args)</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a59221ddbd756ca24d289c787fab38dbc">json_ref</link> (<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp;&amp;)=default</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a4c68db46934e03588bbd73b00147c0dd">json_ref</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a98956ba676b1ae16b62346f9c4fb752e">operator=</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a9a73363d9be6b300ddd30745786c50a6">operator=</link> (<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a8bcd4cfcafe952ce5140f8cb35ebe2f6">~json_ref</link> ()=default</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__ref_1ae39e523218bf05cac3fb5b5b1cd5efb6">moved_or_copied</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> const  &amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref_1aa3100e41472dba02ab78ccc1607e44ab">operator*</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> const  * <link linkend="_classnlohmann_1_1detail_1_1json__ref_1adb652774a67829876449dc0b30637456">operator-&gt;</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a5d7bd67a5ab713d9be1e248cf9d509cd">owned_value</link> = nullptr</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> * <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a23504615c2076070d5e087443bb376a4">value_ref</link> = nullptr</para>
+</listitem>
+            <listitem><para>const bool <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a434d1e18c21cc1b61954ba22b62ee7a5">is_rvalue</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType&gt;
+class nlohmann::detail::json_ref&lt; BasicJsonType &gt;</title></simplesect>
+
+<para>
+Definition at line 2804 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef"/>    <section>
+    <title>value_type</title>
+<indexterm><primary>value_type</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>value_type</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> =  BasicJsonType</computeroutput></para><para>
+Definition at line 11778 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1ae1adf5bcee8b6fa0c358710604fb1938"/>    <section>
+    <title>json_ref()<computeroutput>[1/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (<link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> &amp;&amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11780 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a8c3eb3c6e952ed0cd7eece586ab4047c"/>    <section>
+    <title>json_ref()<computeroutput>[2/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11784 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1adfba2db547283a7c6a5df9a32e72efc5"/>    <section>
+    <title>json_ref()<computeroutput>[3/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (std::initializer_list&lt; <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&lt; BasicJsonType &gt; &gt; init)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11788 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a8a31d6c588d6c3c06b62008fd5d36c6c"/>    <section>
+    <title>json_ref()<computeroutput>[4/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><computeroutput>template&lt;class... Args, enable_if_t&lt; std::is_constructible&lt; value_type, Args... &gt;::value, int &gt;  = 0&gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (Args &amp;&amp;... args)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11795 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a59221ddbd756ca24d289c787fab38dbc"/>    <section>
+    <title>json_ref()<computeroutput>[5/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&lt; BasicJsonType &gt; &amp;&amp; )<computeroutput>[default]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a4c68db46934e03588bbd73b00147c0dd"/>    <section>
+    <title>json_ref()<computeroutput>[6/6]</computeroutput></title>
+<indexterm><primary>json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> (const <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&lt; BasicJsonType &gt; &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a8bcd4cfcafe952ce5140f8cb35ebe2f6"/>    <section>
+    <title>~json_ref()</title>
+<indexterm><primary>~json_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>~json_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::~<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link> ( )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1ae39e523218bf05cac3fb5b5b1cd5efb6"/>    <section>
+    <title>moved_or_copied()</title>
+<indexterm><primary>moved_or_copied</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>moved_or_copied</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::moved_or_copied ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11806 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1aa3100e41472dba02ab78ccc1607e44ab"/>    <section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> const&amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11815 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1adb652774a67829876449dc0b30637456"/>    <section>
+    <title>operator-&gt;()</title>
+<indexterm><primary>operator-&gt;</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>operator-&gt;</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> const* <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::operator-&gt; ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 11820 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a98956ba676b1ae16b62346f9c4fb752e"/>    <section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::operator= (const <link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&lt; BasicJsonType &gt; &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para>    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a9a73363d9be6b300ddd30745786c50a6"/>    <section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&amp; <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::operator= (<link linkend="_classnlohmann_1_1detail_1_1json__ref">json_ref</link>&lt; BasicJsonType &gt; &amp;&amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a434d1e18c21cc1b61954ba22b62ee7a5"/>    <section>
+    <title>is_rvalue</title>
+<indexterm><primary>is_rvalue</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>is_rvalue</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput>const bool <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::is_rvalue<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11828 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a5d7bd67a5ab713d9be1e248cf9d509cd"/>    <section>
+    <title>owned_value</title>
+<indexterm><primary>owned_value</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>owned_value</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link> <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::owned_value = nullptr<computeroutput>[mutable]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11826 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1json__ref_1a23504615c2076070d5e087443bb376a4"/>    <section>
+    <title>value_ref</title>
+<indexterm><primary>value_ref</primary><secondary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::json_ref&lt; BasicJsonType &gt;</primary><secondary>value_ref</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType &gt; </computeroutput><para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1json__ref_1a78d76cf288141049568c0d670ed670ef">value_type</link>* <link linkend="_classnlohmann_1_1detail_1_1json__ref">nlohmann::detail::json_ref</link>&lt; BasicJsonType &gt;::value_ref = nullptr<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 11827 of file json.hpp.</para>
+</section>
+</section>
+</section>

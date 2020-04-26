@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1out__of__range">
+<title>nlohmann::detail::out_of_range Class Reference</title>
+<indexterm><primary>nlohmann::detail::out_of_range</primary></indexterm>
+<para>
+
+<para>exception indicating access out of the defined range </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for nlohmann::detail::out_of_range:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classnlohmann_1_1detail_1_1out__of__range.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link> <link linkend="_classnlohmann_1_1detail_1_1out__of__range_1a3f6d82a6f967c4728a1ec735a7867073">create</link> (int id_, const std::string &amp;what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1out__of__range_1ab5fe402019dba957558499502f0fd731">out_of_range</link> (int id_, const char *what_arg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>exception indicating access out of the defined range </para>
+
+
+
+<para>This exception is thrown in case a library function is called on an input parameter that exceeds the expected range, for instance in case of array indices or nonexisting object keys.</para>
+
+<para>Exceptions have ids 4xx.</para>
+
+<para><informaltable frame="all">
+    <tgroup cols="3" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+      <colspec colname='c3'/>
+<thead>
+      <row >
+<entry>
+<para>name / id </para>
+</entry><entry>
+<para>example message </para>
+</entry><entry>
+<para>description  </para>
+</entry></row>
+</thead><tbody>
+      <row >
+<entry>
+<para>json.exception.out_of_range.401 </para>
+</entry><entry>
+<para>array index 3 is out of range </para>
+</entry><entry>
+<para>The provided array index <emphasis>i</emphasis> is larger than <emphasis>size-1</emphasis>.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.402 </para>
+</entry><entry>
+<para>array index &apos;-&apos; (3) is out of range </para>
+</entry><entry>
+<para>The special array index <computeroutput>-</computeroutput> in a JSON Pointer never describes a valid element of the array, but the index past the end. That is, it can only be used to add elements at this position, but not to read it.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.403 </para>
+</entry><entry>
+<para>key &apos;foo&apos; not found </para>
+</entry><entry>
+<para>The provided key was not found in the JSON object.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.404 </para>
+</entry><entry>
+<para>unresolved reference token &apos;foo&apos; </para>
+</entry><entry>
+<para>A reference token in a JSON Pointer could not be resolved.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.405 </para>
+</entry><entry>
+<para>JSON pointer has no parent </para>
+</entry><entry>
+<para>The JSON Patch operations &apos;remove&apos; and &apos;add&apos; can not be applied to the root element of the JSON value.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.406 </para>
+</entry><entry>
+<para>number overflow parsing &apos;10E1000&apos; </para>
+</entry><entry>
+<para>A parsed number could not be stored as without changing it to NaN or INF.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.407 </para>
+</entry><entry>
+<para>number overflow serializing &apos;9223372036854775808&apos; </para>
+</entry><entry>
+<para>UBJSON and BSON only support integer numbers up to 9223372036854775807.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.408 </para>
+</entry><entry>
+<para>excessive array size: 8658170730974374167 </para>
+</entry><entry>
+<para>The size (following <computeroutput>#</computeroutput>) of an UBJSON array or object exceeds the maximal capacity.  </para>
+</entry></row>
+      <row >
+<entry>
+<para>json.exception.out_of_range.409 </para>
+</entry><entry>
+<para>BSON key cannot contain code point U+0000 (at byte 2) </para>
+</entry><entry>
+<para>Key identifiers to be serialized to BSON cannot contain code point U+0000, since the key is stored as zero-terminated c-string  </para>
+</entry></row>
+    </tbody>
+    </tgroup>
+</informaltable>
+</para>
+
+<para>@liveexample{The following code shows how an <computeroutput><link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link></computeroutput> exception can be caught.,<link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link>}</para>
+
+<para><formalpara><title>See also</title>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1exception">exception</link> for the base class of the library exceptions </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1parse__error">parse_error</link> for exceptions indicating a parse error </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1invalid__iterator">invalid_iterator</link> for exceptions indicating errors with iterators </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1type__error">type_error</link> for exceptions indicating executing a member function with a wrong type </para>
+
+<para>- <link linkend="_classnlohmann_1_1detail_1_1other__error">other_error</link> for exceptions indicating other library errors</para>
+</formalpara>
+<formalpara><title>Since</title>
+
+<para>version 3.0.0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 2439 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1out__of__range_1ab5fe402019dba957558499502f0fd731"/>    <section>
+    <title>out_of_range()</title>
+<indexterm><primary>out_of_range</primary><secondary>nlohmann::detail::out_of_range</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::out_of_range</primary><secondary>out_of_range</secondary></indexterm>
+<para><computeroutput>nlohmann::detail::out_of_range::out_of_range (int id_, const char * what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 2450 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1out__of__range_1a3f6d82a6f967c4728a1ec735a7867073"/>    <section>
+    <title>create()</title>
+<indexterm><primary>create</primary><secondary>nlohmann::detail::out_of_range</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::out_of_range</primary><secondary>create</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classnlohmann_1_1detail_1_1out__of__range">out_of_range</link> nlohmann::detail::out_of_range::create (int id_, const std::string &amp; what_arg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line 2442 of file json.hpp.</para>
+</section>
+</section>
+</section>

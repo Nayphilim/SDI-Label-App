@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">
+<title>nlohmann::detail::dtoa_impl::diyfp Struct Reference</title>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>constexpr <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1ad8798a8823a49c8412f0fada9892c918">diyfp</link> (std::uint64_t f_, int e_) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aeb26771af54ad73598c1a0430d65d884">sub</link> (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp;x, const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp;y) noexcept</para>
+
+<para>returns x - y </para>
+</listitem>
+            <listitem><para>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aa5f250d12ce89c81fdb08900c6a823e8">mul</link> (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp;x, const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp;y) noexcept</para>
+
+<para>returns x * y </para>
+</listitem>
+            <listitem><para>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a2246b5b40c7c6992153ef174063d6aa6">normalize</link> (<link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> x) noexcept</para>
+
+<para>normalize x such that the significand is &gt;= 2^(q-1) </para>
+</listitem>
+            <listitem><para>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a6b6665e467ebabe0c0f7418d3fe4b118">normalize_to</link> (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp;x, const int target_exponent) noexcept</para>
+
+<para>normalize x such that the result has the exponent E </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint64_t <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aea90459e340a231ca31d46946803ef51">f</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1ae22e170815983961447c429f324c944d">e</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr int <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a03682754b06ed4f30b263119eecc2d52">kPrecision</link> = 64</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 13587 of file json.hpp.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1ad8798a8823a49c8412f0fada9892c918"/>    <section>
+    <title>diyfp()</title>
+<indexterm><primary>diyfp</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>diyfp</secondary></indexterm>
+<para><computeroutput>constexpr nlohmann::detail::dtoa_impl::diyfp::diyfp (std::uint64_t f_, int e_)<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 13594 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aa5f250d12ce89c81fdb08900c6a823e8"/>    <section>
+    <title>mul()</title>
+<indexterm><primary>mul</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>mul</secondary></indexterm>
+<para><computeroutput>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::diyfp::mul (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp; x, const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp; y)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>returns x * y </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>The result is rounded. (Only the upper q bits are returned.) </para>
+</note>
+</para>
+<para>
+Definition at line 13612 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a2246b5b40c7c6992153ef174063d6aa6"/>    <section>
+    <title>normalize()</title>
+<indexterm><primary>normalize</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>normalize</secondary></indexterm>
+<para><computeroutput>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::diyfp::normalize (<link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>normalize x such that the significand is &gt;= 2^(q-1) </para>
+</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>x.f != 0 </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13677 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a6b6665e467ebabe0c0f7418d3fe4b118"/>    <section>
+    <title>normalize_to()</title>
+<indexterm><primary>normalize_to</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>normalize_to</secondary></indexterm>
+<para><computeroutput>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::diyfp::normalize_to (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp; x, const int target_exponent)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>normalize x such that the result has the exponent E </para>
+</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>e &gt;= x.e and the upper e - x.e bits of x.f must be zero. </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13694 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aeb26771af54ad73598c1a0430d65d884"/>    <section>
+    <title>sub()</title>
+<indexterm><primary>sub</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>sub</secondary></indexterm>
+<para><computeroutput>static <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> nlohmann::detail::dtoa_impl::diyfp::sub (const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp; x, const <link linkend="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp">diyfp</link> &amp; y)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>returns x - y </para>
+</para>
+
+<para><formalpara><title>Precondition</title>
+
+<para>x.e == y.e and x.f &gt;= y.f </para>
+</formalpara>
+</para>
+<para>
+Definition at line 13600 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1ae22e170815983961447c429f324c944d"/>    <section>
+    <title>e</title>
+<indexterm><primary>e</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>e</secondary></indexterm>
+<para><computeroutput>int nlohmann::detail::dtoa_impl::diyfp::e = 0</computeroutput></para><para>
+Definition at line 13592 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1aea90459e340a231ca31d46946803ef51"/>    <section>
+    <title>f</title>
+<indexterm><primary>f</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>f</secondary></indexterm>
+<para><computeroutput>std::uint64_t nlohmann::detail::dtoa_impl::diyfp::f = 0</computeroutput></para><para>
+Definition at line 13591 of file json.hpp.</para>
+    </section><anchor xml:id="_structnlohmann_1_1detail_1_1dtoa__impl_1_1diyfp_1a03682754b06ed4f30b263119eecc2d52"/>    <section>
+    <title>kPrecision</title>
+<indexterm><primary>kPrecision</primary><secondary>nlohmann::detail::dtoa_impl::diyfp</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::dtoa_impl::diyfp</primary><secondary>kPrecision</secondary></indexterm>
+<para><computeroutput>constexpr int nlohmann::detail::dtoa_impl::diyfp::kPrecision = 64<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+Definition at line 13589 of file json.hpp.</para>
+</section>
+</section>
+</section>

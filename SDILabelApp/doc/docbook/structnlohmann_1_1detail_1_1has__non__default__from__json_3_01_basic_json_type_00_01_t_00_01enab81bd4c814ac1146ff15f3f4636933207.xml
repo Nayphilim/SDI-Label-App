@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207">
+<title>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt; Struct Template Reference</title>
+<indexterm><primary>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a610272ed924122e0c46d158ecdfe6faf">serializer</link> = typename BasicJsonType::template json_serializer&lt; T, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> &gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr bool <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a1494ac5fed1163aab4a89208ff04ee85">value</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename BasicJsonType, typename T&gt;
+struct nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</title></simplesect>
+
+<para>
+Definition at line 2870 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a610272ed924122e0c46d158ecdfe6faf"/>    <section>
+    <title>serializer</title>
+<indexterm><primary>serializer</primary><secondary>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</primary><secondary>serializer</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json">nlohmann::detail::has_non_default_from_json</link>&lt; BasicJsonType, T, <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">enable_if_t</link>&lt; not <link linkend="_structnlohmann_1_1detail_1_1is__basic__json">is_basic_json</link>&lt; T &gt;::<link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a1494ac5fed1163aab4a89208ff04ee85">value</link> &gt; &gt;::<link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a610272ed924122e0c46d158ecdfe6faf">serializer</link> =  typename BasicJsonType::template json_serializer&lt;T, <link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link>&gt;</computeroutput></para><para>
+Definition at line 2872 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a1494ac5fed1163aab4a89208ff04ee85"/>    <section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::has_non_default_from_json&lt; BasicJsonType, T, enable_if_t&lt; not is_basic_json&lt; T &gt;::value &gt; &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;typename BasicJsonType , typename T &gt; </computeroutput><para><computeroutput>constexpr bool <link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json">nlohmann::detail::has_non_default_from_json</link>&lt; BasicJsonType, T, <link linkend="_namespacenlohmann_1_1detail_1a02bcbc878bee413f25b985ada771aa9c">enable_if_t</link>&lt; not <link linkend="_structnlohmann_1_1detail_1_1is__basic__json">is_basic_json</link>&lt; T &gt;::value &gt; &gt;::value<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting>=
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespacenlohmann_1_1detail_1a7542b4dbac07817fd4849ecfa4619def">is_detected_exact</link>&lt;T,&#32;<link linkend="_namespacenlohmann_1_1detail_1a1711ee5cef66a0523055c8d9f024f322">from_json_function</link>,&#32;<link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a610272ed924122e0c46d158ecdfe6faf">serializer</link>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;BasicJsonType&amp;&gt;<link linkend="_structnlohmann_1_1detail_1_1has__non__default__from__json_3_01_basic_json_type_00_01_t_00_01enab81bd4c814ac1146ff15f3f4636933207_1a1494ac5fed1163aab4a89208ff04ee85">::value</link>
+</programlisting><para>
+Definition at line 2874 of file json.hpp.</para>
+</section>
+</section>
+</section>

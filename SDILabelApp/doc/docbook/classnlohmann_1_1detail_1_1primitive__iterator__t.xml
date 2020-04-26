@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t">
+<title>nlohmann::detail::primitive_iterator_t Class Reference</title>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary></indexterm>
+<para>
+<computeroutput>#include &lt;json.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ae952990886ca1756229f916661a8af81">get_value</link> () const noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a9d9b005906106e12aed738f97d7fee42">set_begin</link> () noexcept</para>
+
+<para>set iterator to a defined beginning </para>
+</listitem>
+            <listitem><para><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ad26a823483846a12d890c3feed3097eb">set_end</link> () noexcept</para>
+
+<para>set iterator to a defined past the end </para>
+</listitem>
+            <listitem><para>constexpr bool <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a8d1a7d46b3fcd06edd034f04ededb5e4">is_begin</link> () const noexcept</para>
+
+<para>return whether the iterator can be dereferenced </para>
+</listitem>
+            <listitem><para>constexpr bool <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a45a7e301c23b5b90417baf2277f40b1d">is_end</link> () const noexcept</para>
+
+<para>return whether the iterator is at end </para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a00ce828d0fe58046c10e0445504df7bf">operator+</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ad26511012fc88f3ec5d9e1cb708732fd">operator++</link> () noexcept</para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a88e38c8e60ba9769b334c192b830047b">operator++</link> (int) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1abecbf0c73c7fe963a699738065177bc3">operator--</link> () noexcept</para>
+</listitem>
+            <listitem><para>const <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ae5aed974605469fe0dfeddc6c4a7056d">operator--</link> (int) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1aee01535df0b3b40137d9241029a9a203">operator+=</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> &amp; <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a0bf83ab08abe1ae4b51c790c85cdf151">operator-=</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> = std::ptrdiff_t</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a4357355113b0cd7e12b15c2e93703510">m_it</link> = (std::numeric_limits&lt;std::ptrdiff_t&gt;::min)()</para>
+
+<para>iterator as signed integer type </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1afcb3bcf9da8aa95bd82067d1a67c2326">begin_value</link> = 0</para>
+</listitem>
+            <listitem><para>static constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1aa37c37da44f19e6ec1d7d4a9910511c7">end_value</link> = <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1afcb3bcf9da8aa95bd82067d1a67c2326">begin_value</link> + 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>constexpr friend bool <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af58da4713ea9010912f3da6b22aeee51">operator==</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs) noexcept</para>
+</listitem>
+            <listitem><para>constexpr friend bool <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a6b032074795534fe7144a4f1c86ead2f">operator&lt;</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs) noexcept</para>
+</listitem>
+            <listitem><para>constexpr friend <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a86a249e92a5274dec7ea20e52b0cc878">operator-</link> (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs) noexcept</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 9906 of file json.hpp.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553"/>    <section>
+    <title>difference_type</title>
+<indexterm><primary>difference_type</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>difference_type</secondary></indexterm>
+<para><computeroutput>using <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">nlohmann::detail::primitive_iterator_t::difference_type</link> =  std::ptrdiff_t<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9909 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ae952990886ca1756229f916661a8af81"/>    <section>
+    <title>get_value()</title>
+<indexterm><primary>get_value</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>get_value</secondary></indexterm>
+<para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> nlohmann::detail::primitive_iterator_t::get_value ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9917 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a8d1a7d46b3fcd06edd034f04ededb5e4"/>    <section>
+    <title>is_begin()</title>
+<indexterm><primary>is_begin</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>is_begin</secondary></indexterm>
+<para><computeroutput>constexpr bool nlohmann::detail::primitive_iterator_t::is_begin ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return whether the iterator can be dereferenced </para>
+</para>
+<para>
+Definition at line 9935 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a45a7e301c23b5b90417baf2277f40b1d"/>    <section>
+    <title>is_end()</title>
+<indexterm><primary>is_end</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>is_end</secondary></indexterm>
+<para><computeroutput>constexpr bool nlohmann::detail::primitive_iterator_t::is_end ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>return whether the iterator is at end </para>
+</para>
+<para>
+Definition at line 9941 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a00ce828d0fe58046c10e0445504df7bf"/>    <section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> nlohmann::detail::primitive_iterator_t::operator+ (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9956 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ad26511012fc88f3ec5d9e1cb708732fd"/>    <section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator++</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link>&amp; nlohmann::detail::primitive_iterator_t::operator++ ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9968 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a88e38c8e60ba9769b334c192b830047b"/>    <section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator++</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> nlohmann::detail::primitive_iterator_t::operator++ (int )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9974 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1aee01535df0b3b40137d9241029a9a203"/>    <section>
+    <title>operator+=()</title>
+<indexterm><primary>operator+=</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator+=</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link>&amp; nlohmann::detail::primitive_iterator_t::operator+= (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9994 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1abecbf0c73c7fe963a699738065177bc3"/>    <section>
+    <title>operator--()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator--</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link>&amp; nlohmann::detail::primitive_iterator_t::operator-- ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9981 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ae5aed974605469fe0dfeddc6c4a7056d"/>    <section>
+    <title>operator--()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator--</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> nlohmann::detail::primitive_iterator_t::operator-- (int )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 9987 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a0bf83ab08abe1ae4b51c790c85cdf151"/>    <section>
+    <title>operator-=()</title>
+<indexterm><primary>operator-=</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator-=</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link>&amp; nlohmann::detail::primitive_iterator_t::operator-= (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> n)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line 10000 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a9d9b005906106e12aed738f97d7fee42"/>    <section>
+    <title>set_begin()</title>
+<indexterm><primary>set_begin</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>set_begin</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::primitive_iterator_t::set_begin ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>set iterator to a defined beginning </para>
+</para>
+<para>
+Definition at line 9923 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1ad26a823483846a12d890c3feed3097eb"/>    <section>
+    <title>set_end()</title>
+<indexterm><primary>set_end</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>set_end</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacenlohmann_1_1detail_1a59fca69799f6b9e366710cb9043aa77d">void</link> nlohmann::detail::primitive_iterator_t::set_end ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>set iterator to a defined past the end </para>
+</para>
+<para>
+Definition at line 9929 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a86a249e92a5274dec7ea20e52b0cc878"/>    <section>
+    <title>operator-</title>
+<indexterm><primary>operator-</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator-</secondary></indexterm>
+<para><computeroutput>constexpr friend <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> operator- (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line 9963 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a6b032074795534fe7144a4f1c86ead2f"/>    <section>
+    <title>operator&lt;</title>
+<indexterm><primary>operator&lt;</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>constexpr friend bool operator&lt; (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line 9951 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af58da4713ea9010912f3da6b22aeee51"/>    <section>
+    <title>operator==</title>
+<indexterm><primary>operator==</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>constexpr friend bool operator== (<link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> lhs, <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t">primitive_iterator_t</link> rhs)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line 9946 of file json.hpp.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1afcb3bcf9da8aa95bd82067d1a67c2326"/>    <section>
+    <title>begin_value</title>
+<indexterm><primary>begin_value</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>begin_value</secondary></indexterm>
+<para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> nlohmann::detail::primitive_iterator_t::begin_value = 0<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9910 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1aa37c37da44f19e6ec1d7d4a9910511c7"/>    <section>
+    <title>end_value</title>
+<indexterm><primary>end_value</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>end_value</secondary></indexterm>
+<para><computeroutput>constexpr <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> nlohmann::detail::primitive_iterator_t::end_value = <link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1afcb3bcf9da8aa95bd82067d1a67c2326">begin_value</link> + 1<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 9911 of file json.hpp.</para>
+    </section><anchor xml:id="_classnlohmann_1_1detail_1_1primitive__iterator__t_1a4357355113b0cd7e12b15c2e93703510"/>    <section>
+    <title>m_it</title>
+<indexterm><primary>m_it</primary><secondary>nlohmann::detail::primitive_iterator_t</secondary></indexterm>
+<indexterm><primary>nlohmann::detail::primitive_iterator_t</primary><secondary>m_it</secondary></indexterm>
+<para><computeroutput><link linkend="_classnlohmann_1_1detail_1_1primitive__iterator__t_1af3db0d5c90de427d51645fe73a015553">difference_type</link> nlohmann::detail::primitive_iterator_t::m_it = (std::numeric_limits&lt;std::ptrdiff_t&gt;::min)()<computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>iterator as signed integer type </para>
+</para>
+<para>
+Definition at line 9914 of file json.hpp.</para>
+</section>
+</section>
+</section>
