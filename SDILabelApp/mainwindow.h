@@ -145,13 +145,13 @@ private slots:
     ///detects when push button to create a square is pressed
     void on_pushButton_clicked();
 
-
-//    void writeJson();
-
+    ///reads given annotations file to load shapes for a chosen image
     void readJson();
 
+    ///opens the file explorer for the user to select an annotation
     void on_annotationFileExplorerButton_clicked();
 
+    ///saves the JSON object to file
     void on_annotationSaveButton_clicked();
 
     ///detects when push button to create a triangle is pressed
@@ -163,13 +163,8 @@ private slots:
     ///detects when push button to scale a shape is pressed
     void on_pushButton_6_clicked();
 
+    ///will save a JSON object to given file, if the file contains JSON, it will add to the struct
     void saveJson();
-
-
-
-
-
-
 
     void on_actionhelp_triggered();
 
