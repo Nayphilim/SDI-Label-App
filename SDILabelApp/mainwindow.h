@@ -28,6 +28,7 @@
 #include <json.hpp>
 #include <QGraphicsView>
 #include <QListWidget>
+#include <QTimer>
 
 using json = nlohmann::json;
 QT_BEGIN_NAMESPACE
@@ -51,7 +52,7 @@ public:
 
 private:
 public slots:
-     void saveJson();
+
 private slots:
 
 
@@ -160,6 +161,8 @@ private slots:
 
     ///detects when push button to scale a shape is pressed
     void on_pushButton_6_clicked();
+
+    void saveJson();
 
 
 

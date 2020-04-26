@@ -18,7 +18,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-    autosavetimer.cpp \
     classfile.cpp \
     classlistcreator.cpp \
     classmanagement.cpp \
@@ -28,7 +27,6 @@ SOURCES += \
     linkedList.cpp
 
 HEADERS += \
-    autosavetimer.h \
     classfile.h \
     classlistcreator.h \
     classmanagement.h \

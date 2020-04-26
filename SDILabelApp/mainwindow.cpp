@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(saveJson()));
+    //sets timer for every minute
+    timer->start(60000);
 
     ui->setupUi(this);
     showMaximized();

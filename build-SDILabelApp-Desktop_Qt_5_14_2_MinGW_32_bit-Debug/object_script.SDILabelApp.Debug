@@ -1,4 +1,3 @@
-debug/autosavetimer.o
 debug/classfile.o
 debug/classlistcreator.o
 debug/classmanagement.o

@@ -76,6 +76,7 @@ public:
     QListWidget *ImagesFileList;
     QComboBox *imageFileListSortBox;
     QGroupBox *bottomMenuGroupBox;
+    QGridLayout *gridLayout_9;
     QLabel *autoSaveLabel;
     QMenuBar *menubar;
     QMenu *menuSDI_Label_App;
@@ -174,7 +175,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1408, 1000));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1408, 980));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         imageView = new QLabel(scrollAreaWidgetContents_2);
@@ -317,9 +318,13 @@ public:
         bottomMenuGroupBox = new QGroupBox(centralwidget);
         bottomMenuGroupBox->setObjectName(QString::fromUtf8("bottomMenuGroupBox"));
         bottomMenuGroupBox->setAutoFillBackground(true);
+        gridLayout_9 = new QGridLayout(bottomMenuGroupBox);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
         autoSaveLabel = new QLabel(bottomMenuGroupBox);
         autoSaveLabel->setObjectName(QString::fromUtf8("autoSaveLabel"));
-        autoSaveLabel->setGeometry(QRect(720, 0, 47, 13));
+
+        gridLayout_9->addWidget(autoSaveLabel, 0, 0, 1, 1);
+
 
         gridLayout_8->addWidget(bottomMenuGroupBox, 1, 1, 1, 1);
 
